@@ -50,6 +50,14 @@
             <DomainPath>ClaseHasAtributo.Atributo</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="SignaturadeOperaciñon" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ClaseHasSignaturadeOperaciñon.SignaturadeOperaciñon</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="df43c9fa-4032-4fe5-a6b1-a45c0466ea55" Description="Description for Company.DCMLRACPGProyectoIPS.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="Company.DCMLRACPGProyectoIPS">
@@ -62,6 +70,49 @@
         <DomainProperty Id="4f37dddd-ffd4-44b0-bc71-3c4ccb6468b5" Description="Description for Company.DCMLRACPGProyectoIPS.Atributo.Tipo Datos" Name="TipoDatos" DisplayName="Tipo Datos">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="44a6fa22-8f00-45a0-b70f-aca4d13da263" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciñon" Name="SignaturadeOperaciñon" DisplayName="Signaturade Operaciñon" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="5bdd00b8-7bf6-47c6-83b2-d44351e4af9e" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciñon.Name" Name="Name" DisplayName="Name" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="1ec1eaa4-e6d5-4326-af31-5ba2323ab143" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciñon.Tipo Retorno" Name="TipoRetorno" DisplayName="Tipo Retorno">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Parámetros" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>SignaturadeOperaciñonHasParámetros.Parámetros</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="061730c2-c323-4c0e-acf8-5b153b6e2d7e" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros" Name="Parámetros" DisplayName="Parámetros" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="2380cb29-c6d8-4794-b328-78c119fee93a" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros.Name" Name="Name" DisplayName="Name" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="b6970046-1b12-443d-a358-96995f3d8523" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros.Tipo Dato" Name="TipoDato" DisplayName="Tipo Dato">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="513f5724-7f23-4016-b719-9350eb485512" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros.Tipo Parámetro" Name="TipoParámetro" DisplayName="Tipo Parámetro">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoParametro" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -128,6 +179,38 @@
         <DomainRole Id="6f872e83-db1b-4a84-8a0b-d5059a1cbe5e" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Atributo" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="43930221-a349-418c-8039-856e33b33d5d" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperaciñon" Name="ClaseHasSignaturadeOperaciñon" DisplayName="Clase Has Signaturade Operaciñon" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="7abbf0d7-10a8-4fbc-9f1a-6633ad6d612c" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperaciñon.Clase" Name="Clase" DisplayName="Clase" PropertyName="SignaturadeOperaciñon" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Signaturade Operaciñon">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="9f75e668-a1e0-4c88-86e6-848a6987a2eb" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperaciñon.SignaturadeOperaciñon" Name="SignaturadeOperaciñon" DisplayName="Signaturade Operaciñon" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="SignaturadeOperaciñon" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="7488c52d-7a48-47b8-b0a3-b9753f42207a" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciñonHasParámetros" Name="SignaturadeOperaciñonHasParámetros" DisplayName="Signaturade Operaciñon Has Parámetros" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="2c2d04fc-9329-41d6-8b40-97ddbc6101df" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciñonHasParámetros.SignaturadeOperaciñon" Name="SignaturadeOperaciñon" DisplayName="Signaturade Operaciñon" PropertyName="Parámetros" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Parámetros">
+          <RolePlayer>
+            <DomainClassMoniker Name="SignaturadeOperaciñon" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="37afbefa-6ffc-4fc9-88fe-8159ca538a52" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciñonHasParámetros.Parámetros" Name="Parámetros" DisplayName="Parámetros" PropertyName="SignaturadeOperaciñon" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Signaturade Operaciñon">
+          <RolePlayer>
+            <DomainClassMoniker Name="Parámetros" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -222,6 +305,9 @@
           <XmlPropertyData XmlName="domainProperty1">
             <DomainPropertyMoniker Name="Clase/DomainProperty1" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="signaturadeOperaciñon">
+            <DomainRelationshipMoniker Name="ClaseHasSignaturadeOperaciñon" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="DomainRelationship1" MonikerAttributeName="" SerializeId="true" MonikerElementName="domainRelationship1Moniker" ElementName="domainRelationship1" MonikerTypeName="DomainRelationship1Moniker">
@@ -240,6 +326,40 @@
       </XmlClassData>
       <XmlClassData TypeName="ClaseHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoMoniker" ElementName="claseHasAtributo" MonikerTypeName="ClaseHasAtributoMoniker">
         <DomainRelationshipMoniker Name="ClaseHasAtributo" />
+      </XmlClassData>
+      <XmlClassData TypeName="SignaturadeOperaciñon" MonikerAttributeName="name" SerializeId="true" MonikerElementName="signaturadeOperaciñonMoniker" ElementName="signaturadeOperaciñon" MonikerTypeName="SignaturadeOperaciñonMoniker">
+        <DomainClassMoniker Name="SignaturadeOperaciñon" />
+        <ElementData>
+          <XmlPropertyData XmlName="name" IsMonikerKey="true">
+            <DomainPropertyMoniker Name="SignaturadeOperaciñon/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoRetorno">
+            <DomainPropertyMoniker Name="SignaturadeOperaciñon/TipoRetorno" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="parámetros">
+            <DomainRelationshipMoniker Name="SignaturadeOperaciñonHasParámetros" />
+          </XmlRelationshipData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseHasSignaturadeOperaciñon" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasSignaturadeOperaciñonMoniker" ElementName="claseHasSignaturadeOperaciñon" MonikerTypeName="ClaseHasSignaturadeOperaciñonMoniker">
+        <DomainRelationshipMoniker Name="ClaseHasSignaturadeOperaciñon" />
+      </XmlClassData>
+      <XmlClassData TypeName="Parámetros" MonikerAttributeName="name" SerializeId="true" MonikerElementName="parámetrosMoniker" ElementName="parámetros" MonikerTypeName="ParámetrosMoniker">
+        <DomainClassMoniker Name="Parámetros" />
+        <ElementData>
+          <XmlPropertyData XmlName="name" IsMonikerKey="true">
+            <DomainPropertyMoniker Name="Parámetros/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoDato">
+            <DomainPropertyMoniker Name="Parámetros/TipoDato" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoParámetro">
+            <DomainPropertyMoniker Name="Parámetros/TipoParámetro" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="SignaturadeOperaciñonHasParámetros" MonikerAttributeName="" SerializeId="true" MonikerElementName="signaturadeOperaciñonHasParámetrosMoniker" ElementName="signaturadeOperaciñonHasParámetros" MonikerTypeName="SignaturadeOperaciñonHasParámetrosMoniker">
+        <DomainRelationshipMoniker Name="SignaturadeOperaciñonHasParámetros" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
