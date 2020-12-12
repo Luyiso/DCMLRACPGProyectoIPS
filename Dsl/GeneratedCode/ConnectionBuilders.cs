@@ -15,7 +15,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class ExampleElementReferencesTargetsBuilder
+	public static partial class ExampleReferencesTargetsBuilder
 	{
 		#region Accept Connection Methods
 		/// <summary>
@@ -27,7 +27,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::Company.DCMLRACPGProyectoIPS.ExampleElement)
+			else if (candidate is global::Company.DCMLRACPGProyectoIPS.Example)
 			{ 
 				return true;
 			}
@@ -44,7 +44,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::Company.DCMLRACPGProyectoIPS.ExampleElement)
+			else if (candidate is global::Company.DCMLRACPGProyectoIPS.Example)
 			{ 
 				return true;
 			}
@@ -83,13 +83,13 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 			else // Check combinations
 			{
-				if (candidateSource is global::Company.DCMLRACPGProyectoIPS.ExampleElement)
+				if (candidateSource is global::Company.DCMLRACPGProyectoIPS.Example)
 				{
-					if (candidateTarget is global::Company.DCMLRACPGProyectoIPS.ExampleElement)
+					if (candidateTarget is global::Company.DCMLRACPGProyectoIPS.Example)
 					{
-						global::Company.DCMLRACPGProyectoIPS.ExampleElement sourceExampleElement = (global::Company.DCMLRACPGProyectoIPS.ExampleElement)candidateSource;
-						global::Company.DCMLRACPGProyectoIPS.ExampleElement targetExampleElement = (global::Company.DCMLRACPGProyectoIPS.ExampleElement)candidateTarget;
-						if(targetExampleElement == null || sourceExampleElement == null || global::Company.DCMLRACPGProyectoIPS.ExampleElementReferencesTargets.GetLinks(sourceExampleElement, targetExampleElement).Count > 0) return false;
+						global::Company.DCMLRACPGProyectoIPS.Example sourceExample = (global::Company.DCMLRACPGProyectoIPS.Example)candidateSource;
+						global::Company.DCMLRACPGProyectoIPS.Example targetExample = (global::Company.DCMLRACPGProyectoIPS.Example)candidateTarget;
+						if(targetExample == null || sourceExample == null || global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets.GetLinks(sourceExample, targetExample).Count > 0) return false;
 						return true;
 					}
 				}
@@ -121,13 +121,273 @@ namespace Company.DCMLRACPGProyectoIPS
 			
 			if (CanAcceptSourceAndTarget(source, target))
 			{
-				if (source is global::Company.DCMLRACPGProyectoIPS.ExampleElement)
+				if (source is global::Company.DCMLRACPGProyectoIPS.Example)
 				{
-					if (target is global::Company.DCMLRACPGProyectoIPS.ExampleElement)
+					if (target is global::Company.DCMLRACPGProyectoIPS.Example)
 					{
-						global::Company.DCMLRACPGProyectoIPS.ExampleElement sourceAccepted = (global::Company.DCMLRACPGProyectoIPS.ExampleElement)source;
-						global::Company.DCMLRACPGProyectoIPS.ExampleElement targetAccepted = (global::Company.DCMLRACPGProyectoIPS.ExampleElement)target;
-						DslModeling::ElementLink result = new global::Company.DCMLRACPGProyectoIPS.ExampleElementReferencesTargets(sourceAccepted, targetAccepted);
+						global::Company.DCMLRACPGProyectoIPS.Example sourceAccepted = (global::Company.DCMLRACPGProyectoIPS.Example)source;
+						global::Company.DCMLRACPGProyectoIPS.Example targetAccepted = (global::Company.DCMLRACPGProyectoIPS.Example)target;
+						DslModeling::ElementLink result = new global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class AsociaciónBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Company.DCMLRACPGProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Company.DCMLRACPGProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Company.DCMLRACPGProyectoIPS.Clase)
+				{
+					if (candidateTarget is global::Company.DCMLRACPGProyectoIPS.Clase)
+					{
+						global::Company.DCMLRACPGProyectoIPS.Clase sourceClase = (global::Company.DCMLRACPGProyectoIPS.Clase)candidateSource;
+						global::Company.DCMLRACPGProyectoIPS.Clase targetClase = (global::Company.DCMLRACPGProyectoIPS.Clase)candidateTarget;
+						if(targetClase == null || sourceClase == null || global::Company.DCMLRACPGProyectoIPS.Asociación.GetLinks(sourceClase, targetClase).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Company.DCMLRACPGProyectoIPS.Clase)
+				{
+					if (target is global::Company.DCMLRACPGProyectoIPS.Clase)
+					{
+						global::Company.DCMLRACPGProyectoIPS.Clase sourceAccepted = (global::Company.DCMLRACPGProyectoIPS.Clase)source;
+						global::Company.DCMLRACPGProyectoIPS.Clase targetAccepted = (global::Company.DCMLRACPGProyectoIPS.Clase)target;
+						DslModeling::ElementLink result = new global::Company.DCMLRACPGProyectoIPS.Asociación(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class AgregaciónBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Company.DCMLRACPGProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Company.DCMLRACPGProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Company.DCMLRACPGProyectoIPS.Clase)
+				{
+					if (candidateTarget is global::Company.DCMLRACPGProyectoIPS.Clase)
+					{
+						global::Company.DCMLRACPGProyectoIPS.Clase sourceClase = (global::Company.DCMLRACPGProyectoIPS.Clase)candidateSource;
+						global::Company.DCMLRACPGProyectoIPS.Clase targetClase = (global::Company.DCMLRACPGProyectoIPS.Clase)candidateTarget;
+						if(targetClase == null || sourceClase == null || global::Company.DCMLRACPGProyectoIPS.Agregación.GetLinks(sourceClase, targetClase).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Company.DCMLRACPGProyectoIPS.Clase)
+				{
+					if (target is global::Company.DCMLRACPGProyectoIPS.Clase)
+					{
+						global::Company.DCMLRACPGProyectoIPS.Clase sourceAccepted = (global::Company.DCMLRACPGProyectoIPS.Clase)source;
+						global::Company.DCMLRACPGProyectoIPS.Clase targetAccepted = (global::Company.DCMLRACPGProyectoIPS.Clase)target;
+						DslModeling::ElementLink result = new global::Company.DCMLRACPGProyectoIPS.Agregación(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
@@ -220,7 +480,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder ExampleElementReferencesTargetsBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ExampleReferencesTargetsBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -246,11 +506,11 @@ namespace Company.DCMLRACPGProyectoIPS
 				{				
 					if(targetShapeElement == null)
 					{
-						return ExampleElementReferencesTargetsBuilder.CanAcceptSource(sourceElement);
+						return ExampleReferencesTargetsBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return ExampleElementReferencesTargetsBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return ExampleReferencesTargetsBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -275,7 +535,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder ExampleElementReferencesTargetsBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ExampleReferencesTargetsBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -289,7 +549,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				ExampleElementReferencesTargetsBuilder.Connect(sourceElement, targetElement);
+				ExampleReferencesTargetsBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
