@@ -74,6 +74,22 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 		}
 		#endregion
+		#region Diagram styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 188, 201, 223);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.DiagramBackground, backgroundBrush);
+		
+		}
+		#endregion
 		#region Auto-placement
 		/// <summary>
 		/// Indicate that child shapes should added through view fixup should be placed automatically.
@@ -86,6 +102,168 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 		}
 		#endregion
+		#region Compartment support
+		/// <summary>
+		/// Whether compartment items change events are subscribed to.
+		/// </summary>
+		private bool subscribedCompartmentItemsEvents;
+		
+		/// <summary>
+		/// Subscribe to events fired when compartment items changes.
+		/// </summary>
+		public void SubscribeCompartmentItemsEvents()
+		{
+			if (!subscribedCompartmentItemsEvents && this.Store != null)
+			{
+				subscribedCompartmentItemsEvents = true;
+				this.Store.EventManagerDirectory.ElementAdded.Add(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
+				this.Store.EventManagerDirectory.ElementDeleted.Add(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
+				this.Store.EventManagerDirectory.ElementPropertyChanged.Add(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
+				this.Store.EventManagerDirectory.RolePlayerChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
+				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
+			}
+		}
+		
+		/// <summary>
+		/// Unsubscribe to events fired when compartment items changes.
+		/// </summary>
+		public void UnsubscribeCompartmentItemsEvents()
+		{
+			if (subscribedCompartmentItemsEvents)
+			{
+				this.Store.EventManagerDirectory.ElementAdded.Remove(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
+				this.Store.EventManagerDirectory.ElementDeleted.Remove(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
+				this.Store.EventManagerDirectory.ElementPropertyChanged.Remove(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
+				this.Store.EventManagerDirectory.RolePlayerChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
+				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
+				subscribedCompartmentItemsEvents = false;
+			}
+		}
+		
+		#region Event handlers
+		/// <summary>
+		/// Event for element added.
+		/// </summary>
+		private void CompartmentItemAdded(object sender, DslModeling::ElementAddedEventArgs e)
+		{
+			// If in Undo, Redo or Rollback the compartment item rules are not run so we must refresh the compartment list at this point if required
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemAddRule.ElementAdded(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for element deleted.
+		/// </summary>
+		private void CompartmentItemDeleted(object sender, DslModeling::ElementDeletedEventArgs e)
+		{
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemDeleteRule.ElementDeleted(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for element property changed.
+		/// </summary>
+		private void CompartmentItemPropertyChanged(object sender, DslModeling::ElementPropertyChangedEventArgs e)
+		{
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemChangeRule.ElementPropertyChanged(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for role-player changed.
+		/// </summary>
+		private void CompartmentItemRolePlayerChanged(object sender, DslModeling::RolePlayerChangedEventArgs e)
+		{
+			bool repaintOnly = !e.ElementLink.Store.InUndoRedoOrRollback;
+			CompartmentItemRolePlayerChangeRule.RolePlayerChanged(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for role-player order changed.
+		/// </summary>
+		private void CompartmentItemRolePlayerOrderChanged(object sender, DslModeling::RolePlayerOrderChangedEventArgs e)
+		{
+			bool repaintOnly = !e.Link.Store.InUndoRedoOrRollback;
+			CompartmentItemRolePlayerPositionChangeRule.RolePlayerPositionChanged(e, repaintOnly);
+		}
+		#endregion
+		#endregion
+		#region Shape mapping
+		/// <summary>
+		/// Called during view fixup to ask the parent whether a shape should be created for the given child element.
+		/// </summary>
+		/// <remarks>
+		/// Always return true, since we assume there is only one diagram per model file for DSL scenarios.
+		/// </remarks>
+		protected override bool ShouldAddShapeForElement(DslModeling::ModelElement element)
+		{
+			return true;
+		}
+		
+		
+		/// <summary>
+		/// Creates a new shape for the given model element as part of view fixup
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", Justification = "Generated code.")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
+		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
+		{
+			if(element is global::Company.DCMLRACPGProyectoIPS.Clase)
+			{
+				global::Company.DCMLRACPGProyectoIPS.ClaseCShape newShape = new global::Company.DCMLRACPGProyectoIPS.ClaseCShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			return base.CreateChildShape(element);
+		}
+		#endregion
+		#region Decorator mapping
+		/// <summary>
+		/// Initialize shape decorator mappings.  This is done here rather than in individual shapes because decorator maps
+		/// are defined per diagram type rather than per shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			global::Company.DCMLRACPGProyectoIPS.ClaseCShape.DecoratorsInitialized += ClaseCShapeDecoratorMap.OnDecoratorsInitialized;
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ClaseCShape.
+		/// </summary>
+		internal static partial class ClaseCShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ClaseCShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.DCMLRACPGProyectoIPS.Clase.IDDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "IDDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.DCMLRACPGProyectoIPS.Clase.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDeco").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		#endregion
+		
+		/// <summary>
+		/// Dispose of connect actions.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					this.UnsubscribeCompartmentItemsEvents();
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
@@ -116,5 +294,336 @@ namespace Company.DCMLRACPGProyectoIPS
 }
 namespace Company.DCMLRACPGProyectoIPS
 {
+	
+		/// <summary>
+		/// Double derived implementation for the rule that initiates view fixup when an element that has an associated shape is added to the model.
+		/// This now enables the DSL author to everride the SkipFixUp() method 
+		/// </summary>
+		internal partial class FixUpDiagramBase : DslModeling::AddRule
+		{
+			protected virtual bool SkipFixup(DslModeling::ModelElement childElement)
+			{
+				return childElement.IsDeleted;
+			}
+		}
+	
+		/// <summary>
+		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		internal sealed partial class FixUpDiagram : FixUpDiagramBase
+		{
+			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+			public override void ElementAdded(DslModeling::ElementAddedEventArgs e)
+			{
+				if(e == null) throw new global::System.ArgumentNullException("e");
+			
+				DslModeling::ModelElement childElement = e.ModelElement;
+				if (this.SkipFixup(childElement))
+					return;
+				DslModeling::ModelElement parentElement;
+				if(childElement is global::Company.DCMLRACPGProyectoIPS.Clase)
+				{
+					parentElement = GetParentForClase((global::Company.DCMLRACPGProyectoIPS.Clase)childElement);
+				} else
+				{
+					parentElement = null;
+				}
+				
+				if(parentElement != null)
+				{
+					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
+				}
+			}
+			public static global::Company.DCMLRACPGProyectoIPS.TapizModelo GetParentForClase( global::Company.DCMLRACPGProyectoIPS.Clase root )
+			{
+				// Segments 0 and 1
+				global::Company.DCMLRACPGProyectoIPS.TapizModelo result = root.TapizModelo;
+				if ( result == null ) return null;
+				return result;
+			}
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when an item is added to the list
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
+		{
+			/// <summary>
+			/// Called when an element is added. 
+			/// </summary>
+			/// <param name="e"></param>
+			public override void ElementAdded(DslModeling::ElementAddedEventArgs e)
+			{
+				ElementAdded(e, false);
+			}
+	
+			internal static void ElementAdded(DslModeling::ElementAddedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if (e.ModelElement.IsDeleted)
+					return;
+				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseForClaseCShapeAttributeDecoFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeDeco", repaintOnly);
+				}
+				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseForClaseCShapeMethodDecoFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodDeco", repaintOnly);
+				}
+			}
+			
+			#region static DomainPath traversal methods to get the list of compartments to update
+			internal static global::System.Collections.ICollection GetClaseForClaseCShapeAttributeDecoFromLastLink(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo root)
+			{
+				// Segment 0
+				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseForClaseCShapeAttributeDeco(global::Company.DCMLRACPGProyectoIPS.Atributo root)
+			{
+				// Segments 1 and 0
+				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseForClaseCShapeMethodDecoFromLastLink(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación root)
+			{
+				// Segment 0
+				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseForClaseCShapeMethodDeco(global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación root)
+			{
+				// Segments 1 and 0
+				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			#endregion
+	
+			#region helper method to update compartments 
+			/// <summary>
+			/// Updates the compartments for the shapes associated to the given list of model elements
+			/// </summary>
+			/// <param name="elements">List of model elements</param>
+			/// <param name="shapeType">The type of shape that needs updating</param>
+			/// <param name="compartmentName">The name of the compartment to update</param>
+			/// <param name="repaintOnly">If true, the method will only invalidate the shape for a repaint, without re-initializing the shape.</param>
+			internal static void UpdateCompartments(global::System.Collections.IEnumerable elements, global::System.Type shapeType, string compartmentName, bool repaintOnly)
+			{
+				foreach (DslModeling::ModelElement element in elements)
+				{
+					DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+					foreach (DslDiagrams::PresentationElement pel in pels)
+					{
+						DslDiagrams::CompartmentShape compartmentShape = pel as DslDiagrams::CompartmentShape;
+						if (compartmentShape != null && shapeType.IsAssignableFrom(compartmentShape.GetType()))
+						{
+							if (repaintOnly)
+							{
+								compartmentShape.Invalidate();
+							}
+							else
+							{
+								foreach(DslDiagrams::CompartmentMapping mapping in compartmentShape.GetCompartmentMappings())
+								{
+									if(mapping.CompartmentId==compartmentName)
+									{
+										mapping.InitializeCompartmentShape(compartmentShape);
+										break;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			#endregion
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when an items is removed from the list
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
+		{
+			/// <summary>
+			/// Called when an element is deleted
+			/// </summary>
+			/// <param name="e"></param>
+			public override void ElementDeleted(DslModeling::ElementDeletedEventArgs e)
+			{
+				ElementDeleted(e, false);
+			}
+			
+			internal static void ElementDeleted(DslModeling::ElementDeletedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeDecoFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeDeco", repaintOnly);
+				}
+				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodDecoFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodDeco", repaintOnly);
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when the property on an item being displayed changes.
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.Atributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
+		{
+			/// <summary>
+			/// Called when an element is changed
+			/// </summary>
+			/// <param name="e"></param>
+			public override void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e)
+			{
+				ElementPropertyChanged(e, false);
+			}
+			
+			internal static void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.Atributo && e.DomainProperty.Id == global::Company.DCMLRACPGProyectoIPS.Atributo.NameDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeDeco((global::Company.DCMLRACPGProyectoIPS.Atributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeDeco", repaintOnly);
+				}
+				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación && e.DomainProperty.Id == global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.NameDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodDeco((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodDeco", repaintOnly);
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when a roleplayer change happens
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
+		{
+			/// <summary>
+			/// Called when the roleplayer on a link changes.
+			/// </summary>
+			/// <param name="e"></param>
+			public override void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e)
+			{
+				RolePlayerChanged(e, false);
+			}
+			
+			internal static void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeDecoFromLastLink((global::Company.DCMLRACPGProyectoIPS.Atributo)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::Company.DCMLRACPGProyectoIPS.ClaseCShape compartmentShape = pel as global::Company.DCMLRACPGProyectoIPS.ClaseCShape;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeDecoFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeDeco", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeDeco((global::Company.DCMLRACPGProyectoIPS.Atributo)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeDeco", repaintOnly);
+					}
+				}
+				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodDecoFromLastLink((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::Company.DCMLRACPGProyectoIPS.ClaseCShape compartmentShape = pel as global::Company.DCMLRACPGProyectoIPS.ClaseCShape;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodDecoFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodDeco", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodDeco((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodDeco", repaintOnly);
+					}
+				}
+			}
+		}
+	
+		/// <summary>
+		/// Rule to update compartments when the order of items in the list changes.
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
+		{
+			/// <summary>
+			/// Called when the order of a roleplayer in a relationship changes
+			/// </summary>
+			/// <param name="e"></param>
+			public override void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e)
+			{
+				RolePlayerPositionChanged(e, false);
+			}
+			
+			internal static void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeDeco((global::Company.DCMLRACPGProyectoIPS.Atributo)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeDeco", repaintOnly);
+					}
+				}
+				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodDeco((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodDeco", repaintOnly);
+					}
+				}
+			}
+		}
 	
 	}

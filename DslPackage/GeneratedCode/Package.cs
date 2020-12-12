@@ -28,6 +28,15 @@ namespace Company.DCMLRACPGProyectoIPS
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
 	[VSShell::ProvideToolWindow(typeof(DCMLRACPGProyectoIPSExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(DCMLRACPGProyectoIPSExplorerToolWindow), Constants.DCMLRACPGProyectoIPSEditorFactoryId)]
+	[VSShell::ProvideStaticToolboxGroup("@ClasesToolboxTab;Company.DCMLRACPGProyectoIPS.Dsl.dll", "Company.DCMLRACPGProyectoIPS.ClasesToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("Company.DCMLRACPGProyectoIPS.ClasesToolboxTab",
+					"@ClaseToolToolboxItem;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"Company.DCMLRACPGProyectoIPS.ClaseToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ClaseTool", 
+					"@ClaseToolToolboxBitmap;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 0)]
 	[VSShell::ProvideEditorFactory(typeof(DCMLRACPGProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(DCMLRACPGProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(DCMLRACPGProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
@@ -108,6 +117,20 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 		}
 		
+		
+		/// <summary>
+		/// Given a toolbox item "unique ID" and a data format identifier, returns the content of
+		/// the data format. 
+		/// </summary>
+		/// <param name="itemId">The unique ToolboxItem to retrieve data for</param>
+		/// <param name="format">The desired format of the resulting data</param>
+		protected override object GetToolboxItemData(string itemId, DataFormats.Format format)
+		{
+			Debug.Assert(toolboxHelper != null, "Toolbox helper is not initialized");
+		
+			// Retrieve the specified ToolboxItem from the DSL
+			return toolboxHelper.GetToolboxItemData(itemId, format);
+		}
 
 		public override VSShellInterop::IVsAsyncToolWindowFactory GetAsyncToolWindowFactory(Guid toolWindowType)
 		{

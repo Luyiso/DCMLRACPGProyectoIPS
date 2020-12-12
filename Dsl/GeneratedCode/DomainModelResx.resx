@@ -157,14 +157,6 @@
     <value>ID</value>
     <comment>DisplayName for DomainProperty &apos;ID&apos; on DomainClass &apos;Clase&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.Clase/Abstracta.Description" xml:space="preserve">
-    <value>Description for Company.DCMLRACPGProyectoIPS.Clase.Abstracta</value>
-    <comment>Description for DomainProperty &apos;Abstracta&apos; on DomainClass &apos;Clase&apos;</comment>
-  </data>
-  <data name="Company.DCMLRACPGProyectoIPS.Clase/Abstracta.DisplayName" xml:space="preserve">
-    <value>Abstracta</value>
-    <comment>DisplayName for DomainProperty &apos;Abstracta&apos; on DomainClass &apos;Clase&apos;</comment>
-  </data>
   <data name="Company.DCMLRACPGProyectoIPS.Atributo.Description" xml:space="preserve">
     <value>Description for Company.DCMLRACPGProyectoIPS.Atributo</value>
     <comment>Description for DomainClass &apos;Atributo&apos;</comment>
@@ -261,13 +253,189 @@
     <value>Método Abstracto</value>
     <comment>DisplayName for DomainClass &apos;MétodoAbstracto&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.PresentaciónMetodoAtributo.Description" xml:space="preserve">
-    <value>Description for Company.DCMLRACPGProyectoIPS.PresentaciónMetodoAtributo</value>
-    <comment>Description for DomainClass &apos;PresentaciónMetodoAtributo&apos;</comment>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida</value>
+    <comment>Description for DomainClass &apos;ClaseEnriquecida&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.PresentaciónMetodoAtributo.DisplayName" xml:space="preserve">
-    <value>Presentación Metodo Atributo</value>
-    <comment>DisplayName for DomainClass &apos;PresentaciónMetodoAtributo&apos;</comment>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.DisplayName" xml:space="preserve">
+    <value>Clase Enriquecida</value>
+    <comment>DisplayName for DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/Enriquecida.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Enriquecida</value>
+    <comment>Description for DomainProperty &apos;Enriquecida&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/Enriquecida.DisplayName" xml:space="preserve">
+    <value>Enriquecida</value>
+    <comment>DisplayName for DomainProperty &apos;Enriquecida&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorR.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color R</value>
+    <comment>Description for DomainProperty &apos;FondoColorR&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorR.DisplayName" xml:space="preserve">
+    <value>Fondo Color R</value>
+    <comment>DisplayName for DomainProperty &apos;FondoColorR&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorG.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color G</value>
+    <comment>Description for DomainProperty &apos;FondoColorG&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorG.DisplayName" xml:space="preserve">
+    <value>Fondo Color G</value>
+    <comment>DisplayName for DomainProperty &apos;FondoColorG&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorB.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color B</value>
+    <comment>Description for DomainProperty &apos;FondoColorB&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorB.DisplayName" xml:space="preserve">
+    <value>Fondo Color B</value>
+    <comment>DisplayName for DomainProperty &apos;FondoColorB&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorR.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color R</value>
+    <comment>Description for DomainProperty &apos;NombreColorR&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorR.DisplayName" xml:space="preserve">
+    <value>Nombre Color R</value>
+    <comment>DisplayName for DomainProperty &apos;NombreColorR&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorG.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color G</value>
+    <comment>Description for DomainProperty &apos;NombreColorG&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorG.DisplayName" xml:space="preserve">
+    <value>Nombre Color G</value>
+    <comment>DisplayName for DomainProperty &apos;NombreColorG&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/TipoLetra.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Tipo Letra</value>
+    <comment>Description for DomainProperty &apos;TipoLetra&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/TipoLetra.DisplayName" xml:space="preserve">
+    <value>Tipo Letra</value>
+    <comment>DisplayName for DomainProperty &apos;TipoLetra&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/Alineacion.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Alineacion</value>
+    <comment>Description for DomainProperty &apos;Alineacion&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/Alineacion.DisplayName" xml:space="preserve">
+    <value>Alineacion</value>
+    <comment>DisplayName for DomainProperty &apos;Alineacion&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorB.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color B</value>
+    <comment>Description for DomainProperty &apos;NombreColorB&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorB.DisplayName" xml:space="preserve">
+    <value>Nombre Color B</value>
+    <comment>DisplayName for DomainProperty &apos;NombreColorB&apos; on DomainClass &apos;ClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido</value>
+    <comment>Description for DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.DisplayName" xml:space="preserve">
+    <value>Atributo Enriquecido</value>
+    <comment>DisplayName for DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraR.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra R</value>
+    <comment>Description for DomainProperty &apos;ColorLetraR&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraR.DisplayName" xml:space="preserve">
+    <value>Color Letra R</value>
+    <comment>DisplayName for DomainProperty &apos;ColorLetraR&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraG.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra G</value>
+    <comment>Description for DomainProperty &apos;ColorLetraG&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraG.DisplayName" xml:space="preserve">
+    <value>Color Letra G</value>
+    <comment>DisplayName for DomainProperty &apos;ColorLetraG&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraB.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra B</value>
+    <comment>Description for DomainProperty &apos;ColorLetraB&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraB.DisplayName" xml:space="preserve">
+    <value>Color Letra B</value>
+    <comment>DisplayName for DomainProperty &apos;ColorLetraB&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/TipoLetra.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Tipo Letra</value>
+    <comment>Description for DomainProperty &apos;TipoLetra&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/TipoLetra.DisplayName" xml:space="preserve">
+    <value>Tipo Letra</value>
+    <comment>DisplayName for DomainProperty &apos;TipoLetra&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/FormatoBooleano.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Formato Booleano</value>
+    <comment>Description for DomainProperty &apos;FormatoBooleano&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/FormatoBooleano.DisplayName" xml:space="preserve">
+    <value>Formato Booleano</value>
+    <comment>DisplayName for DomainProperty &apos;FormatoBooleano&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/Enriquecido.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Enriquecido</value>
+    <comment>Description for DomainProperty &apos;Enriquecido&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/Enriquecido.DisplayName" xml:space="preserve">
+    <value>Enriquecido</value>
+    <comment>DisplayName for DomainProperty &apos;Enriquecido&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido</value>
+    <comment>Description for DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.DisplayName" xml:space="preserve">
+    <value>Metodo Enriquecido</value>
+    <comment>DisplayName for DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/TipoLetra.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Tipo Letra</value>
+    <comment>Description for DomainProperty &apos;TipoLetra&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/TipoLetra.DisplayName" xml:space="preserve">
+    <value>Tipo Letra</value>
+    <comment>DisplayName for DomainProperty &apos;TipoLetra&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraR.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra R</value>
+    <comment>Description for DomainProperty &apos;ColorLetraR&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraR.DisplayName" xml:space="preserve">
+    <value>Color Letra R</value>
+    <comment>DisplayName for DomainProperty &apos;ColorLetraR&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraG.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra G</value>
+    <comment>Description for DomainProperty &apos;ColorLetraG&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraG.DisplayName" xml:space="preserve">
+    <value>Color Letra G</value>
+    <comment>DisplayName for DomainProperty &apos;ColorLetraG&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraB.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra B</value>
+    <comment>Description for DomainProperty &apos;ColorLetraB&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraB.DisplayName" xml:space="preserve">
+    <value>Color Letra B</value>
+    <comment>DisplayName for DomainProperty &apos;ColorLetraB&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/Enriquecido.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Enriquecido</value>
+    <comment>Description for DomainProperty &apos;Enriquecido&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/Enriquecido.DisplayName" xml:space="preserve">
+    <value>Enriquecido</value>
+    <comment>DisplayName for DomainProperty &apos;Enriquecido&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
   </data>
   <data name="Company.DCMLRACPGProyectoIPS.DomainRelationship1.Description" xml:space="preserve">
     <value>Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1</value>
@@ -605,14 +773,6 @@
     <value>Description for Company.DCMLRACPGProyectoIPS.TipoParametro.EntradaSalida</value>
     <comment>Description for EnumerationLiteral &apos;EntradaSalida&apos; on DomainEnumeration &apos;TipoParametro&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.Cardinalidad/Cero.DisplayName" xml:space="preserve">
-    <value>Cero</value>
-    <comment>Display name for EnumerationLiteral &apos;Cero&apos; on DomainEnumeration &apos;Cardinalidad&apos;</comment>
-  </data>
-  <data name="Company.DCMLRACPGProyectoIPS.Cardinalidad/Cero.Description" xml:space="preserve">
-    <value>Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Cero</value>
-    <comment>Description for EnumerationLiteral &apos;Cero&apos; on DomainEnumeration &apos;Cardinalidad&apos;</comment>
-  </data>
   <data name="Company.DCMLRACPGProyectoIPS.Cardinalidad/Uno.DisplayName" xml:space="preserve">
     <value>Uno</value>
     <comment>Display name for EnumerationLiteral &apos;Uno&apos; on DomainEnumeration &apos;Cardinalidad&apos;</comment>
@@ -628,6 +788,14 @@
   <data name="Company.DCMLRACPGProyectoIPS.Cardinalidad/N.Description" xml:space="preserve">
     <value>Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.N</value>
     <comment>Description for EnumerationLiteral &apos;N&apos; on DomainEnumeration &apos;Cardinalidad&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.Cardinalidad/Cero.DisplayName" xml:space="preserve">
+    <value>Cero</value>
+    <comment>Display name for EnumerationLiteral &apos;Cero&apos; on DomainEnumeration &apos;Cardinalidad&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.Cardinalidad/Cero.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Cero</value>
+    <comment>Description for EnumerationLiteral &apos;Cero&apos; on DomainEnumeration &apos;Cardinalidad&apos;</comment>
   </data>
   <data name="Company.DCMLRACPGProyectoIPS.TipoAgregacion/Inclusiva.DisplayName" xml:space="preserve">
     <value>Inclusiva</value>
@@ -677,6 +845,110 @@
     <value>Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Solapada</value>
     <comment>Description for EnumerationLiteral &apos;Solapada&apos; on DomainEnumeration &apos;DisjuntaSolapada&apos;</comment>
   </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/ComicSans.DisplayName" xml:space="preserve">
+    <value>ComicSans</value>
+    <comment>Display name for EnumerationLiteral &apos;ComicSans&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/ComicSans.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.TipoLetra.ComicSans</value>
+    <comment>Description for EnumerationLiteral &apos;ComicSans&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/Papyrus.DisplayName" xml:space="preserve">
+    <value>Papyrus</value>
+    <comment>Display name for EnumerationLiteral &apos;Papyrus&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/Papyrus.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Papyrus</value>
+    <comment>Description for EnumerationLiteral &apos;Papyrus&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/Wingdings.DisplayName" xml:space="preserve">
+    <value>Wingdings</value>
+    <comment>Display name for EnumerationLiteral &apos;Wingdings&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/Wingdings.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Wingdings</value>
+    <comment>Description for EnumerationLiteral &apos;Wingdings&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/Arial.DisplayName" xml:space="preserve">
+    <value>Arial</value>
+    <comment>Display name for EnumerationLiteral &apos;Arial&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/Arial.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Arial</value>
+    <comment>Description for EnumerationLiteral &apos;Arial&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/Calibri.DisplayName" xml:space="preserve">
+    <value>Calibri</value>
+    <comment>Display name for EnumerationLiteral &apos;Calibri&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.TipoLetra/Calibri.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Calibri</value>
+    <comment>Description for EnumerationLiteral &apos;Calibri&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.FormatoBoolean/Checkbox.DisplayName" xml:space="preserve">
+    <value>Checkbox</value>
+    <comment>Display name for EnumerationLiteral &apos;Checkbox&apos; on DomainEnumeration &apos;FormatoBoolean&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.FormatoBoolean/Checkbox.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.Checkbox</value>
+    <comment>Description for EnumerationLiteral &apos;Checkbox&apos; on DomainEnumeration &apos;FormatoBoolean&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.FormatoBoolean/RadioButton.DisplayName" xml:space="preserve">
+    <value>RadioButton</value>
+    <comment>Display name for EnumerationLiteral &apos;RadioButton&apos; on DomainEnumeration &apos;FormatoBoolean&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.FormatoBoolean/RadioButton.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.RadioButton</value>
+    <comment>Description for EnumerationLiteral &apos;RadioButton&apos; on DomainEnumeration &apos;FormatoBoolean&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseAlineación/Izquierda.DisplayName" xml:space="preserve">
+    <value>Izquierda</value>
+    <comment>Display name for EnumerationLiteral &apos;Izquierda&apos; on DomainEnumeration &apos;ClaseAlineación&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseAlineación/Izquierda.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Izquierda</value>
+    <comment>Description for EnumerationLiteral &apos;Izquierda&apos; on DomainEnumeration &apos;ClaseAlineación&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseAlineación/Centro.DisplayName" xml:space="preserve">
+    <value>Centro</value>
+    <comment>Display name for EnumerationLiteral &apos;Centro&apos; on DomainEnumeration &apos;ClaseAlineación&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseAlineación/Centro.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Centro</value>
+    <comment>Description for EnumerationLiteral &apos;Centro&apos; on DomainEnumeration &apos;ClaseAlineación&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseAlineación/Derecha.DisplayName" xml:space="preserve">
+    <value>Derecha</value>
+    <comment>Display name for EnumerationLiteral &apos;Derecha&apos; on DomainEnumeration &apos;ClaseAlineación&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseAlineación/Derecha.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Derecha</value>
+    <comment>Description for EnumerationLiteral &apos;Derecha&apos; on DomainEnumeration &apos;ClaseAlineación&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseCShape.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.ClaseCShape</value>
+    <comment>Description for DomainClass &apos;ClaseCShape&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.ClaseCShape.DisplayName" xml:space="preserve">
+    <value>Clase CShape</value>
+    <comment>DisplayName for DomainClass &apos;ClaseCShape&apos;</comment>
+  </data>
+  <data name="ClaseCShapeAttributeDecoTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ClaseCShapeMethodDecoTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ClaseCShapeNameDecoDefaultText" xml:space="preserve">
+    <value>NameDeco</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ClaseCShapeIDDecoDefaultText" xml:space="preserve">
+    <value>IDDeco</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="FormatList" xml:space="preserve">
     <value>DCMLRACPGProyectoIPS (*.DCMLRACPG_DSLProyIPS)|*.DCMLRACPG_DSLProyIPS</value>
     <comment>A list of file format specifiers for the Save dialog box</comment>
@@ -692,6 +964,18 @@
   <data name="Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram.DisplayName" xml:space="preserve">
     <value>Minimal Language Diagram</value>
     <comment>DisplayName for DomainClass &apos;DCMLRACPGProyectoIPSDiagram&apos;</comment>
+  </data>
+  <data name="ClasesToolboxTab" xml:space="preserve">
+    <value>Clases</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="ClaseToolToolboxItem" xml:space="preserve">
+    <value>Clase</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ClaseToolToolboxTooltip" xml:space="preserve">
+    <value>Herramienta de Creación de Clases</value>
+    <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
     <value>ToolboxItem {0} was not found</value>
@@ -816,6 +1100,11 @@ A DomainClass can be serialized as a moniker only if
   <data name="UnloadableSaveValidationFailed" xml:space="preserve">
     <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ClaseToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Clase.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
   </data>
 </root>
 

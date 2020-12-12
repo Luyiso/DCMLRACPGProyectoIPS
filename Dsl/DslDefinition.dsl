@@ -421,20 +421,11 @@
     </DomainEnumeration>
     <DomainEnumeration Name="Cardinalidad" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad">
       <Literals>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Cero" Name="Cero" Value="0">
-          <Notes>El nombre del literal no puede ser 0</Notes>
-          <Attributes>
-            <ClrAttribute Name="Value">
-              <Parameters>
-                <AttributeParameter Value="0" />
-              </Parameters>
-            </ClrAttribute>
-          </Attributes>
-        </EnumerationLiteral>
         <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Uno" Name="Uno" Value="1">
           <Notes>El nombre del literal no puede ser 1</Notes>
         </EnumerationLiteral>
         <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.N" Name="N" Value="2" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Cero" Name="Cero" Value="0" />
       </Literals>
     </DomainEnumeration>
     <DomainEnumeration Name="TipoAgregacion" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion">
@@ -834,7 +825,11 @@
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="DCMLRACPGProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
-    <ToolboxTab TabText="Clases" />
+    <ToolboxTab TabText="Clases">
+      <ElementTool Name="ClaseTool" ToolboxIcon="Resources\Clase.bmp" Caption="Clase" Tooltip="Herramienta de Creación de Clases" HelpKeyword="ClaseTool">
+        <DomainClassMoniker Name="Clase" />
+      </ElementTool>
+    </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="DCMLRACPGProyectoIPSDiagram" />
   </Designer>

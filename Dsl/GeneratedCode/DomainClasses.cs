@@ -77,7 +77,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("2a7b6210-3fba-483e-8192-172b1f3b0836")]
-	public partial class Clase : DslModeling::ModelElement
+	public partial class Clase : ClaseEnriquecida
 	{
 		#region Constructors, domain class Id
 	
@@ -274,93 +274,6 @@ namespace Company.DCMLRACPGProyectoIPS
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.iDPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region Abstracta domain property code
-		
-		/// <summary>
-		/// Abstracta domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid AbstractaDomainPropertyId = new global::System.Guid(0x61e4f563, 0x0252, 0x4c06, 0xaf, 0xb3, 0x25, 0xc5, 0x2f, 0xc1, 0x66, 0x41);
-		
-		/// <summary>
-		/// Storage for Abstracta
-		/// </summary>
-		private global::System.Boolean abstractaPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of Abstracta domain property.
-		/// Description for Company.DCMLRACPGProyectoIPS.Clase.Abstracta
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Clase/Abstracta.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Clase/Abstracta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("61e4f563-0252-4c06-afb3-25c52fc16641")]
-		public global::System.Boolean Abstracta
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return abstractaPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				AbstractaPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Clase.Abstracta domain property.
-		/// </summary>
-		internal sealed partial class AbstractaPropertyHandler : DslModeling::DomainPropertyValueHandler<Clase, global::System.Boolean>
-		{
-			private AbstractaPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Clase.Abstracta domain property value handler.
-			/// </summary>
-			public static readonly AbstractaPropertyHandler Instance = new AbstractaPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Clase.Abstracta domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return AbstractaDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.Boolean GetValue(Clase element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.abstractaPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Clase element, global::System.Boolean newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.Boolean oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.abstractaPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -615,7 +528,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("df43c9fa-4032-4fe5-a6b1-a45c0466ea55")]
-	public partial class Atributo : DslModeling::ModelElement
+	public partial class Atributo : AtributoEnriquecido
 	{
 		#region Constructors, domain class Id
 	
@@ -851,7 +764,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("44a6fa22-8f00-45a0-b70f-aca4d13da263")]
-	public partial class SignaturadeOperación : DslModeling::ModelElement
+	public partial class SignaturadeOperación : MetodoEnriquecido
 	{
 		#region Constructors, domain class Id
 	
@@ -1634,20 +1547,20 @@ namespace Company.DCMLRACPGProyectoIPS
 namespace Company.DCMLRACPGProyectoIPS
 {
 	/// <summary>
-	/// DomainClass PresentaciónMetodoAtributo
-	/// Description for Company.DCMLRACPGProyectoIPS.PresentaciónMetodoAtributo
+	/// DomainClass ClaseEnriquecida
+	/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.PresentaciónMetodoAtributo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.PresentaciónMetodoAtributo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("c66cd2f5-f54f-4640-ba47-6747b82e9758")]
-	public abstract partial class PresentaciónMetodoAtributo : DslModeling::ModelElement
+	public abstract partial class ClaseEnriquecida : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// PresentaciónMetodoAtributo domain class Id.
+		/// ClaseEnriquecida domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc66cd2f5, 0xf54f, 0x4640, 0xba, 0x47, 0x67, 0x47, 0xb8, 0x2e, 0x97, 0x58);
 		/// <summary>
@@ -1655,10 +1568,1813 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		protected PresentaciónMetodoAtributo(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+		protected ClaseEnriquecida(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
+		#endregion
+		#region Enriquecida domain property code
+		
+		/// <summary>
+		/// Enriquecida domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid EnriquecidaDomainPropertyId = new global::System.Guid(0x88f6a2f7, 0x9607, 0x429b, 0x94, 0x5a, 0x77, 0x93, 0x43, 0x8c, 0x12, 0xa0);
+		
+		/// <summary>
+		/// Storage for Enriquecida
+		/// </summary>
+		private global::System.Boolean enriquecidaPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Enriquecida domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Enriquecida
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/Enriquecida.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/Enriquecida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("88f6a2f7-9607-429b-945a-7793438c12a0")]
+		public global::System.Boolean Enriquecida
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return enriquecidaPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				EnriquecidaPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnriquecida.Enriquecida domain property.
+		/// </summary>
+		internal sealed partial class EnriquecidaPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.Boolean>
+		{
+			private EnriquecidaPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnriquecida.Enriquecida domain property value handler.
+			/// </summary>
+			public static readonly EnriquecidaPropertyHandler Instance = new EnriquecidaPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnriquecida.Enriquecida domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return EnriquecidaDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(ClaseEnriquecida element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.enriquecidaPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnriquecida element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.enriquecidaPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region FondoColorR domain property code
+		
+		/// <summary>
+		/// FondoColorR domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid FondoColorRDomainPropertyId = new global::System.Guid(0x5ccc3ca3, 0xd1bd, 0x433e, 0x99, 0x34, 0x5a, 0x8e, 0x2a, 0x98, 0x12, 0x72);
+		
+		/// <summary>
+		/// Storage for FondoColorR
+		/// </summary>
+		private global::System.Int16 fondoColorRPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of FondoColorR domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color R
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorR.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorR.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("5ccc3ca3-d1bd-433e-9934-5a8e2a981272")]
+		public global::System.Int16 FondoColorR
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return fondoColorRPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				FondoColorRPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnriquecida.FondoColorR domain property.
+		/// </summary>
+		internal sealed partial class FondoColorRPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.Int16>
+		{
+			private FondoColorRPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnriquecida.FondoColorR domain property value handler.
+			/// </summary>
+			public static readonly FondoColorRPropertyHandler Instance = new FondoColorRPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnriquecida.FondoColorR domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return FondoColorRDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(ClaseEnriquecida element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.fondoColorRPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnriquecida element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.fondoColorRPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region FondoColorG domain property code
+		
+		/// <summary>
+		/// FondoColorG domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid FondoColorGDomainPropertyId = new global::System.Guid(0xb30bfc13, 0x6bf0, 0x447a, 0xbd, 0xf3, 0xd9, 0x13, 0x56, 0x9a, 0xb0, 0xb0);
+		
+		/// <summary>
+		/// Storage for FondoColorG
+		/// </summary>
+		private global::System.Int16 fondoColorGPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of FondoColorG domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color G
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorG.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorG.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("b30bfc13-6bf0-447a-bdf3-d913569ab0b0")]
+		public global::System.Int16 FondoColorG
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return fondoColorGPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				FondoColorGPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnriquecida.FondoColorG domain property.
+		/// </summary>
+		internal sealed partial class FondoColorGPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.Int16>
+		{
+			private FondoColorGPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnriquecida.FondoColorG domain property value handler.
+			/// </summary>
+			public static readonly FondoColorGPropertyHandler Instance = new FondoColorGPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnriquecida.FondoColorG domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return FondoColorGDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(ClaseEnriquecida element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.fondoColorGPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnriquecida element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.fondoColorGPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region FondoColorB domain property code
+		
+		/// <summary>
+		/// FondoColorB domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid FondoColorBDomainPropertyId = new global::System.Guid(0x67f5c7ad, 0x7cee, 0x452e, 0xb6, 0x0b, 0xce, 0xbd, 0xb3, 0x0d, 0xc9, 0x78);
+		
+		/// <summary>
+		/// Storage for FondoColorB
+		/// </summary>
+		private global::System.Int16 fondoColorBPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of FondoColorB domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color B
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorB.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/FondoColorB.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("67f5c7ad-7cee-452e-b60b-cebdb30dc978")]
+		public global::System.Int16 FondoColorB
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return fondoColorBPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				FondoColorBPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnriquecida.FondoColorB domain property.
+		/// </summary>
+		internal sealed partial class FondoColorBPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.Int16>
+		{
+			private FondoColorBPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnriquecida.FondoColorB domain property value handler.
+			/// </summary>
+			public static readonly FondoColorBPropertyHandler Instance = new FondoColorBPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnriquecida.FondoColorB domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return FondoColorBDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(ClaseEnriquecida element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.fondoColorBPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnriquecida element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.fondoColorBPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region NombreColorR domain property code
+		
+		/// <summary>
+		/// NombreColorR domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NombreColorRDomainPropertyId = new global::System.Guid(0xf6ed57a4, 0xa463, 0x40ed, 0xad, 0x7c, 0x46, 0xf3, 0x70, 0x84, 0x53, 0xfb);
+		
+		/// <summary>
+		/// Storage for NombreColorR
+		/// </summary>
+		private global::System.Int16 nombreColorRPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of NombreColorR domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color R
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorR.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorR.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("f6ed57a4-a463-40ed-ad7c-46f3708453fb")]
+		public global::System.Int16 NombreColorR
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreColorRPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NombreColorRPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnriquecida.NombreColorR domain property.
+		/// </summary>
+		internal sealed partial class NombreColorRPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.Int16>
+		{
+			private NombreColorRPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnriquecida.NombreColorR domain property value handler.
+			/// </summary>
+			public static readonly NombreColorRPropertyHandler Instance = new NombreColorRPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnriquecida.NombreColorR domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NombreColorRDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(ClaseEnriquecida element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreColorRPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnriquecida element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreColorRPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region NombreColorG domain property code
+		
+		/// <summary>
+		/// NombreColorG domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NombreColorGDomainPropertyId = new global::System.Guid(0x66f4d9fd, 0x2db6, 0x4ea3, 0xa8, 0xee, 0xf0, 0x2e, 0x98, 0x73, 0x3b, 0xda);
+		
+		/// <summary>
+		/// Storage for NombreColorG
+		/// </summary>
+		private global::System.Int16 nombreColorGPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of NombreColorG domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color G
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorG.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorG.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("66f4d9fd-2db6-4ea3-a8ee-f02e98733bda")]
+		public global::System.Int16 NombreColorG
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreColorGPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NombreColorGPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnriquecida.NombreColorG domain property.
+		/// </summary>
+		internal sealed partial class NombreColorGPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.Int16>
+		{
+			private NombreColorGPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnriquecida.NombreColorG domain property value handler.
+			/// </summary>
+			public static readonly NombreColorGPropertyHandler Instance = new NombreColorGPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnriquecida.NombreColorG domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NombreColorGDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(ClaseEnriquecida element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreColorGPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnriquecida element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreColorGPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region TipoLetra domain property code
+		
+		/// <summary>
+		/// TipoLetra domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoLetraDomainPropertyId = new global::System.Guid(0x860d1781, 0x007d, 0x4cfd, 0x81, 0xf5, 0xfb, 0xdc, 0xcd, 0x67, 0xfa, 0x5a);
+		
+		/// <summary>
+		/// Storage for TipoLetra
+		/// </summary>
+		private TipoLetra tipoLetraPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of TipoLetra domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Tipo Letra
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/TipoLetra.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/TipoLetra.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("860d1781-007d-4cfd-81f5-fbdccd67fa5a")]
+		public TipoLetra TipoLetra
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoLetraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoLetraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnriquecida.TipoLetra domain property.
+		/// </summary>
+		internal sealed partial class TipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, TipoLetra>
+		{
+			private TipoLetraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnriquecida.TipoLetra domain property value handler.
+			/// </summary>
+			public static readonly TipoLetraPropertyHandler Instance = new TipoLetraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnriquecida.TipoLetra domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoLetraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed TipoLetra GetValue(ClaseEnriquecida element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoLetraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnriquecida element, TipoLetra newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				TipoLetra oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoLetraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Alineacion domain property code
+		
+		/// <summary>
+		/// Alineacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid AlineacionDomainPropertyId = new global::System.Guid(0x033e8b56, 0x3496, 0x4961, 0x92, 0xe0, 0x77, 0x65, 0x37, 0x70, 0x5c, 0xf5);
+		
+		/// <summary>
+		/// Storage for Alineacion
+		/// </summary>
+		private global::System.String alineacionPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Alineacion domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Alineacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/Alineacion.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/Alineacion.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("033e8b56-3496-4961-92e0-776537705cf5")]
+		public global::System.String Alineacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return alineacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				AlineacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnriquecida.Alineacion domain property.
+		/// </summary>
+		internal sealed partial class AlineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.String>
+		{
+			private AlineacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnriquecida.Alineacion domain property value handler.
+			/// </summary>
+			public static readonly AlineacionPropertyHandler Instance = new AlineacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnriquecida.Alineacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return AlineacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ClaseEnriquecida element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.alineacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnriquecida element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.alineacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region NombreColorB domain property code
+		
+		/// <summary>
+		/// NombreColorB domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NombreColorBDomainPropertyId = new global::System.Guid(0x928cb5ab, 0xf401, 0x4238, 0x8f, 0x6b, 0x1a, 0xfc, 0x8b, 0x9b, 0x5f, 0xf0);
+		
+		/// <summary>
+		/// Storage for NombreColorB
+		/// </summary>
+		private global::System.String nombreColorBPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NombreColorB domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color B
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorB.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorB.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("928cb5ab-f401-4238-8f6b-1afc8b9b5ff0")]
+		public global::System.String NombreColorB
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreColorBPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NombreColorBPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnriquecida.NombreColorB domain property.
+		/// </summary>
+		internal sealed partial class NombreColorBPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.String>
+		{
+			private NombreColorBPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnriquecida.NombreColorB domain property value handler.
+			/// </summary>
+			public static readonly NombreColorBPropertyHandler Instance = new NombreColorBPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnriquecida.NombreColorB domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NombreColorBDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ClaseEnriquecida element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreColorBPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnriquecida element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreColorBPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+	}
+}
+namespace Company.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainClass AtributoEnriquecido
+	/// Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("b5bd1502-5537-4a25-a3b6-2148ca1c9132")]
+	public abstract partial class AtributoEnriquecido : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AtributoEnriquecido domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb5bd1502, 0x5537, 0x4a25, 0xa3, 0xb6, 0x21, 0x48, 0xca, 0x1c, 0x91, 0x32);
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		protected AtributoEnriquecido(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ColorLetraR domain property code
+		
+		/// <summary>
+		/// ColorLetraR domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorLetraRDomainPropertyId = new global::System.Guid(0x443ddca4, 0xdb69, 0x467a, 0x82, 0xda, 0x1e, 0xb2, 0xa0, 0x39, 0x15, 0xe6);
+		
+		/// <summary>
+		/// Storage for ColorLetraR
+		/// </summary>
+		private global::System.Int16 colorLetraRPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorLetraR domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra R
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraR.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraR.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("443ddca4-db69-467a-82da-1eb2a03915e6")]
+		public global::System.Int16 ColorLetraR
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraRPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorLetraRPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoEnriquecido.ColorLetraR domain property.
+		/// </summary>
+		internal sealed partial class ColorLetraRPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, global::System.Int16>
+		{
+			private ColorLetraRPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoEnriquecido.ColorLetraR domain property value handler.
+			/// </summary>
+			public static readonly ColorLetraRPropertyHandler Instance = new ColorLetraRPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoEnriquecido.ColorLetraR domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorLetraRDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(AtributoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorLetraRPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoEnriquecido element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorLetraRPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ColorLetraG domain property code
+		
+		/// <summary>
+		/// ColorLetraG domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorLetraGDomainPropertyId = new global::System.Guid(0xd59e1e69, 0x3cde, 0x4c15, 0xbe, 0xbe, 0xd4, 0x83, 0x46, 0x21, 0x6b, 0x71);
+		
+		/// <summary>
+		/// Storage for ColorLetraG
+		/// </summary>
+		private global::System.Int16 colorLetraGPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorLetraG domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra G
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraG.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraG.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("d59e1e69-3cde-4c15-bebe-d48346216b71")]
+		public global::System.Int16 ColorLetraG
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraGPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorLetraGPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoEnriquecido.ColorLetraG domain property.
+		/// </summary>
+		internal sealed partial class ColorLetraGPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, global::System.Int16>
+		{
+			private ColorLetraGPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoEnriquecido.ColorLetraG domain property value handler.
+			/// </summary>
+			public static readonly ColorLetraGPropertyHandler Instance = new ColorLetraGPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoEnriquecido.ColorLetraG domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorLetraGDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(AtributoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorLetraGPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoEnriquecido element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorLetraGPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ColorLetraB domain property code
+		
+		/// <summary>
+		/// ColorLetraB domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorLetraBDomainPropertyId = new global::System.Guid(0x16556f25, 0x4ff6, 0x4af5, 0xbb, 0x15, 0xeb, 0x13, 0x5e, 0x7f, 0xda, 0xd7);
+		
+		/// <summary>
+		/// Storage for ColorLetraB
+		/// </summary>
+		private global::System.Int16 colorLetraBPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorLetraB domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra B
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraB.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/ColorLetraB.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("16556f25-4ff6-4af5-bb15-eb135e7fdad7")]
+		public global::System.Int16 ColorLetraB
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraBPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorLetraBPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoEnriquecido.ColorLetraB domain property.
+		/// </summary>
+		internal sealed partial class ColorLetraBPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, global::System.Int16>
+		{
+			private ColorLetraBPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoEnriquecido.ColorLetraB domain property value handler.
+			/// </summary>
+			public static readonly ColorLetraBPropertyHandler Instance = new ColorLetraBPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoEnriquecido.ColorLetraB domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorLetraBDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(AtributoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorLetraBPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoEnriquecido element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorLetraBPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region TipoLetra domain property code
+		
+		/// <summary>
+		/// TipoLetra domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoLetraDomainPropertyId = new global::System.Guid(0x443c26c1, 0x20d2, 0x4d0a, 0xa9, 0xc2, 0xbf, 0xab, 0x68, 0x12, 0x23, 0x90);
+		
+		/// <summary>
+		/// Storage for TipoLetra
+		/// </summary>
+		private TipoLetra tipoLetraPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of TipoLetra domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Tipo Letra
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/TipoLetra.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/TipoLetra.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("443c26c1-20d2-4d0a-a9c2-bfab68122390")]
+		public TipoLetra TipoLetra
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoLetraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoLetraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoEnriquecido.TipoLetra domain property.
+		/// </summary>
+		internal sealed partial class TipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, TipoLetra>
+		{
+			private TipoLetraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoEnriquecido.TipoLetra domain property value handler.
+			/// </summary>
+			public static readonly TipoLetraPropertyHandler Instance = new TipoLetraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoEnriquecido.TipoLetra domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoLetraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed TipoLetra GetValue(AtributoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoLetraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoEnriquecido element, TipoLetra newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				TipoLetra oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoLetraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region FormatoBooleano domain property code
+		
+		/// <summary>
+		/// FormatoBooleano domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid FormatoBooleanoDomainPropertyId = new global::System.Guid(0x5f8fbbb3, 0xc1c2, 0x4751, 0x98, 0xcf, 0xd5, 0x31, 0x88, 0xa3, 0x32, 0x81);
+		
+		/// <summary>
+		/// Storage for FormatoBooleano
+		/// </summary>
+		private FormatoBoolean formatoBooleanoPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of FormatoBooleano domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Formato
+		/// Booleano
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/FormatoBooleano.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/FormatoBooleano.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("5f8fbbb3-c1c2-4751-98cf-d53188a33281")]
+		public FormatoBoolean FormatoBooleano
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return formatoBooleanoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				FormatoBooleanoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoEnriquecido.FormatoBooleano domain property.
+		/// </summary>
+		internal sealed partial class FormatoBooleanoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, FormatoBoolean>
+		{
+			private FormatoBooleanoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoEnriquecido.FormatoBooleano domain property value handler.
+			/// </summary>
+			public static readonly FormatoBooleanoPropertyHandler Instance = new FormatoBooleanoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoEnriquecido.FormatoBooleano domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return FormatoBooleanoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed FormatoBoolean GetValue(AtributoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.formatoBooleanoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoEnriquecido element, FormatoBoolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				FormatoBoolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.formatoBooleanoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Enriquecido domain property code
+		
+		/// <summary>
+		/// Enriquecido domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid EnriquecidoDomainPropertyId = new global::System.Guid(0xa28f1e67, 0xbb6f, 0x4a9e, 0xb8, 0x5f, 0x02, 0x8c, 0xa5, 0x12, 0x3b, 0xfe);
+		
+		/// <summary>
+		/// Storage for Enriquecido
+		/// </summary>
+		private global::System.Boolean enriquecidoPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Enriquecido domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Enriquecido
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/Enriquecido.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.AtributoEnriquecido/Enriquecido.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("a28f1e67-bb6f-4a9e-b85f-028ca5123bfe")]
+		public global::System.Boolean Enriquecido
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return enriquecidoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				EnriquecidoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoEnriquecido.Enriquecido domain property.
+		/// </summary>
+		internal sealed partial class EnriquecidoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, global::System.Boolean>
+		{
+			private EnriquecidoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoEnriquecido.Enriquecido domain property value handler.
+			/// </summary>
+			public static readonly EnriquecidoPropertyHandler Instance = new EnriquecidoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoEnriquecido.Enriquecido domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return EnriquecidoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(AtributoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.enriquecidoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoEnriquecido element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.enriquecidoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+	}
+}
+namespace Company.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainClass MetodoEnriquecido
+	/// Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("9c1db50c-8495-47ae-b286-2c64acb6659c")]
+	public abstract partial class MetodoEnriquecido : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// MetodoEnriquecido domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9c1db50c, 0x8495, 0x47ae, 0xb2, 0x86, 0x2c, 0x64, 0xac, 0xb6, 0x65, 0x9c);
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		protected MetodoEnriquecido(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TipoLetra domain property code
+		
+		/// <summary>
+		/// TipoLetra domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoLetraDomainPropertyId = new global::System.Guid(0xc0617e1c, 0x991a, 0x46c5, 0x9f, 0xb4, 0x49, 0xdf, 0x0b, 0xe5, 0x0d, 0x62);
+		
+		/// <summary>
+		/// Storage for TipoLetra
+		/// </summary>
+		private TipoLetra tipoLetraPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of TipoLetra domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Tipo Letra
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/TipoLetra.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/TipoLetra.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c0617e1c-991a-46c5-9fb4-49df0be50d62")]
+		public TipoLetra TipoLetra
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoLetraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoLetraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the MetodoEnriquecido.TipoLetra domain property.
+		/// </summary>
+		internal sealed partial class TipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<MetodoEnriquecido, TipoLetra>
+		{
+			private TipoLetraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the MetodoEnriquecido.TipoLetra domain property value handler.
+			/// </summary>
+			public static readonly TipoLetraPropertyHandler Instance = new TipoLetraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the MetodoEnriquecido.TipoLetra domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoLetraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed TipoLetra GetValue(MetodoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoLetraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(MetodoEnriquecido element, TipoLetra newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				TipoLetra oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoLetraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ColorLetraR domain property code
+		
+		/// <summary>
+		/// ColorLetraR domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorLetraRDomainPropertyId = new global::System.Guid(0x30e0c98d, 0xcdca, 0x4c83, 0x93, 0x54, 0xa7, 0xed, 0x94, 0xa3, 0x91, 0xf9);
+		
+		/// <summary>
+		/// Storage for ColorLetraR
+		/// </summary>
+		private global::System.Int16 colorLetraRPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorLetraR domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra R
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraR.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraR.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("30e0c98d-cdca-4c83-9354-a7ed94a391f9")]
+		public global::System.Int16 ColorLetraR
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraRPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorLetraRPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the MetodoEnriquecido.ColorLetraR domain property.
+		/// </summary>
+		internal sealed partial class ColorLetraRPropertyHandler : DslModeling::DomainPropertyValueHandler<MetodoEnriquecido, global::System.Int16>
+		{
+			private ColorLetraRPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the MetodoEnriquecido.ColorLetraR domain property value handler.
+			/// </summary>
+			public static readonly ColorLetraRPropertyHandler Instance = new ColorLetraRPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the MetodoEnriquecido.ColorLetraR domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorLetraRDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(MetodoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorLetraRPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(MetodoEnriquecido element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorLetraRPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ColorLetraG domain property code
+		
+		/// <summary>
+		/// ColorLetraG domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorLetraGDomainPropertyId = new global::System.Guid(0xaf08deff, 0x00e8, 0x4f5b, 0x9f, 0x7f, 0x11, 0x1d, 0x71, 0xd5, 0x6a, 0xb2);
+		
+		/// <summary>
+		/// Storage for ColorLetraG
+		/// </summary>
+		private global::System.Int16 colorLetraGPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorLetraG domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra G
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraG.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraG.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("af08deff-00e8-4f5b-9f7f-111d71d56ab2")]
+		public global::System.Int16 ColorLetraG
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraGPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorLetraGPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the MetodoEnriquecido.ColorLetraG domain property.
+		/// </summary>
+		internal sealed partial class ColorLetraGPropertyHandler : DslModeling::DomainPropertyValueHandler<MetodoEnriquecido, global::System.Int16>
+		{
+			private ColorLetraGPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the MetodoEnriquecido.ColorLetraG domain property value handler.
+			/// </summary>
+			public static readonly ColorLetraGPropertyHandler Instance = new ColorLetraGPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the MetodoEnriquecido.ColorLetraG domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorLetraGDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(MetodoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorLetraGPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(MetodoEnriquecido element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorLetraGPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ColorLetraB domain property code
+		
+		/// <summary>
+		/// ColorLetraB domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorLetraBDomainPropertyId = new global::System.Guid(0x0c3ed103, 0xf84d, 0x4d84, 0x94, 0x6a, 0x32, 0x68, 0xdf, 0x8c, 0x0b, 0x03);
+		
+		/// <summary>
+		/// Storage for ColorLetraB
+		/// </summary>
+		private global::System.Int16 colorLetraBPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorLetraB domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra B
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraB.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/ColorLetraB.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("0c3ed103-f84d-4d84-946a-3268df8c0b03")]
+		public global::System.Int16 ColorLetraB
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraBPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorLetraBPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the MetodoEnriquecido.ColorLetraB domain property.
+		/// </summary>
+		internal sealed partial class ColorLetraBPropertyHandler : DslModeling::DomainPropertyValueHandler<MetodoEnriquecido, global::System.Int16>
+		{
+			private ColorLetraBPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the MetodoEnriquecido.ColorLetraB domain property value handler.
+			/// </summary>
+			public static readonly ColorLetraBPropertyHandler Instance = new ColorLetraBPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the MetodoEnriquecido.ColorLetraB domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorLetraBDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(MetodoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorLetraBPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(MetodoEnriquecido element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorLetraBPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Enriquecido domain property code
+		
+		/// <summary>
+		/// Enriquecido domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid EnriquecidoDomainPropertyId = new global::System.Guid(0xd1745f2c, 0xeaa0, 0x4703, 0x83, 0x61, 0x33, 0xc9, 0x5d, 0x6d, 0x93, 0x54);
+		
+		/// <summary>
+		/// Storage for Enriquecido
+		/// </summary>
+		private global::System.Boolean enriquecidoPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Enriquecido domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Enriquecido
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/Enriquecido.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.MetodoEnriquecido/Enriquecido.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("d1745f2c-eaa0-4703-8361-33c95d6d9354")]
+		public global::System.Boolean Enriquecido
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return enriquecidoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				EnriquecidoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the MetodoEnriquecido.Enriquecido domain property.
+		/// </summary>
+		internal sealed partial class EnriquecidoPropertyHandler : DslModeling::DomainPropertyValueHandler<MetodoEnriquecido, global::System.Boolean>
+		{
+			private EnriquecidoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the MetodoEnriquecido.Enriquecido domain property value handler.
+			/// </summary>
+			public static readonly EnriquecidoPropertyHandler Instance = new EnriquecidoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the MetodoEnriquecido.Enriquecido domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return EnriquecidoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(MetodoEnriquecido element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.enriquecidoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(MetodoEnriquecido element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.enriquecidoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 	}
 }

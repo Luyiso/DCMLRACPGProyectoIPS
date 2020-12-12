@@ -771,7 +771,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// <summary>
 	/// Serializer ClaseSerializer for DomainClass Clase.
 	/// </summary>
-	public partial class ClaseSerializer : DslModeling::DomainClassXmlSerializer
+	public partial class ClaseSerializer : ClaseEnriquecidaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -941,23 +941,6 @@ namespace Company.DCMLRACPGProyectoIPS
 					else
 					{	// Invalid property value, ignored.
 						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "iD", typeof(global::System.String), attribID);
-					}
-				}
-			}
-			// Abstracta
-			if (!serializationContext.Result.Failed)
-			{
-				string attribAbstracta = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "abstracta");
-				if (attribAbstracta != null)
-				{
-					global::System.Boolean valueOfAbstracta;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Boolean>(serializationContext, attribAbstracta, out valueOfAbstracta))
-					{
-						instanceOfClase.Abstracta = valueOfAbstracta;
-					}
-					else
-					{	// Invalid property value, ignored.
-						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "abstracta", typeof(global::System.Boolean), attribAbstracta);
 					}
 				}
 			}
@@ -1656,19 +1639,6 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 				}
 			}
-			// Abstracta
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.Boolean propValue = instanceOfClase.Abstracta;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Boolean>(serializationContext, propValue);
-				if (!serializationContext.Result.Failed)
-				{
-					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "False") != 0)
-					{	// No need to write the value out if it's the same as default value.
-						DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "abstracta", serializedPropValue);
-					}
-				}
-			}
 		}
 	
 		/// <summary>
@@ -1861,7 +1831,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// <summary>
 	/// Serializer AtributoSerializer for DomainClass Atributo.
 	/// </summary>
-	public partial class AtributoSerializer : DslModeling::DomainClassXmlSerializer
+	public partial class AtributoSerializer : AtributoEnriquecidoSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -1965,7 +1935,7 @@ namespace Company.DCMLRACPGProyectoIPS
 					// model elements.
 					while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 					{
-						ReadElements(serializationContext, element, reader);
+						base.ReadElements(serializationContext, element, reader);
 						if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 						{
 							// Encountered one unknown XML element, skip it and keep reading.
@@ -2034,29 +2004,6 @@ namespace Company.DCMLRACPGProyectoIPS
 					}
 				}
 			}
-		}
-	
-		/// <summary>
-		/// This methods deserializes nested XML elements inside the passed-in element.
-		/// </summary>
-		/// <remarks>
-		/// The caller will guarantee that the current element does have nested XML elements, and the call will position the 
-		/// reader at the open tag of the first child XML element.
-		/// This method will read as many child XML elements as it can. It returns under three circumstances:
-		/// 1) When an unknown child XML element is encountered. In this case, this method will position the reader at the open 
-		///    tag of the unknown element. This implies that if the first child XML element is unknown, this method should return 
-		///    immediately and do nothing.
-		/// 2) When all child XML elemnets are read. In this case, the reader will be positioned at the end tag of the parent element.
-		/// 3) EOF.
-		/// </remarks>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory Atributo instance that will get the deserialized data.</param>
-		/// <param name="reader">XmlReader to read serialized data from.</param>
-		protected override void ReadElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
-		{
-			// Always call the base class so any extensions are deserialized
-			base.ReadElements(serializationContext, element, reader);
-	
 		}
 	
 		#region TryCreateInstance
@@ -2425,7 +2372,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			if (!serializationContext.Result.Failed)
 			{
 				// Write 1) properties serialized as nested XML elements and 2) child model elements into XML.
-				WriteElements(serializationContext, element, writer);
+				base.WriteElements(serializationContext, element, writer);
 			}
 	
 			writer.WriteEndElement();
@@ -2467,20 +2414,6 @@ namespace Company.DCMLRACPGProyectoIPS
 				}
 			}
 		}
-	
-		/// <summary>
-		/// This methods serializes 1) properties serialized as nested XML elements and 2) child model elements into XML. 
-		/// </summary>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">Atributo instance to be serialized.</param>
-		/// <param name="writer">XmlWriter to write serialized data to.</param>        
-		protected override void WriteElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
-		{
-			// Always call the base class so any extensions are serialized
-			base.WriteElements(serializationContext, element, writer);
-	
-		}
-		
 		#endregion
 	
 		#region Moniker Support
@@ -2572,7 +2505,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// <summary>
 	/// Serializer SignaturadeOperaciónSerializer for DomainClass SignaturadeOperación.
 	/// </summary>
-	public partial class SignaturadeOperaciónSerializer : DslModeling::DomainClassXmlSerializer
+	public partial class SignaturadeOperaciónSerializer : MetodoEnriquecidoSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -5466,15 +5399,15 @@ namespace Company.DCMLRACPGProyectoIPS
 namespace Company.DCMLRACPGProyectoIPS
 {
 	/// <summary>
-	/// Serializer PresentaciónMetodoAtributoSerializer for DomainClass PresentaciónMetodoAtributo.
+	/// Serializer ClaseEnriquecidaSerializer for DomainClass ClaseEnriquecida.
 	/// </summary>
-	public partial class PresentaciónMetodoAtributoSerializer : DslModeling::DomainClassXmlSerializer
+	public partial class ClaseEnriquecidaSerializer : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// PresentaciónMetodoAtributoSerializer Constructor
+		/// ClaseEnriquecidaSerializer Constructor
 		/// </summary>
-		public PresentaciónMetodoAtributoSerializer ()
+		public ClaseEnriquecidaSerializer ()
 			: base ()
 		{
 		}
@@ -5529,16 +5462,16 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 		#region Read Methods
 		/// <summary>
-		/// PresentaciónMetodoAtributo is abstract and cannot be instantiated, so this method throws NotSupportedException.
+		/// ClaseEnriquecida is abstract and cannot be instantiated, so this method throws NotSupportedException.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the PresentaciónMetodoAtributo element that is about to be deserialized. 
+		/// of the ClaseEnriquecida element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory PresentaciónMetodoAtributo instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory ClaseEnriquecida instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -5553,7 +5486,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory PresentaciónMetodoAtributo instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory ClaseEnriquecida instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
@@ -5561,13 +5494,168 @@ namespace Company.DCMLRACPGProyectoIPS
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			// There is no property to read; do nothing
+			ClaseEnriquecida instanceOfClaseEnriquecida = element as ClaseEnriquecida;
+			global::System.Diagnostics.Debug.Assert(instanceOfClaseEnriquecida != null, "Expecting an instance of ClaseEnriquecida");
+	
+			// Enriquecida
+			if (!serializationContext.Result.Failed)
+			{
+				string attribEnriquecida = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "enriquecida");
+				if (attribEnriquecida != null)
+				{
+					global::System.Boolean valueOfEnriquecida;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Boolean>(serializationContext, attribEnriquecida, out valueOfEnriquecida))
+					{
+						instanceOfClaseEnriquecida.Enriquecida = valueOfEnriquecida;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "enriquecida", typeof(global::System.Boolean), attribEnriquecida);
+					}
+				}
+			}
+			// FondoColorR
+			if (!serializationContext.Result.Failed)
+			{
+				string attribFondoColorR = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "fondoColorR");
+				if (attribFondoColorR != null)
+				{
+					global::System.Int16 valueOfFondoColorR;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribFondoColorR, out valueOfFondoColorR))
+					{
+						instanceOfClaseEnriquecida.FondoColorR = valueOfFondoColorR;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "fondoColorR", typeof(global::System.Int16), attribFondoColorR);
+					}
+				}
+			}
+			// FondoColorG
+			if (!serializationContext.Result.Failed)
+			{
+				string attribFondoColorG = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "fondoColorG");
+				if (attribFondoColorG != null)
+				{
+					global::System.Int16 valueOfFondoColorG;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribFondoColorG, out valueOfFondoColorG))
+					{
+						instanceOfClaseEnriquecida.FondoColorG = valueOfFondoColorG;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "fondoColorG", typeof(global::System.Int16), attribFondoColorG);
+					}
+				}
+			}
+			// FondoColorB
+			if (!serializationContext.Result.Failed)
+			{
+				string attribFondoColorB = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "fondoColorB");
+				if (attribFondoColorB != null)
+				{
+					global::System.Int16 valueOfFondoColorB;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribFondoColorB, out valueOfFondoColorB))
+					{
+						instanceOfClaseEnriquecida.FondoColorB = valueOfFondoColorB;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "fondoColorB", typeof(global::System.Int16), attribFondoColorB);
+					}
+				}
+			}
+			// NombreColorR
+			if (!serializationContext.Result.Failed)
+			{
+				string attribNombreColorR = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nombreColorR");
+				if (attribNombreColorR != null)
+				{
+					global::System.Int16 valueOfNombreColorR;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribNombreColorR, out valueOfNombreColorR))
+					{
+						instanceOfClaseEnriquecida.NombreColorR = valueOfNombreColorR;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombreColorR", typeof(global::System.Int16), attribNombreColorR);
+					}
+				}
+			}
+			// NombreColorG
+			if (!serializationContext.Result.Failed)
+			{
+				string attribNombreColorG = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nombreColorG");
+				if (attribNombreColorG != null)
+				{
+					global::System.Int16 valueOfNombreColorG;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribNombreColorG, out valueOfNombreColorG))
+					{
+						instanceOfClaseEnriquecida.NombreColorG = valueOfNombreColorG;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombreColorG", typeof(global::System.Int16), attribNombreColorG);
+					}
+				}
+			}
+			// TipoLetra
+			if (!serializationContext.Result.Failed)
+			{
+				string attribTipoLetra = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoLetra");
+				if (attribTipoLetra != null)
+				{
+					TipoLetra valueOfTipoLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoLetra>(serializationContext, attribTipoLetra, out valueOfTipoLetra))
+					{
+						instanceOfClaseEnriquecida.TipoLetra = valueOfTipoLetra;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(TipoLetra), attribTipoLetra);
+					}
+				}
+			}
+			// Alineacion
+			if (!serializationContext.Result.Failed)
+			{
+				string attribAlineacion = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "alineacion");
+				if (attribAlineacion != null)
+				{
+					global::System.String valueOfAlineacion;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribAlineacion, out valueOfAlineacion))
+					{
+						instanceOfClaseEnriquecida.Alineacion = valueOfAlineacion;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacion", typeof(global::System.String), attribAlineacion);
+					}
+				}
+			}
+			// NombreColorB
+			if (!serializationContext.Result.Failed)
+			{
+				string attribNombreColorB = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nombreColorB");
+				if (attribNombreColorB != null)
+				{
+					global::System.String valueOfNombreColorB;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribNombreColorB, out valueOfNombreColorB))
+					{
+						instanceOfClaseEnriquecida.NombreColorB = valueOfNombreColorB;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombreColorB", typeof(global::System.String), attribNombreColorB);
+					}
+				}
+			}
 		}
 	
 		#region TryCreateInstance
 		/// <summary>
-		/// This method creates a correct instance of PresentaciónMetodoAtributo based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized PresentaciónMetodoAtributo, a new PresentaciónMetodoAtributo instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of ClaseEnriquecida based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized ClaseEnriquecida, a new ClaseEnriquecida instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -5577,7 +5665,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created PresentaciónMetodoAtributo instance, or null if the reader is not pointing to a serialized PresentaciónMetodoAtributo instance.</returns>
+		/// <returns>Created ClaseEnriquecida instance, or null if the reader is not pointing to a serialized ClaseEnriquecida instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -5596,14 +5684,14 @@ namespace Company.DCMLRACPGProyectoIPS
 			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
 				string localName = reader.LocalName;
-				// Check for derived classes of "PresentaciónMetodoAtributo".
+				// Check for derived classes of "ClaseEnriquecida".
 				if (this.derivedClasses == null)
 					this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 				global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 				DslModeling::DomainClassInfo derivedClass = null;
 				if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 				{	// New derived class instance.
-					PresentaciónMetodoAtributoSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as PresentaciónMetodoAtributoSerializer;
+					ClaseEnriquecidaSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ClaseEnriquecidaSerializer;
 					global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 					result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 				}
@@ -5613,8 +5701,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 	
 		/// <summary>
-		/// This method creates an instance of PresentaciónMetodoAtributo based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of PresentaciónMetodoAtributo.
+		/// This method creates an instance of ClaseEnriquecida based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of ClaseEnriquecida.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -5622,8 +5710,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new PresentaciónMetodoAtributo instance should be created.</param>	
-		/// <returns>Created PresentaciónMetodoAtributo instance.</returns>
+		/// <param name="partition">Partition in which new ClaseEnriquecida instance should be created.</param>	
+		/// <returns>Created ClaseEnriquecida instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			// Abstract class, cannot be serialized.
@@ -5631,12 +5719,12 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from PresentaciónMetodoAtributo, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from ClaseEnriquecida, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from PresentaciónMetodoAtributo.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from ClaseEnriquecida.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -5645,7 +5733,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(PresentaciónMetodoAtributo.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ClaseEnriquecida.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -5677,7 +5765,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including PresentaciónMetodoAtributo itself) instance of PresentaciónMetodoAtributo based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including ClaseEnriquecida itself) instance of ClaseEnriquecida based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -5710,14 +5798,14 @@ namespace Company.DCMLRACPGProyectoIPS
 			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
 				string localName = reader.LocalName;
-				// Check for derived classes of "PresentaciónMetodoAtributo".
+				// Check for derived classes of "ClaseEnriquecida".
 				if (this.derivedClassMonikers == null)
 					this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 				global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 				DslModeling::DomainClassInfo derivedClass = null;
 				if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 				{	// New derived class moniker instance.
-					PresentaciónMetodoAtributoSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as PresentaciónMetodoAtributoSerializer;
+					ClaseEnriquecidaSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ClaseEnriquecidaSerializer;
 					global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 					result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
@@ -5727,7 +5815,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of PresentaciónMetodoAtributo based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of ClaseEnriquecida based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -5752,7 +5840,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, PresentaciónMetodoAtributo.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, ClaseEnriquecida.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -5776,12 +5864,12 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from PresentaciónMetodoAtributo, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from ClaseEnriquecida, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from PresentaciónMetodoAtributo.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from ClaseEnriquecida.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -5790,7 +5878,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(PresentaciónMetodoAtributo.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ClaseEnriquecida.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -5816,24 +5904,24 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized PresentaciónMetodoAtributo instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized ClaseEnriquecida instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">PresentaciónMetodoAtributo instance to be monikerized.</param>
+		/// <param name="element">ClaseEnriquecida instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the PresentaciónMetodoAtributo instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the PresentaciónMetodoAtributo instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the ClaseEnriquecida instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the ClaseEnriquecida instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
-			// Instance of PresentaciónMetodoAtributo cannot be monikerized.
-			DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.CannotMonikerizeElement(serializationContext, "PresentaciónMetodoAtributo");
+			// Instance of ClaseEnriquecida cannot be monikerized.
+			DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.CannotMonikerizeElement(serializationContext, "ClaseEnriquecida");
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one PresentaciónMetodoAtributo instance into XML.
+		/// Public Write() method that serializes one ClaseEnriquecida instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">PresentaciónMetodoAtributo instance to be serialized.</param>
+		/// <param name="element">ClaseEnriquecida instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -5850,7 +5938,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Write all properties that need to be serialized as XML attributes.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">PresentaciónMetodoAtributo instance to be serialized.</param>
+		/// <param name="element">ClaseEnriquecida instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param> 
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
@@ -5858,17 +5946,114 @@ namespace Company.DCMLRACPGProyectoIPS
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			// There are no properties; do nothing
+			ClaseEnriquecida instanceOfClaseEnriquecida = element as ClaseEnriquecida;
+			global::System.Diagnostics.Debug.Assert(instanceOfClaseEnriquecida != null, "Expecting an instance of ClaseEnriquecida");
+	
+			// Enriquecida
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Boolean propValue = instanceOfClaseEnriquecida.Enriquecida;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Boolean>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "False") != 0)
+					{	// No need to write the value out if it's the same as default value.
+						DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "enriquecida", serializedPropValue);
+					}
+				}
+			}
+			// FondoColorR
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfClaseEnriquecida.FondoColorR;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "fondoColorR", serializedPropValue);
+				}
+			}
+			// FondoColorG
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfClaseEnriquecida.FondoColorG;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "fondoColorG", serializedPropValue);
+				}
+			}
+			// FondoColorB
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfClaseEnriquecida.FondoColorB;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "fondoColorB", serializedPropValue);
+				}
+			}
+			// NombreColorR
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfClaseEnriquecida.NombreColorR;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreColorR", serializedPropValue);
+				}
+			}
+			// NombreColorG
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfClaseEnriquecida.NombreColorG;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreColorG", serializedPropValue);
+				}
+			}
+			// TipoLetra
+			if (!serializationContext.Result.Failed)
+			{
+				TipoLetra propValue = instanceOfClaseEnriquecida.TipoLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoLetra>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", serializedPropValue);
+				}
+			}
+			// Alineacion
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfClaseEnriquecida.Alineacion;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacion", propValue);
+	
+				}
+			}
+			// NombreColorB
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfClaseEnriquecida.NombreColorB;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreColorB", propValue);
+	
+				}
+			}
 		}
 		#endregion
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given PresentaciónMetodoAtributo instance.
+		/// This method calculates a moniker to a given ClaseEnriquecida instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">PresentaciónMetodoAtributo instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the PresentaciónMetodoAtributo instance.</returns>
+		/// <param name="element">ClaseEnriquecida instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the ClaseEnriquecida instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -5880,8 +6065,8 @@ namespace Company.DCMLRACPGProyectoIPS
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			PresentaciónMetodoAtributo instance = element as PresentaciónMetodoAtributo;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of PresentaciónMetodoAtributo!");
+			ClaseEnriquecida instance = element as ClaseEnriquecida;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of ClaseEnriquecida!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -5892,7 +6077,1220 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">PresentaciónMetodoAtributo instance to get moniker qualifier from.</param>
+		/// <param name="element">ClaseEnriquecida instance to get moniker qualifier from.</param>
+		/// <returns>
+		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
+		/// element is not monikerized using standard /qualifier/key mechanism.
+		/// </returns>
+		public override string GetMonikerQualifier(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			return string.Empty;
+		}
+		#endregion
+	}
+}
+
+namespace Company.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// Serializer AtributoEnriquecidoSerializer for DomainClass AtributoEnriquecido.
+	/// </summary>
+	public partial class AtributoEnriquecidoSerializer : DslModeling::DomainClassXmlSerializer
+	{
+		#region Constructor
+		/// <summary>
+		/// AtributoEnriquecidoSerializer Constructor
+		/// </summary>
+		public AtributoEnriquecidoSerializer ()
+			: base ()
+		{
+		}
+		#endregion
+	
+		
+		#region Miscellaneous methods
+	
+		/// <summary>
+		/// Reset the serializer
+		/// </summary>
+		/// <remarks>
+		/// Clear the cached information about any derived classes so that it is recalculated.
+		/// </remarks>
+		public override void Reset()
+		{
+			base.Reset();
+			this.derivedClasses = null;
+			this.derivedClassMonikers = null;
+		}
+	
+		#endregion
+	
+		#region Public Properties
+		/// <summary>
+		/// Cannot be serialized.
+		/// </summary>
+		public override string XmlTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return string.Empty; }
+		}
+	
+		/// <summary>
+		/// Cannot be monikerized.
+		/// </summary>
+		public override string MonikerTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return string.Empty; }
+		}
+		
+		/// <summary>
+		/// Cannot be monikerized.
+		/// </summary>
+		public override string MonikerAttributeName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return string.Empty; }
+		}
+		#endregion
+	
+		#region Read Methods
+		/// <summary>
+		/// AtributoEnriquecido is abstract and cannot be instantiated, so this method throws NotSupportedException.
+		/// </summary>
+		/// <remarks>
+		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
+		/// of the AtributoEnriquecido element that is about to be deserialized. 
+		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
+		/// or the close tag of the parent element (or EOF).
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory AtributoEnriquecido instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			throw new global::System.NotSupportedException();
+		}
+	
+		/// <summary>
+		/// This method deserializes all properties that are serialized as XML attributes.
+		/// </summary>
+		/// <remarks>
+		/// Because this method only handles properties serialized as XML attributes, the passed-in reader shouldn't be moved inside this method.
+		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory AtributoEnriquecido instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			// Always call the base class so any extensions are deserialized
+			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
+	
+			AtributoEnriquecido instanceOfAtributoEnriquecido = element as AtributoEnriquecido;
+			global::System.Diagnostics.Debug.Assert(instanceOfAtributoEnriquecido != null, "Expecting an instance of AtributoEnriquecido");
+	
+			// ColorLetraR
+			if (!serializationContext.Result.Failed)
+			{
+				string attribColorLetraR = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetraR");
+				if (attribColorLetraR != null)
+				{
+					global::System.Int16 valueOfColorLetraR;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribColorLetraR, out valueOfColorLetraR))
+					{
+						instanceOfAtributoEnriquecido.ColorLetraR = valueOfColorLetraR;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetraR", typeof(global::System.Int16), attribColorLetraR);
+					}
+				}
+			}
+			// ColorLetraG
+			if (!serializationContext.Result.Failed)
+			{
+				string attribColorLetraG = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetraG");
+				if (attribColorLetraG != null)
+				{
+					global::System.Int16 valueOfColorLetraG;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribColorLetraG, out valueOfColorLetraG))
+					{
+						instanceOfAtributoEnriquecido.ColorLetraG = valueOfColorLetraG;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetraG", typeof(global::System.Int16), attribColorLetraG);
+					}
+				}
+			}
+			// ColorLetraB
+			if (!serializationContext.Result.Failed)
+			{
+				string attribColorLetraB = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetraB");
+				if (attribColorLetraB != null)
+				{
+					global::System.Int16 valueOfColorLetraB;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribColorLetraB, out valueOfColorLetraB))
+					{
+						instanceOfAtributoEnriquecido.ColorLetraB = valueOfColorLetraB;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetraB", typeof(global::System.Int16), attribColorLetraB);
+					}
+				}
+			}
+			// TipoLetra
+			if (!serializationContext.Result.Failed)
+			{
+				string attribTipoLetra = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoLetra");
+				if (attribTipoLetra != null)
+				{
+					TipoLetra valueOfTipoLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoLetra>(serializationContext, attribTipoLetra, out valueOfTipoLetra))
+					{
+						instanceOfAtributoEnriquecido.TipoLetra = valueOfTipoLetra;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(TipoLetra), attribTipoLetra);
+					}
+				}
+			}
+			// FormatoBooleano
+			if (!serializationContext.Result.Failed)
+			{
+				string attribFormatoBooleano = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "formatoBooleano");
+				if (attribFormatoBooleano != null)
+				{
+					FormatoBoolean valueOfFormatoBooleano;
+					if (DslModeling::SerializationUtilities.TryGetValue<FormatoBoolean>(serializationContext, attribFormatoBooleano, out valueOfFormatoBooleano))
+					{
+						instanceOfAtributoEnriquecido.FormatoBooleano = valueOfFormatoBooleano;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "formatoBooleano", typeof(FormatoBoolean), attribFormatoBooleano);
+					}
+				}
+			}
+			// Enriquecido
+			if (!serializationContext.Result.Failed)
+			{
+				string attribEnriquecido = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "enriquecido");
+				if (attribEnriquecido != null)
+				{
+					global::System.Boolean valueOfEnriquecido;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Boolean>(serializationContext, attribEnriquecido, out valueOfEnriquecido))
+					{
+						instanceOfAtributoEnriquecido.Enriquecido = valueOfEnriquecido;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "enriquecido", typeof(global::System.Boolean), attribEnriquecido);
+					}
+				}
+			}
+		}
+	
+		#region TryCreateInstance
+		/// <summary>
+		/// This method creates a correct instance of AtributoEnriquecido based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized AtributoEnriquecido, a new AtributoEnriquecido instance will be created in the given partition, otherwise 
+		/// null is returned.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new elements should be created.</param>	
+		/// <returns>Created AtributoEnriquecido instance, or null if the reader is not pointing to a serialized AtributoEnriquecido instance.</returns>
+		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::ModelElement result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				// Check for derived classes of "AtributoEnriquecido".
+				if (this.derivedClasses == null)
+					this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
+				global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
+				DslModeling::DomainClassInfo derivedClass = null;
+				if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
+				{	// New derived class instance.
+					AtributoEnriquecidoSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as AtributoEnriquecidoSerializer;
+					global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+					result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
+				}
+			}
+	
+			return result;
+		}
+	
+		/// <summary>
+		/// This method creates an instance of AtributoEnriquecido based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of AtributoEnriquecido.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new AtributoEnriquecido instance should be created.</param>	
+		/// <returns>Created AtributoEnriquecido instance.</returns>
+		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			// Abstract class, cannot be serialized.
+			throw new global::System.NotSupportedException();
+		}
+	
+		/// <summary>
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from AtributoEnriquecido, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
+	
+		/// <summary>
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from AtributoEnriquecido.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassesLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
+			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(AtributoEnriquecido.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					global::System.Type descendentType = descendent.ImplementationClass;
+					if (!descendentType.IsAbstract)
+					{
+						DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+						if (descendentSerializer != null)
+						{
+							string descendentXmlTagName = descendentSerializer.XmlTagName;
+							if (!string.IsNullOrEmpty (descendentXmlTagName))
+							{
+								global::System.Diagnostics.Debug.Assert(!this.derivedClasses.ContainsKey (descendentXmlTagName));
+								this.derivedClasses.Add (descendentXmlTagName, descendent);
+							}
+						}
+					}
+					else
+					{   // Ignore abstract derived classes because they cannot be instantiated directly.
+					}
+				}
+			}
+		}
+		#endregion
+	
+		#region TryCreateMonikerInstance
+		/// <summary>
+		/// This method creates a Moniker of the correct derived (including AtributoEnriquecido itself) instance of AtributoEnriquecido based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		public override DslModeling::Moniker TryCreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (sourceRolePlayer != null);
+			if (sourceRolePlayer == null)
+				throw new global::System.ArgumentNullException ("sourceRolePlayer");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::Moniker result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				// Check for derived classes of "AtributoEnriquecido".
+				if (this.derivedClassMonikers == null)
+					this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
+				global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
+				DslModeling::DomainClassInfo derivedClass = null;
+				if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
+				{	// New derived class moniker instance.
+					AtributoEnriquecidoSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as AtributoEnriquecidoSerializer;
+					global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+					result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
+				}
+			}
+	
+			return result;
+		}
+		
+		/// <summary>
+		/// This method creates a Moniker of AtributoEnriquecido based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		protected override DslModeling::Moniker CreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			string monikerString = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, sourceRolePlayer, reader, this.MonikerAttributeName);
+	
+			if (string.IsNullOrEmpty(monikerString))
+			{	
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.MissingMoniker(serializationContext, reader, this.MonikerAttributeName);
+				return null;
+			}
+			try
+			{	// Normalize the Id.
+				global::System.Guid id = new global::System.Guid(monikerString);
+				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, AtributoEnriquecido.DomainClassId, partition.Store), partition.Store);
+				// Set location info if possible.
+				result.Location = serializationContext.Location;
+				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
+				if (xmlLineInfo != null)
+				{
+					result.Line = xmlLineInfo.LineNumber;
+					result.Column = xmlLineInfo.LinePosition;
+				}
+				return result;
+			}
+			catch (global::System.FormatException /* fEx */)
+			{
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+			catch (global::System.OverflowException /* oEx */)
+			{	
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+		}
+	
+		/// <summary>
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from AtributoEnriquecido, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
+	
+		/// <summary>
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from AtributoEnriquecido.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassMonikersLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
+			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(AtributoEnriquecido.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+					if (descendentSerializer != null)
+					{
+						string descendentMonikerTagName = descendentSerializer.MonikerTagName;
+						if (!string.IsNullOrEmpty (descendentMonikerTagName))
+						{
+							global::System.Diagnostics.Debug.Assert(!this.derivedClassMonikers.ContainsKey (descendentMonikerTagName));
+							this.derivedClassMonikers.Add (descendentMonikerTagName, descendent);
+						}
+					}
+				}
+			}
+		}
+		#endregion
+		#endregion
+	
+		#region Write Methods
+		/// <summary>
+		/// Public WriteMoniker() method that writes a monikerized AtributoEnriquecido instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">AtributoEnriquecido instance to be monikerized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="sourceRolePlayer">Source element that references the AtributoEnriquecido instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the AtributoEnriquecido instance being monikerized.</param>
+		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
+		{
+			// Instance of AtributoEnriquecido cannot be monikerized.
+			DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.CannotMonikerizeElement(serializationContext, "AtributoEnriquecido");
+		}
+		
+		/// <summary>
+		/// Public Write() method that serializes one AtributoEnriquecido instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">AtributoEnriquecido instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="rootElementSettings">
+		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
+		/// information like schema target namespace, version, etc.
+		/// This should only be passed for root-level elements. Null should be passed for rest elements (and ideally call the Write() method 
+		/// without this parameter).
+		/// </param>
+		public override void Write(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::RootElementSettings rootElementSettings)
+		{
+			throw new global::System.NotSupportedException();
+		}
+	
+		/// <summary>
+		/// Write all properties that need to be serialized as XML attributes.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">AtributoEnriquecido instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param> 
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
+		{
+			// Always call the base class so any extensions are serialized
+			base.WritePropertiesAsAttributes(serializationContext, element, writer);
+	
+			AtributoEnriquecido instanceOfAtributoEnriquecido = element as AtributoEnriquecido;
+			global::System.Diagnostics.Debug.Assert(instanceOfAtributoEnriquecido != null, "Expecting an instance of AtributoEnriquecido");
+	
+			// ColorLetraR
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfAtributoEnriquecido.ColorLetraR;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetraR", serializedPropValue);
+				}
+			}
+			// ColorLetraG
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfAtributoEnriquecido.ColorLetraG;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetraG", serializedPropValue);
+				}
+			}
+			// ColorLetraB
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfAtributoEnriquecido.ColorLetraB;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetraB", serializedPropValue);
+				}
+			}
+			// TipoLetra
+			if (!serializationContext.Result.Failed)
+			{
+				TipoLetra propValue = instanceOfAtributoEnriquecido.TipoLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoLetra>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", serializedPropValue);
+				}
+			}
+			// FormatoBooleano
+			if (!serializationContext.Result.Failed)
+			{
+				FormatoBoolean propValue = instanceOfAtributoEnriquecido.FormatoBooleano;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<FormatoBoolean>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "formatoBooleano", serializedPropValue);
+				}
+			}
+			// Enriquecido
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Boolean propValue = instanceOfAtributoEnriquecido.Enriquecido;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Boolean>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "False") != 0)
+					{	// No need to write the value out if it's the same as default value.
+						DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "enriquecido", serializedPropValue);
+					}
+				}
+			}
+		}
+		#endregion
+	
+		#region Moniker Support
+		/// <summary>
+		/// This method calculates a moniker to a given AtributoEnriquecido instance.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">AtributoEnriquecido instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the AtributoEnriquecido instance.</returns>
+		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			AtributoEnriquecido instance = element as AtributoEnriquecido;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of AtributoEnriquecido!");
+	
+			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+		}
+	
+		/// <summary>
+		/// A domain class can be monikerized in different ways: standard /qualifier/key mechanism, custom moniker, or element ID. If the domain class is serialized
+		/// using standard /qualifier/key mechanism, this method returns the qualifier of the moniker; if the domain class uses other ways for monikerization, this method
+		/// returns empty string.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">AtributoEnriquecido instance to get moniker qualifier from.</param>
+		/// <returns>
+		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
+		/// element is not monikerized using standard /qualifier/key mechanism.
+		/// </returns>
+		public override string GetMonikerQualifier(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			return string.Empty;
+		}
+		#endregion
+	}
+}
+
+namespace Company.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// Serializer MetodoEnriquecidoSerializer for DomainClass MetodoEnriquecido.
+	/// </summary>
+	public partial class MetodoEnriquecidoSerializer : DslModeling::DomainClassXmlSerializer
+	{
+		#region Constructor
+		/// <summary>
+		/// MetodoEnriquecidoSerializer Constructor
+		/// </summary>
+		public MetodoEnriquecidoSerializer ()
+			: base ()
+		{
+		}
+		#endregion
+	
+		
+		#region Miscellaneous methods
+	
+		/// <summary>
+		/// Reset the serializer
+		/// </summary>
+		/// <remarks>
+		/// Clear the cached information about any derived classes so that it is recalculated.
+		/// </remarks>
+		public override void Reset()
+		{
+			base.Reset();
+			this.derivedClasses = null;
+			this.derivedClassMonikers = null;
+		}
+	
+		#endregion
+	
+		#region Public Properties
+		/// <summary>
+		/// Cannot be serialized.
+		/// </summary>
+		public override string XmlTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return string.Empty; }
+		}
+	
+		/// <summary>
+		/// Cannot be monikerized.
+		/// </summary>
+		public override string MonikerTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return string.Empty; }
+		}
+		
+		/// <summary>
+		/// Cannot be monikerized.
+		/// </summary>
+		public override string MonikerAttributeName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return string.Empty; }
+		}
+		#endregion
+	
+		#region Read Methods
+		/// <summary>
+		/// MetodoEnriquecido is abstract and cannot be instantiated, so this method throws NotSupportedException.
+		/// </summary>
+		/// <remarks>
+		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
+		/// of the MetodoEnriquecido element that is about to be deserialized. 
+		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
+		/// or the close tag of the parent element (or EOF).
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory MetodoEnriquecido instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			throw new global::System.NotSupportedException();
+		}
+	
+		/// <summary>
+		/// This method deserializes all properties that are serialized as XML attributes.
+		/// </summary>
+		/// <remarks>
+		/// Because this method only handles properties serialized as XML attributes, the passed-in reader shouldn't be moved inside this method.
+		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory MetodoEnriquecido instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			// Always call the base class so any extensions are deserialized
+			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
+	
+			MetodoEnriquecido instanceOfMetodoEnriquecido = element as MetodoEnriquecido;
+			global::System.Diagnostics.Debug.Assert(instanceOfMetodoEnriquecido != null, "Expecting an instance of MetodoEnriquecido");
+	
+			// TipoLetra
+			if (!serializationContext.Result.Failed)
+			{
+				string attribTipoLetra = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoLetra");
+				if (attribTipoLetra != null)
+				{
+					TipoLetra valueOfTipoLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoLetra>(serializationContext, attribTipoLetra, out valueOfTipoLetra))
+					{
+						instanceOfMetodoEnriquecido.TipoLetra = valueOfTipoLetra;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(TipoLetra), attribTipoLetra);
+					}
+				}
+			}
+			// ColorLetraR
+			if (!serializationContext.Result.Failed)
+			{
+				string attribColorLetraR = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetraR");
+				if (attribColorLetraR != null)
+				{
+					global::System.Int16 valueOfColorLetraR;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribColorLetraR, out valueOfColorLetraR))
+					{
+						instanceOfMetodoEnriquecido.ColorLetraR = valueOfColorLetraR;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetraR", typeof(global::System.Int16), attribColorLetraR);
+					}
+				}
+			}
+			// ColorLetraG
+			if (!serializationContext.Result.Failed)
+			{
+				string attribColorLetraG = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetraG");
+				if (attribColorLetraG != null)
+				{
+					global::System.Int16 valueOfColorLetraG;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribColorLetraG, out valueOfColorLetraG))
+					{
+						instanceOfMetodoEnriquecido.ColorLetraG = valueOfColorLetraG;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetraG", typeof(global::System.Int16), attribColorLetraG);
+					}
+				}
+			}
+			// ColorLetraB
+			if (!serializationContext.Result.Failed)
+			{
+				string attribColorLetraB = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetraB");
+				if (attribColorLetraB != null)
+				{
+					global::System.Int16 valueOfColorLetraB;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribColorLetraB, out valueOfColorLetraB))
+					{
+						instanceOfMetodoEnriquecido.ColorLetraB = valueOfColorLetraB;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetraB", typeof(global::System.Int16), attribColorLetraB);
+					}
+				}
+			}
+			// Enriquecido
+			if (!serializationContext.Result.Failed)
+			{
+				string attribEnriquecido = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "enriquecido");
+				if (attribEnriquecido != null)
+				{
+					global::System.Boolean valueOfEnriquecido;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Boolean>(serializationContext, attribEnriquecido, out valueOfEnriquecido))
+					{
+						instanceOfMetodoEnriquecido.Enriquecido = valueOfEnriquecido;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "enriquecido", typeof(global::System.Boolean), attribEnriquecido);
+					}
+				}
+			}
+		}
+	
+		#region TryCreateInstance
+		/// <summary>
+		/// This method creates a correct instance of MetodoEnriquecido based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized MetodoEnriquecido, a new MetodoEnriquecido instance will be created in the given partition, otherwise 
+		/// null is returned.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new elements should be created.</param>	
+		/// <returns>Created MetodoEnriquecido instance, or null if the reader is not pointing to a serialized MetodoEnriquecido instance.</returns>
+		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::ModelElement result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				// Check for derived classes of "MetodoEnriquecido".
+				if (this.derivedClasses == null)
+					this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
+				global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
+				DslModeling::DomainClassInfo derivedClass = null;
+				if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
+				{	// New derived class instance.
+					MetodoEnriquecidoSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as MetodoEnriquecidoSerializer;
+					global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+					result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
+				}
+			}
+	
+			return result;
+		}
+	
+		/// <summary>
+		/// This method creates an instance of MetodoEnriquecido based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of MetodoEnriquecido.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new MetodoEnriquecido instance should be created.</param>	
+		/// <returns>Created MetodoEnriquecido instance.</returns>
+		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			// Abstract class, cannot be serialized.
+			throw new global::System.NotSupportedException();
+		}
+	
+		/// <summary>
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from MetodoEnriquecido, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
+	
+		/// <summary>
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from MetodoEnriquecido.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassesLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
+			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(MetodoEnriquecido.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					global::System.Type descendentType = descendent.ImplementationClass;
+					if (!descendentType.IsAbstract)
+					{
+						DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+						if (descendentSerializer != null)
+						{
+							string descendentXmlTagName = descendentSerializer.XmlTagName;
+							if (!string.IsNullOrEmpty (descendentXmlTagName))
+							{
+								global::System.Diagnostics.Debug.Assert(!this.derivedClasses.ContainsKey (descendentXmlTagName));
+								this.derivedClasses.Add (descendentXmlTagName, descendent);
+							}
+						}
+					}
+					else
+					{   // Ignore abstract derived classes because they cannot be instantiated directly.
+					}
+				}
+			}
+		}
+		#endregion
+	
+		#region TryCreateMonikerInstance
+		/// <summary>
+		/// This method creates a Moniker of the correct derived (including MetodoEnriquecido itself) instance of MetodoEnriquecido based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		public override DslModeling::Moniker TryCreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (sourceRolePlayer != null);
+			if (sourceRolePlayer == null)
+				throw new global::System.ArgumentNullException ("sourceRolePlayer");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::Moniker result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				// Check for derived classes of "MetodoEnriquecido".
+				if (this.derivedClassMonikers == null)
+					this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
+				global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
+				DslModeling::DomainClassInfo derivedClass = null;
+				if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
+				{	// New derived class moniker instance.
+					MetodoEnriquecidoSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as MetodoEnriquecidoSerializer;
+					global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+					result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
+				}
+			}
+	
+			return result;
+		}
+		
+		/// <summary>
+		/// This method creates a Moniker of MetodoEnriquecido based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		protected override DslModeling::Moniker CreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			string monikerString = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, sourceRolePlayer, reader, this.MonikerAttributeName);
+	
+			if (string.IsNullOrEmpty(monikerString))
+			{	
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.MissingMoniker(serializationContext, reader, this.MonikerAttributeName);
+				return null;
+			}
+			try
+			{	// Normalize the Id.
+				global::System.Guid id = new global::System.Guid(monikerString);
+				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, MetodoEnriquecido.DomainClassId, partition.Store), partition.Store);
+				// Set location info if possible.
+				result.Location = serializationContext.Location;
+				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
+				if (xmlLineInfo != null)
+				{
+					result.Line = xmlLineInfo.LineNumber;
+					result.Column = xmlLineInfo.LinePosition;
+				}
+				return result;
+			}
+			catch (global::System.FormatException /* fEx */)
+			{
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+			catch (global::System.OverflowException /* oEx */)
+			{	
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+		}
+	
+		/// <summary>
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from MetodoEnriquecido, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
+	
+		/// <summary>
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from MetodoEnriquecido.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassMonikersLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
+			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(MetodoEnriquecido.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+					if (descendentSerializer != null)
+					{
+						string descendentMonikerTagName = descendentSerializer.MonikerTagName;
+						if (!string.IsNullOrEmpty (descendentMonikerTagName))
+						{
+							global::System.Diagnostics.Debug.Assert(!this.derivedClassMonikers.ContainsKey (descendentMonikerTagName));
+							this.derivedClassMonikers.Add (descendentMonikerTagName, descendent);
+						}
+					}
+				}
+			}
+		}
+		#endregion
+		#endregion
+	
+		#region Write Methods
+		/// <summary>
+		/// Public WriteMoniker() method that writes a monikerized MetodoEnriquecido instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">MetodoEnriquecido instance to be monikerized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="sourceRolePlayer">Source element that references the MetodoEnriquecido instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the MetodoEnriquecido instance being monikerized.</param>
+		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
+		{
+			// Instance of MetodoEnriquecido cannot be monikerized.
+			DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.CannotMonikerizeElement(serializationContext, "MetodoEnriquecido");
+		}
+		
+		/// <summary>
+		/// Public Write() method that serializes one MetodoEnriquecido instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">MetodoEnriquecido instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="rootElementSettings">
+		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
+		/// information like schema target namespace, version, etc.
+		/// This should only be passed for root-level elements. Null should be passed for rest elements (and ideally call the Write() method 
+		/// without this parameter).
+		/// </param>
+		public override void Write(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::RootElementSettings rootElementSettings)
+		{
+			throw new global::System.NotSupportedException();
+		}
+	
+		/// <summary>
+		/// Write all properties that need to be serialized as XML attributes.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">MetodoEnriquecido instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param> 
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
+		{
+			// Always call the base class so any extensions are serialized
+			base.WritePropertiesAsAttributes(serializationContext, element, writer);
+	
+			MetodoEnriquecido instanceOfMetodoEnriquecido = element as MetodoEnriquecido;
+			global::System.Diagnostics.Debug.Assert(instanceOfMetodoEnriquecido != null, "Expecting an instance of MetodoEnriquecido");
+	
+			// TipoLetra
+			if (!serializationContext.Result.Failed)
+			{
+				TipoLetra propValue = instanceOfMetodoEnriquecido.TipoLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoLetra>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", serializedPropValue);
+				}
+			}
+			// ColorLetraR
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfMetodoEnriquecido.ColorLetraR;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetraR", serializedPropValue);
+				}
+			}
+			// ColorLetraG
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfMetodoEnriquecido.ColorLetraG;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetraG", serializedPropValue);
+				}
+			}
+			// ColorLetraB
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfMetodoEnriquecido.ColorLetraB;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetraB", serializedPropValue);
+				}
+			}
+			// Enriquecido
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Boolean propValue = instanceOfMetodoEnriquecido.Enriquecido;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Boolean>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "False") != 0)
+					{	// No need to write the value out if it's the same as default value.
+						DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "enriquecido", serializedPropValue);
+					}
+				}
+			}
+		}
+		#endregion
+	
+		#region Moniker Support
+		/// <summary>
+		/// This method calculates a moniker to a given MetodoEnriquecido instance.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">MetodoEnriquecido instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the MetodoEnriquecido instance.</returns>
+		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			MetodoEnriquecido instance = element as MetodoEnriquecido;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of MetodoEnriquecido!");
+	
+			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+		}
+	
+		/// <summary>
+		/// A domain class can be monikerized in different ways: standard /qualifier/key mechanism, custom moniker, or element ID. If the domain class is serialized
+		/// using standard /qualifier/key mechanism, this method returns the qualifier of the moniker; if the domain class uses other ways for monikerization, this method
+		/// returns empty string.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">MetodoEnriquecido instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -11987,6 +13385,569 @@ namespace Company.DCMLRACPGProyectoIPS
 namespace Company.DCMLRACPGProyectoIPS
 {
 	/// <summary>
+	/// Serializer ClaseCShapeSerializer for DomainClass ClaseCShape.
+	/// </summary>
+	public partial class ClaseCShapeSerializer : DslDiagrams::CompartmentShapeSerializer
+	{
+		#region Constructor
+		/// <summary>
+		/// ClaseCShapeSerializer Constructor
+		/// </summary>
+		public ClaseCShapeSerializer ()
+			: base ()
+		{
+		}
+		#endregion
+	
+		
+		#region Miscellaneous methods
+	
+		/// <summary>
+		/// Reset the serializer
+		/// </summary>
+		/// <remarks>
+		/// Clear the cached information about any derived classes so that it is recalculated.
+		/// </remarks>
+		public override void Reset()
+		{
+			base.Reset();
+			this.derivedClasses = null;
+			this.derivedClassMonikers = null;
+		}
+	
+		#endregion
+	
+		#region Public Properties
+		/// <summary>
+		/// This is the XML tag name used to serialize an instance of ClaseCShape.
+		/// </summary>
+		public override string XmlTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return @"claseCShape"; }
+		}
+	
+		/// <summary>
+		/// This is the XML tag name used to serialize a monikerized instance of ClaseCShape.
+		/// </summary>
+		public override string MonikerTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return @"claseCShapeMoniker"; }
+		}
+		
+		/// <summary>
+		/// This is the name of the XML attribute that stores the moniker of ClaseCShape in a serialized monikerized instance.
+		/// </summary>
+		public override string MonikerAttributeName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return @"Id"; }
+		}
+		#endregion
+	
+		#region Read Methods
+		/// <summary>
+		/// Public Read() method that deserializes one ClaseCShape instance from XML.
+		/// </summary>
+		/// <remarks>
+		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
+		/// of the ClaseCShape element that is about to be deserialized. 
+		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
+		/// or the close tag of the parent element (or EOF).
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory ClaseCShape instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException ("element");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			#endregion
+			
+			// Read properties serialized as XML attributes.
+			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
+	
+			// Read nested XML elements.
+			if (!serializationContext.Result.Failed)
+			{
+				if (!reader.IsEmptyElement)
+				{
+					// Read to the start of the first child element.
+					DslModeling::SerializationUtilities.SkipToFirstChild(reader);
+					
+					// Read any extension element data under this XML element
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadExtensions(serializationContext, element, reader);
+					
+					// Read nested XML elements, they can be either properties serialized as XML elements, or child 
+					// model elements.
+					while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+					{
+						base.ReadElements(serializationContext, element, reader);
+						if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+						{
+							// Encountered one unknown XML element, skip it and keep reading.
+							DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.UnexpectedXmlElement(serializationContext, reader);
+							DslModeling::SerializationUtilities.Skip(reader);
+						}
+					}
+				}
+			}
+	
+			// Advance the reader to the next element (open tag of the next sibling, end tag of the parent, or EOF)
+			DslModeling::SerializationUtilities.Skip(reader);
+		}
+		
+	
+		#region TryCreateInstance
+		/// <summary>
+		/// This method creates a correct instance of ClaseCShape based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized ClaseCShape, a new ClaseCShape instance will be created in the given partition, otherwise 
+		/// null is returned.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new elements should be created.</param>	
+		/// <returns>Created ClaseCShape instance, or null if the reader is not pointing to a serialized ClaseCShape instance.</returns>
+		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::ModelElement result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
+				{	// New "ClaseCShape" instance.
+					result = this.CreateInstance(serializationContext, reader, partition);
+				}
+				else
+				{	// Check for derived classes of "ClaseCShape".
+					if (this.derivedClasses == null)
+						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
+					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
+					DslModeling::DomainClassInfo derivedClass = null;
+					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
+					{	// New derived class instance.
+						ClaseCShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ClaseCShapeSerializer;
+						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
+					}
+				}
+			}
+	
+			return result;
+		}
+	
+		/// <summary>
+		/// This method creates an instance of ClaseCShape based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of ClaseCShape.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new ClaseCShape instance should be created.</param>	
+		/// <returns>Created ClaseCShape instance.</returns>
+		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			string idStr = reader.GetAttribute ("Id");
+			try
+			{
+				global::System.Guid id;
+				if (string.IsNullOrEmpty(idStr))
+				{	// Create a default Id.
+					id = global::System.Guid.NewGuid();
+					DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.MissingId(serializationContext, reader, id);
+				}
+				else
+				{
+					id = new global::System.Guid (idStr);
+				}
+				return new ClaseCShape(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
+			}
+			catch (global::System.ArgumentNullException /* anEx */)
+			{	
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(global::System.Guid), idStr);
+			}
+			catch (global::System.FormatException /* fEx */)
+			{
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(global::System.Guid), idStr);
+			}
+			catch (global::System.OverflowException /* ofEx */)
+			{
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(global::System.Guid), idStr);
+			}
+			return null;
+		}
+	
+		/// <summary>
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from ClaseCShape, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
+	
+		/// <summary>
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from ClaseCShape.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassesLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
+			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ClaseCShape.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					global::System.Type descendentType = descendent.ImplementationClass;
+					if (!descendentType.IsAbstract)
+					{
+						DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+						if (descendentSerializer != null)
+						{
+							string descendentXmlTagName = descendentSerializer.XmlTagName;
+							if (!string.IsNullOrEmpty (descendentXmlTagName))
+							{
+								global::System.Diagnostics.Debug.Assert(!this.derivedClasses.ContainsKey (descendentXmlTagName));
+								this.derivedClasses.Add (descendentXmlTagName, descendent);
+							}
+						}
+					}
+					else
+					{   // Ignore abstract derived classes because they cannot be instantiated directly.
+					}
+				}
+			}
+		}
+		#endregion
+	
+		#region TryCreateMonikerInstance
+		/// <summary>
+		/// This method creates a Moniker of the correct derived (including ClaseCShape itself) instance of ClaseCShape based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		public override DslModeling::Moniker TryCreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (sourceRolePlayer != null);
+			if (sourceRolePlayer == null)
+				throw new global::System.ArgumentNullException ("sourceRolePlayer");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::Moniker result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
+				{	// New "ClaseCShape" moniker instance.
+					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
+				}
+				else
+				{	// Check for derived classes of "ClaseCShape".
+					if (this.derivedClassMonikers == null)
+						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
+					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
+					DslModeling::DomainClassInfo derivedClass = null;
+					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
+					{	// New derived class moniker instance.
+						ClaseCShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ClaseCShapeSerializer;
+						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
+					}
+				}
+			}
+	
+			return result;
+		}
+		
+		/// <summary>
+		/// This method creates a Moniker of ClaseCShape based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		protected override DslModeling::Moniker CreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			string monikerString = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, sourceRolePlayer, reader, this.MonikerAttributeName);
+	
+			if (string.IsNullOrEmpty(monikerString))
+			{	
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.MissingMoniker(serializationContext, reader, this.MonikerAttributeName);
+				return null;
+			}
+			try
+			{	// Normalize the Id.
+				global::System.Guid id = new global::System.Guid(monikerString);
+				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, ClaseCShape.DomainClassId, partition.Store), partition.Store);
+				// Set location info if possible.
+				result.Location = serializationContext.Location;
+				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
+				if (xmlLineInfo != null)
+				{
+					result.Line = xmlLineInfo.LineNumber;
+					result.Column = xmlLineInfo.LinePosition;
+				}
+				return result;
+			}
+			catch (global::System.FormatException /* fEx */)
+			{
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+			catch (global::System.OverflowException /* oEx */)
+			{	
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+		}
+	
+		/// <summary>
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from ClaseCShape, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
+	
+		/// <summary>
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from ClaseCShape.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassMonikersLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
+			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ClaseCShape.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+					if (descendentSerializer != null)
+					{
+						string descendentMonikerTagName = descendentSerializer.MonikerTagName;
+						if (!string.IsNullOrEmpty (descendentMonikerTagName))
+						{
+							global::System.Diagnostics.Debug.Assert(!this.derivedClassMonikers.ContainsKey (descendentMonikerTagName));
+							this.derivedClassMonikers.Add (descendentMonikerTagName, descendent);
+						}
+					}
+				}
+			}
+		}
+		#endregion
+		#endregion
+	
+		#region Write Methods
+		/// <summary>
+		/// Public WriteMoniker() method that writes a monikerized ClaseCShape instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">ClaseCShape instance to be monikerized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="sourceRolePlayer">Source element that references the ClaseCShape instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the ClaseCShape instance being monikerized.</param>
+		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException ("element");
+			global::System.Diagnostics.Debug.Assert (writer != null);
+			if (writer == null)
+				throw new global::System.ArgumentNullException ("writer");
+			global::System.Diagnostics.Debug.Assert (sourceRolePlayer != null);
+			if (sourceRolePlayer == null)
+				throw new global::System.ArgumentNullException ("sourceRolePlayer");
+			global::System.Diagnostics.Debug.Assert (relSerializer != null);
+			if (relSerializer == null)
+				throw new global::System.ArgumentNullException ("relSerializer");
+			#endregion
+			
+			string monikerString = this.CalculateQualifiedName(serializationContext.Directory, element);
+			global::System.Diagnostics.Debug.Assert(!string.IsNullOrEmpty(monikerString));
+			writer.WriteStartElement(this.MonikerTagName);
+			DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, this.MonikerAttributeName, monikerString);
+			writer.WriteEndElement();
+		}
+		
+		/// <summary>
+		/// Public Write() method that serializes one ClaseCShape instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">ClaseCShape instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="rootElementSettings">
+		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
+		/// information like schema target namespace, version, etc.
+		/// This should only be passed for root-level elements. Null should be passed for rest elements (and ideally call the Write() method 
+		/// without this parameter).
+		/// </param>
+		public override void Write(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::RootElementSettings rootElementSettings)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException ("element");
+			global::System.Diagnostics.Debug.Assert (writer != null);
+			if (writer == null)
+				throw new global::System.ArgumentNullException ("writer");
+			#endregion
+	
+			// Write start of element, including schema target namespace if specified.
+			if (rootElementSettings != null && !string.IsNullOrEmpty(rootElementSettings.SchemaTargetNamespace))
+			{
+				writer.WriteStartElement(this.XmlTagName, rootElementSettings.SchemaTargetNamespace);
+				DslModeling::SerializationUtilities.WriteDomainModelNamespaces(serializationContext.Directory, writer, rootElementSettings.SchemaTargetNamespace);
+			}
+			else
+			{
+				writer.WriteStartElement(this.XmlTagName);
+			}
+				
+			// Write version info (in the format 1.2.3.4), if necessary
+			if (rootElementSettings != null && rootElementSettings.Version != null)
+				writer.WriteAttributeString("dslVersion", rootElementSettings.Version.ToString(4));
+	
+			// Write out element Id.
+			writer.WriteAttributeString("Id", element.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture));
+	
+			base.WritePropertiesAsAttributes(serializationContext, element, writer);
+	
+			// Write out any extension data if this is the root element
+			if (rootElementSettings != null && !serializationContext.Result.Failed)
+			{
+				DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteExtensions(serializationContext, element, writer);
+			}
+	
+			if (!serializationContext.Result.Failed)
+			{
+				// Write 1) properties serialized as nested XML elements and 2) child model elements into XML.
+				base.WriteElements(serializationContext, element, writer);
+			}
+	
+			writer.WriteEndElement();
+		}
+		#endregion
+	
+		#region Moniker Support
+		/// <summary>
+		/// This method calculates a moniker to a given ClaseCShape instance.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">ClaseCShape instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the ClaseCShape instance.</returns>
+		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			ClaseCShape instance = element as ClaseCShape;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of ClaseCShape!");
+	
+			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+		}
+	
+		/// <summary>
+		/// A domain class can be monikerized in different ways: standard /qualifier/key mechanism, custom moniker, or element ID. If the domain class is serialized
+		/// using standard /qualifier/key mechanism, this method returns the qualifier of the moniker; if the domain class uses other ways for monikerization, this method
+		/// returns empty string.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">ClaseCShape instance to get moniker qualifier from.</param>
+		/// <returns>
+		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
+		/// element is not monikerized using standard /qualifier/key mechanism.
+		/// </returns>
+		public override string GetMonikerQualifier(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			return string.Empty;
+		}
+		#endregion
+	}
+}
+
+namespace Company.DCMLRACPGProyectoIPS
+{
+	/// <summary>
 	/// Serializer DCMLRACPGProyectoIPSDiagramSerializer for DomainClass DCMLRACPGProyectoIPSDiagram.
 	/// </summary>
 	public partial class DCMLRACPGProyectoIPSDiagramSerializer : DslDiagrams::DiagramSerializer
@@ -12609,7 +14570,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				{
 					global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> customSerializerTypes = this.CustomSerializerTypes;
 					int customSerializerCount = (customSerializerTypes == null ? 0 : customSerializerTypes.Count);
-					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(16 + customSerializerCount);
+					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(19 + customSerializerCount);
 	
 					#region Serializers defined in this model
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(TapizModelo.DomainClassId, typeof(TapizModeloSerializer)));
@@ -12619,7 +14580,9 @@ namespace Company.DCMLRACPGProyectoIPS
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Parámetros.DomainClassId, typeof(ParámetrosSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseAbstracta.DomainClassId, typeof(ClaseAbstractaSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MétodoAbstracto.DomainClassId, typeof(MétodoAbstractoSerializer)));
-					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(PresentaciónMetodoAtributo.DomainClassId, typeof(PresentaciónMetodoAtributoSerializer)));
+					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseEnriquecida.DomainClassId, typeof(ClaseEnriquecidaSerializer)));
+					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(AtributoEnriquecido.DomainClassId, typeof(AtributoEnriquecidoSerializer)));
+					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetodoEnriquecido.DomainClassId, typeof(MetodoEnriquecidoSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(DomainRelationship1.DomainClassId, typeof(DomainRelationship1Serializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseHasAtributo.DomainClassId, typeof(ClaseHasAtributoSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseHasSignaturadeOperación.DomainClassId, typeof(ClaseHasSignaturadeOperaciónSerializer)));
@@ -12627,6 +14590,7 @@ namespace Company.DCMLRACPGProyectoIPS
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Asociación.DomainClassId, typeof(AsociaciónSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Agregación.DomainClassId, typeof(AgregaciónSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseAbstractaTieneMetodoAbstracto.DomainClassId, typeof(ClaseAbstractaTieneMetodoAbstractoSerializer)));
+					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseCShape.DomainClassId, typeof(ClaseCShapeSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(DCMLRACPGProyectoIPSDiagram.DomainClassId, typeof(DCMLRACPGProyectoIPSDiagramSerializer)));
 					#endregion
 					
