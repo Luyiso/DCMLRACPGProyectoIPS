@@ -17,11 +17,6 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="61e4f563-0252-4c06-afb3-25c52fc16641" Description="Description for Company.DCMLRACPGProyectoIPS.Clase.Abstracta" Name="Abstracta" DisplayName="Abstracta" DefaultValue="False">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Boolean" />
-          </Type>
-        </DomainProperty>
       </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -520,9 +515,6 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
             <DomainRelationshipMoniker Name="ClaseHasAtributo" />
           </XmlRelationshipData>
-          <XmlPropertyData XmlName="abstracta">
-            <DomainPropertyMoniker Name="Clase/Abstracta" />
-          </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="signaturadeOperación">
             <DomainRelationshipMoniker Name="ClaseHasSignaturadeOperación" />
           </XmlRelationshipData>
@@ -786,6 +778,54 @@
     <Class>
       <DomainClassMoniker Name="TapizModelo" />
     </Class>
+    <ShapeMaps>
+      <CompartmentShapeMap>
+        <DomainClassMoniker Name="Clase" />
+        <ParentElementPath>
+          <DomainPath>DomainRelationship1.TapizModelo/!TapizModelo</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/IDDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Clase/ID" />
+              <DomainPath />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/NameDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Clase/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <CompartmentShapeMoniker Name="ClaseCShape" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="ClaseCShape/AttributeDeco" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseHasAtributo.Atributo/!Atributo</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="ClaseCShape/MethodDeco" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseHasSignaturadeOperación.SignaturadeOperación/!SignaturadeOperación</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="SignaturadeOperación/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+      </CompartmentShapeMap>
+    </ShapeMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="DCMLRACPG_DSLProyIPS" EditorGuid="706b78d9-9e8c-453e-be21-1fd2bf418387">
     <RootClass>
