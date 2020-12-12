@@ -68,10 +68,19 @@ namespace Company.DCMLRACPGProyectoIPS
 			return new global::System.Type[]
 			{
 				typeof(ExampleModel),
-				typeof(ExampleElement),
-				typeof(DomainClass1),
+				typeof(Example),
+				typeof(Clase),
+				typeof(Atributo),
+				typeof(SignaturadeOperación),
+				typeof(Parámetros),
 				typeof(ExampleModelHasElements),
-				typeof(ExampleElementReferencesTargets),
+				typeof(ExampleReferencesTargets),
+				typeof(DomainRelationship1),
+				typeof(ClaseHasAtributo),
+				typeof(ClaseHasSignaturadeOperación),
+				typeof(SignaturadeOperaciónHasParámetros),
+				typeof(Asociación),
+				typeof(Agregación),
 				typeof(DCMLRACPGProyectoIPSDiagram),
 				typeof(ExampleConnector),
 				typeof(ExampleShape),
@@ -88,7 +97,27 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			return new DomainMemberInfo[]
 			{
-				new DomainMemberInfo(typeof(ExampleElement), "Name", ExampleElement.NameDomainPropertyId, typeof(ExampleElement.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Example), "Name", Example.NameDomainPropertyId, typeof(Example.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Clase), "Name", Clase.NameDomainPropertyId, typeof(Clase.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Clase), "ID", Clase.IDDomainPropertyId, typeof(Clase.IDPropertyHandler)),
+				new DomainMemberInfo(typeof(Clase), "DomainProperty1", Clase.DomainProperty1DomainPropertyId, typeof(Clase.DomainProperty1PropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "Name", Atributo.NameDomainPropertyId, typeof(Atributo.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "TipoDatos", Atributo.TipoDatosDomainPropertyId, typeof(Atributo.TipoDatosPropertyHandler)),
+				new DomainMemberInfo(typeof(SignaturadeOperación), "Name", SignaturadeOperación.NameDomainPropertyId, typeof(SignaturadeOperación.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(SignaturadeOperación), "TipoRetorno", SignaturadeOperación.TipoRetornoDomainPropertyId, typeof(SignaturadeOperación.TipoRetornoPropertyHandler)),
+				new DomainMemberInfo(typeof(Parámetros), "Name", Parámetros.NameDomainPropertyId, typeof(Parámetros.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Parámetros), "TipoDato", Parámetros.TipoDatoDomainPropertyId, typeof(Parámetros.TipoDatoPropertyHandler)),
+				new DomainMemberInfo(typeof(Parámetros), "TipoParámetro", Parámetros.TipoParámetroDomainPropertyId, typeof(Parámetros.TipoParámetroPropertyHandler)),
+				new DomainMemberInfo(typeof(Asociación), "Nombre", Asociación.NombreDomainPropertyId, typeof(Asociación.NombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Asociación), "CardinalidadMinimaSource", Asociación.CardinalidadMinimaSourceDomainPropertyId, typeof(Asociación.CardinalidadMinimaSourcePropertyHandler)),
+				new DomainMemberInfo(typeof(Asociación), "CardinalidadMinimaTarget", Asociación.CardinalidadMinimaTargetDomainPropertyId, typeof(Asociación.CardinalidadMinimaTargetPropertyHandler)),
+				new DomainMemberInfo(typeof(Asociación), "CardinalidadMaximaSource", Asociación.CardinalidadMaximaSourceDomainPropertyId, typeof(Asociación.CardinalidadMaximaSourcePropertyHandler)),
+				new DomainMemberInfo(typeof(Asociación), "CardinalidadMaximaTarget", Asociación.CardinalidadMaximaTargetDomainPropertyId, typeof(Asociación.CardinalidadMaximaTargetPropertyHandler)),
+				new DomainMemberInfo(typeof(Agregación), "Nombre", Agregación.NombreDomainPropertyId, typeof(Agregación.NombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Agregación), "CardinalidadMinimaComponente", Agregación.CardinalidadMinimaComponenteDomainPropertyId, typeof(Agregación.CardinalidadMinimaComponentePropertyHandler)),
+				new DomainMemberInfo(typeof(Agregación), "CardinalidadMinimaCompuesta", Agregación.CardinalidadMinimaCompuestaDomainPropertyId, typeof(Agregación.CardinalidadMinimaCompuestaPropertyHandler)),
+				new DomainMemberInfo(typeof(Agregación), "CardinalidadMaximaComponente", Agregación.CardinalidadMaximaComponenteDomainPropertyId, typeof(Agregación.CardinalidadMaximaComponentePropertyHandler)),
+				new DomainMemberInfo(typeof(Agregación), "CardinalidadMaximaCompuesta", Agregación.CardinalidadMaximaCompuestaDomainPropertyId, typeof(Agregación.CardinalidadMaximaCompuestaPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -101,8 +130,20 @@ namespace Company.DCMLRACPGProyectoIPS
 			{
 				new DomainRolePlayerInfo(typeof(ExampleModelHasElements), "ExampleModel", ExampleModelHasElements.ExampleModelDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ExampleModelHasElements), "Element", ExampleModelHasElements.ElementDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleElementReferencesTargets), "Source", ExampleElementReferencesTargets.SourceDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleElementReferencesTargets), "Target", ExampleElementReferencesTargets.TargetDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ExampleReferencesTargets), "Source", ExampleReferencesTargets.SourceDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ExampleReferencesTargets), "Target", ExampleReferencesTargets.TargetDomainRoleId),
+				new DomainRolePlayerInfo(typeof(DomainRelationship1), "ExampleModel", DomainRelationship1.ExampleModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(DomainRelationship1), "Clase", DomainRelationship1.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Clase", ClaseHasAtributo.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Atributo", ClaseHasAtributo.AtributoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseHasSignaturadeOperación), "Clase", ClaseHasSignaturadeOperación.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseHasSignaturadeOperación), "SignaturadeOperación", ClaseHasSignaturadeOperación.SignaturadeOperaciónDomainRoleId),
+				new DomainRolePlayerInfo(typeof(SignaturadeOperaciónHasParámetros), "SignaturadeOperación", SignaturadeOperaciónHasParámetros.SignaturadeOperaciónDomainRoleId),
+				new DomainRolePlayerInfo(typeof(SignaturadeOperaciónHasParámetros), "Parámetros", SignaturadeOperaciónHasParámetros.ParámetrosDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Asociación), "SourceClase", Asociación.SourceClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Asociación), "TargetClase", Asociación.TargetClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Agregación), "SourceClase", Agregación.SourceClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Agregación), "TargetClase", Agregación.TargetClaseDomainRoleId),
 			};
 		}
 		#endregion
@@ -124,13 +165,16 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
 				createElementMap.Add(typeof(ExampleModel), 0);
-				createElementMap.Add(typeof(ExampleElement), 1);
-				createElementMap.Add(typeof(DomainClass1), 2);
-				createElementMap.Add(typeof(DCMLRACPGProyectoIPSDiagram), 3);
-				createElementMap.Add(typeof(ExampleConnector), 4);
-				createElementMap.Add(typeof(ExampleShape), 5);
+				createElementMap.Add(typeof(Example), 1);
+				createElementMap.Add(typeof(Clase), 2);
+				createElementMap.Add(typeof(Atributo), 3);
+				createElementMap.Add(typeof(SignaturadeOperación), 4);
+				createElementMap.Add(typeof(Parámetros), 5);
+				createElementMap.Add(typeof(DCMLRACPGProyectoIPSDiagram), 6);
+				createElementMap.Add(typeof(ExampleConnector), 7);
+				createElementMap.Add(typeof(ExampleShape), 8);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -145,11 +189,14 @@ namespace Company.DCMLRACPGProyectoIPS
 			switch (index)
 			{
 				case 0: return new ExampleModel(partition, propertyAssignments);
-				case 1: return new ExampleElement(partition, propertyAssignments);
-				case 2: return new DomainClass1(partition, propertyAssignments);
-				case 3: return new DCMLRACPGProyectoIPSDiagram(partition, propertyAssignments);
-				case 4: return new ExampleConnector(partition, propertyAssignments);
-				case 5: return new ExampleShape(partition, propertyAssignments);
+				case 1: return new Example(partition, propertyAssignments);
+				case 2: return new Clase(partition, propertyAssignments);
+				case 3: return new Atributo(partition, propertyAssignments);
+				case 4: return new SignaturadeOperación(partition, propertyAssignments);
+				case 5: return new Parámetros(partition, propertyAssignments);
+				case 6: return new DCMLRACPGProyectoIPSDiagram(partition, propertyAssignments);
+				case 7: return new ExampleConnector(partition, propertyAssignments);
+				case 8: return new ExampleShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -172,9 +219,15 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(2);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(8);
 				createElementLinkMap.Add(typeof(ExampleModelHasElements), 0);
-				createElementLinkMap.Add(typeof(ExampleElementReferencesTargets), 1);
+				createElementLinkMap.Add(typeof(ExampleReferencesTargets), 1);
+				createElementLinkMap.Add(typeof(DomainRelationship1), 2);
+				createElementLinkMap.Add(typeof(ClaseHasAtributo), 3);
+				createElementLinkMap.Add(typeof(ClaseHasSignaturadeOperación), 4);
+				createElementLinkMap.Add(typeof(SignaturadeOperaciónHasParámetros), 5);
+				createElementLinkMap.Add(typeof(Asociación), 6);
+				createElementLinkMap.Add(typeof(Agregación), 7);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -190,7 +243,13 @@ namespace Company.DCMLRACPGProyectoIPS
 			switch (index)
 			{
 				case 0: return new ExampleModelHasElements(partition, roleAssignments, propertyAssignments);
-				case 1: return new ExampleElementReferencesTargets(partition, roleAssignments, propertyAssignments);
+				case 1: return new ExampleReferencesTargets(partition, roleAssignments, propertyAssignments);
+				case 2: return new DomainRelationship1(partition, roleAssignments, propertyAssignments);
+				case 3: return new ClaseHasAtributo(partition, roleAssignments, propertyAssignments);
+				case 4: return new ClaseHasSignaturadeOperación(partition, roleAssignments, propertyAssignments);
+				case 5: return new SignaturadeOperaciónHasParámetros(partition, roleAssignments, propertyAssignments);
+				case 6: return new Asociación(partition, roleAssignments, propertyAssignments);
+				case 7: return new Agregación(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -360,6 +419,10 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			#region Initialize DomainData Table
 			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements.ElementDomainRoleId, true);
+			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.ClaseDomainRoleId, true);
+			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.AtributoDomainRoleId, true);
+			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.SignaturadeOperaciónDomainRoleId, true);
+			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.ParámetrosDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
@@ -433,5 +496,64 @@ namespace Company.DCMLRACPGProyectoIPS
 	}
 	#endregion
 		
+}
+namespace Company.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: TipoParametro
+	/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum TipoParametro
+	{
+		/// <summary>
+		/// Entrada
+		/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Entrada
+		/// </summary>
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/Entrada.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Entrada = 0,
+		/// <summary>
+		/// Salida
+		/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Salida
+		/// </summary>
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/Salida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Salida = 1,
+		/// <summary>
+		/// EntradaSalida
+		/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro.EntradaSalida
+		/// </summary>
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/EntradaSalida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		EntradaSalida = 2,
+	}
+}
+namespace Company.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: Cardinalidad
+	/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Cardinalidad
+	{
+		/// <summary>
+		/// Cero
+		/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Cero
+		/// </summary>
+		[Value(0)]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/Cero.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Cero = 0,
+		/// <summary>
+		/// Uno
+		/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Uno
+		/// </summary>
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/Uno.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Uno = 1,
+		/// <summary>
+		/// N
+		/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.N
+		/// </summary>
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/N.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		N = 2,
+	}
 }
 

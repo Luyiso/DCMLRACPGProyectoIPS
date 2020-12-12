@@ -191,13 +191,13 @@ namespace Company.DCMLRACPGProyectoIPS
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::Company.DCMLRACPGProyectoIPS.ExampleElement)
+			if(element is global::Company.DCMLRACPGProyectoIPS.Example)
 			{
 				global::Company.DCMLRACPGProyectoIPS.ExampleShape newShape = new global::Company.DCMLRACPGProyectoIPS.ExampleShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.DCMLRACPGProyectoIPS.ExampleElementReferencesTargets)
+			if(element is global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets)
 			{
 				global::Company.DCMLRACPGProyectoIPS.ExampleConnector newShape = new global::Company.DCMLRACPGProyectoIPS.ExampleConnector(this.Partition);
 				return newShape;
@@ -229,7 +229,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.DCMLRACPGProyectoIPS.ExampleElement.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.DCMLRACPGProyectoIPS.Example.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -385,8 +385,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ExampleElement), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ExampleElementReferencesTargets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.Example), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -402,9 +402,9 @@ namespace Company.DCMLRACPGProyectoIPS
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::Company.DCMLRACPGProyectoIPS.ExampleElement)
+				if(childElement is global::Company.DCMLRACPGProyectoIPS.Example)
 				{
-					parentElement = GetParentForExampleElement((global::Company.DCMLRACPGProyectoIPS.ExampleElement)childElement);
+					parentElement = GetParentForExample((global::Company.DCMLRACPGProyectoIPS.Example)childElement);
 				} else
 				{
 					parentElement = null;
@@ -415,7 +415,7 @@ namespace Company.DCMLRACPGProyectoIPS
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::Company.DCMLRACPGProyectoIPS.ExampleModel GetParentForExampleElement( global::Company.DCMLRACPGProyectoIPS.ExampleElement root )
+			public static global::Company.DCMLRACPGProyectoIPS.ExampleModel GetParentForExample( global::Company.DCMLRACPGProyectoIPS.Example root )
 			{
 				// Segments 0 and 1
 				global::Company.DCMLRACPGProyectoIPS.ExampleModel result = root.ExampleModel;
@@ -511,7 +511,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ExampleElementReferencesTargets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

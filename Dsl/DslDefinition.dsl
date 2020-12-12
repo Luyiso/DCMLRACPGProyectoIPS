@@ -35,9 +35,9 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="61e4f563-0252-4c06-afb3-25c52fc16641" Description="Description for Company.DCMLRACPGProyectoIPS.Clase.Domain Property1" Name="DomainProperty1" DisplayName="Domain Property1">
+        <DomainProperty Id="61e4f563-0252-4c06-afb3-25c52fc16641" Description="Description for Company.DCMLRACPGProyectoIPS.Clase.Abstracta" Name="Abstracta" DisplayName="Abstracta" DefaultValue="False">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <ExternalTypeMoniker Name="/System/Boolean" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -113,6 +113,20 @@
         <DomainProperty Id="513f5724-7f23-4016-b719-9350eb485512" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros.Tipo Parámetro" Name="TipoParámetro" DisplayName="Tipo Parámetro">
           <Type>
             <DomainEnumerationMoniker Name="TipoParametro" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="3dc3c8f3-5cab-47d3-8ee8-e544067b5b4e" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstracta" Name="ClaseAbstracta" DisplayName="Clase Abstracta" Namespace="Company.DCMLRACPGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="Clase" />
+      </BaseClass>
+    </DomainClass>
+    <DomainClass Id="5b931a82-9b48-40a7-85d2-8597330d001d" Description="Description for Company.DCMLRACPGProyectoIPS.MétodoAbstracto" Name="MétodoAbstracto" DisplayName="Método Abstracto" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="f9a88dcc-e4d8-4038-90b6-dd54863fe109" Description="Description for Company.DCMLRACPGProyectoIPS.MétodoAbstracto.Name" Name="Name" DisplayName="Name" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -258,6 +272,49 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="ee613c58-55fe-4237-acad-f1920cd3badb" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación" Name="Agregación" DisplayName="Agregación" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="2e273c5d-7e1f-404c-ad73-d33676997c2c" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Nombre" Name="Nombre" DisplayName="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5dc773b0-9790-4ead-851b-d35fb76ba406" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Minima Componente" Name="CardinalidadMinimaComponente" DisplayName="Cardinalidad Minima Componente">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="ed9ce060-2945-43a5-ae32-043fe0c3c1e8" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Minima Compuesta" Name="CardinalidadMinimaCompuesta" DisplayName="Cardinalidad Minima Compuesta">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="45da3b44-0a2d-41c1-8da0-3627b197b13b" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Maxima Componente" Name="CardinalidadMaximaComponente" DisplayName="Cardinalidad Maxima Componente">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="f43d629e-506b-4fe0-a8e2-83dd4ec38746" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Maxima Compuesta" Name="CardinalidadMaximaCompuesta" DisplayName="Cardinalidad Maxima Compuesta">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <Source>
+        <DomainRole Id="cacc345e-0f3a-4552-aaf3-0e33437364e4" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="Conpuesta" PropertyDisplayName="Conpuesta">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="97a78d46-1510-43cd-8b6b-63cf114e9673" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="Componente" PropertyDisplayName="Componente">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -363,14 +420,17 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
             <DomainRelationshipMoniker Name="ClaseHasAtributo" />
           </XmlRelationshipData>
-          <XmlPropertyData XmlName="domainProperty1">
-            <DomainPropertyMoniker Name="Clase/DomainProperty1" />
+          <XmlPropertyData XmlName="abstracta">
+            <DomainPropertyMoniker Name="Clase/Abstracta" />
           </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="signaturadeOperación">
             <DomainRelationshipMoniker Name="ClaseHasSignaturadeOperación" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="targetClase">
             <DomainRelationshipMoniker Name="Asociación" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="conpuesta">
+            <DomainRelationshipMoniker Name="Agregación" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -445,6 +505,37 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
+      <XmlClassData TypeName="Agregación" MonikerAttributeName="" SerializeId="true" MonikerElementName="agregaciónMoniker" ElementName="agregación" MonikerTypeName="AgregaciónMoniker">
+        <DomainRelationshipMoniker Name="Agregación" />
+        <ElementData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="Agregación/Nombre" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadMinimaComponente">
+            <DomainPropertyMoniker Name="Agregación/CardinalidadMinimaComponente" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadMinimaCompuesta">
+            <DomainPropertyMoniker Name="Agregación/CardinalidadMinimaCompuesta" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadMaximaComponente">
+            <DomainPropertyMoniker Name="Agregación/CardinalidadMaximaComponente" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadMaximaCompuesta">
+            <DomainPropertyMoniker Name="Agregación/CardinalidadMaximaCompuesta" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaMoniker" ElementName="claseAbstracta" MonikerTypeName="ClaseAbstractaMoniker">
+        <DomainClassMoniker Name="ClaseAbstracta" />
+      </XmlClassData>
+      <XmlClassData TypeName="MétodoAbstracto" MonikerAttributeName="name" SerializeId="true" MonikerElementName="métodoAbstractoMoniker" ElementName="métodoAbstracto" MonikerTypeName="MétodoAbstractoMoniker">
+        <DomainClassMoniker Name="MétodoAbstracto" />
+        <ElementData>
+          <XmlPropertyData XmlName="name" IsMonikerKey="true">
+            <DomainPropertyMoniker Name="MétodoAbstracto/Name" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="DCMLRACPGProyectoIPSExplorer" />
@@ -472,6 +563,25 @@
     <ConnectionBuilder Name="AsociaciónBuilder">
       <LinkConnectDirective>
         <DomainRelationshipMoniker Name="Asociación" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="AgregaciónBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="Agregación" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
