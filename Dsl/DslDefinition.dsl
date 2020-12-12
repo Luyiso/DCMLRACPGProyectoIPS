@@ -215,6 +215,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="afac110b-14f8-4a22-986e-50c36e40d56c" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseReferencesTargetClase" Name="ClaseReferencesTargetClase" DisplayName="Clase References Target Clase" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Source>
+        <DomainRole Id="b60fda92-3a0e-4bc9-9c63-df996099459a" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseReferencesTargetClase.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="TargetClase" PropertyDisplayName="Target Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="388548b8-a4a3-4aff-8708-02f880b3b1a5" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseReferencesTargetClase.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="SourceClase" PropertyDisplayName="Source Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -237,6 +253,12 @@
         <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Entrada" Name="Entrada" Value="0" />
         <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Salida" Name="Salida" Value="1" />
         <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoParametro.EntradaSalida" Name="EntradaSalida" Value="2" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="Cardinalidad" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad">
+      <Literals>
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.0" Name="0" Value="0" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.1" Name="1" Value="1" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -308,6 +330,9 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="signaturadeOperaciñon">
             <DomainRelationshipMoniker Name="ClaseHasSignaturadeOperaciñon" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="targetClase">
+            <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="DomainRelationship1" MonikerAttributeName="" SerializeId="true" MonikerElementName="domainRelationship1Moniker" ElementName="domainRelationship1" MonikerTypeName="DomainRelationship1Moniker">
@@ -361,6 +386,9 @@
       <XmlClassData TypeName="SignaturadeOperaciñonHasParámetros" MonikerAttributeName="" SerializeId="true" MonikerElementName="signaturadeOperaciñonHasParámetrosMoniker" ElementName="signaturadeOperaciñonHasParámetros" MonikerTypeName="SignaturadeOperaciñonHasParámetrosMoniker">
         <DomainRelationshipMoniker Name="SignaturadeOperaciñonHasParámetros" />
       </XmlClassData>
+      <XmlClassData TypeName="ClaseReferencesTargetClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseReferencesTargetClaseMoniker" ElementName="claseReferencesTargetClase" MonikerTypeName="ClaseReferencesTargetClaseMoniker">
+        <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="DCMLRACPGProyectoIPSExplorer" />
@@ -380,6 +408,25 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Example" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ClaseReferencesTargetClaseBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
