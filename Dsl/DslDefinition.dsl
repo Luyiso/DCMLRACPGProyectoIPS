@@ -295,6 +295,11 @@
             <DomainEnumerationMoniker Name="Cardinalidad" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="76be3af3-73af-4e40-a00a-05e868c1a4bc" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Tipo" Name="Tipo" DisplayName="Tipo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <Source>
         <DomainRole Id="cacc345e-0f3a-4552-aaf3-0e33437364e4" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="Conpuesta" PropertyDisplayName="Conpuesta">
@@ -367,6 +372,12 @@
           <Notes>El nombre del literal no puede ser 1</Notes>
         </EnumerationLiteral>
         <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.N" Name="N" Value="2" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="TipoAgregacion" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion">
+      <Literals>
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion.Inclusiva" Name="Inclusiva" Value="1" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion.Referencial" Name="Referencial" Value="0" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -534,6 +545,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="cardinalidadMaximaCompuesta">
             <DomainPropertyMoniker Name="Agregación/CardinalidadMaximaCompuesta" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipo">
+            <DomainPropertyMoniker Name="Agregación/Tipo" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
