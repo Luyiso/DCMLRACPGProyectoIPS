@@ -6,7 +6,7 @@
         <ElementMergeDirective>
           <Notes>Creates an embedding link when an element is dropped onto a model. </Notes>
           <Index>
-            <DomainClassMoniker Name="ExampleElement" />
+            <DomainClassMoniker Name="Example" />
           </Index>
           <LinkCreationPaths>
             <DomainPath>ExampleModelHasElements.Elements</DomainPath>
@@ -14,16 +14,24 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="109a0aa1-054a-43d3-b641-4f02ef9fb74f" Description="Elements embedded in the model. Appear as boxes on the diagram." Name="ExampleElement" DisplayName="Example Element" Namespace="Company.DCMLRACPGProyectoIPS">
+    <DomainClass Id="109a0aa1-054a-43d3-b641-4f02ef9fb74f" Description="Elements embedded in the model. Appear as boxes on the diagram." Name="Example" DisplayName="Example" Namespace="Company.DCMLRACPGProyectoIPS">
       <Properties>
-        <DomainProperty Id="a874847f-e31f-4120-b2b3-cea395909d28" Description="Description for Company.DCMLRACPGProyectoIPS.ExampleElement.Name" Name="Name" DisplayName="Name" DefaultValue="" IsElementName="true">
+        <DomainProperty Id="a874847f-e31f-4120-b2b3-cea395909d28" Description="Description for Company.DCMLRACPGProyectoIPS.Example.Name" Name="Name" DisplayName="Name" DefaultValue="" IsElementName="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="d315ec34-1b54-4cbe-af6e-daaa49d3d27b" Description="Description for Company.DCMLRACPGProyectoIPS.DomainClass1" Name="DomainClass1" DisplayName="Domain Class1" Namespace="Company.DCMLRACPGProyectoIPS" />
+    <DomainClass Id="2a7b6210-3fba-483e-8192-172b1f3b0836" Description="Description for Company.DCMLRACPGProyectoIPS.DomainClass1" Name="DomainClass1" DisplayName="Domain Class1" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="2e66dd1d-11b3-4363-9ecf-c80c940fced5" Description="Description for Company.DCMLRACPGProyectoIPS.DomainClass1.Name" Name="Name" DisplayName="Name" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
   </Classes>
   <Relationships>
     <DomainRelationship Id="ae63115c-02f9-4e24-8202-584702467939" Description="Embedding relationship between the Model and Elements" Name="ExampleModelHasElements" DisplayName="Example Model Has Elements" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
@@ -37,23 +45,23 @@
       <Target>
         <DomainRole Id="9f5fa326-3e16-4c8a-a75b-656e2c783911" Description="" Name="Element" DisplayName="Element" PropertyName="ExampleModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Example Model">
           <RolePlayer>
-            <DomainClassMoniker Name="ExampleElement" />
+            <DomainClassMoniker Name="Example" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="c32ec58a-62f4-4078-8b83-7ef759d9ae37" Description="Reference relationship between Elements." Name="ExampleElementReferencesTargets" DisplayName="Example Element References Targets" Namespace="Company.DCMLRACPGProyectoIPS">
+    <DomainRelationship Id="c32ec58a-62f4-4078-8b83-7ef759d9ae37" Description="Reference relationship between Elements." Name="ExampleReferencesTargets" DisplayName="Example References Targets" Namespace="Company.DCMLRACPGProyectoIPS">
       <Source>
         <DomainRole Id="62ab4fe9-f0e6-444a-9523-1f42cff7d78e" Description="Description for Company.DCMLRACPGProyectoIPS.ExampleRelationship.Target" Name="Source" DisplayName="Source" PropertyName="Targets" PropertyDisplayName="Targets">
           <RolePlayer>
-            <DomainClassMoniker Name="ExampleElement" />
+            <DomainClassMoniker Name="Example" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
         <DomainRole Id="2566a42c-32f1-4d00-a01d-84852470a7cc" Description="Description for Company.DCMLRACPGProyectoIPS.ExampleRelationship.Source" Name="Target" DisplayName="Target" PropertyName="Sources" PropertyDisplayName="Sources">
           <RolePlayer>
-            <DomainClassMoniker Name="ExampleElement" />
+            <DomainClassMoniker Name="Example" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -83,7 +91,7 @@
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="f0c0271e-e72c-4c6b-b84d-925cc0185f39" Description="Description for Company.DCMLRACPGProyectoIPS.GeometryShape1" Name="GeometryShape1" DisplayName="Geometry Shape1" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Geometry Shape1" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="3d52f70c-8ebb-492f-a483-58163328217e" Description="Description for Company.DCMLRACPGProyectoIPS.GeometryShape1" Name="GeometryShape1" DisplayName="Geometry Shape1" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Geometry Shape1" InitialHeight="1" Geometry="Rectangle" />
   </Shapes>
   <Connectors>
     <Connector Id="22ecb680-59f2-47cb-84c7-dabf40cdf41d" Description="Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram." Name="ExampleConnector" DisplayName="Example Connector" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Example Connector" Color="113, 111, 110" TargetEndStyle="EmptyArrow" Thickness="0.01" />
@@ -98,22 +106,22 @@
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ExampleElement" MonikerAttributeName="name" SerializeId="true" MonikerElementName="exampleElementMoniker" ElementName="exampleElement" MonikerTypeName="ExampleElementMoniker">
-        <DomainClassMoniker Name="ExampleElement" />
+      <XmlClassData TypeName="Example" MonikerAttributeName="name" SerializeId="true" MonikerElementName="exampleMoniker" ElementName="example" MonikerTypeName="ExampleMoniker">
+        <DomainClassMoniker Name="Example" />
         <ElementData>
           <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="ExampleElement/Name" />
+            <DomainPropertyMoniker Name="Example/Name" />
           </XmlPropertyData>
           <XmlRelationshipData RoleElementName="targets">
-            <DomainRelationshipMoniker Name="ExampleElementReferencesTargets" />
+            <DomainRelationshipMoniker Name="ExampleReferencesTargets" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ExampleModelHasElements" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelHasElementsMoniker" ElementName="exampleModelHasElements" MonikerTypeName="ExampleModelHasElementsMoniker">
         <DomainRelationshipMoniker Name="ExampleModelHasElements" />
       </XmlClassData>
-      <XmlClassData TypeName="ExampleElementReferencesTargets" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleElementReferencesTargetsMoniker" ElementName="exampleElementReferencesTargets" MonikerTypeName="ExampleElementReferencesTargetsMoniker">
-        <DomainRelationshipMoniker Name="ExampleElementReferencesTargets" />
+      <XmlClassData TypeName="ExampleReferencesTargets" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleReferencesTargetsMoniker" ElementName="exampleReferencesTargets" MonikerTypeName="ExampleReferencesTargetsMoniker">
+        <DomainRelationshipMoniker Name="ExampleReferencesTargets" />
       </XmlClassData>
       <XmlClassData TypeName="ExampleShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleShapeMoniker" ElementName="exampleShape" MonikerTypeName="ExampleShapeMoniker">
         <GeometryShapeMoniker Name="ExampleShape" />
@@ -124,8 +132,13 @@
       <XmlClassData TypeName="DCMLRACPGProyectoIPSDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="dCMLRACPGProyectoIPSDiagramMoniker" ElementName="dCMLRACPGProyectoIPSDiagram" MonikerTypeName="DCMLRACPGProyectoIPSDiagramMoniker">
         <DiagramMoniker Name="DCMLRACPGProyectoIPSDiagram" />
       </XmlClassData>
-      <XmlClassData TypeName="DomainClass1" MonikerAttributeName="" SerializeId="true" MonikerElementName="domainClass1Moniker" ElementName="domainClass1" MonikerTypeName="DomainClass1Moniker">
+      <XmlClassData TypeName="DomainClass1" MonikerAttributeName="name" SerializeId="true" MonikerElementName="domainClass1Moniker" ElementName="domainClass1" MonikerTypeName="DomainClass1Moniker">
         <DomainClassMoniker Name="DomainClass1" />
+        <ElementData>
+          <XmlPropertyData XmlName="name" IsMonikerKey="true">
+            <DomainPropertyMoniker Name="DomainClass1/Name" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="GeometryShape1" MonikerAttributeName="" SerializeId="true" MonikerElementName="geometryShape1Moniker" ElementName="geometryShape1" MonikerTypeName="GeometryShape1Moniker">
         <GeometryShapeMoniker Name="GeometryShape1" />
@@ -134,21 +147,21 @@
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="DCMLRACPGProyectoIPSExplorer" />
   <ConnectionBuilders>
-    <ConnectionBuilder Name="ExampleElementReferencesTargetsBuilder">
+    <ConnectionBuilder Name="ExampleReferencesTargetsBuilder">
       <Notes>Provides for the creation of an ExampleRelationship by pointing at two ExampleElements.</Notes>
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ExampleElementReferencesTargets" />
+        <DomainRelationshipMoniker Name="ExampleReferencesTargets" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="ExampleElement" />
+              <DomainClassMoniker Name="Example" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
         <TargetDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="ExampleElement" />
+              <DomainClassMoniker Name="Example" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -161,7 +174,7 @@
     </Class>
     <ShapeMaps>
       <ShapeMap>
-        <DomainClassMoniker Name="ExampleElement" />
+        <DomainClassMoniker Name="Example" />
         <ParentElementPath>
           <DomainPath>ExampleModelHasElements.ExampleModel/!ExampleModel</DomainPath>
         </ParentElementPath>
@@ -169,7 +182,7 @@
           <TextDecoratorMoniker Name="ExampleShape/NameDecorator" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ExampleElement/Name" />
+              <DomainPropertyMoniker Name="Example/Name" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -179,7 +192,7 @@
     <ConnectorMaps>
       <ConnectorMap>
         <ConnectorMoniker Name="ExampleConnector" />
-        <DomainRelationshipMoniker Name="ExampleElementReferencesTargets" />
+        <DomainRelationshipMoniker Name="ExampleReferencesTargets" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -192,10 +205,10 @@
     </XmlSerializationDefinition>
     <ToolboxTab TabText="DCMLRACPGProyectoIPS">
       <ElementTool Name="ExampleElement" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="ExampleElement" Tooltip="Create an ExampleElement" HelpKeyword="CreateExampleClassF1Keyword">
-        <DomainClassMoniker Name="ExampleElement" />
+        <DomainClassMoniker Name="Example" />
       </ElementTool>
       <ConnectionTool Name="ExampleRelationship" ToolboxIcon="resources\exampleconnectortoolbitmap.bmp" Caption="ExampleRelationship" Tooltip="Drag between ExampleElements to create an ExampleRelationship" HelpKeyword="ConnectExampleRelationF1Keyword">
-        <ConnectionBuilderMoniker Name="DCMLRACPGProyectoIPS/ExampleElementReferencesTargetsBuilder" />
+        <ConnectionBuilderMoniker Name="DCMLRACPGProyectoIPS/ExampleReferencesTargetsBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
