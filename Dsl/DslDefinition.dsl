@@ -23,6 +23,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
+    <DomainClass Id="d315ec34-1b54-4cbe-af6e-daaa49d3d27b" Description="Description for Company.DCMLRACPGProyectoIPS.DomainClass1" Name="DomainClass1" DisplayName="Domain Class1" Namespace="Company.DCMLRACPGProyectoIPS" />
   </Classes>
   <Relationships>
     <DomainRelationship Id="ae63115c-02f9-4e24-8202-584702467939" Description="Embedding relationship between the Model and Elements" Name="ExampleModelHasElements" DisplayName="Example Model Has Elements" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
@@ -82,6 +83,7 @@
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <GeometryShape Id="f0c0271e-e72c-4c6b-b84d-925cc0185f39" Description="Description for Company.DCMLRACPGProyectoIPS.GeometryShape1" Name="GeometryShape1" DisplayName="Geometry Shape1" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Geometry Shape1" InitialHeight="1" Geometry="Rectangle" />
   </Shapes>
   <Connectors>
     <Connector Id="22ecb680-59f2-47cb-84c7-dabf40cdf41d" Description="Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram." Name="ExampleConnector" DisplayName="Example Connector" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Example Connector" Color="113, 111, 110" TargetEndStyle="EmptyArrow" Thickness="0.01" />
@@ -121,6 +123,12 @@
       </XmlClassData>
       <XmlClassData TypeName="DCMLRACPGProyectoIPSDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="dCMLRACPGProyectoIPSDiagramMoniker" ElementName="dCMLRACPGProyectoIPSDiagram" MonikerTypeName="DCMLRACPGProyectoIPSDiagramMoniker">
         <DiagramMoniker Name="DCMLRACPGProyectoIPSDiagram" />
+      </XmlClassData>
+      <XmlClassData TypeName="DomainClass1" MonikerAttributeName="" SerializeId="true" MonikerElementName="domainClass1Moniker" ElementName="domainClass1" MonikerTypeName="DomainClass1Moniker">
+        <DomainClassMoniker Name="DomainClass1" />
+      </XmlClassData>
+      <XmlClassData TypeName="GeometryShape1" MonikerAttributeName="" SerializeId="true" MonikerElementName="geometryShape1Moniker" ElementName="geometryShape1" MonikerTypeName="GeometryShape1Moniker">
+        <GeometryShapeMoniker Name="GeometryShape1" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>

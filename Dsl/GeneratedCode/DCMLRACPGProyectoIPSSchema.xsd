@@ -127,6 +127,38 @@
     </xsd:complexContent>
   </xsd:complexType>
   
+  <!-- DomainClass1 -->
+  <xsd:element name="domainClass1" type="DomainClass1" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DomainClass1">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DomainClass1 Moniker -->
+  <xsd:element name="domainClass1Moniker" type="DomainClass1Moniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DomainClass1Moniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DomainClass1 instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
   <!-- ExampleModelHasElements -->
   <xsd:element name="exampleModelHasElements" abstract="true" type="ExampleModelHasElements" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ExampleModelHasElements" abstract="true" >

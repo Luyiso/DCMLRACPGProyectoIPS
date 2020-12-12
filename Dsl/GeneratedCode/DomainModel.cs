@@ -69,6 +69,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			{
 				typeof(ExampleModel),
 				typeof(ExampleElement),
+				typeof(DomainClass1),
 				typeof(ExampleModelHasElements),
 				typeof(ExampleElementReferencesTargets),
 				typeof(DCMLRACPGProyectoIPSDiagram),
@@ -123,12 +124,13 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
 				createElementMap.Add(typeof(ExampleModel), 0);
 				createElementMap.Add(typeof(ExampleElement), 1);
-				createElementMap.Add(typeof(DCMLRACPGProyectoIPSDiagram), 2);
-				createElementMap.Add(typeof(ExampleConnector), 3);
-				createElementMap.Add(typeof(ExampleShape), 4);
+				createElementMap.Add(typeof(DomainClass1), 2);
+				createElementMap.Add(typeof(DCMLRACPGProyectoIPSDiagram), 3);
+				createElementMap.Add(typeof(ExampleConnector), 4);
+				createElementMap.Add(typeof(ExampleShape), 5);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -144,9 +146,10 @@ namespace Company.DCMLRACPGProyectoIPS
 			{
 				case 0: return new ExampleModel(partition, propertyAssignments);
 				case 1: return new ExampleElement(partition, propertyAssignments);
-				case 2: return new DCMLRACPGProyectoIPSDiagram(partition, propertyAssignments);
-				case 3: return new ExampleConnector(partition, propertyAssignments);
-				case 4: return new ExampleShape(partition, propertyAssignments);
+				case 2: return new DomainClass1(partition, propertyAssignments);
+				case 3: return new DCMLRACPGProyectoIPSDiagram(partition, propertyAssignments);
+				case 4: return new ExampleConnector(partition, propertyAssignments);
+				case 5: return new ExampleShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}

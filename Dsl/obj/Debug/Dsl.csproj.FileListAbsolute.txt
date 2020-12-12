@@ -68,3 +68,4 @@ D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Dsl\obj\Debug\Dsl.cspro
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Dsl\obj\Debug\Dsl.csproj.CopyComplete
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Dsl\obj\Debug\Company.DCMLRACPGProyectoIPS.Dsl.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Dsl\obj\Debug\Company.DCMLRACPGProyectoIPS.Dsl.pdb
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Dsl\obj\Debug\Dsl.csprojAssemblyReference.cache

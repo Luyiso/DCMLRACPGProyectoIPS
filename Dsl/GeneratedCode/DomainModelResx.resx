@@ -149,6 +149,14 @@
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ExampleElement&apos;</comment>
   </data>
+  <data name="Company.DCMLRACPGProyectoIPS.DomainClass1.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.DomainClass1</value>
+    <comment>Description for DomainClass &apos;DomainClass1&apos;</comment>
+  </data>
+  <data name="Company.DCMLRACPGProyectoIPS.DomainClass1.DisplayName" xml:space="preserve">
+    <value>Domain Class1</value>
+    <comment>DisplayName for DomainClass &apos;DomainClass1&apos;</comment>
+  </data>
   <data name="Company.DCMLRACPGProyectoIPS.ExampleModelHasElements.Description" xml:space="preserve">
     <value>Embedding relationship between the Model and Elements</value>
     <comment>Description for DomainClass &apos;ExampleModelHasElements&apos;</comment>
