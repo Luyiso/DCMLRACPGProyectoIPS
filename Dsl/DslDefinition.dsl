@@ -311,6 +311,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="2bdc530c-7796-4612-a0fd-be3a9573dd77" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto" Name="ClaseAbstractaTieneMetodoAbstracto" DisplayName="Clase Abstracta Tiene Metodo Abstracto" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Source>
+        <DomainRole Id="0ebe78ec-3d09-491b-a0a7-434e1373ba85" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.MétodoAbstracto" Name="MétodoAbstracto" DisplayName="Método Abstracto" PropertyName="ClaseAbstracta" Multiplicity="One" PropertyDisplayName="Clase Abstracta">
+          <RolePlayer>
+            <DomainClassMoniker Name="MétodoAbstracto" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="2339c444-94f8-46be-b596-967ae57a7a2d" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.ClaseAbstracta" Name="ClaseAbstracta" DisplayName="Clase Abstracta" PropertyName="MétodoAbstracto" Multiplicity="OneMany" PropertyDisplayName="Método Abstracto">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClaseAbstracta" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -526,6 +542,14 @@
       </XmlClassData>
       <XmlClassData TypeName="MétodoAbstracto" MonikerAttributeName="" SerializeId="true" MonikerElementName="métodoAbstractoMoniker" ElementName="métodoAbstracto" MonikerTypeName="MétodoAbstractoMoniker">
         <DomainClassMoniker Name="MétodoAbstracto" />
+        <ElementData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="claseAbstracta">
+            <DomainRelationshipMoniker Name="ClaseAbstractaTieneMetodoAbstracto" />
+          </XmlRelationshipData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseAbstractaTieneMetodoAbstracto" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaTieneMetodoAbstractoMoniker" ElementName="claseAbstractaTieneMetodoAbstracto" MonikerTypeName="ClaseAbstractaTieneMetodoAbstractoMoniker">
+        <DomainRelationshipMoniker Name="ClaseAbstractaTieneMetodoAbstracto" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -584,6 +608,25 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ClaseAbstractaTieneMetodoAbstractoBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ClaseAbstractaTieneMetodoAbstracto" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="MétodoAbstracto" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClaseAbstracta" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
