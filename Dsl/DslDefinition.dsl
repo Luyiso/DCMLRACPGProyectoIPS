@@ -100,7 +100,7 @@
     </DomainClass>
     <DomainClass Id="061730c2-c323-4c0e-acf8-5b153b6e2d7e" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros" Name="Parámetros" DisplayName="Parámetros" Namespace="Company.DCMLRACPGProyectoIPS">
       <Properties>
-        <DomainProperty Id="2380cb29-c6d8-4794-b328-78c119fee93a" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros.Name" Name="Name" DisplayName="Name" IsElementName="true">
+        <DomainProperty Id="2380cb29-c6d8-4794-b328-78c119fee93a" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros.Nombre" Name="Nombre" DisplayName="Nombre" IsElementName="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -464,11 +464,11 @@
       <XmlClassData TypeName="ClaseHasSignaturadeOperación" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasSignaturadeOperaciónMoniker" ElementName="claseHasSignaturadeOperación" MonikerTypeName="ClaseHasSignaturadeOperaciónMoniker">
         <DomainRelationshipMoniker Name="ClaseHasSignaturadeOperación" />
       </XmlClassData>
-      <XmlClassData TypeName="Parámetros" MonikerAttributeName="name" SerializeId="true" MonikerElementName="parámetrosMoniker" ElementName="parámetros" MonikerTypeName="ParámetrosMoniker">
+      <XmlClassData TypeName="Parámetros" MonikerAttributeName="nombre" SerializeId="true" MonikerElementName="parámetrosMoniker" ElementName="parámetros" MonikerTypeName="ParámetrosMoniker">
         <DomainClassMoniker Name="Parámetros" />
         <ElementData>
-          <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="Parámetros/Name" />
+          <XmlPropertyData XmlName="nombre" IsMonikerKey="true">
+            <DomainPropertyMoniker Name="Parámetros/Nombre" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="tipoDato">
             <DomainPropertyMoniker Name="Parámetros/TipoDato" />
