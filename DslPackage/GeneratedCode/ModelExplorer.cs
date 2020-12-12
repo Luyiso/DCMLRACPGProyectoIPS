@@ -67,7 +67,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		///</summary>
 		protected override global::System.Guid RootElementDomainClassId
 		{
-			get { return global::Company.DCMLRACPGProyectoIPS.ExampleModel.DomainClassId; }
+			get { return global::Company.DCMLRACPGProyectoIPS.TapizModelo.DomainClassId; }
 		}
 		
 		/// <summary>

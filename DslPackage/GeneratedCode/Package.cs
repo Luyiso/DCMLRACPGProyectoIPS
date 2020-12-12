@@ -28,23 +28,15 @@ namespace Company.DCMLRACPGProyectoIPS
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
 	[VSShell::ProvideToolWindow(typeof(DCMLRACPGProyectoIPSExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(DCMLRACPGProyectoIPSExplorerToolWindow), Constants.DCMLRACPGProyectoIPSEditorFactoryId)]
-	[VSShell::ProvideStaticToolboxGroup("@DCMLRACPGProyectoIPSToolboxTab;Company.DCMLRACPGProyectoIPS.Dsl.dll", "Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxTab",
-					"@ExampleElementToolboxItem;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
-					"Company.DCMLRACPGProyectoIPS.ExampleElementToolboxItem", 
+	[VSShell::ProvideStaticToolboxGroup("@ClasesToolboxTab;Company.DCMLRACPGProyectoIPS.Dsl.dll", "Company.DCMLRACPGProyectoIPS.ClasesToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("Company.DCMLRACPGProyectoIPS.ClasesToolboxTab",
+					"@ClaseToolToolboxItem;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"Company.DCMLRACPGProyectoIPS.ClaseToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"CreateExampleClassF1Keyword", 
-					"@ExampleElementToolboxBitmap;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"ClaseTool", 
+					"@ClaseToolToolboxBitmap;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 0)]
-	[VSShell::ProvideStaticToolboxItem("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxTab",
-					"@ExampleRelationshipToolboxItem;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
-					"Company.DCMLRACPGProyectoIPS.ExampleRelationshipToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ConnectExampleRelationF1Keyword", 
-					"@ExampleRelationshipToolboxBitmap;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
-					0xff00ff,
-					Index = 1)]
 	[VSShell::ProvideEditorFactory(typeof(DCMLRACPGProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(DCMLRACPGProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(DCMLRACPGProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
