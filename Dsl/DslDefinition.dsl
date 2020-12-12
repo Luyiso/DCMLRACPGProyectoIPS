@@ -35,6 +35,11 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="61e4f563-0252-4c06-afb3-25c52fc16641" Description="Description for Company.DCMLRACPGProyectoIPS.Clase.Domain Property1" Name="DomainProperty1" DisplayName="Domain Property1">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -43,14 +48,6 @@
           </Index>
           <LinkCreationPaths>
             <DomainPath>ClaseHasAtributo.Atributo</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="Operación" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>ClaseHasOperación.Operación</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -65,44 +62,6 @@
         <DomainProperty Id="4f37dddd-ffd4-44b0-bc71-3c4ccb6468b5" Description="Description for Company.DCMLRACPGProyectoIPS.Atributo.Tipo Datos" Name="TipoDatos" DisplayName="Tipo Datos">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
-    <DomainClass Id="aed20b5d-ee96-4c18-bd71-6a4a57b83e9d" Description="Description for Company.DCMLRACPGProyectoIPS.Operación" Name="Operación" DisplayName="Operación" Namespace="Company.DCMLRACPGProyectoIPS">
-      <Properties>
-        <DomainProperty Id="64e92061-39a5-4f6e-a6b6-1a0f1a66bdad" Description="Description for Company.DCMLRACPGProyectoIPS.Operación.Name" Name="Name" DisplayName="Name" IsElementName="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-      <ElementMergeDirectives>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="Parámetro" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>OperaciónHasParámetro.Parámetro</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-      </ElementMergeDirectives>
-    </DomainClass>
-    <DomainClass Id="be656711-f8f2-44ac-94c8-f602b2917c5b" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetro" Name="Parámetro" DisplayName="Parámetro" Namespace="Company.DCMLRACPGProyectoIPS">
-      <Properties>
-        <DomainProperty Id="7db67bb9-d568-425f-90e7-69ee2d13a376" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetro.Name" Name="Name" DisplayName="Name" IsElementName="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="a315cd60-a3bc-4a0a-8647-1b54eaa18153" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetro.Tipo Datos" Name="TipoDatos" DisplayName="Tipo Datos">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="973ccd61-dbdf-4d87-b908-e16e43c7314a" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetro.Tipo Parametro" Name="TipoParametro" DisplayName="Tipo Parametro">
-          <Type>
-            <DomainEnumerationMoniker Name="TipoParametro" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -173,38 +132,6 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="29c5c1d3-8fef-4d2f-87e7-07938e39aff3" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasOperación" Name="ClaseHasOperación" DisplayName="Clase Has Operación" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="7d5f1deb-0d26-439f-b38c-fa93fdf68b08" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasOperación.Clase" Name="Clase" DisplayName="Clase" PropertyName="Operación" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Operación">
-          <RolePlayer>
-            <DomainClassMoniker Name="Clase" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="f4cacd10-621e-4174-8b07-fdc5ca1e9e87" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasOperación.Operación" Name="Operación" DisplayName="Operación" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
-          <RolePlayer>
-            <DomainClassMoniker Name="Operación" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="8031209d-8be4-4216-aa7f-23432523acda" Description="Description for Company.DCMLRACPGProyectoIPS.OperaciónHasParámetro" Name="OperaciónHasParámetro" DisplayName="Operación Has Parámetro" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="9b22dec1-ebd1-4af4-8b5c-3e3f21018f29" Description="Description for Company.DCMLRACPGProyectoIPS.OperaciónHasParámetro.Operación" Name="Operación" DisplayName="Operación" PropertyName="Parámetro" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Parámetro">
-          <RolePlayer>
-            <DomainClassMoniker Name="Operación" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="3488b52e-8af7-4d73-babf-a6cb4a2923a3" Description="Description for Company.DCMLRACPGProyectoIPS.OperaciónHasParámetro.Parámetro" Name="Parámetro" DisplayName="Parámetro" PropertyName="Operación" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Operación">
-          <RolePlayer>
-            <DomainClassMoniker Name="Parámetro" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -234,11 +161,6 @@
     <GeometryShape Id="af64f214-b9a5-4965-adaa-1c4c8c4fd260" Description="Shape used to represent ExampleElements on a Diagram." Name="ExampleShape" DisplayName="Example Shape" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Example Shape" FillColor="242, 239, 229" OutlineColor="113, 111, 110" InitialWidth="2" InitialHeight="0.75" OutlineThickness="0.01" Geometry="Rectangle">
       <Notes>The shape has a text decorator used to display the Name property of the mapped ExampleElement.</Notes>
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
-      </ShapeHasDecorators>
-    </GeometryShape>
-    <GeometryShape Id="9f36a97c-a9af-4bc4-8cfd-434b6d997ffc" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseShape" Name="ClaseShape" DisplayName="Clase Shape" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Clase Shape" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
@@ -297,16 +219,13 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
             <DomainRelationshipMoniker Name="ClaseHasAtributo" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="operación">
-            <DomainRelationshipMoniker Name="ClaseHasOperación" />
-          </XmlRelationshipData>
+          <XmlPropertyData XmlName="domainProperty1">
+            <DomainPropertyMoniker Name="Clase/DomainProperty1" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="DomainRelationship1" MonikerAttributeName="" SerializeId="true" MonikerElementName="domainRelationship1Moniker" ElementName="domainRelationship1" MonikerTypeName="DomainRelationship1Moniker">
         <DomainRelationshipMoniker Name="DomainRelationship1" />
-      </XmlClassData>
-      <XmlClassData TypeName="ClaseShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseShapeMoniker" ElementName="claseShape" MonikerTypeName="ClaseShapeMoniker">
-        <GeometryShapeMoniker Name="ClaseShape" />
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="name" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
@@ -319,39 +238,8 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="Operación" MonikerAttributeName="name" SerializeId="true" MonikerElementName="operaciónMoniker" ElementName="operación" MonikerTypeName="OperaciónMoniker">
-        <DomainClassMoniker Name="Operación" />
-        <ElementData>
-          <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="Operación/Name" />
-          </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="parámetro">
-            <DomainRelationshipMoniker Name="OperaciónHasParámetro" />
-          </XmlRelationshipData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="Parámetro" MonikerAttributeName="name" SerializeId="true" MonikerElementName="parámetroMoniker" ElementName="parámetro" MonikerTypeName="ParámetroMoniker">
-        <DomainClassMoniker Name="Parámetro" />
-        <ElementData>
-          <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="Parámetro/Name" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="tipoDatos">
-            <DomainPropertyMoniker Name="Parámetro/TipoDatos" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="tipoParametro">
-            <DomainPropertyMoniker Name="Parámetro/TipoParametro" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
       <XmlClassData TypeName="ClaseHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoMoniker" ElementName="claseHasAtributo" MonikerTypeName="ClaseHasAtributoMoniker">
         <DomainRelationshipMoniker Name="ClaseHasAtributo" />
-      </XmlClassData>
-      <XmlClassData TypeName="ClaseHasOperación" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasOperaciónMoniker" ElementName="claseHasOperación" MonikerTypeName="ClaseHasOperaciónMoniker">
-        <DomainRelationshipMoniker Name="ClaseHasOperación" />
-      </XmlClassData>
-      <XmlClassData TypeName="OperaciónHasParámetro" MonikerAttributeName="" SerializeId="true" MonikerElementName="operaciónHasParámetroMoniker" ElementName="operaciónHasParámetro" MonikerTypeName="OperaciónHasParámetroMoniker">
-        <DomainRelationshipMoniker Name="OperaciónHasParámetro" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
