@@ -23,9 +23,9 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="2a7b6210-3fba-483e-8192-172b1f3b0836" Description="Description for Company.DCMLRACPGProyectoIPS.DomainClass1" Name="DomainClass1" DisplayName="Domain Class1" Namespace="Company.DCMLRACPGProyectoIPS">
+    <DomainClass Id="2a7b6210-3fba-483e-8192-172b1f3b0836" Description="Description for Company.DCMLRACPGProyectoIPS.Clase" Name="Clase" DisplayName="Clase" Namespace="Company.DCMLRACPGProyectoIPS">
       <Properties>
-        <DomainProperty Id="2e66dd1d-11b3-4363-9ecf-c80c940fced5" Description="Description for Company.DCMLRACPGProyectoIPS.DomainClass1.Name" Name="Name" DisplayName="Name" IsElementName="true">
+        <DomainProperty Id="2e66dd1d-11b3-4363-9ecf-c80c940fced5" Description="Description for Company.DCMLRACPGProyectoIPS.Clase.Name" Name="Name" DisplayName="Name" IsElementName="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -66,6 +66,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="31411dc4-d60c-41c9-8fcb-e4d66ff6f5a5" Description="Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1" Name="DomainRelationship1" DisplayName="Domain Relationship1" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="af32347b-aa47-4128-95c5-3a37da991e62" Description="Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.ExampleModel" Name="ExampleModel" DisplayName="Example Model" PropertyName="Clase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="ExampleModel" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="25d207e7-919d-4fd8-8f36-884745cf4735" Description="Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.Clase" Name="Clase" DisplayName="Clase" PropertyName="ExampleModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Example Model">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -91,7 +107,11 @@
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="3d52f70c-8ebb-492f-a483-58163328217e" Description="Description for Company.DCMLRACPGProyectoIPS.GeometryShape1" Name="GeometryShape1" DisplayName="Geometry Shape1" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Geometry Shape1" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="9f36a97c-a9af-4bc4-8cfd-434b6d997ffc" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseShape" Name="ClaseShape" DisplayName="Clase Shape" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Clase Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="22ecb680-59f2-47cb-84c7-dabf40cdf41d" Description="Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram." Name="ExampleConnector" DisplayName="Example Connector" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Example Connector" Color="113, 111, 110" TargetEndStyle="EmptyArrow" Thickness="0.01" />
@@ -103,6 +123,9 @@
         <ElementData>
           <XmlRelationshipData RoleElementName="elements">
             <DomainRelationshipMoniker Name="ExampleModelHasElements" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="clase">
+            <DomainRelationshipMoniker Name="DomainRelationship1" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -132,16 +155,19 @@
       <XmlClassData TypeName="DCMLRACPGProyectoIPSDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="dCMLRACPGProyectoIPSDiagramMoniker" ElementName="dCMLRACPGProyectoIPSDiagram" MonikerTypeName="DCMLRACPGProyectoIPSDiagramMoniker">
         <DiagramMoniker Name="DCMLRACPGProyectoIPSDiagram" />
       </XmlClassData>
-      <XmlClassData TypeName="DomainClass1" MonikerAttributeName="name" SerializeId="true" MonikerElementName="domainClass1Moniker" ElementName="domainClass1" MonikerTypeName="DomainClass1Moniker">
-        <DomainClassMoniker Name="DomainClass1" />
+      <XmlClassData TypeName="Clase" MonikerAttributeName="name" SerializeId="true" MonikerElementName="claseMoniker" ElementName="clase" MonikerTypeName="ClaseMoniker">
+        <DomainClassMoniker Name="Clase" />
         <ElementData>
           <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="DomainClass1/Name" />
+            <DomainPropertyMoniker Name="Clase/Name" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="GeometryShape1" MonikerAttributeName="" SerializeId="true" MonikerElementName="geometryShape1Moniker" ElementName="geometryShape1" MonikerTypeName="GeometryShape1Moniker">
-        <GeometryShapeMoniker Name="GeometryShape1" />
+      <XmlClassData TypeName="DomainRelationship1" MonikerAttributeName="" SerializeId="true" MonikerElementName="domainRelationship1Moniker" ElementName="domainRelationship1" MonikerTypeName="DomainRelationship1Moniker">
+        <DomainRelationshipMoniker Name="DomainRelationship1" />
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseShapeMoniker" ElementName="claseShape" MonikerTypeName="ClaseShapeMoniker">
+        <GeometryShapeMoniker Name="ClaseShape" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -187,6 +213,21 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="ExampleShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Clase" />
+        <ParentElementPath>
+          <DomainPath>DomainRelationship1.ExampleModel/!ExampleModel</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Clase/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="ClaseShape" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
