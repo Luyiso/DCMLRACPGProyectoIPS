@@ -327,6 +327,18 @@
         <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion.Referencial" Name="Referencial" Value="0" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="Totalidad" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.Totalidad">
+      <Literals>
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Totalidad.Total" Name="Total" Value="1" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Totalidad.Parcial" Name="Parcial" Value="0" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="DisjuntaSolapada" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada">
+      <Literals>
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Disjunta" Name="Disjunta" Value="0" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Solapada" Name="Solapada" Value="1" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <XmlSerializationBehavior Name="DCMLRACPGProyectoIPSSerializationBehavior" Namespace="Company.DCMLRACPGProyectoIPS">
     <ClassData>
