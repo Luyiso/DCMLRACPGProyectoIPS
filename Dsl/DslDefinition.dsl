@@ -123,13 +123,9 @@
       </BaseClass>
     </DomainClass>
     <DomainClass Id="5b931a82-9b48-40a7-85d2-8597330d001d" Description="Description for Company.DCMLRACPGProyectoIPS.MétodoAbstracto" Name="MétodoAbstracto" DisplayName="Método Abstracto" Namespace="Company.DCMLRACPGProyectoIPS">
-      <Properties>
-        <DomainProperty Id="f9a88dcc-e4d8-4038-90b6-dd54863fe109" Description="Description for Company.DCMLRACPGProyectoIPS.MétodoAbstracto.Name" Name="Name" DisplayName="Name" IsElementName="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
+      <BaseClass>
+        <DomainClassMoniker Name="SignaturadeOperación" />
+      </BaseClass>
     </DomainClass>
   </Classes>
   <Relationships>
@@ -528,13 +524,8 @@
       <XmlClassData TypeName="ClaseAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaMoniker" ElementName="claseAbstracta" MonikerTypeName="ClaseAbstractaMoniker">
         <DomainClassMoniker Name="ClaseAbstracta" />
       </XmlClassData>
-      <XmlClassData TypeName="MétodoAbstracto" MonikerAttributeName="name" SerializeId="true" MonikerElementName="métodoAbstractoMoniker" ElementName="métodoAbstracto" MonikerTypeName="MétodoAbstractoMoniker">
+      <XmlClassData TypeName="MétodoAbstracto" MonikerAttributeName="" SerializeId="true" MonikerElementName="métodoAbstractoMoniker" ElementName="métodoAbstracto" MonikerTypeName="MétodoAbstractoMoniker">
         <DomainClassMoniker Name="MétodoAbstracto" />
-        <ElementData>
-          <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="MétodoAbstracto/Name" />
-          </XmlPropertyData>
-        </ElementData>
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
