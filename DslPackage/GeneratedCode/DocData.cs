@@ -305,7 +305,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		protected override void Load(string fileName, bool isReload)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Company.DCMLRACPGProyectoIPS.ExampleModel modelRoot = null;
+			global::Company.DCMLRACPGProyectoIPS.TapizModelo modelRoot = null;
 			DslModeling::ISchemaResolver schemaResolver = new DslShell::ModelingSchemaResolver(this.ServiceProvider);
 			//clear the current root element
 			this.SetRootElement(null);
@@ -410,7 +410,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		protected override void Save(string fileName)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Company.DCMLRACPGProyectoIPS.ExampleModel modelRoot = (global::Company.DCMLRACPGProyectoIPS.ExampleModel)this.RootElement;
+			global::Company.DCMLRACPGProyectoIPS.TapizModelo modelRoot = (global::Company.DCMLRACPGProyectoIPS.TapizModelo)this.RootElement;
 
 			
 			// Only save the diagrams if
@@ -556,7 +556,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			get
 			{
-				global::Company.DCMLRACPGProyectoIPS.ExampleModel modelRoot = this.RootElement as global::Company.DCMLRACPGProyectoIPS.ExampleModel;
+				global::Company.DCMLRACPGProyectoIPS.TapizModelo modelRoot = this.RootElement as global::Company.DCMLRACPGProyectoIPS.TapizModelo;
 				string modelFile = string.Empty;
 				if (modelRoot != null)
 				{

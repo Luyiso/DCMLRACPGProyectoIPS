@@ -12,463 +12,6 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace Company.DCMLRACPGProyectoIPS
 {
 	/// <summary>
-	/// DomainRelationship ExampleModelHasElements
-	/// Embedding relationship between the Model and Elements
-	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ExampleModelHasElements.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ExampleModelHasElements.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("ae63115c-02f9-4e24-8202-584702467939")]
-	public partial class ExampleModelHasElements : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ExampleModelHasElements domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xae63115c, 0x02f9, 0x4e24, 0x82, 0x02, 0x58, 0x47, 0x02, 0x46, 0x79, 0x39);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ExampleModelHasElements link in the same Partition as the given ExampleModel
-		/// </summary>
-		/// <param name="source">ExampleModel to use as the source of the relationship.</param>
-		/// <param name="target">Example to use as the target of the relationship.</param>
-		public ExampleModelHasElements(ExampleModel source, Example target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ExampleModelHasElements.ExampleModelDomainRoleId, source), new DslModeling::RoleAssignment(ExampleModelHasElements.ElementDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasElements(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasElements(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasElements(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasElements(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region ExampleModel domain role code
-		
-		/// <summary>
-		/// ExampleModel domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ExampleModelDomainRoleId = new global::System.Guid(0x927accec, 0xdfe3, 0x4429, 0xbb, 0x25, 0xba, 0xc8, 0x23, 0x02, 0x09, 0x40);
-		
-		/// <summary>
-		/// DomainRole ExampleModel
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ExampleModelHasElements/ExampleModel.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ExampleModelHasElements/ExampleModel.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ExampleModelHasElements/ExampleModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("927accec-dfe3-4429-bb25-bac823020940")]
-		public virtual ExampleModel ExampleModel
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (ExampleModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, ExampleModelDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ExampleModelDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access ExampleModel of a Example
-		/// <summary>
-		/// Gets ExampleModel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ExampleModel GetExampleModel(Example element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ElementDomainRoleId) as ExampleModel;
-		}
-		
-		/// <summary>
-		/// Sets ExampleModel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetExampleModel(Example element, ExampleModel newExampleModel)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, ElementDomainRoleId, newExampleModel);
-		}
-		#endregion
-		#region Element domain role code
-		
-		/// <summary>
-		/// Element domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ElementDomainRoleId = new global::System.Guid(0x9f5fa326, 0x3e16, 0x4c8a, 0xa7, 0x5b, 0x65, 0x6e, 0x2c, 0x78, 0x39, 0x11);
-		
-		/// <summary>
-		/// DomainRole Element
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ExampleModelHasElements/Element.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ExampleModelHasElements/Element.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ExampleModel", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ExampleModelHasElements/Element.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("9f5fa326-3e16-4c8a-a75b-656e2c783911")]
-		public virtual Example Element
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Example)DslModeling::DomainRoleInfo.GetRolePlayer(this, ElementDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ElementDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Elements of a ExampleModel
-		/// <summary>
-		/// Gets a list of Elements.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Example> GetElements(ExampleModel element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Example>, Example>(element, ExampleModelDomainRoleId);
-		}
-		#endregion
-		#region ExampleModel link accessor
-		/// <summary>
-		/// Get the list of ExampleModelHasElements links to a ExampleModel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements> GetLinksToElements ( global::Company.DCMLRACPGProyectoIPS.ExampleModel exampleModelInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements>(exampleModelInstance, global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements.ExampleModelDomainRoleId);
-		}
-		#endregion
-		#region Element link accessor
-		/// <summary>
-		/// Get the ExampleModelHasElements link to a Example.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements GetLinkToExampleModel (global::Company.DCMLRACPGProyectoIPS.Example elementInstance)
-		{
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements>(elementInstance, global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements.ElementDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Element not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region ExampleModelHasElements instance accessors
-		
-		/// <summary>
-		/// Get any ExampleModelHasElements links between a given ExampleModel and a Example.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements> GetLinks( global::Company.DCMLRACPGProyectoIPS.ExampleModel source, global::Company.DCMLRACPGProyectoIPS.Example target )
-		{
-			global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements> outLinks = new global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements>();
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements>(source, global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements.ExampleModelDomainRoleId);
-			foreach ( global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements link in links )
-			{
-				if ( target.Equals(link.Element) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ExampleModelHasElements link between a given ExampleModeland a Example.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements GetLink( global::Company.DCMLRACPGProyectoIPS.ExampleModel source, global::Company.DCMLRACPGProyectoIPS.Example target )
-		{
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements>(source, global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements.ExampleModelDomainRoleId);
-			foreach ( global::Company.DCMLRACPGProyectoIPS.ExampleModelHasElements link in links )
-			{
-				if ( target.Equals(link.Element) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Company.DCMLRACPGProyectoIPS
-{
-	/// <summary>
-	/// DomainRelationship ExampleReferencesTargets
-	/// Reference relationship between Elements.
-	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("c32ec58a-62f4-4078-8b83-7ef759d9ae37")]
-	public partial class ExampleReferencesTargets : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ExampleReferencesTargets domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc32ec58a, 0x62f4, 0x4078, 0x8b, 0x83, 0x7e, 0xf7, 0x59, 0xd9, 0xae, 0x37);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ExampleReferencesTargets link in the same Partition as the given Example
-		/// </summary>
-		/// <param name="source">Example to use as the source of the relationship.</param>
-		/// <param name="target">Example to use as the target of the relationship.</param>
-		public ExampleReferencesTargets(Example source, Example target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ExampleReferencesTargets.SourceDomainRoleId, source), new DslModeling::RoleAssignment(ExampleReferencesTargets.TargetDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleReferencesTargets(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleReferencesTargets(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleReferencesTargets(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleReferencesTargets(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Source domain role code
-		
-		/// <summary>
-		/// Source domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid SourceDomainRoleId = new global::System.Guid(0x62ab4fe9, 0xf0e6, 0x444a, 0x95, 0x23, 0x1f, 0x42, 0xcf, 0xf7, 0xd7, 0x8e);
-		
-		/// <summary>
-		/// DomainRole Source
-		/// Description for Company.DCMLRACPGProyectoIPS.ExampleRelationship.Target
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets/Source.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets/Source.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Targets", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets/Source.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("62ab4fe9-f0e6-444a-9523-1f42cff7d78e")]
-		public virtual Example Source
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Example)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Sources of a Example
-		/// <summary>
-		/// Gets a list of Sources.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Example> GetSources(Example element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Example>, Example>(element, TargetDomainRoleId);
-		}
-		#endregion
-		#region Target domain role code
-		
-		/// <summary>
-		/// Target domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TargetDomainRoleId = new global::System.Guid(0x2566a42c, 0x32f1, 0x4d00, 0xa0, 0x1d, 0x84, 0x85, 0x24, 0x70, 0xa7, 0xcc);
-		
-		/// <summary>
-		/// DomainRole Target
-		/// Description for Company.DCMLRACPGProyectoIPS.ExampleRelationship.Source
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets/Target.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets/Target.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Sources", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets/Target.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("2566a42c-32f1-4d00-a01d-84852470a7cc")]
-		public virtual Example Target
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Example)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Targets of a Example
-		/// <summary>
-		/// Gets a list of Targets.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Example> GetTargets(Example element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Example>, Example>(element, SourceDomainRoleId);
-		}
-		#endregion
-		#region Source link accessor
-		/// <summary>
-		/// Get the list of ExampleReferencesTargets links to a Example.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets> GetLinksToTargets ( global::Company.DCMLRACPGProyectoIPS.Example sourceInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets>(sourceInstance, global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets.SourceDomainRoleId);
-		}
-		#endregion
-		#region Target link accessor
-		/// <summary>
-		/// Get the list of ExampleReferencesTargets links to a Example.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets> GetLinksToSources ( global::Company.DCMLRACPGProyectoIPS.Example targetInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets>(targetInstance, global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets.TargetDomainRoleId);
-		}
-		#endregion
-		#region ExampleReferencesTargets instance accessors
-		
-		/// <summary>
-		/// Get any ExampleReferencesTargets links between a given Example and a Example.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets> GetLinks( global::Company.DCMLRACPGProyectoIPS.Example source, global::Company.DCMLRACPGProyectoIPS.Example target )
-		{
-			global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets> outLinks = new global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets>();
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets>(source, global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets.SourceDomainRoleId);
-			foreach ( global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets link in links )
-			{
-				if ( target.Equals(link.Target) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ExampleReferencesTargets link between a given Exampleand a Example.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets GetLink( global::Company.DCMLRACPGProyectoIPS.Example source, global::Company.DCMLRACPGProyectoIPS.Example target )
-		{
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets>(source, global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets.SourceDomainRoleId);
-			foreach ( global::Company.DCMLRACPGProyectoIPS.ExampleReferencesTargets link in links )
-			{
-				if ( target.Equals(link.Target) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Company.DCMLRACPGProyectoIPS
-{
-	/// <summary>
 	/// DomainRelationship DomainRelationship1
 	/// Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1
 	/// </summary>
@@ -490,12 +33,12 @@ namespace Company.DCMLRACPGProyectoIPS
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a DomainRelationship1 link in the same Partition as the given ExampleModel
+		/// Creates a DomainRelationship1 link in the same Partition as the given TapizModelo
 		/// </summary>
-		/// <param name="source">ExampleModel to use as the source of the relationship.</param>
+		/// <param name="source">TapizModelo to use as the source of the relationship.</param>
 		/// <param name="target">Clase to use as the target of the relationship.</param>
-		public DomainRelationship1(ExampleModel source, Clase target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DomainRelationship1.ExampleModelDomainRoleId, source), new DslModeling::RoleAssignment(DomainRelationship1.ClaseDomainRoleId, target)}, null)
+		public DomainRelationship1(TapizModelo source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DomainRelationship1.TapizModeloDomainRoleId, source), new DslModeling::RoleAssignment(DomainRelationship1.ClaseDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -541,55 +84,55 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 		}
 		#endregion
-		#region ExampleModel domain role code
+		#region TapizModelo domain role code
 		
 		/// <summary>
-		/// ExampleModel domain role Id.
+		/// TapizModelo domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid ExampleModelDomainRoleId = new global::System.Guid(0xaf32347b, 0xaa47, 0x4128, 0x95, 0xc5, 0x3a, 0x37, 0xda, 0x99, 0x1e, 0x62);
+		public static readonly global::System.Guid TapizModeloDomainRoleId = new global::System.Guid(0xaf32347b, 0xaa47, 0x4128, 0x95, 0xc5, 0x3a, 0x37, 0xda, 0x99, 0x1e, 0x62);
 		
 		/// <summary>
-		/// DomainRole ExampleModel
-		/// Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.ExampleModel
+		/// DomainRole TapizModelo
+		/// Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModelo
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/ExampleModel.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/ExampleModel.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Clase", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.DomainRelationship1/ExampleModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/TapizModelo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/TapizModelo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Clase", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.DomainRelationship1/TapizModelo.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("af32347b-aa47-4128-95c5-3a37da991e62")]
-		public virtual ExampleModel ExampleModel
+		public virtual TapizModelo TapizModelo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (ExampleModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, ExampleModelDomainRoleId);
+				return (TapizModelo)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizModeloDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ExampleModelDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizModeloDomainRoleId, value);
 			}
 		}
 				
 		#endregion
-		#region Static methods to access ExampleModel of a Clase
+		#region Static methods to access TapizModelo of a Clase
 		/// <summary>
-		/// Gets ExampleModel.
+		/// Gets TapizModelo.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ExampleModel GetExampleModel(Clase element)
+		public static TapizModelo GetTapizModelo(Clase element)
 		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseDomainRoleId) as ExampleModel;
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseDomainRoleId) as TapizModelo;
 		}
 		
 		/// <summary>
-		/// Sets ExampleModel.
+		/// Sets TapizModelo.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetExampleModel(Clase element, ExampleModel newExampleModel)
+		public static void SetTapizModelo(Clase element, TapizModelo newTapizModelo)
 		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseDomainRoleId, newExampleModel);
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseDomainRoleId, newTapizModelo);
 		}
 		#endregion
 		#region Clase domain role code
@@ -605,7 +148,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ExampleModel", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizModelo", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("25d207e7-919d-4fd8-8f36-884745cf4735")]
 		public virtual Clase Clase
 		{
@@ -622,26 +165,26 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access Clase of a ExampleModel
+		#region Static methods to access Clase of a TapizModelo
 		/// <summary>
 		/// Gets a list of Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClase(ExampleModel element)
+		public static DslModeling::LinkedElementCollection<Clase> GetClase(TapizModelo element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, ExampleModelDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, TapizModeloDomainRoleId);
 		}
 		#endregion
-		#region ExampleModel link accessor
+		#region TapizModelo link accessor
 		/// <summary>
-		/// Get the list of DomainRelationship1 links to a ExampleModel.
+		/// Get the list of DomainRelationship1 links to a TapizModelo.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> GetLinksToClase ( global::Company.DCMLRACPGProyectoIPS.ExampleModel exampleModelInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> GetLinksToClase ( global::Company.DCMLRACPGProyectoIPS.TapizModelo tapizModeloInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(exampleModelInstance, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.ExampleModelDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(tapizModeloInstance, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModeloDomainRoleId);
 		}
 		#endregion
 		#region Clase link accessor
@@ -650,7 +193,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 GetLinkToExampleModel (global::Company.DCMLRACPGProyectoIPS.Clase claseInstance)
+		public static global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 GetLinkToTapizModelo (global::Company.DCMLRACPGProyectoIPS.Clase claseInstance)
 		{
 			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(claseInstance, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.ClaseDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Clase not obeyed.");
@@ -667,14 +210,14 @@ namespace Company.DCMLRACPGProyectoIPS
 		#region DomainRelationship1 instance accessors
 		
 		/// <summary>
-		/// Get any DomainRelationship1 links between a given ExampleModel and a Clase.
+		/// Get any DomainRelationship1 links between a given TapizModelo and a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> GetLinks( global::Company.DCMLRACPGProyectoIPS.ExampleModel source, global::Company.DCMLRACPGProyectoIPS.Clase target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> GetLinks( global::Company.DCMLRACPGProyectoIPS.TapizModelo source, global::Company.DCMLRACPGProyectoIPS.Clase target )
 		{
 			global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> outLinks = new global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>();
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(source, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.ExampleModelDomainRoleId);
+			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(source, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModeloDomainRoleId);
 			foreach ( global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 link in links )
 			{
 				if ( target.Equals(link.Clase) )
@@ -685,13 +228,13 @@ namespace Company.DCMLRACPGProyectoIPS
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one DomainRelationship1 link between a given ExampleModeland a Clase.
+		/// Get the one DomainRelationship1 link between a given TapizModeloand a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 GetLink( global::Company.DCMLRACPGProyectoIPS.ExampleModel source, global::Company.DCMLRACPGProyectoIPS.Clase target )
+		public static global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 GetLink( global::Company.DCMLRACPGProyectoIPS.TapizModelo source, global::Company.DCMLRACPGProyectoIPS.Clase target )
 		{
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(source, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.ExampleModelDomainRoleId);
+			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(source, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModeloDomainRoleId);
 			foreach ( global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 link in links )
 			{
 				if ( target.Equals(link.Clase) )
@@ -2680,6 +2223,93 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 		
 		#endregion
+		#region Tipo domain property code
+		
+		/// <summary>
+		/// Tipo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoDomainPropertyId = new global::System.Guid(0x76be3af3, 0x73af, 0x4e40, 0xa0, 0x0a, 0x05, 0xe8, 0x68, 0xc1, 0xa4, 0xbc);
+		
+		/// <summary>
+		/// Storage for Tipo
+		/// </summary>
+		private global::System.String tipoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Tipo domain property.
+		/// Description for Company.DCMLRACPGProyectoIPS.Agregación.Tipo
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/Tipo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/Tipo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("76be3af3-73af-4e40-a00a-05e868c1a4bc")]
+		public global::System.String Tipo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Agregación.Tipo domain property.
+		/// </summary>
+		internal sealed partial class TipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Agregación, global::System.String>
+		{
+			private TipoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Agregación.Tipo domain property value handler.
+			/// </summary>
+			public static readonly TipoPropertyHandler Instance = new TipoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Agregación.Tipo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Agregación element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Agregación element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region SourceClase link accessor
 		/// <summary>
 		/// Get the list of Agregación links to a Clase.
@@ -2733,6 +2363,247 @@ namespace Company.DCMLRACPGProyectoIPS
 			foreach ( global::Company.DCMLRACPGProyectoIPS.Agregación link in links )
 			{
 				if ( target.Equals(link.TargetClase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Company.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship ClaseAbstractaTieneMetodoAbstracto
+	/// Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("2bdc530c-7796-4612-a0fd-be3a9573dd77")]
+	public partial class ClaseAbstractaTieneMetodoAbstracto : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseAbstractaTieneMetodoAbstracto domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x2bdc530c, 0x7796, 0x4612, 0xa0, 0xfd, 0xbe, 0x3a, 0x95, 0x73, 0xdd, 0x77);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseAbstractaTieneMetodoAbstracto link in the same Partition as the given MétodoAbstracto
+		/// </summary>
+		/// <param name="source">MétodoAbstracto to use as the source of the relationship.</param>
+		/// <param name="target">ClaseAbstracta to use as the target of the relationship.</param>
+		public ClaseAbstractaTieneMetodoAbstracto(MétodoAbstracto source, ClaseAbstracta target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseAbstractaTieneMetodoAbstracto.MétodoAbstractoDomainRoleId, source), new DslModeling::RoleAssignment(ClaseAbstractaTieneMetodoAbstracto.ClaseAbstractaDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseAbstractaTieneMetodoAbstracto(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseAbstractaTieneMetodoAbstracto(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseAbstractaTieneMetodoAbstracto(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseAbstractaTieneMetodoAbstracto(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region MétodoAbstracto domain role code
+		
+		/// <summary>
+		/// MétodoAbstracto domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid MétodoAbstractoDomainRoleId = new global::System.Guid(0x0ebe78ec, 0x3d09, 0x491b, 0xa0, 0xa7, 0x43, 0x4e, 0x13, 0x73, 0xba, 0x85);
+		
+		/// <summary>
+		/// DomainRole MétodoAbstracto
+		/// Description for
+		/// Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.MétodoAbstracto
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/MétodoAbstracto.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/MétodoAbstracto.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseAbstracta", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/MétodoAbstracto.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("0ebe78ec-3d09-491b-a0a7-434e1373ba85")]
+		public virtual MétodoAbstracto MétodoAbstracto
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (MétodoAbstracto)DslModeling::DomainRoleInfo.GetRolePlayer(this, MétodoAbstractoDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, MétodoAbstractoDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access MétodoAbstracto of a ClaseAbstracta
+		/// <summary>
+		/// Gets a list of MétodoAbstracto.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<MétodoAbstracto> GetMétodoAbstracto(ClaseAbstracta element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<MétodoAbstracto>, MétodoAbstracto>(element, ClaseAbstractaDomainRoleId);
+		}
+		#endregion
+		#region ClaseAbstracta domain role code
+		
+		/// <summary>
+		/// ClaseAbstracta domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseAbstractaDomainRoleId = new global::System.Guid(0x2339c444, 0x94f8, 0x46be, 0xb5, 0x96, 0x96, 0x7a, 0xe5, 0x7a, 0x7a, 0x2d);
+		
+		/// <summary>
+		/// DomainRole ClaseAbstracta
+		/// Description for
+		/// Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.ClaseAbstracta
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/ClaseAbstracta.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/ClaseAbstracta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "MétodoAbstracto", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/ClaseAbstracta.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainObjectId("2339c444-94f8-46be-b596-967ae57a7a2d")]
+		public virtual ClaseAbstracta ClaseAbstracta
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClaseAbstracta)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseAbstractaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseAbstractaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseAbstracta of a MétodoAbstracto
+		/// <summary>
+		/// Gets ClaseAbstracta.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClaseAbstracta GetClaseAbstracta(MétodoAbstracto element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, MétodoAbstractoDomainRoleId) as ClaseAbstracta;
+		}
+		
+		/// <summary>
+		/// Sets ClaseAbstracta.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClaseAbstracta(MétodoAbstracto element, ClaseAbstracta newClaseAbstracta)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, MétodoAbstractoDomainRoleId, newClaseAbstracta);
+		}
+		#endregion
+		#region MétodoAbstracto link accessor
+		/// <summary>
+		/// Get the ClaseAbstractaTieneMetodoAbstracto link to a MétodoAbstracto.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto GetLinkToClaseAbstracta (global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto métodoAbstractoInstance)
+		{
+			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto>(métodoAbstractoInstance, global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.MétodoAbstractoDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of MétodoAbstracto not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseAbstracta link accessor
+		/// <summary>
+		/// Get the list of ClaseAbstractaTieneMetodoAbstracto links to a ClaseAbstracta.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto> GetLinksToMétodoAbstracto ( global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta claseAbstractaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto>(claseAbstractaInstance, global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.ClaseAbstractaDomainRoleId);
+		}
+		#endregion
+		#region ClaseAbstractaTieneMetodoAbstracto instance accessors
+		
+		/// <summary>
+		/// Get any ClaseAbstractaTieneMetodoAbstracto links between a given MétodoAbstracto and a ClaseAbstracta.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto> GetLinks( global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto source, global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta target )
+		{
+			global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto> outLinks = new global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto>();
+			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto>(source, global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.MétodoAbstractoDomainRoleId);
+			foreach ( global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto link in links )
+			{
+				if ( target.Equals(link.ClaseAbstracta) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseAbstractaTieneMetodoAbstracto link between a given MétodoAbstractoand a ClaseAbstracta.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto GetLink( global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto source, global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta target )
+		{
+			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto>(source, global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.MétodoAbstractoDomainRoleId);
+			foreach ( global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto link in links )
+			{
+				if ( target.Equals(link.ClaseAbstracta) )
 				{
 					return link;
 				}

@@ -3,6 +3,9 @@
   <Classes>
     <DomainClass Id="3ff1f316-db9f-43ff-a9d7-9f50d6d21e71" Description="The root in which all other elements are embedded. Appears as a diagram." Name="TapizModelo" DisplayName="Tapiz Modelo" Namespace="Company.DCMLRACPGProyectoIPS" />
     <DomainClass Id="2a7b6210-3fba-483e-8192-172b1f3b0836" Description="Description for Company.DCMLRACPGProyectoIPS.Clase" Name="Clase" DisplayName="Clase" Namespace="Company.DCMLRACPGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="ClaseEnriquecida" />
+      </BaseClass>
       <Properties>
         <DomainProperty Id="2e66dd1d-11b3-4363-9ecf-c80c940fced5" Description="Description for Company.DCMLRACPGProyectoIPS.Clase.Name" Name="Name" DisplayName="Name" IsElementName="true">
           <Type>
@@ -40,6 +43,9 @@
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="df43c9fa-4032-4fe5-a6b1-a45c0466ea55" Description="Description for Company.DCMLRACPGProyectoIPS.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="Company.DCMLRACPGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="AtributoEnriquecido" />
+      </BaseClass>
       <Properties>
         <DomainProperty Id="ae9969a4-1da5-40d0-bbbb-c9e9f37313a3" Description="Description for Company.DCMLRACPGProyectoIPS.Atributo.Name" Name="Name" DisplayName="Name" IsElementName="true">
           <Type>
@@ -54,6 +60,9 @@
       </Properties>
     </DomainClass>
     <DomainClass Id="44a6fa22-8f00-45a0-b70f-aca4d13da263" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperación" Name="SignaturadeOperación" DisplayName="Signaturade Operación" Namespace="Company.DCMLRACPGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="MetodoEnriquecido" />
+      </BaseClass>
       <Properties>
         <DomainProperty Id="5bdd00b8-7bf6-47c6-83b2-d44351e4af9e" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperación.Name" Name="Name" DisplayName="Name" IsElementName="true">
           <Type>
@@ -105,6 +114,118 @@
       <BaseClass>
         <DomainClassMoniker Name="SignaturadeOperación" />
       </BaseClass>
+    </DomainClass>
+    <DomainClass Id="c66cd2f5-f54f-4640-ba47-6747b82e9758" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" InheritanceModifier="Abstract" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="88f6a2f7-9607-429b-945a-7793438c12a0" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Enriquecida" Name="Enriquecida" DisplayName="Enriquecida" DefaultValue="False">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5ccc3ca3-d1bd-433e-9934-5a8e2a981272" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color R" Name="FondoColorR" DisplayName="Fondo Color R">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="b30bfc13-6bf0-447a-bdf3-d913569ab0b0" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color G" Name="FondoColorG" DisplayName="Fondo Color G">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="67f5c7ad-7cee-452e-b60b-cebdb30dc978" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color B" Name="FondoColorB" DisplayName="Fondo Color B">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="f6ed57a4-a463-40ed-ad7c-46f3708453fb" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color R" Name="NombreColorR" DisplayName="Nombre Color R">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="66f4d9fd-2db6-4ea3-a8ee-f02e98733bda" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color G" Name="NombreColorG" DisplayName="Nombre Color G">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="860d1781-007d-4cfd-81f5-fbdccd67fa5a" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoLetra" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="033e8b56-3496-4961-92e0-776537705cf5" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Alineacion" Name="Alineacion" DisplayName="Alineacion">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="928cb5ab-f401-4238-8f6b-1afc8b9b5ff0" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color B" Name="NombreColorB" DisplayName="Nombre Color B">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="b5bd1502-5537-4a25-a3b6-2148ca1c9132" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido" Name="AtributoEnriquecido" DisplayName="Atributo Enriquecido" InheritanceModifier="Abstract" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="443ddca4-db69-467a-82da-1eb2a03915e6" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra R" Name="ColorLetraR" DisplayName="Color Letra R">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d59e1e69-3cde-4c15-bebe-d48346216b71" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra G" Name="ColorLetraG" DisplayName="Color Letra G">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="16556f25-4ff6-4af5-bb15-eb135e7fdad7" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra B" Name="ColorLetraB" DisplayName="Color Letra B">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="443c26c1-20d2-4d0a-a9c2-bfab68122390" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoLetra" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5f8fbbb3-c1c2-4751-98cf-d53188a33281" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Formato Booleano" Name="FormatoBooleano" DisplayName="Formato Booleano">
+          <Type>
+            <DomainEnumerationMoniker Name="FormatoBoolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="a28f1e67-bb6f-4a9e-b85f-028ca5123bfe" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Enriquecido" Name="Enriquecido" DisplayName="Enriquecido" DefaultValue="False">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="9c1db50c-8495-47ae-b286-2c64acb6659c" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido" Name="MetodoEnriquecido" DisplayName="Metodo Enriquecido" InheritanceModifier="Abstract" Namespace="Company.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="c0617e1c-991a-46c5-9fb4-49df0be50d62" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoLetra" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="30e0c98d-cdca-4c83-9354-a7ed94a391f9" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra R" Name="ColorLetraR" DisplayName="Color Letra R">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="af08deff-00e8-4f5b-9f7f-111d71d56ab2" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra G" Name="ColorLetraG" DisplayName="Color Letra G">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="0c3ed103-f84d-4d84-946a-3268df8c0b03" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra B" Name="ColorLetraB" DisplayName="Color Letra B">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d1745f2c-eaa0-4703-8361-33c95d6d9354" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Enriquecido" Name="Enriquecido" DisplayName="Enriquecido" DefaultValue="False">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
   </Classes>
   <Relationships>
@@ -339,7 +460,41 @@
         <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Solapada" Name="Solapada" Value="1" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="TipoLetra" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra">
+      <Literals>
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.ComicSans" Name="ComicSans" Value="2" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Papyrus" Name="Papyrus" Value="3" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Wingdings" Name="Wingdings" Value="4" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Arial" Name="Arial" Value="0" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Calibri" Name="Calibri" Value="1" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="FormatoBoolean" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean">
+      <Literals>
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.Checkbox" Name="Checkbox" Value="0" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.RadioButton" Name="RadioButton" Value="1" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="ClaseAlineación" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación">
+      <Literals>
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Izquierda" Name="Izquierda" Value="2" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Centro" Name="Centro" Value="0" />
+        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Derecha" Name="Derecha" Value="1" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
+  <Shapes>
+    <CompartmentShape Id="9cd4b6ca-bc30-4e6c-a641-fd4476b49ded" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseCShape" Name="ClaseCShape" DisplayName="Clase CShape" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Clase CShape" TextColor="87, 90, 123" FillColor="188, 201, 223" OutlineColor="170, 80, 112" InitialHeight="1" OutlineThickness="0.06" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDeco" DisplayName="Name Deco" DefaultText="NameDeco" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="IDDeco" DisplayName="IDDeco" DefaultText="IDDeco" />
+      </ShapeHasDecorators>
+      <Compartment Name="AttributeDeco" />
+      <Compartment Name="MethodDeco" />
+    </CompartmentShape>
+  </Shapes>
   <XmlSerializationBehavior Name="DCMLRACPGProyectoIPSSerializationBehavior" Namespace="Company.DCMLRACPGProyectoIPS">
     <ClassData>
       <XmlClassData TypeName="TapizModelo" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizModeloMoniker" ElementName="tapizModelo" MonikerTypeName="TapizModeloMoniker">
@@ -487,6 +642,84 @@
       <XmlClassData TypeName="ClaseAbstractaTieneMetodoAbstracto" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaTieneMetodoAbstractoMoniker" ElementName="claseAbstractaTieneMetodoAbstracto" MonikerTypeName="ClaseAbstractaTieneMetodoAbstractoMoniker">
         <DomainRelationshipMoniker Name="ClaseAbstractaTieneMetodoAbstracto" />
       </XmlClassData>
+      <XmlClassData TypeName="ClaseEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaMoniker" ElementName="claseEnriquecida" MonikerTypeName="ClaseEnriquecidaMoniker">
+        <DomainClassMoniker Name="ClaseEnriquecida" />
+        <ElementData>
+          <XmlPropertyData XmlName="enriquecida">
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="fondoColorR">
+            <DomainPropertyMoniker Name="ClaseEnriquecida/FondoColorR" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="fondoColorG">
+            <DomainPropertyMoniker Name="ClaseEnriquecida/FondoColorG" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="fondoColorB">
+            <DomainPropertyMoniker Name="ClaseEnriquecida/FondoColorB" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreColorR">
+            <DomainPropertyMoniker Name="ClaseEnriquecida/NombreColorR" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreColorG">
+            <DomainPropertyMoniker Name="ClaseEnriquecida/NombreColorG" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoLetra">
+            <DomainPropertyMoniker Name="ClaseEnriquecida/TipoLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="alineacion">
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Alineacion" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreColorB">
+            <DomainPropertyMoniker Name="ClaseEnriquecida/NombreColorB" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="AtributoEnriquecido" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoEnriquecidoMoniker" ElementName="atributoEnriquecido" MonikerTypeName="AtributoEnriquecidoMoniker">
+        <DomainClassMoniker Name="AtributoEnriquecido" />
+        <ElementData>
+          <XmlPropertyData XmlName="colorLetraR">
+            <DomainPropertyMoniker Name="AtributoEnriquecido/ColorLetraR" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraG">
+            <DomainPropertyMoniker Name="AtributoEnriquecido/ColorLetraG" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraB">
+            <DomainPropertyMoniker Name="AtributoEnriquecido/ColorLetraB" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoLetra">
+            <DomainPropertyMoniker Name="AtributoEnriquecido/TipoLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="formatoBooleano">
+            <DomainPropertyMoniker Name="AtributoEnriquecido/FormatoBooleano" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="enriquecido">
+            <DomainPropertyMoniker Name="AtributoEnriquecido/Enriquecido" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="MetodoEnriquecido" MonikerAttributeName="" SerializeId="true" MonikerElementName="metodoEnriquecidoMoniker" ElementName="metodoEnriquecido" MonikerTypeName="MetodoEnriquecidoMoniker">
+        <DomainClassMoniker Name="MetodoEnriquecido" />
+        <ElementData>
+          <XmlPropertyData XmlName="tipoLetra">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/TipoLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraR">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraR" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraG">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraG" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraB">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraB" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="enriquecido">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/Enriquecido" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseCShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseCShapeMoniker" ElementName="claseCShape" MonikerTypeName="ClaseCShapeMoniker">
+        <CompartmentShapeMoniker Name="ClaseCShape" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="DCMLRACPGProyectoIPSExplorer" />
@@ -549,7 +782,7 @@
       </LinkConnectDirective>
     </ConnectionBuilder>
   </ConnectionBuilders>
-  <Diagram Id="bc48b3fc-0396-4312-b566-4bcb302845e1" Description="Description for Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram" Name="DCMLRACPGProyectoIPSDiagram" DisplayName="Minimal Language Diagram" Namespace="Company.DCMLRACPGProyectoIPS">
+  <Diagram Id="bc48b3fc-0396-4312-b566-4bcb302845e1" Description="Description for Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram" Name="DCMLRACPGProyectoIPSDiagram" DisplayName="Minimal Language Diagram" Namespace="Company.DCMLRACPGProyectoIPS" FillColor="188, 201, 223">
     <Class>
       <DomainClassMoniker Name="TapizModelo" />
     </Class>
@@ -561,6 +794,7 @@
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="DCMLRACPGProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
+    <ToolboxTab TabText="Clases" />
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="DCMLRACPGProyectoIPSDiagram" />
   </Designer>

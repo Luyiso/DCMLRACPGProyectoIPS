@@ -78,29 +78,6 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 
 		/// <summary>
-		/// Name of the toolbox tab that should be displayed when the diagram is opened.
-		/// </summary>
-		protected override string DefaultToolboxTabName
-		{
-			get
-			{
-				return global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper.DefaultToolboxTabName;
-			}
-		}
-		
-		/// <summary>
-		/// Returns the toolbox items count in the default tool box tab.
-		/// </summary>
-		protected override int DefaultToolboxTabToolboxItemsCount
-		{
-			get
-			{
-				return global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper.DefaultToolboxTabToolboxItemsCount;			
-			}
-		}
-		
-		
-		/// <summary>
 		/// Context menu displayed when the user right-clicks on the design surface.
 		/// </summary>
 		protected override global::System.ComponentModel.Design.CommandID ContextMenuId
