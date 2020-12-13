@@ -15,8 +15,8 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// DomainRelationship Tiene
 	/// Description for Company.DCMLRACPGProyectoIPS.Tiene
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Tiene.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Tiene.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Tiene.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Tiene.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
@@ -95,8 +95,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// DomainRole TapizModelo
 		/// Description for Company.DCMLRACPGProyectoIPS.Tiene.TapizModelo
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Clase", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("af32347b-aa47-4128-95c5-3a37da991e62")]
 		public virtual TapizModelo TapizModelo
@@ -146,8 +146,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// DomainRole Clase
 		/// Description for Company.DCMLRACPGProyectoIPS.Tiene.Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Tiene/Clase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Tiene/Clase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Tiene/Clase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Tiene/Clase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizModelo", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.Tiene/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("25d207e7-919d-4fd8-8f36-884745cf4735")]
 		public virtual Clase Clase
@@ -254,8 +254,8 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// DomainRelationship ClaseHasAtributo
 	/// Description for Company.DCMLRACPGProyectoIPS.ClaseHasAtributo
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
@@ -334,8 +334,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// DomainRole Clase
 		/// Description for Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Clase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Clase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Clase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Clase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Atributo", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("847892e1-87c7-4313-81db-7a758c4b78a7")]
 		public virtual Clase Clase
@@ -385,8 +385,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// DomainRole Atributo
 		/// Description for Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.Atributo
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Atributo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Atributo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Atributo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Atributo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Clase", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ClaseHasAtributo/Atributo.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("6f872e83-db1b-4a84-8a0b-d5059a1cbe5e")]
 		public virtual Atributo Atributo
@@ -493,8 +493,8 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// DomainRelationship ClaseHasSignaturadeOperación
 	/// Description for Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
@@ -573,8 +573,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// DomainRole Clase
 		/// Description for Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/Clase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/Clase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/Clase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/Clase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "SignaturadeOperación", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("7abbf0d7-10a8-4fbc-9f1a-6633ad6d612c")]
 		public virtual Clase Clase
@@ -625,8 +625,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for
 		/// Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.SignaturadeOperación
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/SignaturadeOperación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/SignaturadeOperación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/SignaturadeOperación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/SignaturadeOperación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Clase", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación/SignaturadeOperación.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("9f75e668-a1e0-4c88-86e6-848a6987a2eb")]
 		public virtual SignaturadeOperación SignaturadeOperación
@@ -733,8 +733,8 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// DomainRelationship SignaturadeOperaciónHasParámetros
 	/// Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
@@ -814,8 +814,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for
 		/// Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.SignaturadeOperación
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/SignaturadeOperación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/SignaturadeOperación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/SignaturadeOperación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/SignaturadeOperación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Parámetros", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/SignaturadeOperación.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("2c2d04fc-9329-41d6-8b40-97ddbc6101df")]
 		public virtual SignaturadeOperación SignaturadeOperación
@@ -866,8 +866,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for
 		/// Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.Parámetros
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/Parámetros.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/Parámetros.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/Parámetros.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/Parámetros.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SignaturadeOperación", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros/Parámetros.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("37afbefa-6ffc-4fc9-88fe-8159ca538a52")]
 		public virtual Parámetros Parámetros
@@ -974,8 +974,8 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// DomainRelationship Asociación
 	/// Description for Company.DCMLRACPGProyectoIPS.Asociación
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
@@ -1054,8 +1054,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// DomainRole SourceClase
 		/// Description for Company.DCMLRACPGProyectoIPS.Asociación.SourceClase
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/SourceClase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/SourceClase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/SourceClase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/SourceClase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "TargetClase", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.Asociación/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("c9b43e94-d8f7-4ea6-a40a-aaa62d0f7421")]
 		public virtual Clase SourceClase
@@ -1095,8 +1095,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// DomainRole TargetClase
 		/// Description for Company.DCMLRACPGProyectoIPS.Asociación.TargetClase
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/TargetClase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/TargetClase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/TargetClase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/TargetClase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SourceClase", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.Asociación/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("8e0451bd-ead9-462b-a6cf-95e326809b9c")]
 		public virtual Clase TargetClase
@@ -1141,8 +1141,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Gets or sets the value of Nombre domain property.
 		/// Description for Company.DCMLRACPGProyectoIPS.Asociación.Nombre
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/Nombre.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/Nombre.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/Nombre.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/Nombre.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("187f4852-4f2a-4186-8bff-e0e1e7c6548b")]
 		public global::System.String Nombre
 		{
@@ -1229,8 +1229,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for Company.DCMLRACPGProyectoIPS.Asociación.Cardinalidad Minima
 		/// Source
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMinimaSource.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMinimaSource.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMinimaSource.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMinimaSource.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("2d2ba050-65d3-4821-aa6d-5e037b7311b8")]
 		public Cardinalidad CardinalidadMinimaSource
 		{
@@ -1317,8 +1317,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for Company.DCMLRACPGProyectoIPS.Asociación.Cardinalidad Minima
 		/// Target
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMinimaTarget.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMinimaTarget.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMinimaTarget.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMinimaTarget.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("c24156b1-053a-49ba-b3bd-225c76053a5c")]
 		public Cardinalidad CardinalidadMinimaTarget
 		{
@@ -1405,8 +1405,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for Company.DCMLRACPGProyectoIPS.Asociación.Cardinalidad Maxima
 		/// Source
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMaximaSource.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMaximaSource.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMaximaSource.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMaximaSource.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("0256fece-ffd8-4981-b96a-37aa257a409b")]
 		public Cardinalidad CardinalidadMaximaSource
 		{
@@ -1493,8 +1493,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for Company.DCMLRACPGProyectoIPS.Asociación.Cardinalidad Maxima
 		/// Target
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMaximaTarget.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMaximaTarget.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMaximaTarget.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Asociación/CardinalidadMaximaTarget.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("7f71b58c-a65b-4ed2-ab3d-506ba5fcafdd")]
 		public Cardinalidad CardinalidadMaximaTarget
 		{
@@ -1633,8 +1633,8 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// DomainRelationship Agregación
 	/// Description for Company.DCMLRACPGProyectoIPS.Agregación
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
@@ -1713,8 +1713,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// DomainRole SourceClase
 		/// Description for Company.DCMLRACPGProyectoIPS.Agregación.SourceClase
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/SourceClase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/SourceClase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/SourceClase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/SourceClase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Conpuesta", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.Agregación/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("cacc345e-0f3a-4552-aaf3-0e33437364e4")]
 		public virtual Clase SourceClase
@@ -1754,8 +1754,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// DomainRole TargetClase
 		/// Description for Company.DCMLRACPGProyectoIPS.Agregación.TargetClase
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/TargetClase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/TargetClase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/TargetClase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/TargetClase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Componente", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.Agregación/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("97a78d46-1510-43cd-8b6b-63cf114e9673")]
 		public virtual Clase TargetClase
@@ -1800,8 +1800,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Gets or sets the value of Nombre domain property.
 		/// Description for Company.DCMLRACPGProyectoIPS.Agregación.Nombre
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/Nombre.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/Nombre.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/Nombre.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/Nombre.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("2e273c5d-7e1f-404c-ad73-d33676997c2c")]
 		public global::System.String Nombre
 		{
@@ -1888,8 +1888,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Minima
 		/// Componente
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMinimaComponente.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMinimaComponente.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMinimaComponente.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMinimaComponente.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("5dc773b0-9790-4ead-851b-d35fb76ba406")]
 		public Cardinalidad CardinalidadMinimaComponente
 		{
@@ -1976,8 +1976,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Minima
 		/// Compuesta
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMinimaCompuesta.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMinimaCompuesta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMinimaCompuesta.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMinimaCompuesta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("ed9ce060-2945-43a5-ae32-043fe0c3c1e8")]
 		public Cardinalidad CardinalidadMinimaCompuesta
 		{
@@ -2064,8 +2064,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Maxima
 		/// Componente
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMaximaComponente.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMaximaComponente.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMaximaComponente.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMaximaComponente.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("45da3b44-0a2d-41c1-8da0-3627b197b13b")]
 		public Cardinalidad CardinalidadMaximaComponente
 		{
@@ -2152,8 +2152,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Maxima
 		/// Compuesta
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMaximaCompuesta.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMaximaCompuesta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMaximaCompuesta.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/CardinalidadMaximaCompuesta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("f43d629e-506b-4fe0-a8e2-83dd4ec38746")]
 		public Cardinalidad CardinalidadMaximaCompuesta
 		{
@@ -2239,8 +2239,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Gets or sets the value of Tipo domain property.
 		/// Description for Company.DCMLRACPGProyectoIPS.Agregación.Tipo
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/Tipo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/Tipo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Agregación/Tipo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Agregación/Tipo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("76be3af3-73af-4e40-a00a-05e868c1a4bc")]
 		public global::System.String Tipo
 		{
@@ -2379,8 +2379,8 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// DomainRelationship ClaseAbstractaTieneMetodoAbstracto
 	/// Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
@@ -2460,8 +2460,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for
 		/// Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.MétodoAbstracto
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/MétodoAbstracto.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/MétodoAbstracto.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/MétodoAbstracto.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/MétodoAbstracto.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseAbstracta", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/MétodoAbstracto.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("0ebe78ec-3d09-491b-a0a7-434e1373ba85")]
 		public virtual MétodoAbstracto MétodoAbstracto
@@ -2502,8 +2502,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Description for
 		/// Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.ClaseAbstracta
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/ClaseAbstracta.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/ClaseAbstracta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/ClaseAbstracta.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/ClaseAbstracta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "MétodoAbstracto", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto/ClaseAbstracta.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
 		[DslModeling::DomainObjectId("2339c444-94f8-46be-b596-967ae57a7a2d")]
 		public virtual ClaseAbstracta ClaseAbstracta

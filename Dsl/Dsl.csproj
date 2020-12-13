@@ -10,8 +10,8 @@
     <ProjectGuid>{2DA952C6-85F4-4753-A188-2A5969E0D578}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Company.DCMLRACPGProyectoIPS</RootNamespace>
-    <AssemblyName>Company.DCMLRACPGProyectoIPS.Dsl</AssemblyName>
+    <RootNamespace>UPM_IPS.DCMLRACPGProyectoIPS</RootNamespace>
+    <AssemblyName>UPM_IPS.DCMLRACPGProyectoIPS.Dsl</AssemblyName>
     <AssemblyOriginatorKeyFile>..\Key.snk</AssemblyOriginatorKeyFile>
     <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
     <SignAssembly>true</SignAssembly>
@@ -74,9 +74,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <None Include="..\Key.snk">
       <Link>Key.snk</Link>
     </None>
+    <None Include="app.config" />
     <None Include="GeneratedCode\SerializationHelper.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
@@ -157,8 +163,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Serializer.tt</DependentUpon>
     </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\ClaseAbs.bmp" />
     <Content Include="Resources\Referencia.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>

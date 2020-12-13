@@ -16,8 +16,8 @@ namespace Company.DCMLRACPGProyectoIPS
 	/// DomainModel DCMLRACPGProyectoIPSDomainModel
 	/// Description for Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.CoreDomainModel))]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.Diagrams.CoreDesignSurfaceDomainModel))]
@@ -86,6 +86,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				typeof(ClaseAbstractaTieneMetodoAbstracto),
 				typeof(DCMLRACPGProyectoIPSDiagram),
 				typeof(ClaseCShape),
+				typeof(ClaseAbstractaCShape),
 				typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram),
 				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule),
 				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule),
@@ -188,7 +189,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
 				createElementMap.Add(typeof(TapizModelo), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
@@ -198,6 +199,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				createElementMap.Add(typeof(MétodoAbstracto), 6);
 				createElementMap.Add(typeof(DCMLRACPGProyectoIPSDiagram), 7);
 				createElementMap.Add(typeof(ClaseCShape), 8);
+				createElementMap.Add(typeof(ClaseAbstractaCShape), 9);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -220,6 +222,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				case 6: return new MétodoAbstracto(partition, propertyAssignments);
 				case 7: return new DCMLRACPGProyectoIPSDiagram(partition, propertyAssignments);
 				case 8: return new ClaseCShape(partition, propertyAssignments);
+				case 9: return new ClaseAbstractaCShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -282,7 +285,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// The base name of this model's resources.
 		/// </summary>
-		public const string ResourceBaseName = "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx";
+		public const string ResourceBaseName = "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx";
 		
 		/// <summary>
 		/// Gets the DomainModel's ResourceManager. If the ResourceManager does not already exist, then it is created.
@@ -538,19 +541,19 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Entrada
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Entrada
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/Entrada.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/Entrada.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Entrada = 0,
 		/// <summary>
 		/// Salida
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Salida
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/Salida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/Salida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Salida = 1,
 		/// <summary>
 		/// EntradaSalida
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro.EntradaSalida
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/EntradaSalida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/EntradaSalida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		EntradaSalida = 2,
 	}
 }
@@ -567,19 +570,19 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Uno
 		/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Uno
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/Uno.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/Uno.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Uno = 1,
 		/// <summary>
 		/// N
 		/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.N
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/N.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/N.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		N = 2,
 		/// <summary>
 		/// Cero
 		/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Cero
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/Cero.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/Cero.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Cero = 0,
 	}
 }
@@ -596,13 +599,13 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Inclusiva
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion.Inclusiva
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoAgregacion/Inclusiva.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoAgregacion/Inclusiva.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Inclusiva = 1,
 		/// <summary>
 		/// Referencial
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion.Referencial
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoAgregacion/Referencial.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoAgregacion/Referencial.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Referencial = 0,
 	}
 }
@@ -619,13 +622,13 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Total
 		/// Description for Company.DCMLRACPGProyectoIPS.Totalidad.Total
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Totalidad/Total.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Totalidad/Total.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Total = 1,
 		/// <summary>
 		/// Parcial
 		/// Description for Company.DCMLRACPGProyectoIPS.Totalidad.Parcial
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Totalidad/Parcial.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Totalidad/Parcial.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Parcial = 0,
 	}
 }
@@ -642,13 +645,13 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Disjunta
 		/// Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Disjunta
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DisjuntaSolapada/Disjunta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DisjuntaSolapada/Disjunta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Disjunta = 0,
 		/// <summary>
 		/// Solapada
 		/// Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Solapada
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DisjuntaSolapada/Solapada.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DisjuntaSolapada/Solapada.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Solapada = 1,
 	}
 }
@@ -665,31 +668,31 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// ComicSans
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.ComicSans
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/ComicSans.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/ComicSans.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		ComicSans = 2,
 		/// <summary>
 		/// Papyrus
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Papyrus
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Papyrus.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Papyrus.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Papyrus = 3,
 		/// <summary>
 		/// Wingdings
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Wingdings
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Wingdings.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Wingdings.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Wingdings = 4,
 		/// <summary>
 		/// Arial
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Arial
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Arial.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Arial.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Arial = 0,
 		/// <summary>
 		/// Calibri
 		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Calibri
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Calibri.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Calibri.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Calibri = 1,
 	}
 }
@@ -706,13 +709,13 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Checkbox
 		/// Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.Checkbox
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.FormatoBoolean/Checkbox.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.FormatoBoolean/Checkbox.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Checkbox = 0,
 		/// <summary>
 		/// RadioButton
 		/// Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.RadioButton
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.FormatoBoolean/RadioButton.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.FormatoBoolean/RadioButton.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		RadioButton = 1,
 	}
 }
@@ -729,19 +732,19 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Izquierda
 		/// Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Izquierda
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAlineación/Izquierda.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAlineación/Izquierda.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Izquierda = 2,
 		/// <summary>
 		/// Centro
 		/// Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Centro
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAlineación/Centro.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAlineación/Centro.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Centro = 0,
 		/// <summary>
 		/// Derecha
 		/// Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Derecha
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAlineación/Derecha.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAlineación/Derecha.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Derecha = 1,
 	}
 }

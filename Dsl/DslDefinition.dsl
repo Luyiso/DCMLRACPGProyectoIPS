@@ -480,6 +480,17 @@
       <Compartment Name="AttributeCompa" EntryTextColor="" TitleTextColor="108, 116, 156" />
       <Compartment Name="MethodCompa" EntryTextColor="108, 116, 156" TitleTextColor="108, 116, 156" />
     </CompartmentShape>
+    <CompartmentShape Id="6389ca0d-e547-4b32-9646-c21602a63f73" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape" Name="ClaseAbstractaCShape" DisplayName="Clase Abstracta CShape" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Clase Abstracta CShape" TextColor="87, 90, 123" FillColor="188, 201, 223" OutlineColor="170, 80, 112" InitialHeight="1" OutlineDashStyle="Dot" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDeco" DisplayName="Name Deco" DefaultText="NameDeco" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="IDDeco" DisplayName="IDDeco" DefaultText="IDDeco" />
+      </ShapeHasDecorators>
+      <Compartment Name="AttributeCompa" EntryTextColor="" TitleTextColor="108, 116, 156" />
+      <Compartment Name="MethodCompa" EntryTextColor="108, 116, 156" TitleTextColor="108, 116, 156" />
+      <Compartment Name="AbstractMethodCompa" />
+    </CompartmentShape>
   </Shapes>
   <XmlSerializationBehavior Name="DCMLRACPGProyectoIPSSerializationBehavior" Namespace="Company.DCMLRACPGProyectoIPS">
     <ClassData>
@@ -703,6 +714,9 @@
       <XmlClassData TypeName="ClaseCShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseCShapeMoniker" ElementName="claseCShape" MonikerTypeName="ClaseCShapeMoniker">
         <CompartmentShapeMoniker Name="ClaseCShape" />
       </XmlClassData>
+      <XmlClassData TypeName="ClaseAbstractaCShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaCShapeMoniker" ElementName="claseAbstractaCShape" MonikerTypeName="ClaseAbstractaCShapeMoniker">
+        <CompartmentShapeMoniker Name="ClaseAbstractaCShape" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="DCMLRACPGProyectoIPSExplorer" />
@@ -816,6 +830,62 @@
           </PropertyDisplayed>
         </CompartmentMap>
       </CompartmentShapeMap>
+      <CompartmentShapeMap>
+        <DomainClassMoniker Name="ClaseAbstracta" />
+        <ParentElementPath>
+          <DomainPath>Tiene.TapizModelo/!TapizModelo</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseAbstractaCShape/IDDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Clase/ID" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseAbstractaCShape/NameDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Clase/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <CompartmentShapeMoniker Name="ClaseAbstractaCShape" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="ClaseAbstractaCShape/AttributeCompa" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseHasAtributo.Atributo/!Atributo</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="ClaseAbstractaCShape/MethodCompa" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseHasSignaturadeOperación.SignaturadeOperación/!SignaturadeOperación</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="SignaturadeOperación/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="ClaseAbstractaCShape/AbstractMethodCompa" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseAbstractaTieneMetodoAbstracto.MétodoAbstracto/!MétodoAbstracto</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="SignaturadeOperación/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+      </CompartmentShapeMap>
     </ShapeMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="DCMLRACPG_DSLProyIPS" EditorGuid="706b78d9-9e8c-453e-be21-1fd2bf418387">
@@ -828,6 +898,10 @@
     <ToolboxTab TabText="Clases">
       <ElementTool Name="ClaseTool" ToolboxIcon="Resources\Clase.bmp" Caption="Clase" Tooltip="Herramienta de Creación de Clases" HelpKeyword="ClaseTool">
         <DomainClassMoniker Name="Clase" />
+      </ElementTool>
+      <ElementTool Name="ClaseAbsTool" ToolboxIcon="Resources\ClaseAbs.bmp" Caption="Clase Abstracta" Tooltip="Clase Abs Tool" HelpKeyword="ClaseAbsTool">
+        <Notes>Crea una clase abstracta</Notes>
+        <DomainClassMoniker Name="ClaseAbstracta" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

@@ -94,7 +94,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			get
 			{
-				return 1;
+				return 2;
 			}
 		}
 		
@@ -155,6 +155,22 @@ namespace Company.DCMLRACPGProyectoIPS
 						"ClaseTool", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ClaseToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::Company.DCMLRACPGProyectoIPS.Clase.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.DCMLRACPGProyectoIPS.ClaseAbsToolToolboxItem":
+					// Add ClaseAbsTool shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.DCMLRACPGProyectoIPS.ClaseAbsToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						2, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ClaseAbsToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ClaseAbsToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.DCMLRACPGProyectoIPS.ClasesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("ClasesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ClaseAbsTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ClaseAbsToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});

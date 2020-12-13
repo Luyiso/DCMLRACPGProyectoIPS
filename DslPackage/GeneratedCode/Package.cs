@@ -37,6 +37,14 @@ namespace Company.DCMLRACPGProyectoIPS
 					"@ClaseToolToolboxBitmap;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 0)]
+	[VSShell::ProvideStaticToolboxItem("Company.DCMLRACPGProyectoIPS.ClasesToolboxTab",
+					"@ClaseAbsToolToolboxItem;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"Company.DCMLRACPGProyectoIPS.ClaseAbsToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ClaseAbsTool", 
+					"@ClaseAbsToolToolboxBitmap;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 1)]
 	[VSShell::ProvideEditorFactory(typeof(DCMLRACPGProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(DCMLRACPGProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(DCMLRACPGProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
