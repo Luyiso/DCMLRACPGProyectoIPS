@@ -270,11 +270,33 @@ namespace Company.DCMLRACPGProyectoIPS
 				{
 					localCompartmentsOffset = baseCompartmentDescriptions.Length;
 				}
-				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[0+localCompartmentsOffset];
+				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[2+localCompartmentsOffset];
 				
 				if(baseCompartmentDescriptions!=null)
 				{
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
+				}
+				{
+					string title = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeAttributeCompaTitle");
+					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("AttributeCompa", title, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
+						null, null,
+						false);
+					descriptor.TitleTextColor = global::System.Drawing.Color.FromArgb(255, 108, 116, 156);
+					descriptor.ItemTextColor = global::System.Drawing.Color.FromArgb(0, 0, 0, 0);
+					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
+				}
+				{
+					string title = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeMethodCompaTitle");
+					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("MethodCompa", title, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
+						null, null,
+						false);
+					descriptor.TitleTextColor = global::System.Drawing.Color.FromArgb(255, 108, 116, 156);
+					descriptor.ItemTextColor = global::System.Drawing.Color.FromArgb(255, 108, 116, 156);
+					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
 				}
 			}
 			
@@ -308,12 +330,28 @@ namespace Company.DCMLRACPGProyectoIPS
 					{
 						localCompartmentMappingsOffset = baseMappings.Length;
 					}
-					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[0+localCompartmentMappingsOffset];
+					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[2+localCompartmentMappingsOffset];
 					
 					if(baseMappings!=null)
 					{
 						baseMappings.CopyTo(mappings, 0);
 					}
+					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
+																				"AttributeCompa", 
+																				global::Company.DCMLRACPGProyectoIPS.Atributo.NameDomainPropertyId, 
+																				global::Company.DCMLRACPGProyectoIPS.Atributo.DomainClassId, 
+																				GetElementsFromClaseForAttributeCompa,
+																				null,
+																				null,
+																				null);
+					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
+																				"MethodCompa", 
+																				global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.NameDomainPropertyId, 
+																				global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.DomainClassId, 
+																				GetElementsFromClaseForMethodCompa,
+																				null,
+																				null,
+																				null);
 					compartmentMappings.Add(typeof(global::Company.DCMLRACPGProyectoIPS.Clase), mappings);
 				}
 			}
@@ -343,6 +381,20 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
+			internal static global::System.Collections.IList GetElementsFromClaseForAttributeCompa(DslModeling::ModelElement rootElement)
+			{
+				global::Company.DCMLRACPGProyectoIPS.Clase root = (global::Company.DCMLRACPGProyectoIPS.Clase)rootElement;
+					// Segments 0 and 1
+					DslModeling::LinkedElementCollection<global::Company.DCMLRACPGProyectoIPS.Atributo> result = root.Atributo;
+				return result;
+			}
+			internal static global::System.Collections.IList GetElementsFromClaseForMethodCompa(DslModeling::ModelElement rootElement)
+			{
+				global::Company.DCMLRACPGProyectoIPS.Clase root = (global::Company.DCMLRACPGProyectoIPS.Clase)rootElement;
+					// Segments 0 and 1
+					DslModeling::LinkedElementCollection<global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación> result = root.SignaturadeOperación;
+				return result;
+			}
 			#endregion
 		
 		#endregion

@@ -366,6 +366,46 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 		}
 
+		/// <summary>
+		/// Called after the document is opened.
+		/// </summary>
+		/// <param name="e">Event Args.</param>
+		protected override void OnDocumentLoaded(global::System.EventArgs e)
+		{
+			base.OnDocumentLoaded(e);
+			this.OnDocumentLoaded();
+		}
+
+		/// <summary>
+		/// Called after the document is reloaded.
+		/// </summary>
+		protected override void OnDocumentReloaded(global::System.EventArgs e)
+		{
+			base.OnDocumentReloaded(e);
+			this.OnDocumentLoaded();
+		}
+		
+		/// <summary>
+		/// Called on both document load and reload.
+		/// </summary>
+		protected virtual void OnDocumentLoaded()
+		{
+			// Enable CompartmentItems events.
+			global::Company.DCMLRACPGProyectoIPS.TapizModelo modelRoot = this.RootElement as global::Company.DCMLRACPGProyectoIPS.TapizModelo;
+			if (modelRoot != null)
+			{
+				global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(modelRoot);
+				if (diagrams.Count > 0)
+				{
+					global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram diagram = diagrams[0] as global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram;
+					if (diagram != null)
+					{
+						diagram.SubscribeCompartmentItemsEvents();
+					}
+				}
+			}
+		}
+
 
 			
 		/// <summary>

@@ -933,6 +933,14 @@
     <value>Clase CShape</value>
     <comment>DisplayName for DomainClass &apos;ClaseCShape&apos;</comment>
   </data>
+  <data name="ClaseCShapeAttributeCompaTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ClaseCShapeMethodCompaTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
   <data name="ClaseCShapeNameDecoDefaultText" xml:space="preserve">
     <value>NameDeco</value>
     <comment>Text decorator default text</comment>

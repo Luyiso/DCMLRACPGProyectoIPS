@@ -87,6 +87,11 @@ namespace Company.DCMLRACPGProyectoIPS
 				typeof(DCMLRACPGProyectoIPSDiagram),
 				typeof(ClaseCShape),
 				typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram),
+				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule),
+				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule),
+				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerChangeRule),
+				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerPositionChangeRule),
+				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemChangeRule),
 			};
 		}
 		/// <summary>
@@ -386,6 +391,11 @@ namespace Company.DCMLRACPGProyectoIPS
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule));
+			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule));
+			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerChangeRule));
+			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerPositionChangeRule));
+			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemChangeRule));
 		}
 		
 		/// <summary>
@@ -397,6 +407,11 @@ namespace Company.DCMLRACPGProyectoIPS
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule));
+			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule));
+			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerChangeRule));
+			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerPositionChangeRule));
+			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemChangeRule));
 		}
 		#endregion
 	}
