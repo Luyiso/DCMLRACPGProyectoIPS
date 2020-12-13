@@ -77,7 +77,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				typeof(ClaseEnriquecida),
 				typeof(AtributoEnriquecido),
 				typeof(MetodoEnriquecido),
-				typeof(DomainRelationship1),
+				typeof(Tiene),
 				typeof(ClaseHasAtributo),
 				typeof(ClaseHasSignaturadeOperación),
 				typeof(SignaturadeOperaciónHasParámetros),
@@ -87,11 +87,6 @@ namespace Company.DCMLRACPGProyectoIPS
 				typeof(DCMLRACPGProyectoIPSDiagram),
 				typeof(ClaseCShape),
 				typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerChangeRule),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerPositionChangeRule),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemChangeRule),
 			};
 		}
 		/// <summary>
@@ -153,8 +148,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(DomainRelationship1), "TapizModelo", DomainRelationship1.TapizModeloDomainRoleId),
-				new DomainRolePlayerInfo(typeof(DomainRelationship1), "Clase", DomainRelationship1.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Tiene), "TapizModelo", Tiene.TapizModeloDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Tiene), "Clase", Tiene.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Clase", ClaseHasAtributo.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Atributo", ClaseHasAtributo.AtributoDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasSignaturadeOperación), "Clase", ClaseHasSignaturadeOperación.ClaseDomainRoleId),
@@ -243,7 +238,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			if (createElementLinkMap == null)
 			{
 				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(7);
-				createElementLinkMap.Add(typeof(DomainRelationship1), 0);
+				createElementLinkMap.Add(typeof(Tiene), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasSignaturadeOperación), 2);
 				createElementLinkMap.Add(typeof(SignaturadeOperaciónHasParámetros), 3);
@@ -264,7 +259,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 			switch (index)
 			{
-				case 0: return new DomainRelationship1(partition, roleAssignments, propertyAssignments);
+				case 0: return new Tiene(partition, roleAssignments, propertyAssignments);
 				case 1: return new ClaseHasAtributo(partition, roleAssignments, propertyAssignments);
 				case 2: return new ClaseHasSignaturadeOperación(partition, roleAssignments, propertyAssignments);
 				case 3: return new SignaturadeOperaciónHasParámetros(partition, roleAssignments, propertyAssignments);
@@ -391,11 +386,6 @@ namespace Company.DCMLRACPGProyectoIPS
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerChangeRule));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerPositionChangeRule));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemChangeRule));
 		}
 		
 		/// <summary>
@@ -407,11 +397,6 @@ namespace Company.DCMLRACPGProyectoIPS
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerChangeRule));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerPositionChangeRule));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemChangeRule));
 		}
 		#endregion
 	}
@@ -447,7 +432,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		public DCMLRACPGProyectoIPSDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.ClaseDomainRoleId, true);
+			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.Tiene.ClaseDomainRoleId, true);
 			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.AtributoDomainRoleId, true);
 			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.SignaturadeOperaciónDomainRoleId, true);
 			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.ParámetrosDomainRoleId, true);

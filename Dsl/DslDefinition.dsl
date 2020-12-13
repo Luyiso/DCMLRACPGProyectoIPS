@@ -224,16 +224,16 @@
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="31411dc4-d60c-41c9-8fcb-e4d66ff6f5a5" Description="Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1" Name="DomainRelationship1" DisplayName="Domain Relationship1" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
+    <DomainRelationship Id="31411dc4-d60c-41c9-8fcb-e4d66ff6f5a5" Description="Description for Company.DCMLRACPGProyectoIPS.Tiene" Name="Tiene" DisplayName="Tiene" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="af32347b-aa47-4128-95c5-3a37da991e62" Description="Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModelo" Name="TapizModelo" DisplayName="Tapiz Modelo" PropertyName="Clase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Clase">
+        <DomainRole Id="af32347b-aa47-4128-95c5-3a37da991e62" Description="Description for Company.DCMLRACPGProyectoIPS.Tiene.TapizModelo" Name="TapizModelo" DisplayName="Tapiz Modelo" PropertyName="Clase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Clase">
           <RolePlayer>
             <DomainClassMoniker Name="TapizModelo" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="25d207e7-919d-4fd8-8f36-884745cf4735" Description="Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.Clase" Name="Clase" DisplayName="Clase" PropertyName="TapizModelo" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Modelo">
+        <DomainRole Id="25d207e7-919d-4fd8-8f36-884745cf4735" Description="Description for Company.DCMLRACPGProyectoIPS.Tiene.Clase" Name="Clase" DisplayName="Clase" PropertyName="TapizModelo" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Modelo">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -477,8 +477,8 @@
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="IDDeco" DisplayName="IDDeco" DefaultText="IDDeco" />
       </ShapeHasDecorators>
-      <Compartment Name="AttributeDeco" />
-      <Compartment Name="MethodDeco" />
+      <Compartment Name="AttributeCompa" EntryTextColor="" TitleTextColor="108, 116, 156" />
+      <Compartment Name="MethodCompa" EntryTextColor="108, 116, 156" TitleTextColor="108, 116, 156" />
     </CompartmentShape>
   </Shapes>
   <XmlSerializationBehavior Name="DCMLRACPGProyectoIPSSerializationBehavior" Namespace="Company.DCMLRACPGProyectoIPS">
@@ -487,7 +487,7 @@
         <DomainClassMoniker Name="TapizModelo" />
         <ElementData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="clase">
-            <DomainRelationshipMoniker Name="DomainRelationship1" />
+            <DomainRelationshipMoniker Name="Tiene" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -517,8 +517,8 @@
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="DomainRelationship1" MonikerAttributeName="" SerializeId="true" MonikerElementName="domainRelationship1Moniker" ElementName="domainRelationship1" MonikerTypeName="DomainRelationship1Moniker">
-        <DomainRelationshipMoniker Name="DomainRelationship1" />
+      <XmlClassData TypeName="Tiene" MonikerAttributeName="" SerializeId="true" MonikerElementName="tieneMoniker" ElementName="tiene" MonikerTypeName="TieneMoniker">
+        <DomainRelationshipMoniker Name="Tiene" />
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="name" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
@@ -773,7 +773,7 @@
       <CompartmentShapeMap>
         <DomainClassMoniker Name="Clase" />
         <ParentElementPath>
-          <DomainPath>DomainRelationship1.TapizModelo/!TapizModelo</DomainPath>
+          <DomainPath>Tiene.TapizModelo/!TapizModelo</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ClaseCShape/IDDeco" />
@@ -794,7 +794,7 @@
         </DecoratorMap>
         <CompartmentShapeMoniker Name="ClaseCShape" />
         <CompartmentMap>
-          <CompartmentMoniker Name="ClaseCShape/AttributeDeco" />
+          <CompartmentMoniker Name="ClaseCShape/AttributeCompa" />
           <ElementsDisplayed>
             <DomainPath>ClaseHasAtributo.Atributo/!Atributo</DomainPath>
           </ElementsDisplayed>
@@ -805,7 +805,7 @@
           </PropertyDisplayed>
         </CompartmentMap>
         <CompartmentMap>
-          <CompartmentMoniker Name="ClaseCShape/MethodDeco" />
+          <CompartmentMoniker Name="ClaseCShape/MethodCompa" />
           <ElementsDisplayed>
             <DomainPath>ClaseHasSignaturadeOperación.SignaturadeOperación/!SignaturadeOperación</DomainPath>
           </ElementsDisplayed>

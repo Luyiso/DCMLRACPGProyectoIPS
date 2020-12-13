@@ -12,33 +12,33 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace Company.DCMLRACPGProyectoIPS
 {
 	/// <summary>
-	/// DomainRelationship DomainRelationship1
-	/// Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1
+	/// DomainRelationship Tiene
+	/// Description for Company.DCMLRACPGProyectoIPS.Tiene
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Tiene.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Tiene.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("31411dc4-d60c-41c9-8fcb-e4d66ff6f5a5")]
-	public partial class DomainRelationship1 : DslModeling::ElementLink
+	public partial class Tiene : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// DomainRelationship1 domain class Id.
+		/// Tiene domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x31411dc4, 0xd60c, 0x41c9, 0x8f, 0xcb, 0xe4, 0xd6, 0x6f, 0xf6, 0xf5, 0xa5);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a DomainRelationship1 link in the same Partition as the given TapizModelo
+		/// Creates a Tiene link in the same Partition as the given TapizModelo
 		/// </summary>
 		/// <param name="source">TapizModelo to use as the source of the relationship.</param>
 		/// <param name="target">Clase to use as the target of the relationship.</param>
-		public DomainRelationship1(TapizModelo source, Clase target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DomainRelationship1.TapizModeloDomainRoleId, source), new DslModeling::RoleAssignment(DomainRelationship1.ClaseDomainRoleId, target)}, null)
+		public Tiene(TapizModelo source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(Tiene.TapizModeloDomainRoleId, source), new DslModeling::RoleAssignment(Tiene.ClaseDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -47,7 +47,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public DomainRelationship1(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public Tiene(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -58,7 +58,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public DomainRelationship1(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public Tiene(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -68,7 +68,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public DomainRelationship1(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public Tiene(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -79,7 +79,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public DomainRelationship1(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public Tiene(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -93,11 +93,11 @@ namespace Company.DCMLRACPGProyectoIPS
 		
 		/// <summary>
 		/// DomainRole TapizModelo
-		/// Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModelo
+		/// Description for Company.DCMLRACPGProyectoIPS.Tiene.TapizModelo
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/TapizModelo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/TapizModelo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Clase", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.DomainRelationship1/TapizModelo.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Clase", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("af32347b-aa47-4128-95c5-3a37da991e62")]
 		public virtual TapizModelo TapizModelo
 		{
@@ -144,11 +144,11 @@ namespace Company.DCMLRACPGProyectoIPS
 		
 		/// <summary>
 		/// DomainRole Clase
-		/// Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.Clase
+		/// Description for Company.DCMLRACPGProyectoIPS.Tiene.Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizModelo", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.Tiene/Clase.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Tiene/Clase.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "Company.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizModelo", PropertyDisplayNameKey="Company.DCMLRACPGProyectoIPS.Tiene/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("25d207e7-919d-4fd8-8f36-884745cf4735")]
 		public virtual Clase Clase
 		{
@@ -178,24 +178,24 @@ namespace Company.DCMLRACPGProyectoIPS
 		#endregion
 		#region TapizModelo link accessor
 		/// <summary>
-		/// Get the list of DomainRelationship1 links to a TapizModelo.
+		/// Get the list of Tiene links to a TapizModelo.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> GetLinksToClase ( global::Company.DCMLRACPGProyectoIPS.TapizModelo tapizModeloInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.Tiene> GetLinksToClase ( global::Company.DCMLRACPGProyectoIPS.TapizModelo tapizModeloInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(tapizModeloInstance, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModeloDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.Tiene>(tapizModeloInstance, global::Company.DCMLRACPGProyectoIPS.Tiene.TapizModeloDomainRoleId);
 		}
 		#endregion
 		#region Clase link accessor
 		/// <summary>
-		/// Get the DomainRelationship1 link to a Clase.
+		/// Get the Tiene link to a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 GetLinkToTapizModelo (global::Company.DCMLRACPGProyectoIPS.Clase claseInstance)
+		public static global::Company.DCMLRACPGProyectoIPS.Tiene GetLinkToTapizModelo (global::Company.DCMLRACPGProyectoIPS.Clase claseInstance)
 		{
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(claseInstance, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.ClaseDomainRoleId);
+			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.Tiene> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.Tiene>(claseInstance, global::Company.DCMLRACPGProyectoIPS.Tiene.ClaseDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Clase not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -207,18 +207,18 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 		}
 		#endregion
-		#region DomainRelationship1 instance accessors
+		#region Tiene instance accessors
 		
 		/// <summary>
-		/// Get any DomainRelationship1 links between a given TapizModelo and a Clase.
+		/// Get any Tiene links between a given TapizModelo and a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> GetLinks( global::Company.DCMLRACPGProyectoIPS.TapizModelo source, global::Company.DCMLRACPGProyectoIPS.Clase target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.Tiene> GetLinks( global::Company.DCMLRACPGProyectoIPS.TapizModelo source, global::Company.DCMLRACPGProyectoIPS.Clase target )
 		{
-			global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> outLinks = new global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>();
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(source, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModeloDomainRoleId);
-			foreach ( global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 link in links )
+			global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.Tiene> outLinks = new global::System.Collections.Generic.List<global::Company.DCMLRACPGProyectoIPS.Tiene>();
+			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.Tiene> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.Tiene>(source, global::Company.DCMLRACPGProyectoIPS.Tiene.TapizModeloDomainRoleId);
+			foreach ( global::Company.DCMLRACPGProyectoIPS.Tiene link in links )
 			{
 				if ( target.Equals(link.Clase) )
 				{
@@ -228,14 +228,14 @@ namespace Company.DCMLRACPGProyectoIPS
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one DomainRelationship1 link between a given TapizModeloand a Clase.
+		/// Get the one Tiene link between a given TapizModeloand a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 GetLink( global::Company.DCMLRACPGProyectoIPS.TapizModelo source, global::Company.DCMLRACPGProyectoIPS.Clase target )
+		public static global::Company.DCMLRACPGProyectoIPS.Tiene GetLink( global::Company.DCMLRACPGProyectoIPS.TapizModelo source, global::Company.DCMLRACPGProyectoIPS.Clase target )
 		{
-			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.DomainRelationship1>(source, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModeloDomainRoleId);
-			foreach ( global::Company.DCMLRACPGProyectoIPS.DomainRelationship1 link in links )
+			global::System.Collections.Generic.IList<global::Company.DCMLRACPGProyectoIPS.Tiene> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.DCMLRACPGProyectoIPS.Tiene>(source, global::Company.DCMLRACPGProyectoIPS.Tiene.TapizModeloDomainRoleId);
+			foreach ( global::Company.DCMLRACPGProyectoIPS.Tiene link in links )
 			{
 				if ( target.Equals(link.Clase) )
 				{

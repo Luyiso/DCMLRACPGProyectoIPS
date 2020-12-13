@@ -270,29 +270,11 @@ namespace Company.DCMLRACPGProyectoIPS
 				{
 					localCompartmentsOffset = baseCompartmentDescriptions.Length;
 				}
-				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[2+localCompartmentsOffset];
+				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[0+localCompartmentsOffset];
 				
 				if(baseCompartmentDescriptions!=null)
 				{
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
-				}
-				{
-					string title = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeAttributeDecoTitle");
-					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("AttributeDeco", title, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
-						null, null,
-						false);
-					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
-				}
-				{
-					string title = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeMethodDecoTitle");
-					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("MethodDeco", title, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
-						null, null,
-						false);
-					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
 				}
 			}
 			
@@ -326,28 +308,12 @@ namespace Company.DCMLRACPGProyectoIPS
 					{
 						localCompartmentMappingsOffset = baseMappings.Length;
 					}
-					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[2+localCompartmentMappingsOffset];
+					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[0+localCompartmentMappingsOffset];
 					
 					if(baseMappings!=null)
 					{
 						baseMappings.CopyTo(mappings, 0);
 					}
-					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
-																				"AttributeDeco", 
-																				global::Company.DCMLRACPGProyectoIPS.Atributo.NameDomainPropertyId, 
-																				global::Company.DCMLRACPGProyectoIPS.Atributo.DomainClassId, 
-																				GetElementsFromClaseForAttributeDeco,
-																				null,
-																				null,
-																				null);
-					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
-																				"MethodDeco", 
-																				global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.NameDomainPropertyId, 
-																				global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.DomainClassId, 
-																				GetElementsFromClaseForMethodDeco,
-																				null,
-																				null,
-																				null);
 					compartmentMappings.Add(typeof(global::Company.DCMLRACPGProyectoIPS.Clase), mappings);
 				}
 			}
@@ -377,20 +343,6 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromClaseForAttributeDeco(DslModeling::ModelElement rootElement)
-			{
-				global::Company.DCMLRACPGProyectoIPS.Clase root = (global::Company.DCMLRACPGProyectoIPS.Clase)rootElement;
-					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Company.DCMLRACPGProyectoIPS.Atributo> result = root.Atributo;
-				return result;
-			}
-			internal static global::System.Collections.IList GetElementsFromClaseForMethodDeco(DslModeling::ModelElement rootElement)
-			{
-				global::Company.DCMLRACPGProyectoIPS.Clase root = (global::Company.DCMLRACPGProyectoIPS.Clase)rootElement;
-					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación> result = root.SignaturadeOperación;
-				return result;
-			}
 			#endregion
 		
 		#endregion

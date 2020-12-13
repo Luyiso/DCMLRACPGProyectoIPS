@@ -10,16 +10,16 @@
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: DomainRelationship1 -->
+          <!-- Relationship: Tiene -->
           <xsd:element name="clase" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of DomainRelationship1</xsd:documentation>
+              <xsd:documentation>Instances of Tiene</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="domainRelationship1" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="tiene" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of DomainRelationship1 needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of Tiene needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -491,9 +491,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- DomainRelationship1 -->
-  <xsd:element name="domainRelationship1" type="DomainRelationship1" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="DomainRelationship1">
+  <!-- Tiene -->
+  <xsd:element name="tiene" type="Tiene" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Tiene">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -514,11 +514,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- DomainRelationship1 Moniker -->
-  <xsd:element name="domainRelationship1Moniker" type="DomainRelationship1Moniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="DomainRelationship1Moniker">
+  <!-- Tiene Moniker -->
+  <xsd:element name="tieneMoniker" type="TieneMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TieneMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for DomainRelationship1 instance.</xsd:documentation>
+      <xsd:documentation>Moniker for Tiene instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

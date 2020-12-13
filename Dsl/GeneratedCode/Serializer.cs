@@ -211,7 +211,7 @@ namespace Company.DCMLRACPGProyectoIPS
 					else
 					{
 						DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <clase>
-						ReadDomainRelationship1Instances(serializationContext, element, reader);
+						ReadTieneInstances(serializationContext, element, reader);
 						DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </clase>
 					}
 				}
@@ -219,7 +219,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship DomainRelationship1.
+		/// Reads all instances of relationship Tiene.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
@@ -229,32 +229,32 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory TapizModelo instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		private static void ReadDomainRelationship1Instances(DslModeling::SerializationContext serializationContext, TapizModelo element, global::System.Xml.XmlReader reader)
+		private static void ReadTieneInstances(DslModeling::SerializationContext serializationContext, TapizModelo element, global::System.Xml.XmlReader reader)
 		{
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
-				DslModeling::DomainClassXmlSerializer newDomainRelationship1Serializer = serializationContext.Directory.GetSerializer(DomainRelationship1.DomainClassId);
-				global::System.Diagnostics.Debug.Assert(newDomainRelationship1Serializer != null, "Cannot find serializer for DomainRelationship1!");
-				DomainRelationship1 newDomainRelationship1 = newDomainRelationship1Serializer.TryCreateInstance (serializationContext, reader, element.Partition) as DomainRelationship1;
-				if (newDomainRelationship1 != null)
+				DslModeling::DomainClassXmlSerializer newTieneSerializer = serializationContext.Directory.GetSerializer(Tiene.DomainClassId);
+				global::System.Diagnostics.Debug.Assert(newTieneSerializer != null, "Cannot find serializer for Tiene!");
+				Tiene newTiene = newTieneSerializer.TryCreateInstance (serializationContext, reader, element.Partition) as Tiene;
+				if (newTiene != null)
 				{
-					DslModeling::DomainRoleInfo.SetRolePlayer (newDomainRelationship1, DomainRelationship1.TapizModeloDomainRoleId, element);
-					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newDomainRelationship1.GetDomainClass().Id);	
-					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newDomainRelationship1.GetDomainClass().Name + "!");
-					targetSerializer.Read(serializationContext, newDomainRelationship1, reader);
+					DslModeling::DomainRoleInfo.SetRolePlayer (newTiene, Tiene.TapizModeloDomainRoleId, element);
+					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newTiene.GetDomainClass().Id);	
+					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newTiene.GetDomainClass().Name + "!");
+					targetSerializer.Read(serializationContext, newTiene, reader);
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
-					DslModeling::DomainClassXmlSerializer newClaseOfDomainRelationship1Serializer = serializationContext.Directory.GetSerializer(Clase.DomainClassId);
-					global::System.Diagnostics.Debug.Assert(newClaseOfDomainRelationship1Serializer != null, "Cannot find serializer for Clase!");
-					Clase newClaseOfDomainRelationship1 = newClaseOfDomainRelationship1Serializer.TryCreateInstance(serializationContext, reader, element.Partition) as Clase;
-					if (newClaseOfDomainRelationship1 != null)
+					DslModeling::DomainClassXmlSerializer newClaseOfTieneSerializer = serializationContext.Directory.GetSerializer(Clase.DomainClassId);
+					global::System.Diagnostics.Debug.Assert(newClaseOfTieneSerializer != null, "Cannot find serializer for Clase!");
+					Clase newClaseOfTiene = newClaseOfTieneSerializer.TryCreateInstance(serializationContext, reader, element.Partition) as Clase;
+					if (newClaseOfTiene != null)
 					{
-						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(DomainRelationship1));
-						element.Clase.Add(newClaseOfDomainRelationship1);
-						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newClaseOfDomainRelationship1.GetDomainClass().Id);	
-						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newClaseOfDomainRelationship1.GetDomainClass().Name + "!");
-						targetSerializer.Read(serializationContext, newClaseOfDomainRelationship1, reader);
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(Tiene));
+						element.Clase.Add(newClaseOfTiene);
+						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newClaseOfTiene.GetDomainClass().Id);	
+						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newClaseOfTiene.GetDomainClass().Name + "!");
+						targetSerializer.Read(serializationContext, newClaseOfTiene, reader);
 					}
 					else
 					{	// Unknown element, skip.
@@ -694,19 +694,19 @@ namespace Company.DCMLRACPGProyectoIPS
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]		
 		private static void WriteChildElements(DslModeling::SerializationContext serializationContext, TapizModelo element, global::System.Xml.XmlWriter writer)
 		{
-			// DomainRelationship1
-			global::System.Collections.ObjectModel.ReadOnlyCollection<DomainRelationship1> allDomainRelationship1Instances = DomainRelationship1.GetLinksToClase(element);
-			if (!serializationContext.Result.Failed && allDomainRelationship1Instances.Count > 0)
+			// Tiene
+			global::System.Collections.ObjectModel.ReadOnlyCollection<Tiene> allTieneInstances = Tiene.GetLinksToClase(element);
+			if (!serializationContext.Result.Failed && allTieneInstances.Count > 0)
 			{
 				writer.WriteStartElement("clase");
-				foreach (DomainRelationship1 eachDomainRelationship1Instance in allDomainRelationship1Instances)
+				foreach (Tiene eachTieneInstance in allTieneInstances)
 				{
 					if (serializationContext.Result.Failed)
 						break;
 	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachDomainRelationship1Instance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachDomainRelationship1Instance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachDomainRelationship1Instance, writer);
+					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachTieneInstance.GetDomainClass().Id);
+					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachTieneInstance.GetDomainClass().Name + "!");
+					relSerializer.Write(serializationContext, eachTieneInstance, writer);
 				}
 				writer.WriteEndElement();
 			}
@@ -7315,15 +7315,15 @@ namespace Company.DCMLRACPGProyectoIPS
 namespace Company.DCMLRACPGProyectoIPS
 {
 	/// <summary>
-	/// Serializer DomainRelationship1Serializer for DomainClass DomainRelationship1.
+	/// Serializer TieneSerializer for DomainClass Tiene.
 	/// </summary>
-	public partial class DomainRelationship1Serializer : DslModeling::DomainRelationshipXmlSerializer
+	public partial class TieneSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// DomainRelationship1Serializer Constructor
+		/// TieneSerializer Constructor
 		/// </summary>
-		public DomainRelationship1Serializer ()
+		public TieneSerializer ()
 			: base ()
 		{
 		}
@@ -7349,25 +7349,25 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of DomainRelationship1.
+		/// This is the XML tag name used to serialize an instance of Tiene.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"domainRelationship1"; }
+			get { return @"tiene"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of DomainRelationship1.
+		/// This is the XML tag name used to serialize a monikerized instance of Tiene.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"domainRelationship1Moniker"; }
+			get { return @"tieneMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of DomainRelationship1 in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of Tiene in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -7378,16 +7378,16 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one DomainRelationship1 instance from XML.
+		/// Public Read() method that deserializes one Tiene instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the DomainRelationship1 element that is about to be deserialized. 
+		/// of the Tiene element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory DomainRelationship1 instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory Tiene instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -7435,7 +7435,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				}
 				else
 				{
-					DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "DomainRelationship1");
+					DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "Tiene");
 				}
 			}
 	
@@ -7459,7 +7459,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory DomainRelationship1 instance that will link to the target Clase instance.</param>
+		/// <param name="element">In-memory Tiene instance that will link to the target Clase instance.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected virtual void ReadTargetRolePlayer(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -7486,7 +7486,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				if (targetRolePlayer != null)
 				{
 					// Attach the target role-player.
-					DslModeling::DomainRoleInfo.SetRolePlayer(element as DslModeling::ElementLink, DomainRelationship1.ClaseDomainRoleId, targetRolePlayer);
+					DslModeling::DomainRoleInfo.SetRolePlayer(element as DslModeling::ElementLink, Tiene.ClaseDomainRoleId, targetRolePlayer);
 					// Read target role-player.
 					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (targetRolePlayer.GetDomainClass().Id);	
 					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + targetRolePlayer.GetDomainClass().Name + "!");
@@ -7499,7 +7499,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 			if (targetRolePlayer == null)
 			{
-				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "DomainRelationship1");
+				DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "Tiene");
 			}
 		}
 	
@@ -7511,7 +7511,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory DomainRelationship1 instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory Tiene instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
@@ -7536,7 +7536,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory DomainRelationship1 instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory Tiene instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected override void ReadElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -7547,8 +7547,8 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 		#region TryCreateInstance & TryCreateDerivedInstance
 		/// <summary>
-		/// This method creates a correct instance of DomainRelationship1 based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized DomainRelationship1, a new DomainRelationship1 instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of Tiene based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized Tiene, a new Tiene instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -7558,7 +7558,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created DomainRelationship1 instance, or null if the reader is not pointing to a serialized DomainRelationship1 instance.</returns>
+		/// <returns>Created Tiene instance, or null if the reader is not pointing to a serialized Tiene instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -7577,9 +7577,9 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 	
 		/// <summary>
-		/// This method creates a correct derived instance of DomainRelationship1 based on the tag currently pointed by the reader.
+		/// This method creates a correct derived instance of Tiene based on the tag currently pointed by the reader.
 		/// Note that the difference between this method and the above one is that this method will never create an instance of the
-		/// DomainRelationship1 type itself, only derived types are checked.
+		/// Tiene type itself, only derived types are checked.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -7588,7 +7588,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>
-		/// <returns>Created instance that derives from DomainRelationship1, or null if the reader is not pointing to such a serialized instance.</returns>
+		/// <returns>Created instance that derives from Tiene, or null if the reader is not pointing to such a serialized instance.</returns>
 		public override DslModeling::ElementLink TryCreateDerivedInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -7620,18 +7620,18 @@ namespace Company.DCMLRACPGProyectoIPS
 			{
 				string localName = reader.LocalName;
 				if (!derivedTypesOnly && string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "DomainRelationship1" instance.
+				{	// New "Tiene" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "DomainRelationship1".
+				{	// Check for derived classes of "Tiene".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived relationship instance.
-						DomainRelationship1Serializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as DomainRelationship1Serializer;
+						TieneSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as TieneSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -7642,8 +7642,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 	
 		/// <summary>
-		/// This method creates an instance of DomainRelationship1 based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of DomainRelationship1.
+		/// This method creates an instance of Tiene based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of Tiene.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -7651,8 +7651,8 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new DomainRelationship1 instance should be created.</param>	
-		/// <returns>Created DomainRelationship1 instance.</returns>
+		/// <param name="partition">Partition in which new Tiene instance should be created.</param>	
+		/// <returns>Created Tiene instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -7669,11 +7669,11 @@ namespace Company.DCMLRACPGProyectoIPS
 					id = new global::System.Guid (idStr);
 				}
 				// Create the link with place-holder role-players.
-				return new DomainRelationship1(
+				return new Tiene(
 					partition,
 					new DslModeling::RoleAssignment[] {
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (DomainRelationship1.TapizModeloDomainRoleId), 
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (DomainRelationship1.ClaseDomainRoleId)
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (Tiene.TapizModeloDomainRoleId), 
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (Tiene.ClaseDomainRoleId)
 					},
 					new DslModeling::PropertyAssignment[] {
 						new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id)
@@ -7696,12 +7696,12 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from DomainRelationship1, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from Tiene, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from DomainRelationship1.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from Tiene.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -7710,7 +7710,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(DomainRelationship1.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(Tiene.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -7742,7 +7742,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including DomainRelationship1 itself) instance of DomainRelationship1 based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including Tiene itself) instance of Tiene based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -7776,18 +7776,18 @@ namespace Company.DCMLRACPGProyectoIPS
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "DomainRelationship1" moniker instance.
+				{	// New "Tiene" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "DomainRelationship1".
+				{	// Check for derived classes of "Tiene".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						DomainRelationship1Serializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as DomainRelationship1Serializer;
+						TieneSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as TieneSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -7798,7 +7798,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of DomainRelationship1 based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of Tiene based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -7823,7 +7823,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, DomainRelationship1.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, Tiene.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -7847,12 +7847,12 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from DomainRelationship1, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from Tiene, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from DomainRelationship1.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from Tiene.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -7861,7 +7861,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(DomainRelationship1.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(Tiene.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -7887,13 +7887,13 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized DomainRelationship1 instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized Tiene instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">DomainRelationship1 instance to be monikerized.</param>
+		/// <param name="element">Tiene instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the DomainRelationship1 instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the DomainRelationship1 instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the Tiene instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the Tiene instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -7922,10 +7922,10 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one DomainRelationship1 instance into XML.
+		/// Public Write() method that serializes one Tiene instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">DomainRelationship1 instance to be serialized.</param>
+		/// <param name="element">Tiene instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -7974,8 +7974,8 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 	
 			// Write the target role-player instance.
-			DomainRelationship1 instance = element as DomainRelationship1;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of DomainRelationship1!");
+			Tiene instance = element as Tiene;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of Tiene!");
 	
 			DslModeling::ModelElement targetElement = instance.Clase;
 			DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer(targetElement.GetDomainClass().Id);
@@ -7995,7 +7995,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// Write all properties that need to be serialized as XML attributes.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">DomainRelationship1 instance to be serialized.</param>
+		/// <param name="element">Tiene instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param> 
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
@@ -8010,7 +8010,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// This methods serializes 1) properties serialized as nested XML elements and 2) child model elements into XML. 
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">DomainRelationship1 instance to be serialized.</param>
+		/// <param name="element">Tiene instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>        
 		protected override void WriteElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
 		{
@@ -8023,11 +8023,11 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given DomainRelationship1 instance.
+		/// This method calculates a moniker to a given Tiene instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">DomainRelationship1 instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the DomainRelationship1 instance.</returns>
+		/// <param name="element">Tiene instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the Tiene instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -8039,8 +8039,8 @@ namespace Company.DCMLRACPGProyectoIPS
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			DomainRelationship1 instance = element as DomainRelationship1;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of DomainRelationship1!");
+			Tiene instance = element as Tiene;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of Tiene!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -8051,7 +8051,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">DomainRelationship1 instance to get moniker qualifier from.</param>
+		/// <param name="element">Tiene instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -14583,7 +14583,7 @@ namespace Company.DCMLRACPGProyectoIPS
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseEnriquecida.DomainClassId, typeof(ClaseEnriquecidaSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(AtributoEnriquecido.DomainClassId, typeof(AtributoEnriquecidoSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetodoEnriquecido.DomainClassId, typeof(MetodoEnriquecidoSerializer)));
-					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(DomainRelationship1.DomainClassId, typeof(DomainRelationship1Serializer)));
+					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Tiene.DomainClassId, typeof(TieneSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseHasAtributo.DomainClassId, typeof(ClaseHasAtributoSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseHasSignaturadeOperación.DomainClassId, typeof(ClaseHasSignaturadeOperaciónSerializer)));
 					DCMLRACPGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(SignaturadeOperaciónHasParámetros.DomainClassId, typeof(SignaturadeOperaciónHasParámetrosSerializer)));

@@ -52,14 +52,14 @@ namespace Company.DCMLRACPGProyectoIPS
 		
 		/// <summary>
 		/// Gets a list of Clase.
-		/// Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModelo
+		/// Description for Company.DCMLRACPGProyectoIPS.Tiene.TapizModelo
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<Clase> Clase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModeloDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::Company.DCMLRACPGProyectoIPS.Tiene.TapizModeloDomainRoleId);
 			}
 		}
 		#endregion
@@ -283,19 +283,19 @@ namespace Company.DCMLRACPGProyectoIPS
 		#region TapizModelo opposite domain role accessor
 		/// <summary>
 		/// Gets or sets TapizModelo.
-		/// Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.Clase
+		/// Description for Company.DCMLRACPGProyectoIPS.Tiene.Clase
 		/// </summary>
 		public virtual TapizModelo TapizModelo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.ClaseDomainRoleId) as TapizModelo;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.DCMLRACPGProyectoIPS.Tiene.ClaseDomainRoleId) as TapizModelo;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.DCMLRACPGProyectoIPS.DomainRelationship1.ClaseDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.DCMLRACPGProyectoIPS.Tiene.ClaseDomainRoleId, value);
 			}
 		}
 		#endregion

@@ -437,37 +437,37 @@
     <value>Enriquecido</value>
     <comment>DisplayName for DomainProperty &apos;Enriquecido&apos; on DomainClass &apos;MetodoEnriquecido&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.DomainRelationship1.Description" xml:space="preserve">
-    <value>Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1</value>
-    <comment>Description for DomainClass &apos;DomainRelationship1&apos;</comment>
+  <data name="Company.DCMLRACPGProyectoIPS.Tiene.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.Tiene</value>
+    <comment>Description for DomainClass &apos;Tiene&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.DomainRelationship1.DisplayName" xml:space="preserve">
-    <value>Domain Relationship1</value>
-    <comment>DisplayName for DomainClass &apos;DomainRelationship1&apos;</comment>
+  <data name="Company.DCMLRACPGProyectoIPS.Tiene.DisplayName" xml:space="preserve">
+    <value>Tiene</value>
+    <comment>DisplayName for DomainClass &apos;Tiene&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.DomainRelationship1/TapizModelo.Description" xml:space="preserve">
-    <value>Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.TapizModelo</value>
-    <comment>Description for DomainRole &apos;TapizModelo&apos; on DomainRelationship &apos;DomainRelationship1&apos;</comment>
+  <data name="Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.Tiene.TapizModelo</value>
+    <comment>Description for DomainRole &apos;TapizModelo&apos; on DomainRelationship &apos;Tiene&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.DomainRelationship1/TapizModelo.DisplayName" xml:space="preserve">
+  <data name="Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.DisplayName" xml:space="preserve">
     <value>Tapiz Modelo</value>
-    <comment>DisplayName for DomainRole &apos;TapizModelo&apos; on DomainRelationship &apos;DomainRelationship1&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;TapizModelo&apos; on DomainRelationship &apos;Tiene&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.DomainRelationship1/TapizModelo.PropertyDisplayName" xml:space="preserve">
+  <data name="Company.DCMLRACPGProyectoIPS.Tiene/TapizModelo.PropertyDisplayName" xml:space="preserve">
     <value>Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;TapizModelo&apos; on DomainRelationship &apos;DomainRelationship1&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;TapizModelo&apos; on DomainRelationship &apos;Tiene&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.Description" xml:space="preserve">
-    <value>Description for Company.DCMLRACPGProyectoIPS.DomainRelationship1.Clase</value>
-    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;DomainRelationship1&apos;</comment>
+  <data name="Company.DCMLRACPGProyectoIPS.Tiene/Clase.Description" xml:space="preserve">
+    <value>Description for Company.DCMLRACPGProyectoIPS.Tiene.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;Tiene&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.DisplayName" xml:space="preserve">
+  <data name="Company.DCMLRACPGProyectoIPS.Tiene/Clase.DisplayName" xml:space="preserve">
     <value>Clase</value>
-    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;DomainRelationship1&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;Tiene&apos;</comment>
   </data>
-  <data name="Company.DCMLRACPGProyectoIPS.DomainRelationship1/Clase.PropertyDisplayName" xml:space="preserve">
+  <data name="Company.DCMLRACPGProyectoIPS.Tiene/Clase.PropertyDisplayName" xml:space="preserve">
     <value>Tapiz Modelo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;DomainRelationship1&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;Tiene&apos;</comment>
   </data>
   <data name="Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.Description" xml:space="preserve">
     <value>Description for Company.DCMLRACPGProyectoIPS.ClaseHasAtributo</value>
@@ -932,14 +932,6 @@
   <data name="Company.DCMLRACPGProyectoIPS.ClaseCShape.DisplayName" xml:space="preserve">
     <value>Clase CShape</value>
     <comment>DisplayName for DomainClass &apos;ClaseCShape&apos;</comment>
-  </data>
-  <data name="ClaseCShapeAttributeDecoTitle" xml:space="preserve">
-    <value></value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="ClaseCShapeMethodDecoTitle" xml:space="preserve">
-    <value></value>
-    <comment>Compartment title</comment>
   </data>
   <data name="ClaseCShapeNameDecoDefaultText" xml:space="preserve">
     <value>NameDeco</value>
