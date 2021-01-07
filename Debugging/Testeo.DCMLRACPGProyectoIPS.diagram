@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dCMLRACPGProyectoIPSDiagram dslVersion="1.0.0.0" Id="2d5f9a35-6c3c-4d61-b9f4-5e3f91358a27" absoluteBounds="0, 0, 12.125, 8.5" name="DCMLRACPGProyectoIPS1">
+  <tapizModeloMoniker Id="f026bad4-af9b-4c29-97a1-28c69bef8b09" />
+  <nestedChildShapes>
+    <claseCShape Id="86572e99-8119-43b7-a4e7-0d1a5aebaa69" absoluteBounds="7, 3.25, 1.5, 1">
+      <claseMoniker Id="bfa87189-4bfc-427d-bea3-bfba30ceadf1" />
+    </claseCShape>
+    <claseCShape Id="a09b0cd7-5294-4bde-ada0-728ad1688eea" absoluteBounds="10.375, 1.75, 1.5, 1">
+      <claseMoniker Id="022ade21-8667-44f0-8d67-967cb770265c" />
+    </claseCShape>
+  </nestedChildShapes>
+</dCMLRACPGProyectoIPSDiagram>

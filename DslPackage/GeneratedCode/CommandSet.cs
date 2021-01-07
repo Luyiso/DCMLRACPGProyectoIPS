@@ -13,7 +13,7 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.

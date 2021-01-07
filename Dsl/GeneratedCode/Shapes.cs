@@ -11,17 +11,17 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// DomainClass ClaseCShape
-	/// Description for Company.DCMLRACPGProyectoIPS.ClaseCShape
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseCShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseCShape.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseCShape.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
+	[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.ClaseCShape.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.ClaseCShape.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("9cd4b6ca-bc30-4e6c-a641-fd4476b49ded")]
+	[DslModeling::DomainObjectId("cf77c783-6cb0-4d1c-8a86-b1d7b7773a27")]
 	public partial class ClaseCShape : DslDiagrams::CompartmentShape
 	{
 		#region DiagramElement boilerplate
@@ -143,14 +143,20 @@ namespace Company.DCMLRACPGProyectoIPS
 			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 			// Fill brush settings for this shape.
 			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 188, 201, 223);
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 87, 90, 123);
 			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
 		
 			// Text brush settings for this shape.
 			DslDiagrams::BrushSettings textBrush = new DslDiagrams::BrushSettings();
-			textBrush.Color = global::System.Drawing.Color.FromArgb(255, 87, 90, 123);
+			textBrush.Color = global::System.Drawing.Color.FromArgb(255, 188, 201, 223);
 			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
 		
+			// Custom font styles
+			DslDiagrams::FontSettings fontSettings;
+			fontSettings = new DslDiagrams::FontSettings();
+			fontSettings.Style =  global::System.Drawing.FontStyle.Regular ;
+			fontSettings.Size = 12/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular12"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
 		}
 		
 		/// <summary>
@@ -182,22 +188,104 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDeco");
-			field1.DefaultText = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeNameDecoDefaultText");
+			field1.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeNameDecoDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular12");			
 			shapeFields.Add(field1);
 			
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("IDDeco");
-			field2.DefaultText = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeIDDecoDefaultText");
+			field2.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeIDDecoDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
 			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
 			shapeFields.Add(field2);
+			
+			DslDiagrams::TextField field3 = new DslDiagrams::TextField("Enriquecida");
+			field3.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeEnriquecidaDefaultText");
+			field3.DefaultFocusable = true;
+			field3.DefaultAutoSize = true;
+			field3.AnchoringBehavior.MinimumHeightInLines = 1;
+			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field3);
+			
+			DslDiagrams::TextField field4 = new DslDiagrams::TextField("FondoColorR");
+			field4.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeFondoColorRDefaultText");
+			field4.DefaultFocusable = true;
+			field4.DefaultAutoSize = true;
+			field4.AnchoringBehavior.MinimumHeightInLines = 1;
+			field4.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field4.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field4);
+			
+			DslDiagrams::TextField field5 = new DslDiagrams::TextField("FondoColorG");
+			field5.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeFondoColorGDefaultText");
+			field5.DefaultFocusable = true;
+			field5.DefaultAutoSize = true;
+			field5.AnchoringBehavior.MinimumHeightInLines = 1;
+			field5.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field5.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field5);
+			
+			DslDiagrams::TextField field6 = new DslDiagrams::TextField("FondoColorB");
+			field6.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeFondoColorBDefaultText");
+			field6.DefaultFocusable = true;
+			field6.DefaultAutoSize = true;
+			field6.AnchoringBehavior.MinimumHeightInLines = 1;
+			field6.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field6.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field6);
+			
+			DslDiagrams::TextField field7 = new DslDiagrams::TextField("NombreColorR");
+			field7.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeNombreColorRDefaultText");
+			field7.DefaultFocusable = true;
+			field7.DefaultAutoSize = true;
+			field7.AnchoringBehavior.MinimumHeightInLines = 1;
+			field7.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field7.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field7);
+			
+			DslDiagrams::TextField field8 = new DslDiagrams::TextField("NombreColorG");
+			field8.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeNombreColorGDefaultText");
+			field8.DefaultFocusable = true;
+			field8.DefaultAutoSize = true;
+			field8.AnchoringBehavior.MinimumHeightInLines = 1;
+			field8.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field8.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field8);
+			
+			DslDiagrams::TextField field9 = new DslDiagrams::TextField("NombreColorB");
+			field9.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeNombreColorBDefaultText");
+			field9.DefaultFocusable = true;
+			field9.DefaultAutoSize = true;
+			field9.AnchoringBehavior.MinimumHeightInLines = 1;
+			field9.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field9.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field9);
+			
+			DslDiagrams::TextField field10 = new DslDiagrams::TextField("TipoLetra");
+			field10.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeTipoLetraDefaultText");
+			field10.DefaultFocusable = true;
+			field10.DefaultAutoSize = true;
+			field10.AnchoringBehavior.MinimumHeightInLines = 1;
+			field10.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field10.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field10);
+			
+			DslDiagrams::TextField field11 = new DslDiagrams::TextField("Alineacion");
+			field11.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeAlineacionDefaultText");
+			field11.DefaultFocusable = true;
+			field11.DefaultAutoSize = true;
+			field11.AnchoringBehavior.MinimumHeightInLines = 1;
+			field11.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field11.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field11);
 			
 		}
 		
@@ -211,12 +299,48 @@ namespace Company.DCMLRACPGProyectoIPS
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDeco");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "IDDeco");
 			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator2);
+				
+			DslDiagrams::ShapeField field3 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Enriquecida");
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ShapeDecorator(field3, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.15));
+			decorators.Add(decorator3);
+				
+			DslDiagrams::ShapeField field4 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "FondoColorR");
+			DslDiagrams::Decorator decorator4 = new DslDiagrams::ShapeDecorator(field4, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.3));
+			decorators.Add(decorator4);
+				
+			DslDiagrams::ShapeField field5 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "FondoColorG");
+			DslDiagrams::Decorator decorator5 = new DslDiagrams::ShapeDecorator(field5, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.45));
+			decorators.Add(decorator5);
+				
+			DslDiagrams::ShapeField field6 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "FondoColorB");
+			DslDiagrams::Decorator decorator6 = new DslDiagrams::ShapeDecorator(field6, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.6));
+			decorators.Add(decorator6);
+				
+			DslDiagrams::ShapeField field7 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NombreColorR");
+			DslDiagrams::Decorator decorator7 = new DslDiagrams::ShapeDecorator(field7, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.75));
+			decorators.Add(decorator7);
+				
+			DslDiagrams::ShapeField field8 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NombreColorG");
+			DslDiagrams::Decorator decorator8 = new DslDiagrams::ShapeDecorator(field8, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.9));
+			decorators.Add(decorator8);
+				
+			DslDiagrams::ShapeField field9 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NombreColorB");
+			DslDiagrams::Decorator decorator9 = new DslDiagrams::ShapeDecorator(field9, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 1.05));
+			decorators.Add(decorator9);
+				
+			DslDiagrams::ShapeField field10 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "TipoLetra");
+			DslDiagrams::Decorator decorator10 = new DslDiagrams::ShapeDecorator(field10, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 1.2));
+			decorators.Add(decorator10);
+				
+			DslDiagrams::ShapeField field11 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Alineacion");
+			DslDiagrams::Decorator decorator11 = new DslDiagrams::ShapeDecorator(field11, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 1.35));
+			decorators.Add(decorator11);
 				
 		}
 		
@@ -270,33 +394,11 @@ namespace Company.DCMLRACPGProyectoIPS
 				{
 					localCompartmentsOffset = baseCompartmentDescriptions.Length;
 				}
-				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[2+localCompartmentsOffset];
+				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[0+localCompartmentsOffset];
 				
 				if(baseCompartmentDescriptions!=null)
 				{
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
-				}
-				{
-					string title = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeAttributeCompaTitle");
-					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("AttributeCompa", title, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
-						null, null,
-						false);
-					descriptor.TitleTextColor = global::System.Drawing.Color.FromArgb(255, 108, 116, 156);
-					descriptor.ItemTextColor = global::System.Drawing.Color.FromArgb(0, 0, 0, 0);
-					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
-				}
-				{
-					string title = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseCShapeMethodCompaTitle");
-					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("MethodCompa", title, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
-						null, null,
-						false);
-					descriptor.TitleTextColor = global::System.Drawing.Color.FromArgb(255, 108, 116, 156);
-					descriptor.ItemTextColor = global::System.Drawing.Color.FromArgb(255, 108, 116, 156);
-					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
 				}
 			}
 			
@@ -324,35 +426,19 @@ namespace Company.DCMLRACPGProyectoIPS
 				{
 					// First we get the mappings defined for the base shape, and add on any mappings defined for this
 					// shape. 
-					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::Company.DCMLRACPGProyectoIPS.Clase));
+					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Clase));
 					int localCompartmentMappingsOffset = 0;
 					if(baseMappings!=null)
 					{
 						localCompartmentMappingsOffset = baseMappings.Length;
 					}
-					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[2+localCompartmentMappingsOffset];
+					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[0+localCompartmentMappingsOffset];
 					
 					if(baseMappings!=null)
 					{
 						baseMappings.CopyTo(mappings, 0);
 					}
-					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
-																				"AttributeCompa", 
-																				global::Company.DCMLRACPGProyectoIPS.Atributo.NameDomainPropertyId, 
-																				global::Company.DCMLRACPGProyectoIPS.Atributo.DomainClassId, 
-																				GetElementsFromClaseForAttributeCompa,
-																				null,
-																				null,
-																				null);
-					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
-																				"MethodCompa", 
-																				global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.NameDomainPropertyId, 
-																				global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.DomainClassId, 
-																				GetElementsFromClaseForMethodCompa,
-																				null,
-																				null,
-																				null);
-					compartmentMappings.Add(typeof(global::Company.DCMLRACPGProyectoIPS.Clase), mappings);
+					compartmentMappings.Add(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Clase), mappings);
 				}
 			}
 			
@@ -381,20 +467,6 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromClaseForAttributeCompa(DslModeling::ModelElement rootElement)
-			{
-				global::Company.DCMLRACPGProyectoIPS.Clase root = (global::Company.DCMLRACPGProyectoIPS.Clase)rootElement;
-					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Company.DCMLRACPGProyectoIPS.Atributo> result = root.Atributo;
-				return result;
-			}
-			internal static global::System.Collections.IList GetElementsFromClaseForMethodCompa(DslModeling::ModelElement rootElement)
-			{
-				global::Company.DCMLRACPGProyectoIPS.Clase root = (global::Company.DCMLRACPGProyectoIPS.Clase)rootElement;
-					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación> result = root.SignaturadeOperación;
-				return result;
-			}
 			#endregion
 		
 		#endregion
@@ -403,7 +475,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// ClaseCShape domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9cd4b6ca, 0xbc30, 0x4e6c, 0xa6, 0x41, 0xfd, 0x44, 0x76, 0xb4, 0x9d, 0xed);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xcf77c783, 0x6cb0, 0x4d1c, 0x8a, 0x86, 0xb1, 0xd7, 0xb7, 0x77, 0x3a, 0x27);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -426,17 +498,17 @@ namespace Company.DCMLRACPGProyectoIPS
 		#endregion
 	}
 }
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// DomainClass ClaseAbstractaCShape
-	/// Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaCShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
+	[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaCShape.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaCShape.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("6389ca0d-e547-4b32-9646-c21602a63f73")]
+	[DslModeling::DomainObjectId("ea015489-c2b0-46fa-a54f-fb72ff86ba24")]
 	public partial class ClaseAbstractaCShape : DslDiagrams::CompartmentShape
 	{
 		#region DiagramElement boilerplate
@@ -554,21 +626,6 @@ namespace Company.DCMLRACPGProyectoIPS
 			// Outline pen settings for this shape.
 			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
 			outlinePen.Color = global::System.Drawing.Color.FromArgb(255, 170, 80, 112);
-			outlinePen.DashStyle = global::System.Drawing.Drawing2D.DashStyle.Dot;
-			// Property:
-			//	private static ArrayList customOutlineDashPattern;
-			//	protected static ArrayList CustomOutlineDashPattern
-			//	{
-			//		get
-			//		{
-			//			if(customOutlineDashPattern == null)
-			//				customOutlineDashPattern = new ArrayList(new float[] { 4.0F, 2.0F, 1.0F, 3.0F });
-			//			return customOutlineDashPattern;
-			//		}
-			//	}
-			// must be implemented in a partial class of Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape. This property should
-			// return an ArrayList of float values containing the custom DashPattern to use for this shape.
-			outlinePen.DashPattern = global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape.CustomOutlineDashPattern;
 			outlinePen.Width = 0.03F;
 			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 			// Fill brush settings for this shape.
@@ -581,6 +638,12 @@ namespace Company.DCMLRACPGProyectoIPS
 			textBrush.Color = global::System.Drawing.Color.FromArgb(255, 87, 90, 123);
 			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
 		
+			// Custom font styles
+			DslDiagrams::FontSettings fontSettings;
+			fontSettings = new DslDiagrams::FontSettings();
+			fontSettings.Style =  global::System.Drawing.FontStyle.Regular ;
+			fontSettings.Size = 12/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular12"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
 		}
 		
 		/// <summary>
@@ -612,16 +675,17 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDeco");
-			field1.DefaultText = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseAbstractaCShapeNameDecoDefaultText");
+			field1.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseAbstractaCShapeNameDecoDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular12");			
 			shapeFields.Add(field1);
 			
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("IDDeco");
-			field2.DefaultText = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseAbstractaCShapeIDDecoDefaultText");
+			field2.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseAbstractaCShapeIDDecoDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -641,7 +705,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDeco");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "IDDeco");
@@ -700,42 +764,11 @@ namespace Company.DCMLRACPGProyectoIPS
 				{
 					localCompartmentsOffset = baseCompartmentDescriptions.Length;
 				}
-				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[3+localCompartmentsOffset];
+				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[0+localCompartmentsOffset];
 				
 				if(baseCompartmentDescriptions!=null)
 				{
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
-				}
-				{
-					string title = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseAbstractaCShapeAttributeCompaTitle");
-					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("AttributeCompa", title, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
-						null, null,
-						false);
-					descriptor.TitleTextColor = global::System.Drawing.Color.FromArgb(255, 108, 116, 156);
-					descriptor.ItemTextColor = global::System.Drawing.Color.FromArgb(0, 0, 0, 0);
-					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
-				}
-				{
-					string title = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseAbstractaCShapeMethodCompaTitle");
-					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("MethodCompa", title, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
-						null, null,
-						false);
-					descriptor.TitleTextColor = global::System.Drawing.Color.FromArgb(255, 108, 116, 156);
-					descriptor.ItemTextColor = global::System.Drawing.Color.FromArgb(255, 108, 116, 156);
-					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
-				}
-				{
-					string title = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ClaseAbstractaCShapeAbstractMethodCompaTitle");
-					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("AbstractMethodCompa", title, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
-						null, null,
-						false);
-					compartmentDescriptions[localCompartmentsOffset+2] = descriptor;
 				}
 			}
 			
@@ -763,43 +796,19 @@ namespace Company.DCMLRACPGProyectoIPS
 				{
 					// First we get the mappings defined for the base shape, and add on any mappings defined for this
 					// shape. 
-					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta));
+					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstracta));
 					int localCompartmentMappingsOffset = 0;
 					if(baseMappings!=null)
 					{
 						localCompartmentMappingsOffset = baseMappings.Length;
 					}
-					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[3+localCompartmentMappingsOffset];
+					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[0+localCompartmentMappingsOffset];
 					
 					if(baseMappings!=null)
 					{
 						baseMappings.CopyTo(mappings, 0);
 					}
-					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
-																				"AttributeCompa", 
-																				global::Company.DCMLRACPGProyectoIPS.Atributo.NameDomainPropertyId, 
-																				global::Company.DCMLRACPGProyectoIPS.Atributo.DomainClassId, 
-																				GetElementsFromClaseAbstractaForAttributeCompa,
-																				null,
-																				null,
-																				null);
-					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
-																				"MethodCompa", 
-																				global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.NameDomainPropertyId, 
-																				global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.DomainClassId, 
-																				GetElementsFromClaseAbstractaForMethodCompa,
-																				null,
-																				null,
-																				null);
-					mappings[localCompartmentMappingsOffset+2] = new DslDiagrams::ElementListCompartmentMapping(
-																				"AbstractMethodCompa", 
-																				global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.NameDomainPropertyId, 
-																				global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto.DomainClassId, 
-																				GetElementsFromClaseAbstractaForAbstractMethodCompa,
-																				null,
-																				null,
-																				null);
-					compartmentMappings.Add(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta), mappings);
+					compartmentMappings.Add(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstracta), mappings);
 				}
 			}
 			
@@ -828,27 +837,6 @@ namespace Company.DCMLRACPGProyectoIPS
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromClaseAbstractaForAttributeCompa(DslModeling::ModelElement rootElement)
-			{
-				global::Company.DCMLRACPGProyectoIPS.Clase root = (global::Company.DCMLRACPGProyectoIPS.Clase)rootElement;
-					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Company.DCMLRACPGProyectoIPS.Atributo> result = root.Atributo;
-				return result;
-			}
-			internal static global::System.Collections.IList GetElementsFromClaseAbstractaForMethodCompa(DslModeling::ModelElement rootElement)
-			{
-				global::Company.DCMLRACPGProyectoIPS.Clase root = (global::Company.DCMLRACPGProyectoIPS.Clase)rootElement;
-					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación> result = root.SignaturadeOperación;
-				return result;
-			}
-			internal static global::System.Collections.IList GetElementsFromClaseAbstractaForAbstractMethodCompa(DslModeling::ModelElement rootElement)
-			{
-				global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta root = (global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta)rootElement;
-					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto> result = root.MétodoAbstracto;
-				return result;
-			}
 			#endregion
 		
 		#endregion
@@ -857,7 +845,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// ClaseAbstractaCShape domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6389ca0d, 0xe547, 0x4b32, 0x96, 0x46, 0xc2, 0x16, 0x02, 0xa6, 0x3f, 0x73);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xea015489, 0xc2b0, 0x46fa, 0xa5, 0x4f, 0xfb, 0x72, 0xff, 0x86, 0xba, 0x24);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -874,6 +862,988 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
 		public ClaseAbstractaCShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainClass AtributoShape
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.AtributoShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.AtributoShape.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.AtributoShape.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("7f429312-083c-42ae-a95d-8e24ecfaaa9b")]
+	public partial class AtributoShape : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with AtributoShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindAtributoShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.25, 0.25);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromArgb(255, 87, 90, 123);
+			outlinePen.Width = 0.02F;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 128, 128, 255);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+			// Text brush settings for this shape.
+			DslDiagrams::BrushSettings textBrush = new DslDiagrams::BrushSettings();
+			textBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
+		
+		}
+		
+		/// <summary>
+		/// Indicates whether this shape displays a background gradient.
+		/// </summary>
+		public override bool HasBackgroundGradient
+		{
+			get
+			{
+				return false;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+			}
+		}
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("AtributoDeco");
+			field1.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("AtributoShapeAtributoDecoDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+			DslDiagrams::TextField field2 = new DslDiagrams::TextField("ColorLetraR");
+			field2.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("AtributoShapeColorLetraRDefaultText");
+			field2.DefaultFocusable = true;
+			field2.DefaultAutoSize = true;
+			field2.AnchoringBehavior.MinimumHeightInLines = 1;
+			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field2);
+			
+			DslDiagrams::TextField field3 = new DslDiagrams::TextField("ColorLetraG");
+			field3.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("AtributoShapeColorLetraGDefaultText");
+			field3.DefaultFocusable = true;
+			field3.DefaultAutoSize = true;
+			field3.AnchoringBehavior.MinimumHeightInLines = 1;
+			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field3);
+			
+			DslDiagrams::TextField field4 = new DslDiagrams::TextField("ColorLetraB");
+			field4.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("AtributoShapeColorLetraBDefaultText");
+			field4.DefaultFocusable = true;
+			field4.DefaultAutoSize = true;
+			field4.AnchoringBehavior.MinimumHeightInLines = 1;
+			field4.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field4.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field4);
+			
+			DslDiagrams::TextField field5 = new DslDiagrams::TextField("TipoLetra");
+			field5.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("AtributoShapeTipoLetraDefaultText");
+			field5.DefaultFocusable = true;
+			field5.DefaultAutoSize = true;
+			field5.AnchoringBehavior.MinimumHeightInLines = 1;
+			field5.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field5.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field5);
+			
+			DslDiagrams::TextField field6 = new DslDiagrams::TextField("FormatoBooleano");
+			field6.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("AtributoShapeFormatoBooleanoDefaultText");
+			field6.DefaultFocusable = true;
+			field6.DefaultAutoSize = true;
+			field6.AnchoringBehavior.MinimumHeightInLines = 1;
+			field6.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field6.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field6);
+			
+			DslDiagrams::TextField field7 = new DslDiagrams::TextField("Enriquecido");
+			field7.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("AtributoShapeEnriquecidoDefaultText");
+			field7.DefaultFocusable = true;
+			field7.DefaultAutoSize = true;
+			field7.AnchoringBehavior.MinimumHeightInLines = 1;
+			field7.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field7.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field7);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "AtributoDeco");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "ColorLetraR");
+			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.15));
+			decorators.Add(decorator2);
+				
+			DslDiagrams::ShapeField field3 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "ColorLetraG");
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ShapeDecorator(field3, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.3));
+			decorators.Add(decorator3);
+				
+			DslDiagrams::ShapeField field4 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "ColorLetraB");
+			DslDiagrams::Decorator decorator4 = new DslDiagrams::ShapeDecorator(field4, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.45));
+			decorators.Add(decorator4);
+				
+			DslDiagrams::ShapeField field5 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "TipoLetra");
+			DslDiagrams::Decorator decorator5 = new DslDiagrams::ShapeDecorator(field5, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.6));
+			decorators.Add(decorator5);
+				
+			DslDiagrams::ShapeField field6 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "FormatoBooleano");
+			DslDiagrams::Decorator decorator6 = new DslDiagrams::ShapeDecorator(field6, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.75));
+			decorators.Add(decorator6);
+				
+			DslDiagrams::ShapeField field7 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Enriquecido");
+			DslDiagrams::Decorator decorator7 = new DslDiagrams::ShapeDecorator(field7, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.9));
+			decorators.Add(decorator7);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AtributoShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7f429312, 0x083c, 0x42ae, 0xa9, 0x5d, 0x8e, 0x24, 0xec, 0xfa, 0xaa, 0x9b);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AtributoShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AtributoShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainClass MetodoShape
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.MetodoShape.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.MetodoShape.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("382e9cb4-d503-4a43-ad0b-f507c45592c5")]
+	public partial class MetodoShape : DslDiagrams::CompartmentShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with MetodoShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindMetodoShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(0.75, 0.5);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromArgb(255, 128, 128, 255);
+			outlinePen.Width = 0.04F;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 128, 128, 255);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+			// Text brush settings for this shape.
+			DslDiagrams::BrushSettings textBrush = new DslDiagrams::BrushSettings();
+			textBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
+		
+		}
+		
+		/// <summary>
+		/// Indicates whether this shape displays a background gradient.
+		/// </summary>
+		public override bool HasBackgroundGradient
+		{
+			get
+			{
+				return false;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+			}
+		}
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("MetodoDeco");
+			field1.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("MetodoShapeMetodoDecoDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+			DslDiagrams::TextField field2 = new DslDiagrams::TextField("TipoLetra");
+			field2.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("MetodoShapeTipoLetraDefaultText");
+			field2.DefaultFocusable = true;
+			field2.DefaultAutoSize = true;
+			field2.AnchoringBehavior.MinimumHeightInLines = 1;
+			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field2);
+			
+			DslDiagrams::TextField field3 = new DslDiagrams::TextField("ColorLetraR");
+			field3.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("MetodoShapeColorLetraRDefaultText");
+			field3.DefaultFocusable = true;
+			field3.DefaultAutoSize = true;
+			field3.AnchoringBehavior.MinimumHeightInLines = 1;
+			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field3);
+			
+			DslDiagrams::TextField field4 = new DslDiagrams::TextField("ColorLetraG");
+			field4.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("MetodoShapeColorLetraGDefaultText");
+			field4.DefaultFocusable = true;
+			field4.DefaultAutoSize = true;
+			field4.AnchoringBehavior.MinimumHeightInLines = 1;
+			field4.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field4.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field4);
+			
+			DslDiagrams::TextField field5 = new DslDiagrams::TextField("ColorLetraB");
+			field5.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("MetodoShapeColorLetraBDefaultText");
+			field5.DefaultFocusable = true;
+			field5.DefaultAutoSize = true;
+			field5.AnchoringBehavior.MinimumHeightInLines = 1;
+			field5.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field5.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field5);
+			
+			DslDiagrams::TextField field6 = new DslDiagrams::TextField("Enriquecido");
+			field6.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("MetodoShapeEnriquecidoDefaultText");
+			field6.DefaultFocusable = true;
+			field6.DefaultAutoSize = true;
+			field6.AnchoringBehavior.MinimumHeightInLines = 1;
+			field6.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field6.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field6);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "MetodoDeco");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "TipoLetra");
+			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.15));
+			decorators.Add(decorator2);
+				
+			DslDiagrams::ShapeField field3 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "ColorLetraR");
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ShapeDecorator(field3, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.3));
+			decorators.Add(decorator3);
+				
+			DslDiagrams::ShapeField field4 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "ColorLetraG");
+			DslDiagrams::Decorator decorator4 = new DslDiagrams::ShapeDecorator(field4, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.45));
+			decorators.Add(decorator4);
+				
+			DslDiagrams::ShapeField field5 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "ColorLetraB");
+			DslDiagrams::Decorator decorator5 = new DslDiagrams::ShapeDecorator(field5, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.6));
+			decorators.Add(decorator5);
+				
+			DslDiagrams::ShapeField field6 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Enriquecido");
+			DslDiagrams::Decorator decorator6 = new DslDiagrams::ShapeDecorator(field6, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, new DslDiagrams::PointD(0, 0.75));
+			decorators.Add(decorator6);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		#region CompartmentShape code
+		/// <summary>
+		/// Returns a value indicating whether compartment header should be visible if there is only one of them.
+		/// </summary>
+		public override bool IsSingleCompartmentHeaderVisible
+		{
+			get { return true; }
+		}
+		
+		private static DslDiagrams::CompartmentDescription[] compartmentDescriptions;
+		
+		/// <summary>
+		/// Gets an array of CompartmentDescription for all compartments shown on this shape
+		/// (including compartments defined on base shapes).
+		/// </summary>
+		/// <returns></returns>
+		public override DslDiagrams::CompartmentDescription[] GetCompartmentDescriptions()
+		{
+			if(compartmentDescriptions == null)
+			{
+				// Initialize the array of compartment descriptions if we haven't done so already. 
+				// First we get any compartment descriptions in base shapes, and add on any compartments
+				// that are defined on this shape. 
+				DslDiagrams::CompartmentDescription[] baseCompartmentDescriptions = base.GetCompartmentDescriptions();
+				
+				int localCompartmentsOffset = 0;
+				if(baseCompartmentDescriptions!=null)
+				{
+					localCompartmentsOffset = baseCompartmentDescriptions.Length;
+				}
+				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[0+localCompartmentsOffset];
+				
+				if(baseCompartmentDescriptions!=null)
+				{
+					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
+				}
+			}
+			
+			return MetodoShape.compartmentDescriptions;
+		}
+		
+		private static global::System.Collections.Generic.Dictionary<global::System.Type, DslDiagrams::CompartmentMapping[]> compartmentMappings;
+		
+		/// <summary>
+		/// Gets an array of CompartmentMappings for all compartments displayed on this shape
+		/// (including compartment maps defined on base shapes). 
+		/// </summary>
+		/// <param name="melType">The type of the DomainClass that this shape is mapped to</param>
+		/// <returns></returns>
+		protected override DslDiagrams::CompartmentMapping[] GetCompartmentMappings(global::System.Type melType)
+		{
+			if(melType==null) throw new global::System.ArgumentNullException("melType");
+			
+			if(compartmentMappings==null)
+			{
+				// Initialize the table of compartment mappings if we haven't done so already. 
+				// The table contains an array of CompartmentMapping for every Type that this
+				// shape can be mapped to. 
+				compartmentMappings = new global::System.Collections.Generic.Dictionary<global::System.Type, DslDiagrams::CompartmentMapping[]>();
+				{
+					// First we get the mappings defined for the base shape, and add on any mappings defined for this
+					// shape. 
+					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Metodo));
+					int localCompartmentMappingsOffset = 0;
+					if(baseMappings!=null)
+					{
+						localCompartmentMappingsOffset = baseMappings.Length;
+					}
+					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[0+localCompartmentMappingsOffset];
+					
+					if(baseMappings!=null)
+					{
+						baseMappings.CopyTo(mappings, 0);
+					}
+					compartmentMappings.Add(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Metodo), mappings);
+				}
+			}
+			
+			// See if we can find the mapping being requested directly in the table. 
+			DslDiagrams::CompartmentMapping[] returnValue;
+			if(compartmentMappings.TryGetValue(melType, out returnValue))
+			{
+				return returnValue;
+			}
+			
+			// If not, loop through the types in the table, and find the 'most derived' base
+			// class of melType. 
+			global::System.Type selectedMappedType = null;
+			foreach(global::System.Type mappedType in compartmentMappings.Keys)
+			{
+				if(mappedType.IsAssignableFrom(melType) && (selectedMappedType==null || selectedMappedType.IsAssignableFrom(mappedType)))
+				{
+					selectedMappedType = mappedType;
+				}
+			}
+			if(selectedMappedType!=null)
+			{
+				return compartmentMappings[selectedMappedType];
+			}
+			return new DslDiagrams::CompartmentMapping[] {};
+		}
+		
+			#region DomainPath traversal methods to get the list of elements to display in a compartment.
+			#endregion
+		
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// MetodoShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x382e9cb4, 0xd503, 0x4a43, 0xad, 0x0b, 0xf5, 0x07, 0xc4, 0x55, 0x92, 0xc5);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public MetodoShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public MetodoShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainClass ParametroShape
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.ParametroShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.ParametroShape.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.ParametroShape.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("b9211995-5a4c-41a6-9ec4-f252173fe406")]
+	public partial class ParametroShape : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with ParametroShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindParametroShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.25, 0.25);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromArgb(255, 87, 90, 123);
+			outlinePen.Width = 0.02F;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 137, 154, 183);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+			// Text brush settings for this shape.
+			DslDiagrams::BrushSettings textBrush = new DslDiagrams::BrushSettings();
+			textBrush.Color = global::System.Drawing.Color.FromArgb(255, 170, 80, 112);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
+		
+		}
+		
+		/// <summary>
+		/// Indicates whether this shape displays a background gradient.
+		/// </summary>
+		public override bool HasBackgroundGradient
+		{
+			get
+			{
+				return true;
+			}
+		}
+		
+		/// <summary>
+		/// Indicates the direction of the gradient.
+		/// </summary>
+		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		{
+			get
+			{
+				return global::System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+			}
+		}
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("DetallesDeco");
+			field1.DefaultText = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("ParametroShapeDetallesDecoDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "DetallesDeco");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ParametroShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb9211995, 0x5a4c, 0x41a6, 0x9e, 0xc4, 0xf2, 0x52, 0x17, 0x3f, 0xe4, 0x06);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ParametroShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ParametroShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

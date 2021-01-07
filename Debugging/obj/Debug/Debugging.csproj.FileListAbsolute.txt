@@ -1,0 +1,6 @@
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\bin\Debug\Debugging.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\bin\Debug\Debugging.pdb
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\obj\Debug\Debugging.csprojAssemblyReference.cache
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\obj\Debug\Debugging.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\obj\Debug\Debugging.pdb

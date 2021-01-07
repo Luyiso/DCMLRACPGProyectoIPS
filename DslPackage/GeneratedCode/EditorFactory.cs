@@ -10,7 +10,7 @@
 using VSShellInterop = global::Microsoft.VisualStudio.Shell.Interop;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.

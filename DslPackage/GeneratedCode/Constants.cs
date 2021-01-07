@@ -7,12 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	internal static partial class Constants
 	{
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-		public const string DesignerFileExtension = "DCMLRACPG_DSLProyIPS";
+		public const string DesignerFileExtension = "DCMLRACPGProyectoIPS";
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
 		public const string ProductName = @"DCMLRACPGProyectoIPS";
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
@@ -28,25 +28,25 @@ namespace Company.DCMLRACPGProyectoIPS
 		public static readonly global::System.ComponentModel.Design.CommandID ViewDCMLRACPGProyectoIPSExplorerCommand = new global::System.ComponentModel.Design.CommandID(new global::System.Guid(DCMLRACPGProyectoIPSCommandSetId), 0x0001);
 	
 		// Package identifier
-		public const string DCMLRACPGProyectoIPSPackageId = "8132dbac-9e08-4103-af90-a9f76e7d9f25";
+		public const string DCMLRACPGProyectoIPSPackageId = "376b96cb-2111-44a2-9672-1f05aa1c130a";
 		
 		// Editor factory identifier
-		public const string DCMLRACPGProyectoIPSEditorFactoryId = "706b78d9-9e8c-453e-be21-1fd2bf418387";
+		public const string DCMLRACPGProyectoIPSEditorFactoryId = "3ca63a9b-1b6f-431d-a04c-4a67b55592ca";
 		
 		public const string DefaultDiagramExtension = ".diagram";
 		
 		// Model explorer tool window identifier
-		public const string DCMLRACPGProyectoIPSModelExplorerToolWindowId = "e532fe49-9988-4aad-bd56-952e9fad6260";
+		public const string DCMLRACPGProyectoIPSModelExplorerToolWindowId = "a3835318-e5f5-4843-84c1-97a22113aa3b";
 	}
 }
 //
 // Constants not generated from values in DesignerDefinition.dsl are defined below
 //
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	internal static partial class Constants
 	{
 		// Menu identifier
-		public const string DCMLRACPGProyectoIPSCommandSetId = "0ef9fd6f-c56c-43c6-bf90-2a2be049058f";
+		public const string DCMLRACPGProyectoIPSCommandSetId = "d1d81eac-e92f-49d7-b31d-e01374eeaf36";
 	}
 }

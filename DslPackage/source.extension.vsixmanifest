@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="8132dbac-9e08-4103-af90-a9f76e7d9f25" Version="1.0.0.0" Language="en-US" Publisher="UPM_IPS" />
+    <Identity Id="376b96cb-2111-44a2-9672-1f05aa1c130a" Version="1.0.0.0" Language="en-US" Publisher="UPM_IPS" />
     <DisplayName>DCMLRACPGProyectoIPS</DisplayName>
-    <Description>Description for Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS</Description>
+    <Description>Description for UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS</Description>
   </Metadata>
   <Installation InstalledByMsi="false">
     <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Community" />

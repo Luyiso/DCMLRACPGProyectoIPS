@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapizModelo xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="51462126-bb25-4f28-8218-0997a0cff0d7" xmlns="http://schemas.microsoft.com/dsltools/DCMLRACPGProyectoIPS">
+  <clase>
+    <tapizModeloHasClase Id="e6dab6c7-f42b-437f-99b8-b2ea8e344081">
+      <clase Id="2e97b175-38c3-47a7-be65-078cfd62e781" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Ejemplo">
+        <targetClase>
+          <asociacion Id="17768060-8c5b-49da-a62a-dd1d5cd51569" cardinalidadMinimaSource="Cero" cardinalidadMinimaTarget="Cero" cardinalidadMaximaSource="Cero" cardinalidadMaximaTarget="Cero">
+            <claseMoniker Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" />
+          </asociacion>
+        </targetClase>
+        <atributo>
+          <claseHasAtributo Id="bedac5eb-e2f9-45ff-8855-04464b7abd8b">
+            <atributo Id="40171f26-2413-46d7-ad42-f2197d15fe0e" colorLetraR="0" colorLetraG="0" colorLetraB="0" tipoLetra="Arial" formatoBooleano="Checkbox" enriquecido="false" name="Name" tipoDatos="String" />
+          </claseHasAtributo>
+        </atributo>
+        <metodo>
+          <claseHasMetodo Id="1b72c20f-20bc-4d27-80c1-d6370fb3d7ef">
+            <metodo Id="9afe30e8-af74-4e3c-a4af-e4f349afac35" tipoLetra="Arial" colorLetraR="0" colorLetraG="0" colorLetraB="0" enriquecido="false" name="Metodo" tipoRetorno="Int" />
+          </claseHasMetodo>
+        </metodo>
+      </clase>
+    </tapizModeloHasClase>
+    <tapizModeloHasClase Id="895aaad7-e10f-429c-8eb9-2539c8d23a78">
+      <clase Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Clase1" />
+    </tapizModeloHasClase>
+    <tapizModeloHasClase Id="e1fe30f2-e053-43ef-9499-6331518d882a">
+      <claseAbstracta Id="324c3a2d-e483-4039-9d8a-ac6fb04d5592" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="ClaseAbstracta1">
+        <compuesta>
+          <agregacion Id="476d98b9-f565-4f89-b70e-f75c37636d1e" nombre="Agregacion1" cardMinComponente="Cero" cardMaxComponente="Cero" cardMinCompuesta="Cero" cardMaxCompuesta="Cero">
+            <claseMoniker Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" />
+          </agregacion>
+        </compuesta>
+        <atributo>
+          <claseHasAtributo Id="a992afd1-6c05-47c7-8b12-d481f385a58d">
+            <atributo Id="bc81f311-c885-4b70-8861-5f748dc1ba02" colorLetraR="0" colorLetraG="0" colorLetraB="0" tipoLetra="Arial" formatoBooleano="Checkbox" enriquecido="false" name="ID" tipoDatos="Int" />
+          </claseHasAtributo>
+        </atributo>
+        <metodo>
+          <claseHasMetodo Id="bc5c4b94-9b10-40b6-9d62-0dc6a5829653">
+            <metodo Id="4b598098-d843-4e96-80d0-7756652ddf6c" tipoLetra="Arial" colorLetraR="0" colorLetraG="0" colorLetraB="0" enriquecido="false" name="Metodo1" tipoRetorno="Boolean" />
+          </claseHasMetodo>
+        </metodo>
+        <subClase>
+          <herencia Id="dde77cdd-9fac-45b3-a81d-07c77ffda98a" totalParcial="Parcial" disjuntaSolapada="Disjunta">
+            <claseMoniker Id="2e97b175-38c3-47a7-be65-078cfd62e781" />
+          </herencia>
+        </subClase>
+      </claseAbstracta>
+    </tapizModeloHasClase>
+    <tapizModeloHasClase Id="29340707-3706-467a-8859-0dca05da4bc8">
+      <clase Id="b86e6c5f-54e8-47a9-81a6-778e4befeea1" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Clase2">
+        <atributo>
+          <claseHasAtributo Id="85a857ed-6ef8-4752-8679-245801f43ccd">
+            <atributo Id="96b3bf0f-7096-4582-8f02-34e65f734baf" colorLetraR="0" colorLetraG="0" colorLetraB="0" tipoLetra="Arial" formatoBooleano="Checkbox" enriquecido="false" name="Atributo1" />
+          </claseHasAtributo>
+        </atributo>
+        <metodo>
+          <claseHasMetodo Id="bee35f44-4995-4543-8386-5026968713d5">
+            <metodo Id="4ebb9023-e33c-488a-850c-1bcd70ab879c" tipoLetra="Arial" colorLetraR="0" colorLetraG="0" colorLetraB="0" enriquecido="false" name="Metodo1" />
+          </claseHasMetodo>
+        </metodo>
+      </clase>
+    </tapizModeloHasClase>
+  </clase>
+</tapizModelo>

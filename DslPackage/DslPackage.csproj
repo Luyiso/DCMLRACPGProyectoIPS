@@ -7,13 +7,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20723</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{bdee1c10-2cf7-4dae-bb33-3d6450e06830}</ProjectGuid>
+    <ProjectGuid>{D7FC043A-09F4-419D-A9F5-14FD5A9F5ABB}</ProjectGuid>
     <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <ApplicationIcon>Resources\File.ico</ApplicationIcon>
-    <RootNamespace>Company.DCMLRACPGProyectoIPS</RootNamespace>
-    <AssemblyName>Company.DCMLRACPGProyectoIPS.DslPackage</AssemblyName>
+    <RootNamespace>UPM_IPS.DCMLRACPGProyectoIPS</RootNamespace>
+    <AssemblyName>UPM_IPS.DCMLRACPGProyectoIPS.DslPackage</AssemblyName>
     <AssemblyOriginatorKeyFile>..\Key.snk</AssemblyOriginatorKeyFile>
     <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
     <SignAssembly>true</SignAssembly>
@@ -188,7 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dsl\Dsl.csproj">
-      <Project>{2da952c6-85f4-4753-a188-2a5969e0d578}</Project>
+      <Project>{b3c49466-f364-486a-8208-43930902acff}</Project>
       <Name>Dsl</Name>
       <IncludeOutputGroupsInVSIX>
         BuiltProjectOutputGroup;
@@ -247,8 +247,8 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>CSharp.vstemplate</LastGenOutput>
     </None>
-    <None Include="ProjectItemTemplates\DCMLRACPG_DSLProyIPS.DCMLRACPG_DSLProyIPS" />
-    <None Include="ProjectItemTemplates\DCMLRACPG_DSLProyIPS.diagram" />
+    <None Include="ProjectItemTemplates\DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS" />
+    <None Include="ProjectItemTemplates\DCMLRACPGProyectoIPS.diagram" />
     <None Include="ProjectItemTemplates\VisualBasic.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VisualBasic.vstemplate</LastGenOutput>

@@ -12,7 +12,7 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	
 	partial class DCMLRACPGProyectoIPSDomainModel
@@ -302,7 +302,7 @@ namespace Company.DCMLRACPGProyectoIPS
 }
 
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	
 	partial class DCMLRACPGProyectoIPSSerializationHelperBase
@@ -1296,7 +1296,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <param name="modelRoot">Root instance to be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the root instance.</param>
 		/// <returns>Model in XML form</returns>
-		public virtual string GetSerializedModelString(global::Company.DCMLRACPGProyectoIPS.TapizModelo modelRoot, global::System.Text.Encoding encoding)
+		public virtual string GetSerializedModelString(global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo modelRoot, global::System.Text.Encoding encoding)
 		{
 			string result = string.Empty;
 			if (modelRoot == null)
@@ -1496,7 +1496,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 }
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public partial class TapizModelo

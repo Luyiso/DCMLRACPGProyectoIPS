@@ -9,7 +9,7 @@
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.
@@ -47,7 +47,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			get
 			{
-				global::System.Resources.ResourceManager resourceManager = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager;
+				global::System.Resources.ResourceManager resourceManager = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager;
 				return resourceManager.GetString("ModelExplorerTitle");
 			}
 		}
@@ -91,12 +91,12 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			base.OnSelectionChanged(e);
 
-			if(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance != null)
+			if(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance != null)
 			{
 				DslModeling::ModelElement selectedElement = this.PrimarySelection as DslModeling::ModelElement;
 				if(selectedElement != null)
 				{
-					string f1Keyword = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance.GetHelpKeyword(selectedElement);
+					string f1Keyword = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance.GetHelpKeyword(selectedElement);
 					if (!string.IsNullOrEmpty(f1Keyword) && this.SelectionHelpService != null)
 					{
 						this.SelectionHelpService.AddContextAttribute(string.Empty, f1Keyword, global::System.ComponentModel.Design.HelpKeywordType.F1Keyword);

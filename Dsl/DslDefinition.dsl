@@ -1,18 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="be8cfad3-e6e3-4779-99d4-a7b7738ce75d" Description="Description for Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS" Name="DCMLRACPGProyectoIPS" DisplayName="DCMLRACPGProyectoIPS" Namespace="Company.DCMLRACPGProyectoIPS" ProductName="DCMLRACPGProyectoIPS" CompanyName="UPM_IPS" PackageGuid="8132dbac-9e08-4103-af90-a9f76e7d9f25" PackageNamespace="Company.DCMLRACPGProyectoIPS" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
+<Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="428c4483-fcc4-4784-b083-8cfe50e00ecf" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS" Name="DCMLRACPGProyectoIPS" DisplayName="DCMLRACPGProyectoIPS" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" ProductName="DCMLRACPGProyectoIPS" CompanyName="UPM_IPS" PackageGuid="376b96cb-2111-44a2-9672-1f05aa1c130a" PackageNamespace="UPM_IPS.DCMLRACPGProyectoIPS" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
-    <DomainClass Id="3ff1f316-db9f-43ff-a9d7-9f50d6d21e71" Description="The root in which all other elements are embedded. Appears as a diagram." Name="TapizModelo" DisplayName="Tapiz Modelo" Namespace="Company.DCMLRACPGProyectoIPS" />
-    <DomainClass Id="2a7b6210-3fba-483e-8192-172b1f3b0836" Description="Description for Company.DCMLRACPGProyectoIPS.Clase" Name="Clase" DisplayName="Clase" Namespace="Company.DCMLRACPGProyectoIPS">
+    <DomainClass Id="a9196261-abbf-4bbc-8c83-783ad3efa0c7" Description="The root in which all other elements are embedded. Appears as a diagram." Name="TapizModelo" DisplayName="Tapiz Modelo" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Clase" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>TapizModeloHasClase.Clase</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="b808156b-94b6-4757-a31c-c9cce157e055" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
       <BaseClass>
-        <DomainClassMoniker Name="ClaseEnriquecida" />
+        <DomainClassMoniker Name="AtributoEnriquecido" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="2e66dd1d-11b3-4363-9ecf-c80c940fced5" Description="Description for Company.DCMLRACPGProyectoIPS.Clase.Name" Name="Name" DisplayName="Name" IsElementName="true">
+        <DomainProperty Id="d4dbbb2f-bc92-4478-84b6-c91ee3414e5f" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Atributo.Name" Name="Name" DisplayName="Name" IsElementName="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="0ebbdf2a-f550-423c-97e6-28e4d2ca8512" Description="Description for Company.DCMLRACPGProyectoIPS.Clase.ID" Name="ID" DisplayName="ID">
+        <DomainProperty Id="f60a84b4-1705-431e-9050-3ecf548f6899" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Atributo.Tipo Datos" Name="TipoDatos" DisplayName="Tipo Datos">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="36b74ff4-5b2a-458f-ac02-947e092f9856" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Atributo.Name Tipo" Name="NameTipo" DisplayName="Name Tipo" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="07e74404-a6d4-4da4-9d50-98bb979c0167" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Parametro" Name="Parametro" DisplayName="Parametro" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="402061a3-9621-45d7-a723-8f74730baeb4" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Parametro.Nombre" Name="Nombre" DisplayName="Nombre" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="b9055765-9fc4-4724-8ce6-ae78afa0adcf" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Parametro.Tipo Dato" Name="TipoDato" DisplayName="Tipo Dato">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="c682f36a-a82a-4a84-b473-1bcec65f402d" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Parametro.Tipo Parametro" Name="TipoParametro" DisplayName="Tipo Parametro">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoParametro" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="a542b637-c6b1-4f83-bcd7-a96954c16c64" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Parametro.Detalles" Name="Detalles" DisplayName="Detalles" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="0bd8146f-64dd-459f-a3bd-d37f5821eba1" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstracta" Name="ClaseAbstracta" DisplayName="Clase Abstracta" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="Clase" />
+      </BaseClass>
+    </DomainClass>
+    <DomainClass Id="3886ef8d-77fe-458a-9fcd-c3cb67ff9b50" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Metodo" Name="Metodo" DisplayName="Metodo" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="MetodoEnriquecido" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="cfc851e2-0597-418b-bd24-e5173b7d7565" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Metodo.Name" Name="Name" DisplayName="Name" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="19bbb9a0-007a-4af6-958f-cced933014fc" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Metodo.Tipo Retorno" Name="TipoRetorno" DisplayName="Tipo Retorno">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5d9b0e74-273e-45bc-80cf-74b8ef365376" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Metodo.Name Tipo Retorno" Name="NameTipoRetorno" DisplayName="Name Tipo Retorno" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="45d84e46-585f-4f60-b91f-3f8bd1f815c7" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Clase" Name="Clase" DisplayName="Clase" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="ClaseEnriquecida" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="72dc9542-f887-4ce2-80a1-161a3f5c7b97" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Clase.Name" Name="Name" DisplayName="Name" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="da5f2470-15df-4161-a7ad-db2b5b62727a" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Clase.Identificador" Name="Identificador" DisplayName="Identificador">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -29,193 +113,125 @@
         </ElementMergeDirective>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="SignaturadeOperación" />
+            <DomainClassMoniker Name="Metodo" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ClaseHasSignaturadeOperación.SignaturadeOperación</DomainPath>
+            <DomainPath>ClaseHasMetodo.Metodo</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="df43c9fa-4032-4fe5-a6b1-a45c0466ea55" Description="Description for Company.DCMLRACPGProyectoIPS.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="Company.DCMLRACPGProyectoIPS">
+    <DomainClass Id="61bc2709-874d-44c3-840a-460a58c5180e" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MétodoAbstracto" Name="MétodoAbstracto" DisplayName="Método Abstracto" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
       <BaseClass>
-        <DomainClassMoniker Name="AtributoEnriquecido" />
-      </BaseClass>
-      <Properties>
-        <DomainProperty Id="ae9969a4-1da5-40d0-bbbb-c9e9f37313a3" Description="Description for Company.DCMLRACPGProyectoIPS.Atributo.Name" Name="Name" DisplayName="Name" IsElementName="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="4f37dddd-ffd4-44b0-bc71-3c4ccb6468b5" Description="Description for Company.DCMLRACPGProyectoIPS.Atributo.Tipo Datos" Name="TipoDatos" DisplayName="Tipo Datos">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
-    <DomainClass Id="44a6fa22-8f00-45a0-b70f-aca4d13da263" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperación" Name="SignaturadeOperación" DisplayName="Signaturade Operación" Namespace="Company.DCMLRACPGProyectoIPS">
-      <BaseClass>
-        <DomainClassMoniker Name="MetodoEnriquecido" />
-      </BaseClass>
-      <Properties>
-        <DomainProperty Id="5bdd00b8-7bf6-47c6-83b2-d44351e4af9e" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperación.Name" Name="Name" DisplayName="Name" IsElementName="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="1ec1eaa4-e6d5-4326-af31-5ba2323ab143" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperación.Tipo Retorno" Name="TipoRetorno" DisplayName="Tipo Retorno">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-      <ElementMergeDirectives>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="Parámetros" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>SignaturadeOperaciónHasParámetros.Parámetros</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-      </ElementMergeDirectives>
-    </DomainClass>
-    <DomainClass Id="061730c2-c323-4c0e-acf8-5b153b6e2d7e" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros" Name="Parámetros" DisplayName="Parámetros" Namespace="Company.DCMLRACPGProyectoIPS">
-      <Properties>
-        <DomainProperty Id="2380cb29-c6d8-4794-b328-78c119fee93a" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros.Nombre" Name="Nombre" DisplayName="Nombre" IsElementName="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="b6970046-1b12-443d-a358-96995f3d8523" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros.Tipo Dato" Name="TipoDato" DisplayName="Tipo Dato">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="513f5724-7f23-4016-b719-9350eb485512" Description="Description for Company.DCMLRACPGProyectoIPS.Parámetros.Tipo Parámetro" Name="TipoParámetro" DisplayName="Tipo Parámetro">
-          <Type>
-            <DomainEnumerationMoniker Name="TipoParametro" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
-    <DomainClass Id="3dc3c8f3-5cab-47d3-8ee8-e544067b5b4e" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstracta" Name="ClaseAbstracta" DisplayName="Clase Abstracta" Namespace="Company.DCMLRACPGProyectoIPS">
-      <BaseClass>
-        <DomainClassMoniker Name="Clase" />
+        <DomainClassMoniker Name="Metodo" />
       </BaseClass>
     </DomainClass>
-    <DomainClass Id="5b931a82-9b48-40a7-85d2-8597330d001d" Description="Description for Company.DCMLRACPGProyectoIPS.MétodoAbstracto" Name="MétodoAbstracto" DisplayName="Método Abstracto" Namespace="Company.DCMLRACPGProyectoIPS">
-      <BaseClass>
-        <DomainClassMoniker Name="SignaturadeOperación" />
-      </BaseClass>
-    </DomainClass>
-    <DomainClass Id="c66cd2f5-f54f-4640-ba47-6747b82e9758" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" InheritanceModifier="Abstract" Namespace="Company.DCMLRACPGProyectoIPS">
+    <DomainClass Id="416dd86a-f73a-4181-a61c-f9f788fd71c4" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" InheritanceModifier="Abstract" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
       <Properties>
-        <DomainProperty Id="88f6a2f7-9607-429b-945a-7793438c12a0" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Enriquecida" Name="Enriquecida" DisplayName="Enriquecida" DefaultValue="False">
+        <DomainProperty Id="d2d40c70-b517-43f8-9550-58e9327ca18f" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Enriquecida" Name="Enriquecida" DisplayName="Enriquecida" DefaultValue="False">
           <Type>
             <ExternalTypeMoniker Name="/System/Boolean" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="5ccc3ca3-d1bd-433e-9934-5a8e2a981272" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color R" Name="FondoColorR" DisplayName="Fondo Color R">
+        <DomainProperty Id="325999d7-c2af-4b2b-a8c6-ef5c2db8cefd" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color R" Name="FondoColorR" DisplayName="Fondo Color R">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="b30bfc13-6bf0-447a-bdf3-d913569ab0b0" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color G" Name="FondoColorG" DisplayName="Fondo Color G">
+        <DomainProperty Id="7165850b-1297-407e-8523-2be0ddcd4106" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color G" Name="FondoColorG" DisplayName="Fondo Color G">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="67f5c7ad-7cee-452e-b60b-cebdb30dc978" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color B" Name="FondoColorB" DisplayName="Fondo Color B">
+        <DomainProperty Id="59377741-d5d1-4a8c-8324-95a620f0e9e4" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Fondo Color B" Name="FondoColorB" DisplayName="Fondo Color B">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="f6ed57a4-a463-40ed-ad7c-46f3708453fb" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color R" Name="NombreColorR" DisplayName="Nombre Color R">
+        <DomainProperty Id="dd5fa666-8737-48fb-959a-1c7f489c5940" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color R" Name="NombreColorR" DisplayName="Nombre Color R">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="66f4d9fd-2db6-4ea3-a8ee-f02e98733bda" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color G" Name="NombreColorG" DisplayName="Nombre Color G">
+        <DomainProperty Id="28329ea9-2e9a-4ae4-a773-e3a776e8f101" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color G" Name="NombreColorG" DisplayName="Nombre Color G">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="860d1781-007d-4cfd-81f5-fbdccd67fa5a" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
+        <DomainProperty Id="60ce5560-a005-401e-8d46-8caaf904acdc" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
           <Type>
             <DomainEnumerationMoniker Name="TipoLetra" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="033e8b56-3496-4961-92e0-776537705cf5" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Alineacion" Name="Alineacion" DisplayName="Alineacion">
+        <DomainProperty Id="906a22d7-4ca8-4344-a5bd-e5c330d26ca8" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Alineacion" Name="Alineacion" DisplayName="Alineacion">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="928cb5ab-f401-4238-8f6b-1afc8b9b5ff0" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color B" Name="NombreColorB" DisplayName="Nombre Color B">
+        <DomainProperty Id="0f360cd1-7f83-4ac6-9dab-c1372941a6d2" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color B" Name="NombreColorB" DisplayName="Nombre Color B">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="b5bd1502-5537-4a25-a3b6-2148ca1c9132" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido" Name="AtributoEnriquecido" DisplayName="Atributo Enriquecido" InheritanceModifier="Abstract" Namespace="Company.DCMLRACPGProyectoIPS">
+    <DomainClass Id="858fa50a-4994-4f75-a82c-c782c0f07390" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido" Name="MetodoEnriquecido" DisplayName="Metodo Enriquecido" InheritanceModifier="Abstract" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
       <Properties>
-        <DomainProperty Id="443ddca4-db69-467a-82da-1eb2a03915e6" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra R" Name="ColorLetraR" DisplayName="Color Letra R">
+        <DomainProperty Id="eabd690f-1625-48ad-8445-f4252f9e4aab" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoLetra1" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="eac026be-0c60-4c25-a807-703246a6d541" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra R" Name="ColorLetraR" DisplayName="Color Letra R">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="d59e1e69-3cde-4c15-bebe-d48346216b71" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra G" Name="ColorLetraG" DisplayName="Color Letra G">
+        <DomainProperty Id="c896b839-119d-49e7-8ed0-96f6f23a7acb" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra G" Name="ColorLetraG" DisplayName="Color Letra G">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="16556f25-4ff6-4af5-bb15-eb135e7fdad7" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra B" Name="ColorLetraB" DisplayName="Color Letra B">
+        <DomainProperty Id="9822085e-1ebe-4821-9263-c00f75601d3f" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra B" Name="ColorLetraB" DisplayName="Color Letra B">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="443c26c1-20d2-4d0a-a9c2-bfab68122390" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
+        <DomainProperty Id="2a4e8ab8-ae15-431b-936b-1b60fff302fc" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.Enriquecido" Name="Enriquecido" DisplayName="Enriquecido" DefaultValue="False">
           <Type>
-            <DomainEnumerationMoniker Name="TipoLetra" />
+            <ExternalTypeMoniker Name="/System/Boolean" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="5f8fbbb3-c1c2-4751-98cf-d53188a33281" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Formato Booleano" Name="FormatoBooleano" DisplayName="Formato Booleano">
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="c268bf5a-34c9-4b2c-87e2-62cee552a3d3" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido" Name="AtributoEnriquecido" DisplayName="Atributo Enriquecido" InheritanceModifier="Abstract" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="3765cfd3-2131-477a-b0b5-120b8c1cf75a" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra R" Name="ColorLetraR" DisplayName="Color Letra R">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="3255c7ba-da75-416d-a0d0-da5168e8dc29" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra G" Name="ColorLetraG" DisplayName="Color Letra G">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="2094af12-f949-4bc3-a547-8f0590dc3a10" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.Color Letra B" Name="ColorLetraB" DisplayName="Color Letra B">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="b3b01c6b-eb2a-4535-a2e4-beccdb83b7a6" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoLetra1" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="09eb6868-371b-4abc-a0b0-59a6a3372095" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.Formato Booleano" Name="FormatoBooleano" DisplayName="Formato Booleano">
           <Type>
             <DomainEnumerationMoniker Name="FormatoBoolean" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="a28f1e67-bb6f-4a9e-b85f-028ca5123bfe" Description="Description for Company.DCMLRACPGProyectoIPS.AtributoEnriquecido.Enriquecido" Name="Enriquecido" DisplayName="Enriquecido" DefaultValue="False">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Boolean" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
-    <DomainClass Id="9c1db50c-8495-47ae-b286-2c64acb6659c" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido" Name="MetodoEnriquecido" DisplayName="Metodo Enriquecido" InheritanceModifier="Abstract" Namespace="Company.DCMLRACPGProyectoIPS">
-      <Properties>
-        <DomainProperty Id="c0617e1c-991a-46c5-9fb4-49df0be50d62" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
-          <Type>
-            <DomainEnumerationMoniker Name="TipoLetra" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="30e0c98d-cdca-4c83-9354-a7ed94a391f9" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra R" Name="ColorLetraR" DisplayName="Color Letra R">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Int16" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="af08deff-00e8-4f5b-9f7f-111d71d56ab2" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra G" Name="ColorLetraG" DisplayName="Color Letra G">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Int16" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="0c3ed103-f84d-4d84-946a-3268df8c0b03" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Color Letra B" Name="ColorLetraB" DisplayName="Color Letra B">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Int16" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="d1745f2c-eaa0-4703-8361-33c95d6d9354" Description="Description for Company.DCMLRACPGProyectoIPS.MetodoEnriquecido.Enriquecido" Name="Enriquecido" DisplayName="Enriquecido" DefaultValue="False">
+        <DomainProperty Id="a5d52a70-277d-40be-af1a-dae586dfa773" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.Enriquecido" Name="Enriquecido" DisplayName="Enriquecido" DefaultValue="False">
           <Type>
             <ExternalTypeMoniker Name="/System/Boolean" />
           </Type>
@@ -224,173 +240,201 @@
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="31411dc4-d60c-41c9-8fcb-e4d66ff6f5a5" Description="Description for Company.DCMLRACPGProyectoIPS.Tiene" Name="Tiene" DisplayName="Tiene" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
+    <DomainRelationship Id="c44a633c-7771-49a7-b2f2-e0c691d15130" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoHasParametro" Name="MetodoHasParametro" DisplayName="Metodo Has Parametro" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="af32347b-aa47-4128-95c5-3a37da991e62" Description="Description for Company.DCMLRACPGProyectoIPS.Tiene.TapizModelo" Name="TapizModelo" DisplayName="Tapiz Modelo" PropertyName="Clase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Clase">
+        <DomainRole Id="8f29ebe1-8ee6-4eb6-a3d4-2227d2658f8d" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoHasParametro.Metodo" Name="Metodo" DisplayName="Metodo" PropertyName="Parametro" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Parametro">
+          <RolePlayer>
+            <DomainClassMoniker Name="Metodo" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="ef4ca583-1f77-4a83-a6ab-e7c9bd96fe89" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoHasParametro.Parametro" Name="Parametro" DisplayName="Parametro" PropertyName="Metodo" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Metodo">
+          <RolePlayer>
+            <DomainClassMoniker Name="Parametro" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="90f34c18-45ab-452a-b7bf-f3fb79f21710" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TapizModeloHasClase" Name="TapizModeloHasClase" DisplayName="Tapiz Modelo Has Clase" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="5ef0aa34-6e47-48c2-8ad9-d26d90f4eafe" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TapizModeloHasClase.TapizModelo" Name="TapizModelo" DisplayName="Tapiz Modelo" PropertyName="Clase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Clase">
           <RolePlayer>
             <DomainClassMoniker Name="TapizModelo" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="25d207e7-919d-4fd8-8f36-884745cf4735" Description="Description for Company.DCMLRACPGProyectoIPS.Tiene.Clase" Name="Clase" DisplayName="Clase" PropertyName="TapizModelo" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Modelo">
+        <DomainRole Id="a8cf9c8d-06db-4f78-b1ba-598974dc6e2c" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TapizModeloHasClase.Clase" Name="Clase" DisplayName="Clase" PropertyName="TapizModelo" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Modelo">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="0373ddd8-de89-4c38-a65d-efe7c38e53b7" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasAtributo" Name="ClaseHasAtributo" DisplayName="Clase Has Atributo" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
+    <DomainRelationship Id="3922d80b-2de3-41b4-9b1a-3a6b18d22cd0" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion" Name="Agregacion" DisplayName="Agregacion" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="f03ac2d4-d7a7-4d7a-b34a-b41fca03165e" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.Nombre" Name="Nombre" DisplayName="Nombre" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="c5777f61-d4e4-41ed-813f-93ab4aafb72a" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.Card Min Componente" Name="CardMinComponente" DisplayName="Card Min Componente">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="488049f3-1a50-4ea0-9550-92dac0540cd0" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.Card Max Componente" Name="CardMaxComponente" DisplayName="Card Max Componente">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="f347104d-6fa2-451a-aea1-c79ddeea846e" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.Card Min Compuesta" Name="CardMinCompuesta" DisplayName="Card Min Compuesta">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="4b35cd0a-55b9-41f3-baac-117155106d76" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.Card Max Compuesta" Name="CardMaxCompuesta" DisplayName="Card Max Compuesta">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="9da427e5-4fa9-4953-abcf-7bfd2af93cfc" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.Tipo Agregación" Name="TipoAgregación" DisplayName="Tipo Agregación">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <Source>
-        <DomainRole Id="847892e1-87c7-4313-81db-7a758c4b78a7" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.Clase" Name="Clase" DisplayName="Clase" PropertyName="Atributo" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo">
+        <DomainRole Id="21ca03c8-5755-4c28-ac5f-44d39ff44ad6" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="Compuesta" PropertyDisplayName="Compuesta">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="6f872e83-db1b-4a84-8a0b-d5059a1cbe5e" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
+        <DomainRole Id="749148e8-5247-4074-86e4-a568dcdecb5e" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="Componente" PropertyDisplayName="Componente">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="b1686209-85cd-4dab-9675-9c44e079c5f6" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Asociacion" Name="Asociacion" DisplayName="Asociacion" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
+      <Properties>
+        <DomainProperty Id="bd740d68-ec43-4c28-8f38-b6eab5ad50f2" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.Nombre" Name="Nombre" DisplayName="Nombre" DefaultValue="Asociacion">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="1cd3130d-c5b7-4913-8798-d299ec96a076" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.Cardinalidad Minima Source" Name="CardinalidadMinimaSource" DisplayName="Cardinalidad Minima Source">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad1" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="3167d8b5-4946-455e-ae9f-d59dec23d0a7" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.Cardinalidad Minima Target" Name="CardinalidadMinimaTarget" DisplayName="Cardinalidad Minima Target">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad1" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="9ac2ede6-102e-483f-9deb-ad02c975b439" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.Cardinalidad Maxima Source" Name="CardinalidadMaximaSource" DisplayName="Cardinalidad Maxima Source">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad1" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d7dbe3ee-2477-4bcb-b503-9d41847de38d" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.Cardinalidad Maxima Target" Name="CardinalidadMaximaTarget" DisplayName="Cardinalidad Maxima Target">
+          <Type>
+            <DomainEnumerationMoniker Name="Cardinalidad1" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <Source>
+        <DomainRole Id="590d040e-b5fd-4921-82bc-5761bf78417f" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="TargetClase" PropertyDisplayName="Target Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="e3c818fa-cb6f-43ec-8818-80ef6cb42bca" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="SourceClase" PropertyDisplayName="Source Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="1af1d781-fdde-40a0-9f10-682e8ea7f1cb" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseHasAtributo" Name="ClaseHasAtributo" DisplayName="Clase Has Atributo" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="f40f1b30-ba49-4b5a-8f39-51520758edec" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseHasAtributo.Clase" Name="Clase" DisplayName="Clase" PropertyName="Atributo" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="a276c8c0-e8fb-4ccc-ae1f-8517b78543cd" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseHasAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Atributo" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="43930221-a349-418c-8039-856e33b33d5d" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación" Name="ClaseHasSignaturadeOperación" DisplayName="Clase Has Signaturade Operación" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
+    <DomainRelationship Id="2681aa6e-bd39-481c-88ba-9eb78b4e7536" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseHasMetodo" Name="ClaseHasMetodo" DisplayName="Clase Has Metodo" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="7abbf0d7-10a8-4fbc-9f1a-6633ad6d612c" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.Clase" Name="Clase" DisplayName="Clase" PropertyName="SignaturadeOperación" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Signaturade Operación">
+        <DomainRole Id="dfd2f77d-a18f-45e7-a052-eb5a417a2d65" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseHasMetodo.Clase" Name="Clase" DisplayName="Clase" PropertyName="Metodo" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Metodo">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="9f75e668-a1e0-4c88-86e6-848a6987a2eb" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.SignaturadeOperación" Name="SignaturadeOperación" DisplayName="Signaturade Operación" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
+        <DomainRole Id="e1a8e698-0af1-435e-8d61-f99270c18f04" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseHasMetodo.Metodo" Name="Metodo" DisplayName="Metodo" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
           <RolePlayer>
-            <DomainClassMoniker Name="SignaturadeOperación" />
+            <DomainClassMoniker Name="Metodo" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="7488c52d-7a48-47b8-b0a3-b9753f42207a" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros" Name="SignaturadeOperaciónHasParámetros" DisplayName="Signaturade Operación Has Parámetros" Namespace="Company.DCMLRACPGProyectoIPS" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="2c2d04fc-9329-41d6-8b40-97ddbc6101df" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.SignaturadeOperación" Name="SignaturadeOperación" DisplayName="Signaturade Operación" PropertyName="Parámetros" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Parámetros">
-          <RolePlayer>
-            <DomainClassMoniker Name="SignaturadeOperación" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="37afbefa-6ffc-4fc9-88fe-8159ca538a52" Description="Description for Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.Parámetros" Name="Parámetros" DisplayName="Parámetros" PropertyName="SignaturadeOperación" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Signaturade Operación">
-          <RolePlayer>
-            <DomainClassMoniker Name="Parámetros" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="aea3cf69-910a-4a40-8fc1-05c532f5ab82" Description="Description for Company.DCMLRACPGProyectoIPS.Asociación" Name="Asociación" DisplayName="Asociación" Namespace="Company.DCMLRACPGProyectoIPS">
+    <DomainRelationship Id="c91f5b17-e10b-45fa-8766-2fddcddcfb2d" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
       <Properties>
-        <DomainProperty Id="187f4852-4f2a-4186-8bff-e0e1e7c6548b" Description="Description for Company.DCMLRACPGProyectoIPS.Asociación.Nombre" Name="Nombre" DisplayName="Nombre">
+        <DomainProperty Id="39bb06c2-8fa5-4a29-bc84-b7b9e4bc24a2" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Herencia.Total Parcial" Name="TotalParcial" DisplayName="Total Parcial">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Totalidad" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="2d2ba050-65d3-4821-aa6d-5e037b7311b8" Description="Description for Company.DCMLRACPGProyectoIPS.Asociación.Cardinalidad Minima Source" Name="CardinalidadMinimaSource" DisplayName="Cardinalidad Minima Source">
+        <DomainProperty Id="ac539e8b-b7af-451e-898f-5d3c1d7a61a6" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Herencia.Disjunta Solapada" Name="DisjuntaSolapada" DisplayName="Disjunta Solapada">
           <Type>
-            <DomainEnumerationMoniker Name="Cardinalidad" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="c24156b1-053a-49ba-b3bd-225c76053a5c" Description="Description for Company.DCMLRACPGProyectoIPS.Asociación.Cardinalidad Minima Target" Name="CardinalidadMinimaTarget" DisplayName="Cardinalidad Minima Target">
-          <Type>
-            <DomainEnumerationMoniker Name="Cardinalidad" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="0256fece-ffd8-4981-b96a-37aa257a409b" Description="Description for Company.DCMLRACPGProyectoIPS.Asociación.Cardinalidad Maxima Source" Name="CardinalidadMaximaSource" DisplayName="Cardinalidad Maxima Source">
-          <Type>
-            <DomainEnumerationMoniker Name="Cardinalidad" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="7f71b58c-a65b-4ed2-ab3d-506ba5fcafdd" Description="Description for Company.DCMLRACPGProyectoIPS.Asociación.Cardinalidad Maxima Target" Name="CardinalidadMaximaTarget" DisplayName="Cardinalidad Maxima Target">
-          <Type>
-            <DomainEnumerationMoniker Name="Cardinalidad" />
+            <DomainEnumerationMoniker Name="Solapacion" />
           </Type>
         </DomainProperty>
       </Properties>
       <Source>
-        <DomainRole Id="c9b43e94-d8f7-4ea6-a40a-aaa62d0f7421" Description="Description for Company.DCMLRACPGProyectoIPS.Asociación.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="TargetClase" PropertyDisplayName="Target Clase">
+        <DomainRole Id="436a33c7-81f8-49ce-8e21-7098c67181f0" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Herencia.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="SubClase" PropertyDisplayName="Sub Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="8e0451bd-ead9-462b-a6cf-95e326809b9c" Description="Description for Company.DCMLRACPGProyectoIPS.Asociación.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="SourceClase" PropertyDisplayName="Source Clase">
+        <DomainRole Id="bae84969-b98f-488c-b8db-671d3e39113c" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Herencia.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="SuperClase" Multiplicity="ZeroOne" PropertyDisplayName="Super Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="ee613c58-55fe-4237-acad-f1920cd3badb" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación" Name="Agregación" DisplayName="Agregación" Namespace="Company.DCMLRACPGProyectoIPS">
-      <Properties>
-        <DomainProperty Id="2e273c5d-7e1f-404c-ad73-d33676997c2c" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Nombre" Name="Nombre" DisplayName="Nombre">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="5dc773b0-9790-4ead-851b-d35fb76ba406" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Minima Componente" Name="CardinalidadMinimaComponente" DisplayName="Cardinalidad Minima Componente">
-          <Type>
-            <DomainEnumerationMoniker Name="Cardinalidad" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="ed9ce060-2945-43a5-ae32-043fe0c3c1e8" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Minima Compuesta" Name="CardinalidadMinimaCompuesta" DisplayName="Cardinalidad Minima Compuesta">
-          <Type>
-            <DomainEnumerationMoniker Name="Cardinalidad" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="45da3b44-0a2d-41c1-8da0-3627b197b13b" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Maxima Componente" Name="CardinalidadMaximaComponente" DisplayName="Cardinalidad Maxima Componente">
-          <Type>
-            <DomainEnumerationMoniker Name="Cardinalidad" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="f43d629e-506b-4fe0-a8e2-83dd4ec38746" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Cardinalidad Maxima Compuesta" Name="CardinalidadMaximaCompuesta" DisplayName="Cardinalidad Maxima Compuesta">
-          <Type>
-            <DomainEnumerationMoniker Name="Cardinalidad" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="76be3af3-73af-4e40-a00a-05e868c1a4bc" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.Tipo" Name="Tipo" DisplayName="Tipo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
+    <DomainRelationship Id="6a61f817-5fdb-4d69-9552-b80d9d797812" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMétodoAbstracto" Name="ClaseAbstractaTieneMétodoAbstracto" DisplayName="Clase Abstracta Tiene Método Abstracto" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
       <Source>
-        <DomainRole Id="cacc345e-0f3a-4552-aaf3-0e33437364e4" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="Conpuesta" PropertyDisplayName="Conpuesta">
-          <RolePlayer>
-            <DomainClassMoniker Name="Clase" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="97a78d46-1510-43cd-8b6b-63cf114e9673" Description="Description for Company.DCMLRACPGProyectoIPS.Agregación.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="Componente" PropertyDisplayName="Componente">
-          <RolePlayer>
-            <DomainClassMoniker Name="Clase" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="2bdc530c-7796-4612-a0fd-be3a9573dd77" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto" Name="ClaseAbstractaTieneMetodoAbstracto" DisplayName="Clase Abstracta Tiene Metodo Abstracto" Namespace="Company.DCMLRACPGProyectoIPS">
-      <Source>
-        <DomainRole Id="0ebe78ec-3d09-491b-a0a7-434e1373ba85" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.MétodoAbstracto" Name="MétodoAbstracto" DisplayName="Método Abstracto" PropertyName="ClaseAbstracta" Multiplicity="One" PropertyDisplayName="Clase Abstracta">
-          <RolePlayer>
-            <DomainClassMoniker Name="MétodoAbstracto" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="2339c444-94f8-46be-b596-967ae57a7a2d" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto.ClaseAbstracta" Name="ClaseAbstracta" DisplayName="Clase Abstracta" PropertyName="MétodoAbstracto" Multiplicity="OneMany" PropertyDisplayName="Método Abstracto">
+        <DomainRole Id="20704799-001d-4e08-9bd6-fb95a7b312c2" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMétodoAbstracto.ClaseAbstracta" Name="ClaseAbstracta" DisplayName="Clase Abstracta" PropertyName="MétodoAbstracto" PropertyDisplayName="Método Abstracto">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseAbstracta" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="2a83ef0f-5433-496d-ab2c-bd55fe9e9f66" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMétodoAbstracto.MétodoAbstracto" Name="MétodoAbstracto" DisplayName="Método Abstracto" PropertyName="ClaseAbstracta" PropertyDisplayName="Clase Abstracta">
+          <RolePlayer>
+            <DomainClassMoniker Name="MétodoAbstracto" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -412,229 +456,323 @@
     <ExternalType Name="Guid" Namespace="System" />
     <ExternalType Name="Boolean" Namespace="System" />
     <ExternalType Name="Char" Namespace="System" />
-    <DomainEnumeration Name="TipoParametro" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.TipoParametro">
+    <DomainEnumeration Name="Cardinalidad" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad">
       <Literals>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Entrada" Name="Entrada" Value="0" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Salida" Name="Salida" Value="1" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoParametro.EntradaSalida" Name="EntradaSalida" Value="2" />
-      </Literals>
-    </DomainEnumeration>
-    <DomainEnumeration Name="Cardinalidad" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad">
-      <Literals>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Uno" Name="Uno" Value="1">
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad.Uno" Name="Uno" Value="1">
           <Notes>El nombre del literal no puede ser 1</Notes>
         </EnumerationLiteral>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.N" Name="N" Value="2" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Cero" Name="Cero" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad.N" Name="N" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad.Cero" Name="Cero" Value="0" />
       </Literals>
     </DomainEnumeration>
-    <DomainEnumeration Name="TipoAgregacion" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion">
+    <DomainEnumeration Name="TipoParametro" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro">
       <Literals>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion.Inclusiva" Name="Inclusiva" Value="1" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion.Referencial" Name="Referencial" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro.Entrada" Name="Entrada" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro.Salida" Name="Salida" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro.EntradaSalida" Name="EntradaSalida" Value="2" />
       </Literals>
     </DomainEnumeration>
-    <DomainEnumeration Name="Totalidad" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.Totalidad">
+    <DomainEnumeration Name="TipoLetra" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra">
       <Literals>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Totalidad.Total" Name="Total" Value="1" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.Totalidad.Parcial" Name="Parcial" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.ComicSans" Name="ComicSans" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Papyrus" Name="Papyrus" Value="3" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Wingdings" Name="Wingdings" Value="4" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Arial" Name="Arial" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Calibri" Name="Calibri" Value="1" />
       </Literals>
     </DomainEnumeration>
-    <DomainEnumeration Name="DisjuntaSolapada" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada">
+    <DomainEnumeration Name="Cardinalidad1" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1">
       <Literals>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Disjunta" Name="Disjunta" Value="0" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Solapada" Name="Solapada" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1.Uno" Name="Uno" Value="1">
+          <Notes>El nombre del literal no puede ser 1</Notes>
+        </EnumerationLiteral>
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1.N" Name="N" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1.Cero" Name="Cero" Value="0" />
       </Literals>
     </DomainEnumeration>
-    <DomainEnumeration Name="TipoLetra" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra">
+    <DomainEnumeration Name="Totalidad" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Totalidad">
       <Literals>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.ComicSans" Name="ComicSans" Value="2" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Papyrus" Name="Papyrus" Value="3" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Wingdings" Name="Wingdings" Value="4" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Arial" Name="Arial" Value="0" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Calibri" Name="Calibri" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Totalidad.Total" Name="Total" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Totalidad.Parcial" Name="Parcial" Value="0" />
       </Literals>
     </DomainEnumeration>
-    <DomainEnumeration Name="FormatoBoolean" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean">
+    <DomainEnumeration Name="Solapacion" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Solapacion">
       <Literals>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.Checkbox" Name="Checkbox" Value="0" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.RadioButton" Name="RadioButton" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Solapacion.Disjunta" Name="Disjunta" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Solapacion.Solapada" Name="Solapada" Value="1" />
       </Literals>
     </DomainEnumeration>
-    <DomainEnumeration Name="ClaseAlineación" Namespace="Company.DCMLRACPGProyectoIPS" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación">
+    <DomainEnumeration Name="TipoAgregación" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoAgregación">
       <Literals>
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Izquierda" Name="Izquierda" Value="2" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Centro" Name="Centro" Value="0" />
-        <EnumerationLiteral Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Derecha" Name="Derecha" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoAgregación.Inclusiva" Name="Inclusiva" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoAgregación.Referencial" Name="Referencial" Value="1" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="TipoLetra1" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.ComicSans" Name="ComicSans" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Papyrus" Name="Papyrus" Value="3" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Wingdings" Name="Wingdings" Value="4" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Arial" Name="Arial" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Calibri" Name="Calibri" Value="1" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="FormatoBoolean" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean.Checkbox" Name="Checkbox" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean.RadioButton" Name="RadioButton" Value="1" />
       </Literals>
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <CompartmentShape Id="9cd4b6ca-bc30-4e6c-a641-fd4476b49ded" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseCShape" Name="ClaseCShape" DisplayName="Clase CShape" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Clase CShape" TextColor="87, 90, 123" FillColor="188, 201, 223" OutlineColor="170, 80, 112" InitialHeight="1" OutlineThickness="0.06" FillGradientMode="None" Geometry="RoundedRectangle">
+    <CompartmentShape Id="cf77c783-6cb0-4d1c-8a86-b1d7b7773a27" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseCShape" Name="ClaseCShape" DisplayName="Clase CShape" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" FixedTooltipText="Clase CShape" TextColor="188, 201, 223" FillColor="87, 90, 123" OutlineColor="170, 80, 112" InitialHeight="1" OutlineThickness="0.06" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDeco" DisplayName="Nombre" DefaultText="Nombre" FontSize="12" />
+      </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDeco" DisplayName="Name Deco" DefaultText="NameDeco" />
+        <TextDecorator Name="IDDeco" DisplayName="IDDeco" DefaultText="ID" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.15">
+        <TextDecorator Name="Enriquecida" DisplayName="Enriquecida" DefaultText="Enriquecida" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.3">
+        <TextDecorator Name="FondoColorR" DisplayName="Fondo Color R" DefaultText="FondoColorR" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.45">
+        <TextDecorator Name="FondoColorG" DisplayName="Fondo Color G" DefaultText="FondoColorG" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.6">
+        <TextDecorator Name="FondoColorB" DisplayName="Fondo Color B" DefaultText="FondoColorB" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.75">
+        <TextDecorator Name="NombreColorR" DisplayName="Nombre Color R" DefaultText="NombreColorR" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.9">
+        <TextDecorator Name="NombreColorG" DisplayName="Nombre Color G" DefaultText="NombreColorG" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="1.05">
+        <TextDecorator Name="NombreColorB" DisplayName="Nombre Color B" DefaultText="NombreColorB" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="1.2">
+        <TextDecorator Name="TipoLetra" DisplayName="Tipo Letra" DefaultText="TipoLetra" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="1.35">
+        <TextDecorator Name="Alineacion" DisplayName="Alineacion" DefaultText="Alineacion" />
+      </ShapeHasDecorators>
+    </CompartmentShape>
+    <CompartmentShape Id="ea015489-c2b0-46fa-a54f-fb72ff86ba24" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaCShape" Name="ClaseAbstractaCShape" DisplayName="Clase Abstracta CShape" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" FixedTooltipText="Clase Abstracta CShape" TextColor="87, 90, 123" FillColor="188, 201, 223" OutlineColor="170, 80, 112" InitialHeight="1" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDeco" DisplayName="Name Deco" DefaultText="NameDeco" FontSize="12" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="IDDeco" DisplayName="IDDeco" DefaultText="IDDeco" />
       </ShapeHasDecorators>
-      <Compartment Name="AttributeCompa" EntryTextColor="" TitleTextColor="108, 116, 156" />
-      <Compartment Name="MethodCompa" EntryTextColor="108, 116, 156" TitleTextColor="108, 116, 156" />
     </CompartmentShape>
-    <CompartmentShape Id="6389ca0d-e547-4b32-9646-c21602a63f73" Description="Description for Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape" Name="ClaseAbstractaCShape" DisplayName="Clase Abstracta CShape" Namespace="Company.DCMLRACPGProyectoIPS" FixedTooltipText="Clase Abstracta CShape" TextColor="87, 90, 123" FillColor="188, 201, 223" OutlineColor="170, 80, 112" InitialHeight="1" OutlineDashStyle="Dot" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDeco" DisplayName="Name Deco" DefaultText="NameDeco" />
+    <GeometryShape Id="7f429312-083c-42ae-a95d-8e24ecfaaa9b" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.AtributoShape" Name="AtributoShape" DisplayName="Atributo Shape" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" FixedTooltipText="Atributo Shape" TextColor="White" FillColor="128, 128, 255" OutlineColor="87, 90, 123" InitialWidth="1.25" InitialHeight="0.25" OutlineThickness="0.02" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="AtributoDeco" DisplayName="Atributo Deco" DefaultText="AtributoDeco" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="IDDeco" DisplayName="IDDeco" DefaultText="IDDeco" />
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.15">
+        <TextDecorator Name="ColorLetraR" DisplayName="Color Letra R" DefaultText="ColorLetraR" />
       </ShapeHasDecorators>
-      <Compartment Name="AttributeCompa" EntryTextColor="" TitleTextColor="108, 116, 156" />
-      <Compartment Name="MethodCompa" EntryTextColor="108, 116, 156" TitleTextColor="108, 116, 156" />
-      <Compartment Name="AbstractMethodCompa" />
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.3">
+        <TextDecorator Name="ColorLetraG" DisplayName="Color Letra G" DefaultText="ColorLetraG" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.45">
+        <TextDecorator Name="ColorLetraB" DisplayName="Color Letra B" DefaultText="ColorLetraB" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.6">
+        <TextDecorator Name="TipoLetra" DisplayName="Tipo Letra" DefaultText="TipoLetra" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.75">
+        <TextDecorator Name="FormatoBooleano" DisplayName="Formato Booleano" DefaultText="FormatoBooleano" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.9">
+        <TextDecorator Name="Enriquecido" DisplayName="Enriquecido" DefaultText="Enriquecido" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <CompartmentShape Id="382e9cb4-d503-4a43-ad0b-f507c45592c5" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.MetodoShape" Name="MetodoShape" DisplayName="Metodo Shape" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" FixedTooltipText="Metodo Shape" TextColor="White" FillColor="128, 128, 255" OutlineColor="128, 128, 255" InitialWidth="0.75" InitialHeight="0.5" OutlineThickness="0.04" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="MetodoDeco" DisplayName="Metodo Deco" DefaultText="MetodoDeco" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.15">
+        <TextDecorator Name="TipoLetra" DisplayName="Tipo Letra" DefaultText="TipoLetra" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.3">
+        <TextDecorator Name="ColorLetraR" DisplayName="Color Letra R" DefaultText="ColorLetraR" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.45">
+        <TextDecorator Name="ColorLetraG" DisplayName="Color Letra G" DefaultText="ColorLetraG" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.6">
+        <TextDecorator Name="ColorLetraB" DisplayName="Color Letra B" DefaultText="ColorLetraB" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0.75">
+        <TextDecorator Name="Enriquecido" DisplayName="Enriquecido" DefaultText="Enriquecido" />
+      </ShapeHasDecorators>
     </CompartmentShape>
+    <GeometryShape Id="b9211995-5a4c-41a6-9ec4-f252173fe406" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ParametroShape" Name="ParametroShape" DisplayName="Parametro Shape" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" FixedTooltipText="Parametro Shape" TextColor="170, 80, 112" FillColor="137, 154, 183" OutlineColor="87, 90, 123" InitialWidth="1.25" InitialHeight="0.25" OutlineThickness="0.02" FillGradientMode="ForwardDiagonal" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="DetallesDeco" DisplayName="Detalles Deco" DefaultText="DetallesDeco" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
-  <XmlSerializationBehavior Name="DCMLRACPGProyectoIPSSerializationBehavior" Namespace="Company.DCMLRACPGProyectoIPS">
+  <Connectors>
+    <Connector Id="d9dc6e00-cfde-4c49-a1a0-36c938eb2038" Description="Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram." Name="AgregaConnector" DisplayName="Agrega Connector" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" FixedTooltipText="Agrega Connector" Color="170, 80, 112" Thickness="0.01">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
+        <TextDecorator Name="NameDeco" DisplayName="Name Deco" DefaultText="NameDeco" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="SourceBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardMinComponenteDeco" DisplayName="Card Min Componente Deco" DefaultText="CardMinComponenteDeco" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardMaxComponenteDeco" DisplayName="Card Max Componente Deco" DefaultText="CardMaxComponenteDeco" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardMinCompuestoDeco" DisplayName="Card Min Compuesto Deco" DefaultText="CardMinCompuestoDeco" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardMaxCompuestoDeco" DisplayName="Card Max Compuesto Deco" DefaultText="CardMaxCompuestoDeco" />
+      </ConnectorHasDecorators>
+    </Connector>
+    <Connector Id="367c17e5-dd39-484c-92fc-0bce8d5d89ba" Description="Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram." Name="AsociacionConector" DisplayName="Asociacion Conector" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" FixedTooltipText="Asociacion Conector" Color="170, 80, 50" Thickness="0.01">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
+        <TextDecorator Name="NameDeco" DisplayName="Name Deco" DefaultText="NameDeco" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="SourceBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardMinComponenteDeco" DisplayName="Card Min Componente Deco" DefaultText="CardMinComponenteDeco" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardMaxComponenteDeco" DisplayName="Card Max Componente Deco" DefaultText="CardMaxComponenteDeco" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardMinCompuestoDeco" DisplayName="Card Min Compuesto Deco" DefaultText="CardMinCompuestoDeco" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardMaxCompuestoDeco" DisplayName="Card Max Compuesto Deco" DefaultText="CardMaxCompuestoDeco" />
+      </ConnectorHasDecorators>
+    </Connector>
+    <Connector Id="5b5803b4-7bcf-42ae-be3b-8c40e9f2a8d9" Description="Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram." Name="HerenciaConector" DisplayName="Herencia Conector" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" FixedTooltipText="Herencia Conector" Color="108, 116, 156" Thickness="0.03" RoutingStyle="Straight">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0.5">
+        <TextDecorator Name="Solapacion" DisplayName="Solapación" DefaultText="Solapacion" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="Totalidad" DisplayName="Totalidad" DefaultText="Totalidad" />
+      </ConnectorHasDecorators>
+    </Connector>
+  </Connectors>
+  <XmlSerializationBehavior Name="DCMLRACPGProyectoIPSSerializationBehavior" Namespace="UPM_IPS.DCMLRACPGProyectoIPS">
     <ClassData>
       <XmlClassData TypeName="TapizModelo" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizModeloMoniker" ElementName="tapizModelo" MonikerTypeName="TapizModeloMoniker">
         <DomainClassMoniker Name="TapizModelo" />
         <ElementData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="clase">
-            <DomainRelationshipMoniker Name="Tiene" />
+            <DomainRelationshipMoniker Name="TapizModeloHasClase" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="DCMLRACPGProyectoIPSDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="dCMLRACPGProyectoIPSDiagramMoniker" ElementName="dCMLRACPGProyectoIPSDiagram" MonikerTypeName="DCMLRACPGProyectoIPSDiagramMoniker">
         <DiagramMoniker Name="DCMLRACPGProyectoIPSDiagram" />
       </XmlClassData>
-      <XmlClassData TypeName="Clase" MonikerAttributeName="name" SerializeId="true" MonikerElementName="claseMoniker" ElementName="clase" MonikerTypeName="ClaseMoniker">
-        <DomainClassMoniker Name="Clase" />
-        <ElementData>
-          <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="Clase/Name" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="iD">
-            <DomainPropertyMoniker Name="Clase/ID" />
-          </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
-            <DomainRelationshipMoniker Name="ClaseHasAtributo" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="signaturadeOperación">
-            <DomainRelationshipMoniker Name="ClaseHasSignaturadeOperación" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="targetClase">
-            <DomainRelationshipMoniker Name="Asociación" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="conpuesta">
-            <DomainRelationshipMoniker Name="Agregación" />
-          </XmlRelationshipData>
-        </ElementData>
+      <XmlClassData TypeName="ClaseCShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseCShapeMoniker" ElementName="claseCShape" MonikerTypeName="ClaseCShapeMoniker">
+        <CompartmentShapeMoniker Name="ClaseCShape" />
       </XmlClassData>
-      <XmlClassData TypeName="Tiene" MonikerAttributeName="" SerializeId="true" MonikerElementName="tieneMoniker" ElementName="tiene" MonikerTypeName="TieneMoniker">
-        <DomainRelationshipMoniker Name="Tiene" />
-      </XmlClassData>
-      <XmlClassData TypeName="Atributo" MonikerAttributeName="name" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
+      <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
         <ElementData>
-          <XmlPropertyData XmlName="name" IsMonikerKey="true">
+          <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="Atributo/Name" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="tipoDatos">
             <DomainPropertyMoniker Name="Atributo/TipoDatos" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="nameTipo" Representation="Ignore">
+            <DomainPropertyMoniker Name="Atributo/NameTipo" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ClaseHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoMoniker" ElementName="claseHasAtributo" MonikerTypeName="ClaseHasAtributoMoniker">
-        <DomainRelationshipMoniker Name="ClaseHasAtributo" />
-      </XmlClassData>
-      <XmlClassData TypeName="SignaturadeOperación" MonikerAttributeName="name" SerializeId="true" MonikerElementName="signaturadeOperaciónMoniker" ElementName="signaturadeOperación" MonikerTypeName="SignaturadeOperaciónMoniker">
-        <DomainClassMoniker Name="SignaturadeOperación" />
+      <XmlClassData TypeName="Parametro" MonikerAttributeName="" SerializeId="true" MonikerElementName="parametroMoniker" ElementName="parametro" MonikerTypeName="ParametroMoniker">
+        <DomainClassMoniker Name="Parametro" />
         <ElementData>
-          <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="SignaturadeOperación/Name" />
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="Parametro/Nombre" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoDato">
+            <DomainPropertyMoniker Name="Parametro/TipoDato" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoParametro">
+            <DomainPropertyMoniker Name="Parametro/TipoParametro" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="detalles" Representation="Ignore">
+            <DomainPropertyMoniker Name="Parametro/Detalles" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="Metodo" MonikerAttributeName="" SerializeId="true" MonikerElementName="metodoMoniker" ElementName="metodo" MonikerTypeName="MetodoMoniker">
+        <DomainClassMoniker Name="Metodo" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="Metodo/Name" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="tipoRetorno">
-            <DomainPropertyMoniker Name="SignaturadeOperación/TipoRetorno" />
+            <DomainPropertyMoniker Name="Metodo/TipoRetorno" />
           </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="parámetros">
-            <DomainRelationshipMoniker Name="SignaturadeOperaciónHasParámetros" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="parametro">
+            <DomainRelationshipMoniker Name="MetodoHasParametro" />
+          </XmlRelationshipData>
+          <XmlPropertyData XmlName="nameTipoRetorno" Representation="Ignore">
+            <DomainPropertyMoniker Name="Metodo/NameTipoRetorno" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="Clase" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseMoniker" ElementName="clase" MonikerTypeName="ClaseMoniker">
+        <DomainClassMoniker Name="Clase" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="Clase/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="identificador">
+            <DomainPropertyMoniker Name="Clase/Identificador" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="compuesta">
+            <DomainRelationshipMoniker Name="Agregacion" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="targetClase">
+            <DomainRelationshipMoniker Name="Asociacion" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
+            <DomainRelationshipMoniker Name="ClaseHasAtributo" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="metodo">
+            <DomainRelationshipMoniker Name="ClaseHasMetodo" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="subClase">
+            <DomainRelationshipMoniker Name="Herencia" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ClaseHasSignaturadeOperación" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasSignaturadeOperaciónMoniker" ElementName="claseHasSignaturadeOperación" MonikerTypeName="ClaseHasSignaturadeOperaciónMoniker">
-        <DomainRelationshipMoniker Name="ClaseHasSignaturadeOperación" />
+      <XmlClassData TypeName="ClaseAbstractaCShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaCShapeMoniker" ElementName="claseAbstractaCShape" MonikerTypeName="ClaseAbstractaCShapeMoniker">
+        <CompartmentShapeMoniker Name="ClaseAbstractaCShape" />
       </XmlClassData>
-      <XmlClassData TypeName="Parámetros" MonikerAttributeName="nombre" SerializeId="true" MonikerElementName="parámetrosMoniker" ElementName="parámetros" MonikerTypeName="ParámetrosMoniker">
-        <DomainClassMoniker Name="Parámetros" />
-        <ElementData>
-          <XmlPropertyData XmlName="nombre" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="Parámetros/Nombre" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="tipoDato">
-            <DomainPropertyMoniker Name="Parámetros/TipoDato" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="tipoParámetro">
-            <DomainPropertyMoniker Name="Parámetros/TipoParámetro" />
-          </XmlPropertyData>
-        </ElementData>
+      <XmlClassData TypeName="AgregaConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="agregaConnectorMoniker" ElementName="agregaConnector" MonikerTypeName="AgregaConnectorMoniker">
+        <ConnectorMoniker Name="AgregaConnector" />
       </XmlClassData>
-      <XmlClassData TypeName="SignaturadeOperaciónHasParámetros" MonikerAttributeName="" SerializeId="true" MonikerElementName="signaturadeOperaciónHasParámetrosMoniker" ElementName="signaturadeOperaciónHasParámetros" MonikerTypeName="SignaturadeOperaciónHasParámetrosMoniker">
-        <DomainRelationshipMoniker Name="SignaturadeOperaciónHasParámetros" />
-      </XmlClassData>
-      <XmlClassData TypeName="Asociación" MonikerAttributeName="" SerializeId="true" MonikerElementName="asociaciónMoniker" ElementName="asociación" MonikerTypeName="AsociaciónMoniker">
-        <DomainRelationshipMoniker Name="Asociación" />
-        <ElementData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="Asociación/Nombre" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidadMinimaSource">
-            <DomainPropertyMoniker Name="Asociación/CardinalidadMinimaSource" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidadMinimaTarget">
-            <DomainPropertyMoniker Name="Asociación/CardinalidadMinimaTarget" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidadMaximaSource">
-            <DomainPropertyMoniker Name="Asociación/CardinalidadMaximaSource" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidadMaximaTarget">
-            <DomainPropertyMoniker Name="Asociación/CardinalidadMaximaTarget" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="Agregación" MonikerAttributeName="" SerializeId="true" MonikerElementName="agregaciónMoniker" ElementName="agregación" MonikerTypeName="AgregaciónMoniker">
-        <DomainRelationshipMoniker Name="Agregación" />
-        <ElementData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="Agregación/Nombre" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidadMinimaComponente">
-            <DomainPropertyMoniker Name="Agregación/CardinalidadMinimaComponente" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidadMinimaCompuesta">
-            <DomainPropertyMoniker Name="Agregación/CardinalidadMinimaCompuesta" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidadMaximaComponente">
-            <DomainPropertyMoniker Name="Agregación/CardinalidadMaximaComponente" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidadMaximaCompuesta">
-            <DomainPropertyMoniker Name="Agregación/CardinalidadMaximaCompuesta" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="tipo">
-            <DomainPropertyMoniker Name="Agregación/Tipo" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ClaseAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaMoniker" ElementName="claseAbstracta" MonikerTypeName="ClaseAbstractaMoniker">
-        <DomainClassMoniker Name="ClaseAbstracta" />
+      <XmlClassData TypeName="MetodoHasParametro" MonikerAttributeName="" SerializeId="true" MonikerElementName="metodoHasParametroMoniker" ElementName="metodoHasParametro" MonikerTypeName="MetodoHasParametroMoniker">
+        <DomainRelationshipMoniker Name="MetodoHasParametro" />
       </XmlClassData>
       <XmlClassData TypeName="MétodoAbstracto" MonikerAttributeName="" SerializeId="true" MonikerElementName="métodoAbstractoMoniker" ElementName="métodoAbstracto" MonikerTypeName="MétodoAbstractoMoniker">
         <DomainClassMoniker Name="MétodoAbstracto" />
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaMoniker" ElementName="claseAbstracta" MonikerTypeName="ClaseAbstractaMoniker">
+        <DomainClassMoniker Name="ClaseAbstracta" />
         <ElementData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="claseAbstracta">
-            <DomainRelationshipMoniker Name="ClaseAbstractaTieneMetodoAbstracto" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="métodoAbstracto">
+            <DomainRelationshipMoniker Name="ClaseAbstractaTieneMétodoAbstracto" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ClaseAbstractaTieneMetodoAbstracto" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaTieneMetodoAbstractoMoniker" ElementName="claseAbstractaTieneMetodoAbstracto" MonikerTypeName="ClaseAbstractaTieneMetodoAbstractoMoniker">
-        <DomainRelationshipMoniker Name="ClaseAbstractaTieneMetodoAbstracto" />
+      <XmlClassData TypeName="TapizModeloHasClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizModeloHasClaseMoniker" ElementName="tapizModeloHasClase" MonikerTypeName="TapizModeloHasClaseMoniker">
+        <DomainRelationshipMoniker Name="TapizModeloHasClase" />
       </XmlClassData>
       <XmlClassData TypeName="ClaseEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaMoniker" ElementName="claseEnriquecida" MonikerTypeName="ClaseEnriquecidaMoniker">
         <DomainClassMoniker Name="ClaseEnriquecida" />
@@ -668,6 +806,104 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
+      <XmlClassData TypeName="Agregacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="agregacionMoniker" ElementName="agregacion" MonikerTypeName="AgregacionMoniker">
+        <DomainRelationshipMoniker Name="Agregacion" />
+        <ElementData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="Agregacion/Nombre" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardMinComponente">
+            <DomainPropertyMoniker Name="Agregacion/CardMinComponente" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardMaxComponente">
+            <DomainPropertyMoniker Name="Agregacion/CardMaxComponente" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardMinCompuesta">
+            <DomainPropertyMoniker Name="Agregacion/CardMinCompuesta" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardMaxCompuesta">
+            <DomainPropertyMoniker Name="Agregacion/CardMaxCompuesta" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoAgregación">
+            <DomainPropertyMoniker Name="Agregacion/TipoAgregación" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="Asociacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="asociacionMoniker" ElementName="asociacion" MonikerTypeName="AsociacionMoniker">
+        <DomainRelationshipMoniker Name="Asociacion" />
+        <ElementData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="Asociacion/Nombre" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadMinimaSource">
+            <DomainPropertyMoniker Name="Asociacion/CardinalidadMinimaSource" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadMinimaTarget">
+            <DomainPropertyMoniker Name="Asociacion/CardinalidadMinimaTarget" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadMaximaSource">
+            <DomainPropertyMoniker Name="Asociacion/CardinalidadMaximaSource" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadMaximaTarget">
+            <DomainPropertyMoniker Name="Asociacion/CardinalidadMaximaTarget" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="AsociacionConector" MonikerAttributeName="" SerializeId="true" MonikerElementName="asociacionConectorMoniker" ElementName="asociacionConector" MonikerTypeName="AsociacionConectorMoniker">
+        <ConnectorMoniker Name="AsociacionConector" />
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoMoniker" ElementName="claseHasAtributo" MonikerTypeName="ClaseHasAtributoMoniker">
+        <DomainRelationshipMoniker Name="ClaseHasAtributo" />
+      </XmlClassData>
+      <XmlClassData TypeName="AtributoShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoShapeMoniker" ElementName="atributoShape" MonikerTypeName="AtributoShapeMoniker">
+        <GeometryShapeMoniker Name="AtributoShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseHasMetodo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasMetodoMoniker" ElementName="claseHasMetodo" MonikerTypeName="ClaseHasMetodoMoniker">
+        <DomainRelationshipMoniker Name="ClaseHasMetodo" />
+      </XmlClassData>
+      <XmlClassData TypeName="Herencia" MonikerAttributeName="" SerializeId="true" MonikerElementName="herenciaMoniker" ElementName="herencia" MonikerTypeName="HerenciaMoniker">
+        <DomainRelationshipMoniker Name="Herencia" />
+        <ElementData>
+          <XmlPropertyData XmlName="totalParcial">
+            <DomainPropertyMoniker Name="Herencia/TotalParcial" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="disjuntaSolapada">
+            <DomainPropertyMoniker Name="Herencia/DisjuntaSolapada" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="HerenciaConector" MonikerAttributeName="" SerializeId="true" MonikerElementName="herenciaConectorMoniker" ElementName="herenciaConector" MonikerTypeName="HerenciaConectorMoniker">
+        <ConnectorMoniker Name="HerenciaConector" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetodoShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="metodoShapeMoniker" ElementName="metodoShape" MonikerTypeName="MetodoShapeMoniker">
+        <CompartmentShapeMoniker Name="MetodoShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ParametroShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="parametroShapeMoniker" ElementName="parametroShape" MonikerTypeName="ParametroShapeMoniker">
+        <GeometryShapeMoniker Name="ParametroShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseAbstractaTieneMétodoAbstracto" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaTieneMétodoAbstractoMoniker" ElementName="claseAbstractaTieneMétodoAbstracto" MonikerTypeName="ClaseAbstractaTieneMétodoAbstractoMoniker">
+        <DomainRelationshipMoniker Name="ClaseAbstractaTieneMétodoAbstracto" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetodoEnriquecido" MonikerAttributeName="" SerializeId="true" MonikerElementName="metodoEnriquecidoMoniker" ElementName="metodoEnriquecido" MonikerTypeName="MetodoEnriquecidoMoniker">
+        <DomainClassMoniker Name="MetodoEnriquecido" />
+        <ElementData>
+          <XmlPropertyData XmlName="tipoLetra">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/TipoLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraR">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraR" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraG">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraG" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraB">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraB" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="enriquecido">
+            <DomainPropertyMoniker Name="MetodoEnriquecido/Enriquecido" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
       <XmlClassData TypeName="AtributoEnriquecido" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoEnriquecidoMoniker" ElementName="atributoEnriquecido" MonikerTypeName="AtributoEnriquecidoMoniker">
         <DomainClassMoniker Name="AtributoEnriquecido" />
         <ElementData>
@@ -691,39 +927,13 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="MetodoEnriquecido" MonikerAttributeName="" SerializeId="true" MonikerElementName="metodoEnriquecidoMoniker" ElementName="metodoEnriquecido" MonikerTypeName="MetodoEnriquecidoMoniker">
-        <DomainClassMoniker Name="MetodoEnriquecido" />
-        <ElementData>
-          <XmlPropertyData XmlName="tipoLetra">
-            <DomainPropertyMoniker Name="MetodoEnriquecido/TipoLetra" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="colorLetraR">
-            <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraR" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="colorLetraG">
-            <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraG" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="colorLetraB">
-            <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraB" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="enriquecido">
-            <DomainPropertyMoniker Name="MetodoEnriquecido/Enriquecido" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ClaseCShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseCShapeMoniker" ElementName="claseCShape" MonikerTypeName="ClaseCShapeMoniker">
-        <CompartmentShapeMoniker Name="ClaseCShape" />
-      </XmlClassData>
-      <XmlClassData TypeName="ClaseAbstractaCShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaCShapeMoniker" ElementName="claseAbstractaCShape" MonikerTypeName="ClaseAbstractaCShapeMoniker">
-        <CompartmentShapeMoniker Name="ClaseAbstractaCShape" />
-      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="DCMLRACPGProyectoIPSExplorer" />
   <ConnectionBuilders>
-    <ConnectionBuilder Name="AsociaciónBuilder">
+    <ConnectionBuilder Name="AgregacionBuilder">
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="Asociación" />
+        <DomainRelationshipMoniker Name="Agregacion" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
@@ -740,9 +950,9 @@
         </TargetDirectives>
       </LinkConnectDirective>
     </ConnectionBuilder>
-    <ConnectionBuilder Name="AgregaciónBuilder">
+    <ConnectionBuilder Name="AsociacionBuilder">
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="Agregación" />
+        <DomainRelationshipMoniker Name="Asociacion" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
@@ -759,27 +969,46 @@
         </TargetDirectives>
       </LinkConnectDirective>
     </ConnectionBuilder>
-    <ConnectionBuilder Name="ClaseAbstractaTieneMetodoAbstractoBuilder">
+    <ConnectionBuilder Name="HerenciaBuilder">
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ClaseAbstractaTieneMetodoAbstracto" />
+        <DomainRelationshipMoniker Name="Herencia" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="MétodoAbstracto" />
+              <DomainClassMoniker Name="Clase" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
         <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ClaseAbstractaTieneMétodoAbstractoBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ClaseAbstractaTieneMétodoAbstracto" />
+        <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="ClaseAbstracta" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="MétodoAbstracto" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
       </LinkConnectDirective>
     </ConnectionBuilder>
   </ConnectionBuilders>
-  <Diagram Id="bc48b3fc-0396-4312-b566-4bcb302845e1" Description="Description for Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram" Name="DCMLRACPGProyectoIPSDiagram" DisplayName="Minimal Language Diagram" Namespace="Company.DCMLRACPGProyectoIPS" FillColor="188, 201, 223">
+  <Diagram Id="c8757630-e2ec-40cb-a818-4f0e74c6bb29" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram" Name="DCMLRACPGProyectoIPSDiagram" DisplayName="Minimal Language Diagram" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" FillColor="LightSteelBlue">
     <Class>
       <DomainClassMoniker Name="TapizModelo" />
     </Class>
@@ -787,14 +1016,13 @@
       <CompartmentShapeMap>
         <DomainClassMoniker Name="Clase" />
         <ParentElementPath>
-          <DomainPath>Tiene.TapizModelo/!TapizModelo</DomainPath>
+          <DomainPath>TapizModeloHasClase.TapizModelo/!TapizModelo</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ClaseCShape/IDDeco" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Clase/ID" />
-              <DomainPath />
+              <DomainPropertyMoniker Name="Clase/Identificador" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -806,40 +1034,138 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/Enriquecida" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/FondoColorB" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnriquecida/FondoColorB" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/FondoColorG" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/FondoColorR" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnriquecida/FondoColorR" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/Alineacion" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnriquecida/Alineacion" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/NombreColorB" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnriquecida/NombreColorR" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/NombreColorG" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnriquecida/NombreColorG" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/NombreColorR" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnriquecida/NombreColorB" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseCShape/TipoLetra" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnriquecida/TipoLetra" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="ClaseEnriquecida/Enriquecida" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
         <CompartmentShapeMoniker Name="ClaseCShape" />
-        <CompartmentMap>
-          <CompartmentMoniker Name="ClaseCShape/AttributeCompa" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseHasAtributo.Atributo/!Atributo</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Atributo/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-        <CompartmentMap>
-          <CompartmentMoniker Name="ClaseCShape/MethodCompa" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseHasSignaturadeOperación.SignaturadeOperación/!SignaturadeOperación</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="SignaturadeOperación/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
       </CompartmentShapeMap>
       <CompartmentShapeMap>
         <DomainClassMoniker Name="ClaseAbstracta" />
         <ParentElementPath>
-          <DomainPath>Tiene.TapizModelo/!TapizModelo</DomainPath>
+          <DomainPath>TapizModeloHasClase.TapizModelo/!TapizModelo</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ClaseAbstractaCShape/IDDeco" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Clase/ID" />
+              <DomainPropertyMoniker Name="Clase/Identificador" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -852,43 +1178,319 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <CompartmentShapeMoniker Name="ClaseAbstractaCShape" />
-        <CompartmentMap>
-          <CompartmentMoniker Name="ClaseAbstractaCShape/AttributeCompa" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseHasAtributo.Atributo/!Atributo</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Atributo/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-        <CompartmentMap>
-          <CompartmentMoniker Name="ClaseAbstractaCShape/MethodCompa" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseHasSignaturadeOperación.SignaturadeOperación/!SignaturadeOperación</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="SignaturadeOperación/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-        <CompartmentMap>
-          <CompartmentMoniker Name="ClaseAbstractaCShape/AbstractMethodCompa" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseAbstractaTieneMetodoAbstracto.MétodoAbstracto/!MétodoAbstracto</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="SignaturadeOperación/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
       </CompartmentShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="Atributo" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoShape/AtributoDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/NameTipo" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoShape/Enriquecido" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoEnriquecido/Enriquecido" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="AtributoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoShape/ColorLetraB" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoEnriquecido/ColorLetraB" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="AtributoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoShape/ColorLetraG" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoEnriquecido/ColorLetraG" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="AtributoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoShape/ColorLetraR" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoEnriquecido/ColorLetraR" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="AtributoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoShape/FormatoBooleano" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoEnriquecido/FormatoBooleano" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="AtributoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoShape/TipoLetra" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoEnriquecido/TipoLetra" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="AtributoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="AtributoShape" />
+      </ShapeMap>
+      <CompartmentShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="Metodo" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetodoShape/MetodoDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Metodo/NameTipoRetorno" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetodoShape/Enriquecido" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="MetodoEnriquecido/Enriquecido" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="MetodoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetodoShape/TipoLetra" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="MetodoEnriquecido/TipoLetra" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="MetodoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetodoShape/ColorLetraR" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraR" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="MetodoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetodoShape/ColorLetraG" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraG" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="MetodoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetodoShape/ColorLetraB" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="MetodoEnriquecido/ColorLetraB" />
+            </PropertyPath>
+          </PropertyDisplayed>
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="MetodoEnriquecido/Enriquecido" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <CompartmentShapeMoniker Name="MetodoShape" />
+      </CompartmentShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="Parametro" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ParametroShape/DetallesDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Parametro/Detalles" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="ParametroShape" />
+      </ShapeMap>
     </ShapeMaps>
+    <ConnectorMaps>
+      <ConnectorMap>
+        <ConnectorMoniker Name="AgregaConnector" />
+        <DomainRelationshipMoniker Name="Agregacion" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AgregaConnector/NameDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Agregacion/Nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AgregaConnector/CardMaxComponenteDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Agregacion/CardMaxComponente" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AgregaConnector/CardMaxCompuestoDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Agregacion/CardMaxCompuesta" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AgregaConnector/CardMinComponenteDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Agregacion/CardMinComponente" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AgregaConnector/CardMinCompuestoDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Agregacion/CardMinCompuesta" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="AsociacionConector" />
+        <DomainRelationshipMoniker Name="Asociacion" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AsociacionConector/NameDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Asociacion/Nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AsociacionConector/CardMaxComponenteDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Asociacion/CardinalidadMaximaSource" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AsociacionConector/CardMaxCompuestoDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Asociacion/CardinalidadMaximaTarget" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AsociacionConector/CardMinComponenteDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Asociacion/CardinalidadMinimaSource" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AsociacionConector/CardMinCompuestoDeco" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Asociacion/CardinalidadMinimaTarget" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="HerenciaConector" />
+        <DomainRelationshipMoniker Name="Herencia" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="HerenciaConector/Solapacion" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Herencia/DisjuntaSolapada" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="HerenciaConector/Totalidad" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Herencia/TotalParcial" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+      </ConnectorMap>
+    </ConnectorMaps>
   </Diagram>
-  <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="DCMLRACPG_DSLProyIPS" EditorGuid="706b78d9-9e8c-453e-be21-1fd2bf418387">
+  <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="DCMLRACPGProyectoIPS" EditorGuid="3ca63a9b-1b6f-431d-a04c-4a67b55592ca">
     <RootClass>
       <DomainClassMoniker Name="TapizModelo" />
     </RootClass>
@@ -896,18 +1498,39 @@
       <XmlSerializationBehaviorMoniker Name="DCMLRACPGProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Clases">
-      <ElementTool Name="ClaseTool" ToolboxIcon="Resources\Clase.bmp" Caption="Clase" Tooltip="Herramienta de Creación de Clases" HelpKeyword="ClaseTool">
+      <ElementTool Name="ClaseTool" ToolboxIcon="Resources\Clase.bmp" Caption="Clase" Tooltip="Crea una Clase" HelpKeyword="CreaUnaClaseF1">
         <DomainClassMoniker Name="Clase" />
       </ElementTool>
-      <ElementTool Name="ClaseAbsTool" ToolboxIcon="Resources\ClaseAbs.bmp" Caption="Clase Abstracta" Tooltip="Clase Abs Tool" HelpKeyword="ClaseAbsTool">
-        <Notes>Crea una clase abstracta</Notes>
+      <ElementTool Name="ClaseAbstracta" ToolboxIcon="Resources\ClaseAbs.bmp" Caption="Clase Abstracta" Tooltip="Clase Abstracta" HelpKeyword="ClaseAbstracta">
         <DomainClassMoniker Name="ClaseAbstracta" />
+      </ElementTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="Relaciones">
+      <ConnectionTool Name="Agregacion" ToolboxIcon="Resources\Agregacion.bmp" Caption="Agregacion" Tooltip="Agregacion" HelpKeyword="Agregacion">
+        <ConnectionBuilderMoniker Name="DCMLRACPGProyectoIPS/AgregacionBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="Asociacion" ToolboxIcon="Resources\Referencia.bmp" Caption="Asociacion" Tooltip="Asociacion" HelpKeyword="Asociacion">
+        <ConnectionBuilderMoniker Name="DCMLRACPGProyectoIPS/AsociacionBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="Herencia" ToolboxIcon="Resources\Herencia.bmp" Caption="Herencia" Tooltip="Herencia" HelpKeyword="Herencia">
+        <ConnectionBuilderMoniker Name="DCMLRACPGProyectoIPS/HerenciaBuilder" />
+      </ConnectionTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="Elementos de Clases">
+      <ElementTool Name="Atributo" ToolboxIcon="Resources\Atributo.bmp" Caption="Atributo" Tooltip="Atributo" HelpKeyword="Atributo">
+        <DomainClassMoniker Name="Atributo" />
+      </ElementTool>
+      <ElementTool Name="Metodo" ToolboxIcon="Resources\Método.bmp" Caption="Metodo" Tooltip="Metodo" HelpKeyword="Metodo">
+        <DomainClassMoniker Name="Metodo" />
+      </ElementTool>
+      <ElementTool Name="Parámetro" ToolboxIcon="Resources\Parámetro.bmp" Caption="Parámetro" Tooltip="Parámetro" HelpKeyword="Parámetro">
+        <DomainClassMoniker Name="Parametro" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="DCMLRACPGProyectoIPSDiagram" />
   </Designer>
-  <Explorer ExplorerGuid="e532fe49-9988-4aad-bd56-952e9fad6260" Title="DCMLRACPGProyectoIPS Explorer">
+  <Explorer ExplorerGuid="a3835318-e5f5-4843-84c1-97a22113aa3b" Title="DCMLRACPGProyectoIPS Explorer">
     <ExplorerBehaviorMoniker Name="DCMLRACPGProyectoIPS/DCMLRACPGProyectoIPSExplorer" />
   </Explorer>
 </Dsl>

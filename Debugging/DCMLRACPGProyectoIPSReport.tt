@@ -1,6 +1,6 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ output extension=".txt" #>
-<#@ DCMLRACPGProyectoIPS processor="DCMLRACPGProyectoIPSDirectiveProcessor" requires="fileName='Sample.DCMLRACPG_DSLProyIPS'" #>
+<#@ DCMLRACPGProyectoIPS processor="DCMLRACPGProyectoIPSDirectiveProcessor" requires="fileName='Sample.DCMLRACPGProyectoIPS'" #>
 
 Generated material. Generating code in C#.
 

@@ -10,19 +10,19 @@
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// DomainModel DCMLRACPGProyectoIPSDomainModel
-	/// Description for Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.CoreDomainModel))]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.Diagrams.CoreDesignSurfaceDomainModel))]
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
-	[DslModeling::DomainObjectId("be8cfad3-e6e3-4779-99d4-a7b7738ce75d")]
+	[DslModeling::DomainObjectId("428c4483-fcc4-4784-b083-8cfe50e00ecf")]
 	public partial class DCMLRACPGProyectoIPSDomainModel : DslModeling::DomainModel
 	{
 		#region Constructor, domain model Id
@@ -30,7 +30,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// DCMLRACPGProyectoIPSDomainModel domain model Id.
 		/// </summary>
-		public static readonly global::System.Guid DomainModelId = new global::System.Guid(0xbe8cfad3, 0xe6e3, 0x4779, 0x99, 0xd4, 0xa7, 0xb7, 0x73, 0x8c, 0xe7, 0x5d);
+		public static readonly global::System.Guid DomainModelId = new global::System.Guid(0x428c4483, 0xfcc4, 0x4784, 0xb0, 0x83, 0x8c, 0xfe, 0x50, 0xe0, 0x0e, 0xcf);
 	
 		/// <summary>
 		/// Constructor.
@@ -68,31 +68,35 @@ namespace Company.DCMLRACPGProyectoIPS
 			return new global::System.Type[]
 			{
 				typeof(TapizModelo),
-				typeof(Clase),
 				typeof(Atributo),
-				typeof(SignaturadeOperación),
-				typeof(Parámetros),
+				typeof(Parametro),
 				typeof(ClaseAbstracta),
+				typeof(Metodo),
+				typeof(Clase),
 				typeof(MétodoAbstracto),
 				typeof(ClaseEnriquecida),
-				typeof(AtributoEnriquecido),
 				typeof(MetodoEnriquecido),
-				typeof(Tiene),
+				typeof(AtributoEnriquecido),
+				typeof(MetodoHasParametro),
+				typeof(TapizModeloHasClase),
+				typeof(Agregacion),
+				typeof(Asociacion),
 				typeof(ClaseHasAtributo),
-				typeof(ClaseHasSignaturadeOperación),
-				typeof(SignaturadeOperaciónHasParámetros),
-				typeof(Asociación),
-				typeof(Agregación),
-				typeof(ClaseAbstractaTieneMetodoAbstracto),
+				typeof(ClaseHasMetodo),
+				typeof(Herencia),
+				typeof(ClaseAbstractaTieneMétodoAbstracto),
 				typeof(DCMLRACPGProyectoIPSDiagram),
+				typeof(AgregaConnector),
+				typeof(AsociacionConector),
+				typeof(HerenciaConector),
+				typeof(AtributoShape),
+				typeof(ParametroShape),
 				typeof(ClaseCShape),
 				typeof(ClaseAbstractaCShape),
-				typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerChangeRule),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerPositionChangeRule),
-				typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemChangeRule),
+				typeof(MetodoShape),
+				typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.FixUpDiagram),
+				typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DecoratorPropertyChanged),
+				typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.ConnectorRolePlayerChanged),
 			};
 		}
 		/// <summary>
@@ -104,15 +108,18 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			return new DomainMemberInfo[]
 			{
-				new DomainMemberInfo(typeof(Clase), "Name", Clase.NameDomainPropertyId, typeof(Clase.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(Clase), "ID", Clase.IDDomainPropertyId, typeof(Clase.IDPropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "Name", Atributo.NameDomainPropertyId, typeof(Atributo.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "TipoDatos", Atributo.TipoDatosDomainPropertyId, typeof(Atributo.TipoDatosPropertyHandler)),
-				new DomainMemberInfo(typeof(SignaturadeOperación), "Name", SignaturadeOperación.NameDomainPropertyId, typeof(SignaturadeOperación.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(SignaturadeOperación), "TipoRetorno", SignaturadeOperación.TipoRetornoDomainPropertyId, typeof(SignaturadeOperación.TipoRetornoPropertyHandler)),
-				new DomainMemberInfo(typeof(Parámetros), "Nombre", Parámetros.NombreDomainPropertyId, typeof(Parámetros.NombrePropertyHandler)),
-				new DomainMemberInfo(typeof(Parámetros), "TipoDato", Parámetros.TipoDatoDomainPropertyId, typeof(Parámetros.TipoDatoPropertyHandler)),
-				new DomainMemberInfo(typeof(Parámetros), "TipoParámetro", Parámetros.TipoParámetroDomainPropertyId, typeof(Parámetros.TipoParámetroPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "NameTipo", Atributo.NameTipoDomainPropertyId, typeof(Atributo.NameTipoPropertyHandler)),
+				new DomainMemberInfo(typeof(Parametro), "Nombre", Parametro.NombreDomainPropertyId, typeof(Parametro.NombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Parametro), "TipoDato", Parametro.TipoDatoDomainPropertyId, typeof(Parametro.TipoDatoPropertyHandler)),
+				new DomainMemberInfo(typeof(Parametro), "TipoParametro", Parametro.TipoParametroDomainPropertyId, typeof(Parametro.TipoParametroPropertyHandler)),
+				new DomainMemberInfo(typeof(Parametro), "Detalles", Parametro.DetallesDomainPropertyId, typeof(Parametro.DetallesPropertyHandler)),
+				new DomainMemberInfo(typeof(Metodo), "Name", Metodo.NameDomainPropertyId, typeof(Metodo.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Metodo), "TipoRetorno", Metodo.TipoRetornoDomainPropertyId, typeof(Metodo.TipoRetornoPropertyHandler)),
+				new DomainMemberInfo(typeof(Metodo), "NameTipoRetorno", Metodo.NameTipoRetornoDomainPropertyId, typeof(Metodo.NameTipoRetornoPropertyHandler)),
+				new DomainMemberInfo(typeof(Clase), "Name", Clase.NameDomainPropertyId, typeof(Clase.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Clase), "Identificador", Clase.IdentificadorDomainPropertyId, typeof(Clase.IdentificadorPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "Enriquecida", ClaseEnriquecida.EnriquecidaDomainPropertyId, typeof(ClaseEnriquecida.EnriquecidaPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "FondoColorR", ClaseEnriquecida.FondoColorRDomainPropertyId, typeof(ClaseEnriquecida.FondoColorRPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "FondoColorG", ClaseEnriquecida.FondoColorGDomainPropertyId, typeof(ClaseEnriquecida.FondoColorGPropertyHandler)),
@@ -122,28 +129,30 @@ namespace Company.DCMLRACPGProyectoIPS
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "TipoLetra", ClaseEnriquecida.TipoLetraDomainPropertyId, typeof(ClaseEnriquecida.TipoLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "Alineacion", ClaseEnriquecida.AlineacionDomainPropertyId, typeof(ClaseEnriquecida.AlineacionPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "NombreColorB", ClaseEnriquecida.NombreColorBDomainPropertyId, typeof(ClaseEnriquecida.NombreColorBPropertyHandler)),
+				new DomainMemberInfo(typeof(MetodoEnriquecido), "TipoLetra", MetodoEnriquecido.TipoLetraDomainPropertyId, typeof(MetodoEnriquecido.TipoLetraPropertyHandler)),
+				new DomainMemberInfo(typeof(MetodoEnriquecido), "ColorLetraR", MetodoEnriquecido.ColorLetraRDomainPropertyId, typeof(MetodoEnriquecido.ColorLetraRPropertyHandler)),
+				new DomainMemberInfo(typeof(MetodoEnriquecido), "ColorLetraG", MetodoEnriquecido.ColorLetraGDomainPropertyId, typeof(MetodoEnriquecido.ColorLetraGPropertyHandler)),
+				new DomainMemberInfo(typeof(MetodoEnriquecido), "ColorLetraB", MetodoEnriquecido.ColorLetraBDomainPropertyId, typeof(MetodoEnriquecido.ColorLetraBPropertyHandler)),
+				new DomainMemberInfo(typeof(MetodoEnriquecido), "Enriquecido", MetodoEnriquecido.EnriquecidoDomainPropertyId, typeof(MetodoEnriquecido.EnriquecidoPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoEnriquecido), "ColorLetraR", AtributoEnriquecido.ColorLetraRDomainPropertyId, typeof(AtributoEnriquecido.ColorLetraRPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoEnriquecido), "ColorLetraG", AtributoEnriquecido.ColorLetraGDomainPropertyId, typeof(AtributoEnriquecido.ColorLetraGPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoEnriquecido), "ColorLetraB", AtributoEnriquecido.ColorLetraBDomainPropertyId, typeof(AtributoEnriquecido.ColorLetraBPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoEnriquecido), "TipoLetra", AtributoEnriquecido.TipoLetraDomainPropertyId, typeof(AtributoEnriquecido.TipoLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoEnriquecido), "FormatoBooleano", AtributoEnriquecido.FormatoBooleanoDomainPropertyId, typeof(AtributoEnriquecido.FormatoBooleanoPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoEnriquecido), "Enriquecido", AtributoEnriquecido.EnriquecidoDomainPropertyId, typeof(AtributoEnriquecido.EnriquecidoPropertyHandler)),
-				new DomainMemberInfo(typeof(MetodoEnriquecido), "TipoLetra", MetodoEnriquecido.TipoLetraDomainPropertyId, typeof(MetodoEnriquecido.TipoLetraPropertyHandler)),
-				new DomainMemberInfo(typeof(MetodoEnriquecido), "ColorLetraR", MetodoEnriquecido.ColorLetraRDomainPropertyId, typeof(MetodoEnriquecido.ColorLetraRPropertyHandler)),
-				new DomainMemberInfo(typeof(MetodoEnriquecido), "ColorLetraG", MetodoEnriquecido.ColorLetraGDomainPropertyId, typeof(MetodoEnriquecido.ColorLetraGPropertyHandler)),
-				new DomainMemberInfo(typeof(MetodoEnriquecido), "ColorLetraB", MetodoEnriquecido.ColorLetraBDomainPropertyId, typeof(MetodoEnriquecido.ColorLetraBPropertyHandler)),
-				new DomainMemberInfo(typeof(MetodoEnriquecido), "Enriquecido", MetodoEnriquecido.EnriquecidoDomainPropertyId, typeof(MetodoEnriquecido.EnriquecidoPropertyHandler)),
-				new DomainMemberInfo(typeof(Asociación), "Nombre", Asociación.NombreDomainPropertyId, typeof(Asociación.NombrePropertyHandler)),
-				new DomainMemberInfo(typeof(Asociación), "CardinalidadMinimaSource", Asociación.CardinalidadMinimaSourceDomainPropertyId, typeof(Asociación.CardinalidadMinimaSourcePropertyHandler)),
-				new DomainMemberInfo(typeof(Asociación), "CardinalidadMinimaTarget", Asociación.CardinalidadMinimaTargetDomainPropertyId, typeof(Asociación.CardinalidadMinimaTargetPropertyHandler)),
-				new DomainMemberInfo(typeof(Asociación), "CardinalidadMaximaSource", Asociación.CardinalidadMaximaSourceDomainPropertyId, typeof(Asociación.CardinalidadMaximaSourcePropertyHandler)),
-				new DomainMemberInfo(typeof(Asociación), "CardinalidadMaximaTarget", Asociación.CardinalidadMaximaTargetDomainPropertyId, typeof(Asociación.CardinalidadMaximaTargetPropertyHandler)),
-				new DomainMemberInfo(typeof(Agregación), "Nombre", Agregación.NombreDomainPropertyId, typeof(Agregación.NombrePropertyHandler)),
-				new DomainMemberInfo(typeof(Agregación), "CardinalidadMinimaComponente", Agregación.CardinalidadMinimaComponenteDomainPropertyId, typeof(Agregación.CardinalidadMinimaComponentePropertyHandler)),
-				new DomainMemberInfo(typeof(Agregación), "CardinalidadMinimaCompuesta", Agregación.CardinalidadMinimaCompuestaDomainPropertyId, typeof(Agregación.CardinalidadMinimaCompuestaPropertyHandler)),
-				new DomainMemberInfo(typeof(Agregación), "CardinalidadMaximaComponente", Agregación.CardinalidadMaximaComponenteDomainPropertyId, typeof(Agregación.CardinalidadMaximaComponentePropertyHandler)),
-				new DomainMemberInfo(typeof(Agregación), "CardinalidadMaximaCompuesta", Agregación.CardinalidadMaximaCompuestaDomainPropertyId, typeof(Agregación.CardinalidadMaximaCompuestaPropertyHandler)),
-				new DomainMemberInfo(typeof(Agregación), "Tipo", Agregación.TipoDomainPropertyId, typeof(Agregación.TipoPropertyHandler)),
+				new DomainMemberInfo(typeof(Agregacion), "Nombre", Agregacion.NombreDomainPropertyId, typeof(Agregacion.NombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Agregacion), "CardMinComponente", Agregacion.CardMinComponenteDomainPropertyId, typeof(Agregacion.CardMinComponentePropertyHandler)),
+				new DomainMemberInfo(typeof(Agregacion), "CardMaxComponente", Agregacion.CardMaxComponenteDomainPropertyId, typeof(Agregacion.CardMaxComponentePropertyHandler)),
+				new DomainMemberInfo(typeof(Agregacion), "CardMinCompuesta", Agregacion.CardMinCompuestaDomainPropertyId, typeof(Agregacion.CardMinCompuestaPropertyHandler)),
+				new DomainMemberInfo(typeof(Agregacion), "CardMaxCompuesta", Agregacion.CardMaxCompuestaDomainPropertyId, typeof(Agregacion.CardMaxCompuestaPropertyHandler)),
+				new DomainMemberInfo(typeof(Agregacion), "TipoAgregación", Agregacion.TipoAgregaciónDomainPropertyId, typeof(Agregacion.TipoAgregaciónPropertyHandler)),
+				new DomainMemberInfo(typeof(Asociacion), "Nombre", Asociacion.NombreDomainPropertyId, typeof(Asociacion.NombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Asociacion), "CardinalidadMinimaSource", Asociacion.CardinalidadMinimaSourceDomainPropertyId, typeof(Asociacion.CardinalidadMinimaSourcePropertyHandler)),
+				new DomainMemberInfo(typeof(Asociacion), "CardinalidadMinimaTarget", Asociacion.CardinalidadMinimaTargetDomainPropertyId, typeof(Asociacion.CardinalidadMinimaTargetPropertyHandler)),
+				new DomainMemberInfo(typeof(Asociacion), "CardinalidadMaximaSource", Asociacion.CardinalidadMaximaSourceDomainPropertyId, typeof(Asociacion.CardinalidadMaximaSourcePropertyHandler)),
+				new DomainMemberInfo(typeof(Asociacion), "CardinalidadMaximaTarget", Asociacion.CardinalidadMaximaTargetDomainPropertyId, typeof(Asociacion.CardinalidadMaximaTargetPropertyHandler)),
+				new DomainMemberInfo(typeof(Herencia), "TotalParcial", Herencia.TotalParcialDomainPropertyId, typeof(Herencia.TotalParcialPropertyHandler)),
+				new DomainMemberInfo(typeof(Herencia), "DisjuntaSolapada", Herencia.DisjuntaSolapadaDomainPropertyId, typeof(Herencia.DisjuntaSolapadaPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -154,20 +163,22 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(Tiene), "TapizModelo", Tiene.TapizModeloDomainRoleId),
-				new DomainRolePlayerInfo(typeof(Tiene), "Clase", Tiene.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(MetodoHasParametro), "Metodo", MetodoHasParametro.MetodoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(MetodoHasParametro), "Parametro", MetodoHasParametro.ParametroDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizModeloHasClase), "TapizModelo", TapizModeloHasClase.TapizModeloDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizModeloHasClase), "Clase", TapizModeloHasClase.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Agregacion), "SourceClase", Agregacion.SourceClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Agregacion), "TargetClase", Agregacion.TargetClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Asociacion), "SourceClase", Asociacion.SourceClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Asociacion), "TargetClase", Asociacion.TargetClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Clase", ClaseHasAtributo.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Atributo", ClaseHasAtributo.AtributoDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseHasSignaturadeOperación), "Clase", ClaseHasSignaturadeOperación.ClaseDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseHasSignaturadeOperación), "SignaturadeOperación", ClaseHasSignaturadeOperación.SignaturadeOperaciónDomainRoleId),
-				new DomainRolePlayerInfo(typeof(SignaturadeOperaciónHasParámetros), "SignaturadeOperación", SignaturadeOperaciónHasParámetros.SignaturadeOperaciónDomainRoleId),
-				new DomainRolePlayerInfo(typeof(SignaturadeOperaciónHasParámetros), "Parámetros", SignaturadeOperaciónHasParámetros.ParámetrosDomainRoleId),
-				new DomainRolePlayerInfo(typeof(Asociación), "SourceClase", Asociación.SourceClaseDomainRoleId),
-				new DomainRolePlayerInfo(typeof(Asociación), "TargetClase", Asociación.TargetClaseDomainRoleId),
-				new DomainRolePlayerInfo(typeof(Agregación), "SourceClase", Agregación.SourceClaseDomainRoleId),
-				new DomainRolePlayerInfo(typeof(Agregación), "TargetClase", Agregación.TargetClaseDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseAbstractaTieneMetodoAbstracto), "MétodoAbstracto", ClaseAbstractaTieneMetodoAbstracto.MétodoAbstractoDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseAbstractaTieneMetodoAbstracto), "ClaseAbstracta", ClaseAbstractaTieneMetodoAbstracto.ClaseAbstractaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseHasMetodo), "Clase", ClaseHasMetodo.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseHasMetodo), "Metodo", ClaseHasMetodo.MetodoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Herencia), "SourceClase", Herencia.SourceClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(Herencia), "TargetClase", Herencia.TargetClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseAbstractaTieneMétodoAbstracto), "ClaseAbstracta", ClaseAbstractaTieneMétodoAbstracto.ClaseAbstractaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseAbstractaTieneMétodoAbstracto), "MétodoAbstracto", ClaseAbstractaTieneMétodoAbstracto.MétodoAbstractoDomainRoleId),
 			};
 		}
 		#endregion
@@ -189,17 +200,23 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(19);
 				createElementMap.Add(typeof(TapizModelo), 0);
-				createElementMap.Add(typeof(Clase), 1);
-				createElementMap.Add(typeof(Atributo), 2);
-				createElementMap.Add(typeof(SignaturadeOperación), 3);
-				createElementMap.Add(typeof(Parámetros), 4);
-				createElementMap.Add(typeof(ClaseAbstracta), 5);
+				createElementMap.Add(typeof(Atributo), 1);
+				createElementMap.Add(typeof(Parametro), 2);
+				createElementMap.Add(typeof(ClaseAbstracta), 3);
+				createElementMap.Add(typeof(Metodo), 4);
+				createElementMap.Add(typeof(Clase), 5);
 				createElementMap.Add(typeof(MétodoAbstracto), 6);
 				createElementMap.Add(typeof(DCMLRACPGProyectoIPSDiagram), 7);
-				createElementMap.Add(typeof(ClaseCShape), 8);
-				createElementMap.Add(typeof(ClaseAbstractaCShape), 9);
+				createElementMap.Add(typeof(AgregaConnector), 8);
+				createElementMap.Add(typeof(AsociacionConector), 9);
+				createElementMap.Add(typeof(HerenciaConector), 10);
+				createElementMap.Add(typeof(AtributoShape), 11);
+				createElementMap.Add(typeof(ParametroShape), 12);
+				createElementMap.Add(typeof(ClaseCShape), 13);
+				createElementMap.Add(typeof(ClaseAbstractaCShape), 14);
+				createElementMap.Add(typeof(MetodoShape), 15);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -207,22 +224,28 @@ namespace Company.DCMLRACPGProyectoIPS
 				// construct exception error message		
 				string exceptionError = string.Format(
 								global::System.Globalization.CultureInfo.CurrentCulture,
-								global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("UnrecognizedElementType"),
+								global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("UnrecognizedElementType"),
 								elementType.Name);
 				throw new global::System.ArgumentException(exceptionError, "elementType");
 			}
 			switch (index)
 			{
 				case 0: return new TapizModelo(partition, propertyAssignments);
-				case 1: return new Clase(partition, propertyAssignments);
-				case 2: return new Atributo(partition, propertyAssignments);
-				case 3: return new SignaturadeOperación(partition, propertyAssignments);
-				case 4: return new Parámetros(partition, propertyAssignments);
-				case 5: return new ClaseAbstracta(partition, propertyAssignments);
+				case 1: return new Atributo(partition, propertyAssignments);
+				case 2: return new Parametro(partition, propertyAssignments);
+				case 3: return new ClaseAbstracta(partition, propertyAssignments);
+				case 4: return new Metodo(partition, propertyAssignments);
+				case 5: return new Clase(partition, propertyAssignments);
 				case 6: return new MétodoAbstracto(partition, propertyAssignments);
 				case 7: return new DCMLRACPGProyectoIPSDiagram(partition, propertyAssignments);
-				case 8: return new ClaseCShape(partition, propertyAssignments);
-				case 9: return new ClaseAbstractaCShape(partition, propertyAssignments);
+				case 8: return new AgregaConnector(partition, propertyAssignments);
+				case 9: return new AsociacionConector(partition, propertyAssignments);
+				case 10: return new HerenciaConector(partition, propertyAssignments);
+				case 11: return new AtributoShape(partition, propertyAssignments);
+				case 12: return new ParametroShape(partition, propertyAssignments);
+				case 13: return new ClaseCShape(partition, propertyAssignments);
+				case 14: return new ClaseAbstractaCShape(partition, propertyAssignments);
+				case 15: return new MetodoShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -245,14 +268,15 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(7);
-				createElementLinkMap.Add(typeof(Tiene), 0);
-				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
-				createElementLinkMap.Add(typeof(ClaseHasSignaturadeOperación), 2);
-				createElementLinkMap.Add(typeof(SignaturadeOperaciónHasParámetros), 3);
-				createElementLinkMap.Add(typeof(Asociación), 4);
-				createElementLinkMap.Add(typeof(Agregación), 5);
-				createElementLinkMap.Add(typeof(ClaseAbstractaTieneMetodoAbstracto), 6);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(8);
+				createElementLinkMap.Add(typeof(MetodoHasParametro), 0);
+				createElementLinkMap.Add(typeof(TapizModeloHasClase), 1);
+				createElementLinkMap.Add(typeof(Agregacion), 2);
+				createElementLinkMap.Add(typeof(Asociacion), 3);
+				createElementLinkMap.Add(typeof(ClaseHasAtributo), 4);
+				createElementLinkMap.Add(typeof(ClaseHasMetodo), 5);
+				createElementLinkMap.Add(typeof(Herencia), 6);
+				createElementLinkMap.Add(typeof(ClaseAbstractaTieneMétodoAbstracto), 7);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -260,20 +284,21 @@ namespace Company.DCMLRACPGProyectoIPS
 				// construct exception error message
 				string exceptionError = string.Format(
 								global::System.Globalization.CultureInfo.CurrentCulture,
-								global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("UnrecognizedElementLinkType"),
+								global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("UnrecognizedElementLinkType"),
 								elementLinkType.Name);
 				throw new global::System.ArgumentException(exceptionError, "elementLinkType");
 			
 			}
 			switch (index)
 			{
-				case 0: return new Tiene(partition, roleAssignments, propertyAssignments);
-				case 1: return new ClaseHasAtributo(partition, roleAssignments, propertyAssignments);
-				case 2: return new ClaseHasSignaturadeOperación(partition, roleAssignments, propertyAssignments);
-				case 3: return new SignaturadeOperaciónHasParámetros(partition, roleAssignments, propertyAssignments);
-				case 4: return new Asociación(partition, roleAssignments, propertyAssignments);
-				case 5: return new Agregación(partition, roleAssignments, propertyAssignments);
-				case 6: return new ClaseAbstractaTieneMetodoAbstracto(partition, roleAssignments, propertyAssignments);
+				case 0: return new MetodoHasParametro(partition, roleAssignments, propertyAssignments);
+				case 1: return new TapizModeloHasClase(partition, roleAssignments, propertyAssignments);
+				case 2: return new Agregacion(partition, roleAssignments, propertyAssignments);
+				case 3: return new Asociacion(partition, roleAssignments, propertyAssignments);
+				case 4: return new ClaseHasAtributo(partition, roleAssignments, propertyAssignments);
+				case 5: return new ClaseHasMetodo(partition, roleAssignments, propertyAssignments);
+				case 6: return new Herencia(partition, roleAssignments, propertyAssignments);
+				case 7: return new ClaseAbstractaTieneMétodoAbstracto(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -393,12 +418,9 @@ namespace Company.DCMLRACPGProyectoIPS
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerChangeRule));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerPositionChangeRule));
-			ruleManager.EnableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemChangeRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DecoratorPropertyChanged));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.ConnectorRolePlayerChanged));
 		}
 		
 		/// <summary>
@@ -409,12 +431,9 @@ namespace Company.DCMLRACPGProyectoIPS
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.FixUpDiagram));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemAddRule));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemDeleteRule));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerChangeRule));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemRolePlayerPositionChangeRule));
-			ruleManager.DisableRule(typeof(global::Company.DCMLRACPGProyectoIPS.CompartmentItemChangeRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DecoratorPropertyChanged));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.ConnectorRolePlayerChanged));
 		}
 		#endregion
 	}
@@ -450,10 +469,10 @@ namespace Company.DCMLRACPGProyectoIPS
 		public DCMLRACPGProyectoIPSDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.Tiene.ClaseDomainRoleId, true);
-			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo.AtributoDomainRoleId, true);
-			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación.SignaturadeOperaciónDomainRoleId, true);
-			DomainRoles.Add(global::Company.DCMLRACPGProyectoIPS.SignaturadeOperaciónHasParámetros.ParámetrosDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoHasParametro.ParametroDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModeloHasClase.ClaseDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseHasAtributo.AtributoDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseHasMetodo.MetodoDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
@@ -528,224 +547,265 @@ namespace Company.DCMLRACPGProyectoIPS
 	#endregion
 		
 }
-namespace Company.DCMLRACPGProyectoIPS
-{
-	/// <summary>
-	/// DomainEnumeration: TipoParametro
-	/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro
-	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public enum TipoParametro
-	{
-		/// <summary>
-		/// Entrada
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Entrada
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/Entrada.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Entrada = 0,
-		/// <summary>
-		/// Salida
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro.Salida
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/Salida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Salida = 1,
-		/// <summary>
-		/// EntradaSalida
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoParametro.EntradaSalida
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoParametro/EntradaSalida.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		EntradaSalida = 2,
-	}
-}
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// DomainEnumeration: Cardinalidad
-	/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 	public enum Cardinalidad
 	{
 		/// <summary>
 		/// Uno
-		/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Uno
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad.Uno
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/Uno.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad/Uno.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Uno = 1,
 		/// <summary>
 		/// N
-		/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.N
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad.N
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/N.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad/N.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		N = 2,
 		/// <summary>
 		/// Cero
-		/// Description for Company.DCMLRACPGProyectoIPS.Cardinalidad.Cero
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad.Cero
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Cardinalidad/Cero.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad/Cero.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Cero = 0,
 	}
 }
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
-	/// DomainEnumeration: TipoAgregacion
-	/// Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion
+	/// DomainEnumeration: TipoParametro
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro
 	/// </summary>
 	[global::System.CLSCompliant(true)]
-	public enum TipoAgregacion
+	public enum TipoParametro
 	{
 		/// <summary>
-		/// Inclusiva
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion.Inclusiva
+		/// Entrada
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro.Entrada
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoAgregacion/Inclusiva.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Inclusiva = 1,
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro/Entrada.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Entrada = 0,
 		/// <summary>
-		/// Referencial
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoAgregacion.Referencial
+		/// Salida
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro.Salida
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoAgregacion/Referencial.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Referencial = 0,
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro/Salida.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Salida = 1,
+		/// <summary>
+		/// EntradaSalida
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro.EntradaSalida
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro/EntradaSalida.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		EntradaSalida = 2,
 	}
 }
-namespace Company.DCMLRACPGProyectoIPS
-{
-	/// <summary>
-	/// DomainEnumeration: Totalidad
-	/// Description for Company.DCMLRACPGProyectoIPS.Totalidad
-	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public enum Totalidad
-	{
-		/// <summary>
-		/// Total
-		/// Description for Company.DCMLRACPGProyectoIPS.Totalidad.Total
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Totalidad/Total.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Total = 1,
-		/// <summary>
-		/// Parcial
-		/// Description for Company.DCMLRACPGProyectoIPS.Totalidad.Parcial
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.Totalidad/Parcial.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Parcial = 0,
-	}
-}
-namespace Company.DCMLRACPGProyectoIPS
-{
-	/// <summary>
-	/// DomainEnumeration: DisjuntaSolapada
-	/// Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada
-	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public enum DisjuntaSolapada
-	{
-		/// <summary>
-		/// Disjunta
-		/// Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Disjunta
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DisjuntaSolapada/Disjunta.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Disjunta = 0,
-		/// <summary>
-		/// Solapada
-		/// Description for Company.DCMLRACPGProyectoIPS.DisjuntaSolapada.Solapada
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DisjuntaSolapada/Solapada.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Solapada = 1,
-	}
-}
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// DomainEnumeration: TipoLetra
-	/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 	public enum TipoLetra
 	{
 		/// <summary>
 		/// ComicSans
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.ComicSans
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.ComicSans
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/ComicSans.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/ComicSans.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		ComicSans = 2,
 		/// <summary>
 		/// Papyrus
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Papyrus
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Papyrus
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Papyrus.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/Papyrus.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Papyrus = 3,
 		/// <summary>
 		/// Wingdings
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Wingdings
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Wingdings
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Wingdings.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/Wingdings.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Wingdings = 4,
 		/// <summary>
 		/// Arial
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Arial
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Arial
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Arial.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/Arial.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Arial = 0,
 		/// <summary>
 		/// Calibri
-		/// Description for Company.DCMLRACPGProyectoIPS.TipoLetra.Calibri
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Calibri
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.TipoLetra/Calibri.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/Calibri.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Calibri = 1,
 	}
 }
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: Cardinalidad1
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Cardinalidad1
+	{
+		/// <summary>
+		/// Uno
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1.Uno
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1/Uno.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Uno = 1,
+		/// <summary>
+		/// N
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1.N
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1/N.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		N = 2,
+		/// <summary>
+		/// Cero
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1.Cero
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Cardinalidad1/Cero.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Cero = 0,
+	}
+}
+namespace UPM_IPS.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: Totalidad
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Totalidad
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Totalidad
+	{
+		/// <summary>
+		/// Total
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Totalidad.Total
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Totalidad/Total.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Total = 1,
+		/// <summary>
+		/// Parcial
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Totalidad.Parcial
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Totalidad/Parcial.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Parcial = 0,
+	}
+}
+namespace UPM_IPS.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: Solapacion
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Solapacion
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Solapacion
+	{
+		/// <summary>
+		/// Disjunta
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Solapacion.Disjunta
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Solapacion/Disjunta.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Disjunta = 0,
+		/// <summary>
+		/// Solapada
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Solapacion.Solapada
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Solapacion/Solapada.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Solapada = 1,
+	}
+}
+namespace UPM_IPS.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: TipoAgregación
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoAgregación
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum TipoAgregación
+	{
+		/// <summary>
+		/// Inclusiva
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoAgregación.Inclusiva
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoAgregación/Inclusiva.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Inclusiva = 0,
+		/// <summary>
+		/// Referencial
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoAgregación.Referencial
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoAgregación/Referencial.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Referencial = 1,
+	}
+}
+namespace UPM_IPS.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: TipoLetra1
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum TipoLetra1
+	{
+		/// <summary>
+		/// ComicSans
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.ComicSans
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/ComicSans.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		ComicSans = 2,
+		/// <summary>
+		/// Papyrus
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Papyrus
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/Papyrus.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Papyrus = 3,
+		/// <summary>
+		/// Wingdings
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Wingdings
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/Wingdings.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Wingdings = 4,
+		/// <summary>
+		/// Arial
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Arial
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/Arial.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Arial = 0,
+		/// <summary>
+		/// Calibri
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Calibri
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/Calibri.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Calibri = 1,
+	}
+}
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// DomainEnumeration: FormatoBoolean
-	/// Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 	public enum FormatoBoolean
 	{
 		/// <summary>
 		/// Checkbox
-		/// Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.Checkbox
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean.Checkbox
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.FormatoBoolean/Checkbox.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean/Checkbox.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Checkbox = 0,
 		/// <summary>
 		/// RadioButton
-		/// Description for Company.DCMLRACPGProyectoIPS.FormatoBoolean.RadioButton
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean.RadioButton
 		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.FormatoBoolean/RadioButton.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean/RadioButton.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		RadioButton = 1,
-	}
-}
-namespace Company.DCMLRACPGProyectoIPS
-{
-	/// <summary>
-	/// DomainEnumeration: ClaseAlineación
-	/// Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación
-	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public enum ClaseAlineación
-	{
-		/// <summary>
-		/// Izquierda
-		/// Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Izquierda
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAlineación/Izquierda.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Izquierda = 2,
-		/// <summary>
-		/// Centro
-		/// Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Centro
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAlineación/Centro.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Centro = 0,
-		/// <summary>
-		/// Derecha
-		/// Description for Company.DCMLRACPGProyectoIPS.ClaseAlineación.Derecha
-		/// </summary>
-		[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.ClaseAlineación/Derecha.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Derecha = 1,
 	}
 }
 

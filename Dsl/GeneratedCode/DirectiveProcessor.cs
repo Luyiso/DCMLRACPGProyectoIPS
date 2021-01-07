@@ -6,7 +6,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	#region Using directives
 	using DslModeling = global::Microsoft.VisualStudio.Modeling;
@@ -163,13 +163,13 @@ namespace Company.DCMLRACPGProyectoIPS
 					// Create a field to store the model once it is loaded
 					global::System.CodeDom.CodeMemberField rootElement = new global::System.CodeDom.CodeMemberField();
 					rootElement.Name = providesArguments[providesModelParameter].ToLower(global::System.Globalization.CultureInfo.InvariantCulture) + "Value";
-					rootElement.Type = new global::System.CodeDom.CodeTypeReference(typeof(global::Company.DCMLRACPGProyectoIPS.TapizModelo));
+					rootElement.Type = new global::System.CodeDom.CodeTypeReference(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo));
 					rootElement.Attributes = global::System.CodeDom.MemberAttributes.Private;
 	
 					// Create a property for the Model that delay-loads the model
 					global::System.CodeDom.CodeMemberProperty rootElementProperty = new global::System.CodeDom.CodeMemberProperty();
 					rootElementProperty.Name = providesArguments[providesModelParameter];
-					rootElementProperty.Type = new global::System.CodeDom.CodeTypeReference(typeof(global::Company.DCMLRACPGProyectoIPS.TapizModelo));
+					rootElementProperty.Type = new global::System.CodeDom.CodeTypeReference(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo));
 					rootElementProperty.Attributes = global::System.CodeDom.MemberAttributes.Private;
 					rootElementProperty.HasSet = false;
 					rootElementProperty.HasGet = true;
@@ -235,7 +235,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				if (languageProvider != null)
 				{
 					string[] domainModels = {
-						"Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel",
+						"UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel",
 					};
 	
 					global::System.CodeDom.Compiler.CodeGeneratorOptions options = new global::System.CodeDom.Compiler.CodeGeneratorOptions();
@@ -400,7 +400,7 @@ namespace Company.DCMLRACPGProyectoIPS
 	
 			imports.Add("Microsoft.VisualStudio.Modeling");
 			imports.Add("System.CodeDom.Compiler");
-			imports.Add("Company.DCMLRACPGProyectoIPS");
+			imports.Add("UPM_IPS.DCMLRACPGProyectoIPS");
 	
 			return imports.ToArray();
 		}

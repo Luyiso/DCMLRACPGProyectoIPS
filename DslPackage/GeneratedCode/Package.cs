@@ -20,7 +20,7 @@ using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
@@ -28,23 +28,73 @@ namespace Company.DCMLRACPGProyectoIPS
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
 	[VSShell::ProvideToolWindow(typeof(DCMLRACPGProyectoIPSExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(DCMLRACPGProyectoIPSExplorerToolWindow), Constants.DCMLRACPGProyectoIPSEditorFactoryId)]
-	[VSShell::ProvideStaticToolboxGroup("@ClasesToolboxTab;Company.DCMLRACPGProyectoIPS.Dsl.dll", "Company.DCMLRACPGProyectoIPS.ClasesToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("Company.DCMLRACPGProyectoIPS.ClasesToolboxTab",
-					"@ClaseToolToolboxItem;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
-					"Company.DCMLRACPGProyectoIPS.ClaseToolToolboxItem", 
+	[VSShell::ProvideStaticToolboxGroup("@ClasesToolboxTab;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", "UPM_IPS.DCMLRACPGProyectoIPS.ClasesToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DCMLRACPGProyectoIPS.ClasesToolboxTab",
+					"@ClaseToolToolboxItem;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.DCMLRACPGProyectoIPS.ClaseToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ClaseTool", 
-					"@ClaseToolToolboxBitmap;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"CreaUnaClaseF1", 
+					"@ClaseToolToolboxBitmap;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 0)]
-	[VSShell::ProvideStaticToolboxItem("Company.DCMLRACPGProyectoIPS.ClasesToolboxTab",
-					"@ClaseAbsToolToolboxItem;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
-					"Company.DCMLRACPGProyectoIPS.ClaseAbsToolToolboxItem", 
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DCMLRACPGProyectoIPS.ClasesToolboxTab",
+					"@ClaseAbstractaToolboxItem;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ClaseAbsTool", 
-					"@ClaseAbsToolToolboxBitmap;Company.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"ClaseAbstracta", 
+					"@ClaseAbstractaToolboxBitmap;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 1)]
+	[VSShell::ProvideStaticToolboxGroup("@RelacionesToolboxTab;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", "UPM_IPS.DCMLRACPGProyectoIPS.RelacionesToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DCMLRACPGProyectoIPS.RelacionesToolboxTab",
+					"@AgregacionToolboxItem;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.DCMLRACPGProyectoIPS.AgregacionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Agregacion", 
+					"@AgregacionToolboxBitmap;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 2)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DCMLRACPGProyectoIPS.RelacionesToolboxTab",
+					"@AsociacionToolboxItem;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.DCMLRACPGProyectoIPS.AsociacionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Asociacion", 
+					"@AsociacionToolboxBitmap;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 3)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DCMLRACPGProyectoIPS.RelacionesToolboxTab",
+					"@HerenciaToolboxItem;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.DCMLRACPGProyectoIPS.HerenciaToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Herencia", 
+					"@HerenciaToolboxBitmap;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 4)]
+	[VSShell::ProvideStaticToolboxGroup("@Elementos de ClasesToolboxTab;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", "UPM_IPS.DCMLRACPGProyectoIPS.Elementos de ClasesToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DCMLRACPGProyectoIPS.Elementos de ClasesToolboxTab",
+					"@AtributoToolboxItem;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.DCMLRACPGProyectoIPS.AtributoToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Atributo", 
+					"@AtributoToolboxBitmap;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 5)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DCMLRACPGProyectoIPS.Elementos de ClasesToolboxTab",
+					"@MetodoToolboxItem;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.DCMLRACPGProyectoIPS.MetodoToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Metodo", 
+					"@MetodoToolboxBitmap;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 6)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DCMLRACPGProyectoIPS.Elementos de ClasesToolboxTab",
+					"@ParámetroToolboxItem;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.DCMLRACPGProyectoIPS.ParámetroToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Parámetro", 
+					"@ParámetroToolboxBitmap;UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
 	[VSShell::ProvideEditorFactory(typeof(DCMLRACPGProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(DCMLRACPGProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(DCMLRACPGProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
@@ -61,7 +111,7 @@ namespace Company.DCMLRACPGProyectoIPS
 
 	internal abstract partial class DCMLRACPGProyectoIPSPackageBase : DslShell::AsyncModelingPackage
 	{
-		protected global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper toolboxHelper;	
+		protected global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper toolboxHelper;	
 		
 		/// <summary>
 		/// Initialization method called by the package base class when this package is loaded.
@@ -74,7 +124,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			this.RegisterEditorFactory(new DCMLRACPGProyectoIPSEditorFactory(this));
 			
 			// Initialize the toolbox helper
-			toolboxHelper = new global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper(this);
+			toolboxHelper = new global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper(this);
 
 			// Create the command set that handles menu commands provided by this package.
 			DCMLRACPGProyectoIPSCommandSet commandSet = new DCMLRACPGProyectoIPSCommandSet(this);
@@ -150,20 +200,19 @@ namespace Company.DCMLRACPGProyectoIPS
 			return base.GetAsyncToolWindowFactory(toolWindowType);
 		}
 	}
-
 }
 
 //
 // Package attributes which may need to change are placed on the partial class below, rather than in the main include file.
 //
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.
 	/// </summary>
 	[VSShell::ProvideMenuResource("1000.ctmenu", 1)]
 	[VSShell::ProvideToolboxItems(1)]
-	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDirectiveProcessor), global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDirectiveProcessor.DCMLRACPGProyectoIPSDirectiveProcessorName, "A directive processor that provides access to DCMLRACPGProyectoIPS files")]
+	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDirectiveProcessor), global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDirectiveProcessor.DCMLRACPGProyectoIPSDirectiveProcessorName, "A directive processor that provides access to DCMLRACPGProyectoIPS files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.DCMLRACPGProyectoIPSPackageId)]
 	internal sealed partial class DCMLRACPGProyectoIPSPackage : DCMLRACPGProyectoIPSPackageBase
 	{

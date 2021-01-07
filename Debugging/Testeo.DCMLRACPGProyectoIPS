@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapizModelo xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="f026bad4-af9b-4c29-97a1-28c69bef8b09" xmlns="http://schemas.microsoft.com/dsltools/DCMLRACPGProyectoIPS">
+  <clase>
+    <tapizModeloHasClase Id="e54bb50b-93e4-4dbc-8f0b-0229212c6c66">
+      <clase Id="bfa87189-4bfc-427d-bea3-bfba30ceadf1" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Clase1" />
+    </tapizModeloHasClase>
+    <tapizModeloHasClase Id="3e3a00d7-16ee-4874-98e6-cd54b0b30225">
+      <clase Id="022ade21-8667-44f0-8d67-967cb770265c" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Clase2" />
+    </tapizModeloHasClase>
+  </clase>
+</tapizModelo>

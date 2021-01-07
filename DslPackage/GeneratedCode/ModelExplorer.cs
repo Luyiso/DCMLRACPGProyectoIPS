@@ -11,7 +11,7 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.
@@ -67,7 +67,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		///</summary>
 		protected override global::System.Guid RootElementDomainClassId
 		{
-			get { return global::Company.DCMLRACPGProyectoIPS.TapizModelo.DomainClassId; }
+			get { return global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo.DomainClassId; }
 		}
 		
 		/// <summary>

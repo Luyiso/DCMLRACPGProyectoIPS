@@ -11,19 +11,19 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-[module: global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Scope = "type", Target = "Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram")]
+[module: global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Scope = "type", Target = "UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram")]
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// DomainClass DCMLRACPGProyectoIPSDiagram
-	/// Description for Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram.DisplayName", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram.Description", typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
+	[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("bc48b3fc-0396-4312-b566-4bcb302845e1")]
+	[DslModeling::DomainObjectId("c8757630-e2ec-40cb-a818-4f0e74c6bb29")]
 	public partial class DCMLRACPGProyectoIPSDiagram : DslDiagrams::Diagram
 	{
 		#region Diagram boilerplate
@@ -61,7 +61,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		#endregion
 		#region Toolbox filters
 		private static global::System.ComponentModel.ToolboxItemFilterAttribute[] toolboxFilters = new global::System.ComponentModel.ToolboxItemFilterAttribute[] {
-					new global::System.ComponentModel.ToolboxItemFilterAttribute(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelperBase.ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) };
+					new global::System.ComponentModel.ToolboxItemFilterAttribute(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelperBase.ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) };
 		
 		/// <summary>
 		/// Toolbox item filter attributes for this diagram.
@@ -85,7 +85,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			
 			// Fill brush settings for this shape.
 			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 188, 201, 223);
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightSteelBlue);
 			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.DiagramBackground, backgroundBrush);
 		
 		}
@@ -102,88 +102,6 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 		}
 		#endregion
-		#region Compartment support
-		/// <summary>
-		/// Whether compartment items change events are subscribed to.
-		/// </summary>
-		private bool subscribedCompartmentItemsEvents;
-		
-		/// <summary>
-		/// Subscribe to events fired when compartment items changes.
-		/// </summary>
-		public void SubscribeCompartmentItemsEvents()
-		{
-			if (!subscribedCompartmentItemsEvents && this.Store != null)
-			{
-				subscribedCompartmentItemsEvents = true;
-				this.Store.EventManagerDirectory.ElementAdded.Add(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
-				this.Store.EventManagerDirectory.ElementDeleted.Add(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
-				this.Store.EventManagerDirectory.ElementPropertyChanged.Add(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
-				this.Store.EventManagerDirectory.RolePlayerChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
-				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
-			}
-		}
-		
-		/// <summary>
-		/// Unsubscribe to events fired when compartment items changes.
-		/// </summary>
-		public void UnsubscribeCompartmentItemsEvents()
-		{
-			if (subscribedCompartmentItemsEvents)
-			{
-				this.Store.EventManagerDirectory.ElementAdded.Remove(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
-				this.Store.EventManagerDirectory.ElementDeleted.Remove(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
-				this.Store.EventManagerDirectory.ElementPropertyChanged.Remove(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
-				this.Store.EventManagerDirectory.RolePlayerChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
-				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
-				subscribedCompartmentItemsEvents = false;
-			}
-		}
-		
-		#region Event handlers
-		/// <summary>
-		/// Event for element added.
-		/// </summary>
-		private void CompartmentItemAdded(object sender, DslModeling::ElementAddedEventArgs e)
-		{
-			// If in Undo, Redo or Rollback the compartment item rules are not run so we must refresh the compartment list at this point if required
-			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
-			CompartmentItemAddRule.ElementAdded(e, repaintOnly);
-		}
-		/// <summary>
-		/// Event for element deleted.
-		/// </summary>
-		private void CompartmentItemDeleted(object sender, DslModeling::ElementDeletedEventArgs e)
-		{
-			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
-			CompartmentItemDeleteRule.ElementDeleted(e, repaintOnly);
-		}
-		/// <summary>
-		/// Event for element property changed.
-		/// </summary>
-		private void CompartmentItemPropertyChanged(object sender, DslModeling::ElementPropertyChangedEventArgs e)
-		{
-			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
-			CompartmentItemChangeRule.ElementPropertyChanged(e, repaintOnly);
-		}
-		/// <summary>
-		/// Event for role-player changed.
-		/// </summary>
-		private void CompartmentItemRolePlayerChanged(object sender, DslModeling::RolePlayerChangedEventArgs e)
-		{
-			bool repaintOnly = !e.ElementLink.Store.InUndoRedoOrRollback;
-			CompartmentItemRolePlayerChangeRule.RolePlayerChanged(e, repaintOnly);
-		}
-		/// <summary>
-		/// Event for role-player order changed.
-		/// </summary>
-		private void CompartmentItemRolePlayerOrderChanged(object sender, DslModeling::RolePlayerOrderChangedEventArgs e)
-		{
-			bool repaintOnly = !e.Link.Store.InUndoRedoOrRollback;
-			CompartmentItemRolePlayerPositionChangeRule.RolePlayerPositionChanged(e, repaintOnly);
-		}
-		#endregion
-		#endregion
 		#region Shape mapping
 		/// <summary>
 		/// Called during view fixup to ask the parent whether a shape should be created for the given child element.
@@ -196,6 +114,91 @@ namespace Company.DCMLRACPGProyectoIPS
 			return true;
 		}
 		
+		/// <summary>
+		/// Called during view fixup to configure the given child element, after it has been created.
+		/// </summary>
+		/// <remarks>
+		/// Custom code for choosing the shapes attached to either end of a connector is called from here.
+		/// </remarks>
+		protected override void OnChildConfiguring(DslDiagrams::ShapeElement child, bool createdDuringViewFixup)
+		{
+			DslDiagrams::NodeShape sourceShape;
+			DslDiagrams::NodeShape targetShape;
+			DslDiagrams::BinaryLinkShape connector = child as DslDiagrams::BinaryLinkShape;
+			if(connector == null)
+			{
+				base.OnChildConfiguring(child, createdDuringViewFixup);
+				return;
+			}
+			this.GetSourceAndTargetForConnector(connector, out sourceShape, out targetShape);
+			
+			global::System.Diagnostics.Debug.Assert(sourceShape != null && targetShape != null, "Unable to find source and target shapes for connector.");
+			connector.Connect(sourceShape, targetShape);
+		}
+		
+		/// <summary>
+		/// helper method to find the shapes for either end of a connector, including calling the user's custom code
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		internal void GetSourceAndTargetForConnector(DslDiagrams::BinaryLinkShape connector, out DslDiagrams::NodeShape sourceShape, out DslDiagrams::NodeShape targetShape)
+		{
+			sourceShape = null;
+			targetShape = null;
+			
+			if (sourceShape == null || targetShape == null)
+			{
+				DslDiagrams::NodeShape[] endShapes = GetEndShapesForConnector(connector);
+				if(sourceShape == null)
+				{
+					sourceShape = endShapes[0];
+				}
+				if(targetShape == null)
+				{
+					targetShape = endShapes[1];
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Helper method to find shapes for either end of a connector by looking for shapes associated with either end of the relationship mapped to the connector.
+		/// </summary>
+		private DslDiagrams::NodeShape[] GetEndShapesForConnector(DslDiagrams::BinaryLinkShape connector)
+		{
+			DslModeling::ElementLink link = connector.ModelElement as DslModeling::ElementLink;
+			DslDiagrams::NodeShape sourceShape = null, targetShape = null;
+			if (link != null)
+			{
+				global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::ModelElement> linkedElements = link.LinkedElements;
+				if (linkedElements.Count == 2)
+				{
+					DslDiagrams::Diagram currentDiagram = this.Diagram;
+					DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> presentationElements = DslDiagrams::PresentationViewsSubject.GetPresentation(linkedElements[0]);
+					foreach (DslDiagrams::PresentationElement presentationElement in presentationElements)
+					{
+						DslDiagrams::NodeShape shape = presentationElement as DslDiagrams::NodeShape;
+						if (shape != null && shape.Diagram == currentDiagram)
+						{
+							sourceShape = shape;
+							break;
+						}
+					}
+					
+					presentationElements = DslDiagrams::PresentationViewsSubject.GetPresentation(linkedElements[1]);
+					foreach (DslDiagrams::PresentationElement presentationElement in presentationElements)
+					{
+						DslDiagrams::NodeShape shape = presentationElement as DslDiagrams::NodeShape;
+						if (shape != null && shape.Diagram == currentDiagram)
+						{
+							targetShape = shape;
+							break;
+						}
+					}
+		
+				}
+			}
+			
+			return new DslDiagrams::NodeShape[] { sourceShape, targetShape };
+		}
 		
 		/// <summary>
 		/// Creates a new shape for the given model element as part of view fixup
@@ -204,16 +207,49 @@ namespace Company.DCMLRACPGProyectoIPS
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta)
+			if(element is global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstracta)
 			{
-				global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape newShape = new global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape(this.Partition);
+				global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaCShape newShape = new global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaCShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.DCMLRACPGProyectoIPS.Clase)
+			if(element is global::UPM_IPS.DCMLRACPGProyectoIPS.Clase)
 			{
-				global::Company.DCMLRACPGProyectoIPS.ClaseCShape newShape = new global::Company.DCMLRACPGProyectoIPS.ClaseCShape(this.Partition);
+				global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseCShape newShape = new global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseCShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.DCMLRACPGProyectoIPS.Atributo)
+			{
+				global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoShape newShape = new global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.DCMLRACPGProyectoIPS.Metodo)
+			{
+				global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoShape newShape = new global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.DCMLRACPGProyectoIPS.Parametro)
+			{
+				global::UPM_IPS.DCMLRACPGProyectoIPS.ParametroShape newShape = new global::UPM_IPS.DCMLRACPGProyectoIPS.ParametroShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion)
+			{
+				global::UPM_IPS.DCMLRACPGProyectoIPS.AgregaConnector newShape = new global::UPM_IPS.DCMLRACPGProyectoIPS.AgregaConnector(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion)
+			{
+				global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConector newShape = new global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConector(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia)
+			{
+				global::UPM_IPS.DCMLRACPGProyectoIPS.HerenciaConector newShape = new global::UPM_IPS.DCMLRACPGProyectoIPS.HerenciaConector(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -227,8 +263,14 @@ namespace Company.DCMLRACPGProyectoIPS
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::Company.DCMLRACPGProyectoIPS.ClaseCShape.DecoratorsInitialized += ClaseCShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape.DecoratorsInitialized += ClaseAbstractaCShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseCShape.DecoratorsInitialized += ClaseCShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstractaCShape.DecoratorsInitialized += ClaseAbstractaCShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoShape.DecoratorsInitialized += AtributoShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoShape.DecoratorsInitialized += MetodoShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.ParametroShape.DecoratorsInitialized += ParametroShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.AgregaConnector.DecoratorsInitialized += AgregaConnectorDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConector.DecoratorsInitialized += AsociacionConectorDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.HerenciaConector.DecoratorsInitialized += HerenciaConectorDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -244,11 +286,70 @@ namespace Company.DCMLRACPGProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.DCMLRACPGProyectoIPS.Clase.IDDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Clase.IdentificadorDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "IDDeco").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.DCMLRACPGProyectoIPS.Clase.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Clase.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Enriquecida").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.FondoColorBDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "FondoColorB").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "FondoColorB").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "FondoColorG").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "FondoColorG").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.FondoColorRDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "FondoColorR").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "FondoColorR").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.AlineacionDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Alineacion").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Alineacion").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.NombreColorRDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreColorB").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreColorB").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.NombreColorGDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreColorG").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreColorG").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.NombreColorBDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreColorR").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreColorR").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.TipoLetraDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TipoLetra").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.EnriquecidaDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TipoLetra").AssociateVisibilityWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -265,14 +366,328 @@ namespace Company.DCMLRACPGProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.DCMLRACPGProyectoIPS.Clase.IDDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Clase.IdentificadorDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "IDDeco").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.DCMLRACPGProyectoIPS.Clase.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Clase.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDeco").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
+		/// <summary>
+		/// Class containing decorator path traversal methods for AtributoShape.
+		/// </summary>
+		internal static partial class AtributoShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for AtributoShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Atributo.NameTipoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "AtributoDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.EnriquecidoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Enriquecido").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Enriquecido").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.ColorLetraBDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraB").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraB").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.ColorLetraGDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraG").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraG").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.ColorLetraRDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraR").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraR").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.FormatoBooleanoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "FormatoBooleano").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "FormatoBooleano").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.TipoLetraDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TipoLetra").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.AtributoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TipoLetra").AssociateVisibilityWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetodoShape.
+		/// </summary>
+		internal static partial class MetodoShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetodoShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Metodo.NameTipoRetornoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MetodoDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.EnriquecidoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Enriquecido").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Enriquecido").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.TipoLetraDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TipoLetra").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TipoLetra").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.ColorLetraRDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraR").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraR").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.ColorLetraGDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraG").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraG").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.ColorLetraBDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraB").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.MetodoEnriquecido.EnriquecidoDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ColorLetraB").AssociateVisibilityWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ParametroShape.
+		/// </summary>
+		internal static partial class ParametroShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ParametroShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Parametro.DetallesDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "DetallesDeco").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for AgregaConnector.
+		/// </summary>
+		internal static partial class AgregaConnectorDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for AgregaConnector.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.NombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.CardMaxComponenteDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardMaxComponenteDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.CardMaxCompuestaDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardMaxCompuestoDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.CardMinComponenteDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardMinComponenteDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.CardMinCompuestaDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardMinCompuestoDeco").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for AsociacionConector.
+		/// </summary>
+		internal static partial class AsociacionConectorDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for AsociacionConector.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.NombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.CardinalidadMaximaSourceDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardMaxComponenteDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.CardinalidadMaximaTargetDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardMaxCompuestoDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.CardinalidadMinimaSourceDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardMinComponenteDeco").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.CardinalidadMinimaTargetDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardMinCompuestoDeco").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for HerenciaConector.
+		/// </summary>
+		internal static partial class HerenciaConectorDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for HerenciaConector.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia.DisjuntaSolapadaDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Solapacion").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia.TotalParcialDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Totalidad").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		#endregion
+		
+		#region Connect actions
+		private bool changingMouseAction;
+		private global::UPM_IPS.DCMLRACPGProyectoIPS.AgregacionConnectAction agregacionConnectAction;
+		private global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConnectAction asociacionConnectAction;
+		private global::UPM_IPS.DCMLRACPGProyectoIPS.HerenciaConnectAction herenciaConnectAction;
+		/// <summary>
+		/// Virtual method to provide a filter when to select the mouse action
+		/// </summary>
+		/// <param name="activeView">Currently active view</param>
+		/// <param name="filter">filter string used to filter the toolbox items</param>
+		protected virtual bool SelectedToolboxItemSupportsFilterString(DslDiagrams::DiagramView activeView, string filter)
+		{
+			return activeView.SelectedToolboxItemSupportsFilterString(filter);
+		}
+		/// <summary>
+		/// Override to provide the right mouse action when trying
+		/// to create links on the diagram
+		/// </summary>
+		/// <param name="pointArgs"></param>
+		public override void OnViewMouseEnter(DslDiagrams::DiagramPointEventArgs pointArgs)
+		{
+			if (pointArgs  == null) throw new global::System.ArgumentNullException("pointArgs");
+		
+			DslDiagrams::DiagramView activeView = this.ActiveDiagramView;
+			if(activeView != null)
+			{
+				DslDiagrams::MouseAction action = null;
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper.AgregacionFilterString))
+				{
+					if (this.agregacionConnectAction == null)
+					{
+						this.agregacionConnectAction = new global::UPM_IPS.DCMLRACPGProyectoIPS.AgregacionConnectAction(this);
+						this.agregacionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.agregacionConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper.AsociacionFilterString))
+				{
+					if (this.asociacionConnectAction == null)
+					{
+						this.asociacionConnectAction = new global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConnectAction(this);
+						this.asociacionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.asociacionConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper.HerenciaFilterString))
+				{
+					if (this.herenciaConnectAction == null)
+					{
+						this.herenciaConnectAction = new global::UPM_IPS.DCMLRACPGProyectoIPS.HerenciaConnectAction(this);
+						this.herenciaConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.herenciaConnectAction;
+				} 
+				else
+				{
+					action = null;
+				}
+				
+				if (pointArgs.DiagramClientView.ActiveMouseAction != action)
+				{
+					try
+					{
+						this.changingMouseAction = true;
+						pointArgs.DiagramClientView.ActiveMouseAction = action;
+					}
+					finally
+					{
+						this.changingMouseAction = false;
+					}
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Snap toolbox selection back to regular pointer after using a custom connect action.
+		/// </summary>
+		private void OnConnectActionDeactivated(object sender, DslDiagrams::DiagramEventArgs e)
+		{
+			OnMouseActionDeactivated();
+		}
+		
+		/// <summary>
+		/// Overridable method to manage the mouse deactivation. The default implementation snap stoolbox selection back to regular pointer 
+		/// after using a custom connect action.
+		/// </summary>
+		protected virtual void OnMouseActionDeactivated()
+		{
+			DslDiagrams::DiagramView activeView = this.ActiveDiagramView;
+		
+			if (activeView != null && activeView.Toolbox != null)
+			{
+				// If we're not changing mouse action due to changing toolbox selection change,
+				// reset toolbox selection.
+				if (!this.changingMouseAction)
+				{
+					activeView.Toolbox.SelectedToolboxItemUsed();
+				}
+			}
+		}
 		#endregion
 		
 		/// <summary>
@@ -284,7 +699,21 @@ namespace Company.DCMLRACPGProyectoIPS
 			{
 				if(disposing)
 				{
-					this.UnsubscribeCompartmentItemsEvents();
+					if(this.agregacionConnectAction != null)
+					{
+						this.agregacionConnectAction.Dispose();
+						this.agregacionConnectAction = null;
+					}
+					if(this.asociacionConnectAction != null)
+					{
+						this.asociacionConnectAction.Dispose();
+						this.asociacionConnectAction = null;
+					}
+					if(this.herenciaConnectAction != null)
+					{
+						this.herenciaConnectAction.Dispose();
+						this.herenciaConnectAction = null;
+					}
 				}
 			}
 			finally
@@ -297,7 +726,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// DCMLRACPGProyectoIPSDiagram domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xbc48b3fc, 0x0396, 0x4312, 0xb5, 0x66, 0x4b, 0xcb, 0x30, 0x28, 0x45, 0xe1);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc8757630, 0xe2ec, 0x40cb, 0xa8, 0x18, 0x4f, 0x0e, 0x74, 0xc6, 0xbb, 0x29);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -320,7 +749,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		#endregion
 	}
 }
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	
 		/// <summary>
@@ -338,8 +767,14 @@ namespace Company.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstracta), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Metodo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Parametro), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -351,13 +786,50 @@ namespace Company.DCMLRACPGProyectoIPS
 				if (this.SkipFixup(childElement))
 					return;
 				DslModeling::ModelElement parentElement;
-				if(childElement is global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta)
+				if(childElement is DslModeling::ElementLink)
 				{
-					parentElement = GetParentForClaseAbstracta((global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta)childElement);
+					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::Company.DCMLRACPGProyectoIPS.Clase)
+				if(childElement is global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstracta)
 				{
-					parentElement = GetParentForClase((global::Company.DCMLRACPGProyectoIPS.Clase)childElement);
+					parentElement = GetParentForClaseAbstracta((global::UPM_IPS.DCMLRACPGProyectoIPS.ClaseAbstracta)childElement);
+				} else
+				if(childElement is global::UPM_IPS.DCMLRACPGProyectoIPS.Clase)
+				{
+					parentElement = GetParentForClase((global::UPM_IPS.DCMLRACPGProyectoIPS.Clase)childElement);
+				} else
+				if(childElement is global::UPM_IPS.DCMLRACPGProyectoIPS.Atributo)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForAtributo(Atributo childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.DCMLRACPGProyectoIPS.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForAtributo((global::UPM_IPS.DCMLRACPGProyectoIPS.Atributo)childElement);
+				} else
+				if(childElement is global::UPM_IPS.DCMLRACPGProyectoIPS.Metodo)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForMetodo(Metodo childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.DCMLRACPGProyectoIPS.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForMetodo((global::UPM_IPS.DCMLRACPGProyectoIPS.Metodo)childElement);
+				} else
+				if(childElement is global::UPM_IPS.DCMLRACPGProyectoIPS.Parametro)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForParametro(Parametro childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.DCMLRACPGProyectoIPS.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForParametro((global::UPM_IPS.DCMLRACPGProyectoIPS.Parametro)childElement);
 				} else
 				{
 					parentElement = null;
@@ -368,499 +840,274 @@ namespace Company.DCMLRACPGProyectoIPS
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::Company.DCMLRACPGProyectoIPS.TapizModelo GetParentForClase( global::Company.DCMLRACPGProyectoIPS.Clase root )
+			public static global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo GetParentForClase( global::UPM_IPS.DCMLRACPGProyectoIPS.Clase root )
 			{
 				// Segments 0 and 1
-				global::Company.DCMLRACPGProyectoIPS.TapizModelo result = root.TapizModelo;
+				global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo result = root.TapizModelo;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Company.DCMLRACPGProyectoIPS.TapizModelo GetParentForClaseAbstracta( global::Company.DCMLRACPGProyectoIPS.Clase root )
+			public static global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo GetParentForClaseAbstracta( global::UPM_IPS.DCMLRACPGProyectoIPS.Clase root )
 			{
 				// Segments 0 and 1
-				global::Company.DCMLRACPGProyectoIPS.TapizModelo result = root.TapizModelo;
+				global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo result = root.TapizModelo;
 				if ( result == null ) return null;
 				return result;
+			}
+			private static DslModeling::ModelElement GetParentForRelationship(DslModeling::ElementLink elementLink)
+			{
+				global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::ModelElement> linkedElements = elementLink.LinkedElements;
+	
+				if (linkedElements.Count == 2)
+				{
+					DslDiagrams::ShapeElement sourceShape = linkedElements[0] as DslDiagrams::ShapeElement;
+					DslDiagrams::ShapeElement targetShape = linkedElements[1] as DslDiagrams::ShapeElement;
+	
+					if(sourceShape == null)
+					{
+						DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> presentationElements = DslDiagrams::PresentationViewsSubject.GetPresentation(linkedElements[0]);
+						foreach (DslDiagrams::PresentationElement presentationElement in presentationElements)
+						{
+							DslDiagrams::ShapeElement shape = presentationElement as DslDiagrams::ShapeElement;
+							if (shape != null)
+							{
+								sourceShape = shape;
+								break;
+							}
+						}
+					}
+					
+					if(targetShape == null)
+					{
+						DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> presentationElements = DslDiagrams::PresentationViewsSubject.GetPresentation(linkedElements[1]);
+						foreach (DslDiagrams::PresentationElement presentationElement in presentationElements)
+						{
+							DslDiagrams::ShapeElement shape = presentationElement as DslDiagrams::ShapeElement;
+							if (shape != null)
+							{
+								targetShape = shape;
+								break;
+							}
+						}
+					}
+					
+					if(sourceShape == null || targetShape == null)
+					{
+						global::System.Diagnostics.Debug.Fail("Unable to find source and/or target shape for view fixup.");
+						return null;
+					}
+	
+					DslDiagrams::ShapeElement sourceParent = sourceShape.ParentShape;
+					DslDiagrams::ShapeElement targetParent = targetShape.ParentShape;
+	
+					while (sourceParent != targetParent && sourceParent != null)
+					{
+						DslDiagrams::ShapeElement curParent = targetParent;
+						while (sourceParent != curParent && curParent != null)
+						{
+							curParent = curParent.ParentShape;
+						}
+	
+						if(sourceParent == curParent)
+						{
+							break;
+						}
+						else
+						{
+							sourceParent = sourceParent.ParentShape;
+						}
+					}
+	
+					while (sourceParent != null)
+					{
+						// ensure that the parent can parent connectors (i.e., a diagram or a swimlane).
+						if(sourceParent is DslDiagrams::Diagram || sourceParent is DslDiagrams::SwimlaneShape)
+						{
+							break;
+						}
+						else
+						{
+							sourceParent = sourceParent.ParentShape;
+						}
+					}
+	
+					global::System.Diagnostics.Debug.Assert(sourceParent != null && sourceParent.ModelElement != null, "Unable to find common parent for view fixup.");
+					return sourceParent.ModelElement;
+				}
+	
+				return null;
 			}
 		}
 		
+	
 		/// <summary>
-		/// Rule to update compartments when an item is added to the list
+		/// A rule which fires when data mapped to outer text decorators has changed,
+		/// so we can update the decorator host's bounds.
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia), InitiallyDisabled=true)]
+		internal sealed class DecoratorPropertyChanged : DslModeling::ChangeRule
+		{
+			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+			public override void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e)
+			{
+				if(e == null) throw new global::System.ArgumentNullException("e");
+				
+				if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.NombreDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AgregaConnector.FindAgregaConnectorDecorator("NameDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.CardMaxComponenteDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AgregaConnector.FindAgregaConnectorDecorator("CardMaxComponenteDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.CardMaxCompuestaDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AgregaConnector.FindAgregaConnectorDecorator("CardMaxCompuestoDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.CardMinComponenteDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AgregaConnector.FindAgregaConnectorDecorator("CardMinComponenteDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.CardMinCompuestaDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AgregaConnector.FindAgregaConnectorDecorator("CardMinCompuestoDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.NombreDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConector.FindAsociacionConectorDecorator("NameDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.CardinalidadMaximaSourceDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConector.FindAsociacionConectorDecorator("CardMaxComponenteDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.CardinalidadMaximaTargetDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConector.FindAsociacionConectorDecorator("CardMaxCompuestoDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.CardinalidadMinimaSourceDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConector.FindAsociacionConectorDecorator("CardMinComponenteDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.CardinalidadMinimaTargetDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.AsociacionConector.FindAsociacionConectorDecorator("CardMinCompuestoDeco");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia.DisjuntaSolapadaDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.HerenciaConector.FindHerenciaConectorDecorator("Solapacion");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia.TotalParcialDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DCMLRACPGProyectoIPS.HerenciaConector.FindHerenciaConectorDecorator("Totalidad");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia.DomainClassId);
+					}
+				}
+			}
+		}
+	
+		/// <summary>
+		/// Reroute a connector when the role players of its underlying relationship change
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Agregacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Asociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.Herencia), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>
-			/// Called when an element is added. 
+			/// Reroute a connector when the role players of its underlying relationship change
 			/// </summary>
-			/// <param name="e"></param>
-			public override void ElementAdded(DslModeling::ElementAddedEventArgs e)
+			public override void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e)
 			{
-				ElementAdded(e, false);
-			}
+				if (e == null) throw new global::System.ArgumentNullException("e");
 	
-			internal static void ElementAdded(DslModeling::ElementAddedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if (e.ModelElement.IsDeleted)
-					return;
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)
+				global::System.Collections.ObjectModel.ReadOnlyCollection<DslDiagrams::PresentationViewsSubject> connectorLinks = DslDiagrams::PresentationViewsSubject.GetLinksToPresentation(e.ElementLink);
+				foreach (DslDiagrams::PresentationViewsSubject connectorLink in connectorLinks)
 				{
-					global::System.Collections.IEnumerable elements = GetClaseForClaseCShapeAttributeCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseForClaseCShapeMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseAbstractaForClaseAbstractaCShapeAttributeCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AttributeCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseAbstractaForClaseAbstractaCShapeMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "MethodCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseAbstractaForClaseAbstractaCShapeAbstractMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AbstractMethodCompa", repaintOnly);
-				}
-			}
-			
-			#region static DomainPath traversal methods to get the list of compartments to update
-			internal static global::System.Collections.ICollection GetClaseForClaseCShapeAttributeCompaFromLastLink(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo root)
-			{
-				// Segment 0
-				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseForClaseCShapeAttributeCompa(global::Company.DCMLRACPGProyectoIPS.Atributo root)
-			{
-				// Segments 1 and 0
-				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseForClaseCShapeMethodCompaFromLastLink(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación root)
-			{
-				// Segment 0
-				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseForClaseCShapeMethodCompa(global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación root)
-			{
-				// Segments 1 and 0
-				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseAbstractaForClaseAbstractaCShapeAttributeCompaFromLastLink(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo root)
-			{
-				// Segment 0
-				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseAbstractaForClaseAbstractaCShapeAttributeCompa(global::Company.DCMLRACPGProyectoIPS.Atributo root)
-			{
-				// Segments 1 and 0
-				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseAbstractaForClaseAbstractaCShapeMethodCompaFromLastLink(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación root)
-			{
-				// Segment 0
-				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseAbstractaForClaseAbstractaCShapeMethodCompa(global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación root)
-			{
-				// Segments 1 and 0
-				global::Company.DCMLRACPGProyectoIPS.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseAbstractaForClaseAbstractaCShapeAbstractMethodCompaFromLastLink(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto root)
-			{
-				// Segment 0
-				global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta result = root.ClaseAbstracta;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseAbstractaForClaseAbstractaCShapeAbstractMethodCompa(global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto root)
-			{
-				// Segments 1 and 0
-				global::Company.DCMLRACPGProyectoIPS.ClaseAbstracta result = root.ClaseAbstracta;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			#endregion
-	
-			#region helper method to update compartments 
-			/// <summary>
-			/// Updates the compartments for the shapes associated to the given list of model elements
-			/// </summary>
-			/// <param name="elements">List of model elements</param>
-			/// <param name="shapeType">The type of shape that needs updating</param>
-			/// <param name="compartmentName">The name of the compartment to update</param>
-			/// <param name="repaintOnly">If true, the method will only invalidate the shape for a repaint, without re-initializing the shape.</param>
-			internal static void UpdateCompartments(global::System.Collections.IEnumerable elements, global::System.Type shapeType, string compartmentName, bool repaintOnly)
-			{
-				foreach (DslModeling::ModelElement element in elements)
-				{
-					DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-					foreach (DslDiagrams::PresentationElement pel in pels)
+					// Fix up any binary link shapes attached to the element link.
+					DslDiagrams::BinaryLinkShape linkShape = connectorLink.Presentation as DslDiagrams::BinaryLinkShape;
+					if (linkShape != null)
 					{
-						DslDiagrams::CompartmentShape compartmentShape = pel as DslDiagrams::CompartmentShape;
-						if (compartmentShape != null && shapeType.IsAssignableFrom(compartmentShape.GetType()))
+						global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram diagram = linkShape.Diagram as global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram;
+						if (diagram != null)
 						{
-							if (repaintOnly)
+							if (e.NewRolePlayer != null)
 							{
-								compartmentShape.Invalidate();
+								DslDiagrams::NodeShape fromShape;
+								DslDiagrams::NodeShape toShape;
+								diagram.GetSourceAndTargetForConnector(linkShape, out fromShape, out toShape);
+								if (fromShape != null && toShape != null)
+								{
+									if (!object.Equals(fromShape, linkShape.FromShape))
+									{
+										linkShape.FromShape = fromShape;
+									}
+									if (!object.Equals(linkShape.ToShape, toShape))
+									{
+										linkShape.ToShape = toShape;
+									}
+								}
+								else
+								{
+									// delete the connector if we cannot find an appropriate target shape.
+									linkShape.Delete();
+								}
 							}
 							else
 							{
-								foreach(DslDiagrams::CompartmentMapping mapping in compartmentShape.GetCompartmentMappings())
-								{
-									if(mapping.CompartmentId==compartmentName)
-									{
-										mapping.InitializeCompartmentShape(compartmentShape);
-										break;
-									}
-								}
+								// delete the connector if the new role player is null.
+								linkShape.Delete();
 							}
 						}
 					}
 				}
 			}
-			#endregion
 		}
-		
-		/// <summary>
-		/// Rule to update compartments when an items is removed from the list
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
-		{
-			/// <summary>
-			/// Called when an element is deleted
-			/// </summary>
-			/// <param name="e"></param>
-			public override void ElementDeleted(DslModeling::ElementDeletedEventArgs e)
-			{
-				ElementDeleted(e, false);
-			}
-			
-			internal static void ElementDeleted(DslModeling::ElementDeletedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAttributeCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AttributeCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "MethodCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAbstractMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AbstractMethodCompa", repaintOnly);
-				}
-			}
-		}
-		
-		/// <summary>
-		/// Rule to update compartments when the property on an item being displayed changes.
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.Atributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
-		{
-			/// <summary>
-			/// Called when an element is changed
-			/// </summary>
-			/// <param name="e"></param>
-			public override void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e)
-			{
-				ElementPropertyChanged(e, false);
-			}
-			
-			internal static void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.Atributo && e.DomainProperty.Id == global::Company.DCMLRACPGProyectoIPS.Atributo.NameDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeCompa((global::Company.DCMLRACPGProyectoIPS.Atributo)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación && e.DomainProperty.Id == global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.NameDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodCompa((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.Atributo && e.DomainProperty.Id == global::Company.DCMLRACPGProyectoIPS.Atributo.NameDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAttributeCompa((global::Company.DCMLRACPGProyectoIPS.Atributo)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AttributeCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación && e.DomainProperty.Id == global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación.NameDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeMethodCompa((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "MethodCompa", repaintOnly);
-				}
-				if(e.ModelElement is global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto && e.DomainProperty.Id == global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto.NameDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAbstractMethodCompa((global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AbstractMethodCompa", repaintOnly);
-				}
-			}
-		}
-		
-		/// <summary>
-		/// Rule to update compartments when a roleplayer change happens
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
-		{
-			/// <summary>
-			/// Called when the roleplayer on a link changes.
-			/// </summary>
-			/// <param name="e"></param>
-			public override void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e)
-			{
-				RolePlayerChanged(e, false);
-			}
-			
-			internal static void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.Atributo)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::Company.DCMLRACPGProyectoIPS.ClaseCShape compartmentShape = pel as global::Company.DCMLRACPGProyectoIPS.ClaseCShape;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeCompa", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeCompa((global::Company.DCMLRACPGProyectoIPS.Atributo)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeCompa", repaintOnly);
-					}
-				}
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::Company.DCMLRACPGProyectoIPS.ClaseCShape compartmentShape = pel as global::Company.DCMLRACPGProyectoIPS.ClaseCShape;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodCompa", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodCompa((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodCompa", repaintOnly);
-					}
-				}
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAttributeCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.Atributo)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape compartmentShape = pel as global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAttributeCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AttributeCompa", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAttributeCompa((global::Company.DCMLRACPGProyectoIPS.Atributo)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AttributeCompa", repaintOnly);
-					}
-				}
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape compartmentShape = pel as global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "MethodCompa", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeMethodCompa((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "MethodCompa", repaintOnly);
-					}
-				}
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAbstractMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape compartmentShape = pel as global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAbstractMethodCompaFromLastLink((global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AbstractMethodCompa", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAbstractMethodCompa((global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AbstractMethodCompa", repaintOnly);
-					}
-				}
-			}
-		}
-	
-		/// <summary>
-		/// Rule to update compartments when the order of items in the list changes.
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
-		{
-			/// <summary>
-			/// Called when the order of a roleplayer in a relationship changes
-			/// </summary>
-			/// <param name="e"></param>
-			public override void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e)
-			{
-				RolePlayerPositionChanged(e, false);
-			}
-			
-			internal static void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeAttributeCompa((global::Company.DCMLRACPGProyectoIPS.Atributo)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "AttributeCompa", repaintOnly);
-					}
-				}
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForClaseCShapeMethodCompa((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseCShape), "MethodCompa", repaintOnly);
-					}
-				}
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAttributeCompa((global::Company.DCMLRACPGProyectoIPS.Atributo)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AttributeCompa", repaintOnly);
-					}
-				}
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseHasSignaturadeOperación).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeMethodCompa((global::Company.DCMLRACPGProyectoIPS.SignaturadeOperación)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "MethodCompa", repaintOnly);
-					}
-				}
-				if(typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaTieneMetodoAbstracto).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForClaseAbstractaCShapeAbstractMethodCompa((global::Company.DCMLRACPGProyectoIPS.MétodoAbstracto)e.SourceElement);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Company.DCMLRACPGProyectoIPS.ClaseAbstractaCShape), "AbstractMethodCompa", repaintOnly);
-					}
-				}
-			}
-		}
-	
 	}

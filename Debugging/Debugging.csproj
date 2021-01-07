@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{976392BD-5FC7-4D54-B28A-6C2A8194F101}</ProjectGuid>
+    <ProjectGuid>{1CCE71B2-E63D-4CAB-B265-60FCA6A35C84}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -44,6 +44,10 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="Test.DCMLRACPGProyectoIPS" />
+    <None Include="Test.DCMLRACPGProyectoIPS.diagram">
+      <DependentUpon>Test.DCMLRACPGProyectoIPS</DependentUpon>
+    </None>
     <None Include="DCMLRACPGProyectoIPSReport.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DCMLRACPGProyectoIPSReport.txt</LastGenOutput>
@@ -51,10 +55,6 @@
     <None Include="DCMLRACPGProyectoIPSReportVB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DCMLRACPGProyectoIPSReportVB.txt</LastGenOutput>
-    </None>
-    <None Include="Test.DCMLRACPG_DSLProyIPS" />
-    <None Include="Test.DCMLRACPG_DSLProyIPS.diagram">
-      <DependentUpon>Test.DCMLRACPG_DSLProyIPS</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

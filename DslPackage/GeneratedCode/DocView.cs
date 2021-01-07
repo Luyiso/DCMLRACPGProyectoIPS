@@ -11,7 +11,7 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.
@@ -58,7 +58,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			DslModeling::Partition diagramPartition = docData.GetDiagramPartition();
 			if (diagramPartition != null)
 			{
-				global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram> diagrams = docData.GetDiagramPartition().ElementDirectory.FindElements<global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram>();
+				global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram> diagrams = docData.GetDiagramPartition().ElementDirectory.FindElements<global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram>();
 				if (diagrams.Count > 0)
 				{
 					global::System.Diagnostics.Debug.Assert(diagrams.Count == 1, "Found more than one diagram, using the first one found.");
@@ -84,7 +84,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			get
 			{
-				return global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper.DefaultToolboxTabName;
+				return global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper.DefaultToolboxTabName;
 			}
 		}
 		
@@ -95,7 +95,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			get
 			{
-				return global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper.DefaultToolboxTabToolboxItemsCount;			
+				return global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSToolboxHelper.DefaultToolboxTabToolboxItemsCount;			
 			}
 		}
 		
@@ -122,12 +122,12 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			base.OnSelectionChanged(e);
 
-			if(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance != null)
+			if(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance != null)
 			{
 				DslModeling::ModelElement selectedElement = this.PrimarySelection as DslModeling::ModelElement;
 				if(selectedElement != null)
 				{
-					string f1Keyword = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance.GetHelpKeyword(selectedElement);
+					string f1Keyword = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance.GetHelpKeyword(selectedElement);
 
 					// If this is a presentation element, check the underlying model element for a help keyword
 					DslDiagrams::PresentationElement presentationElement = this.PrimarySelection as DslDiagrams::PresentationElement;
@@ -136,7 +136,7 @@ namespace Company.DCMLRACPGProyectoIPS
 						selectedElement = presentationElement.ModelElement;
 						if(selectedElement != null)
 						{
-							string modelElementKeyword = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance.GetHelpKeyword(selectedElement);
+							string modelElementKeyword = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSHelpKeywordHelper.Instance.GetHelpKeyword(selectedElement);
 							if(string.IsNullOrEmpty(f1Keyword))
 							{
 								// Presentation element does not have an F1 keyword, so push the keyword from the model element as an F1 keyword.

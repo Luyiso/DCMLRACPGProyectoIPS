@@ -14,7 +14,7 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 using VSShellInterop = global::Microsoft.VisualStudio.Shell.Interop;
 using global::System.Linq;
 
-namespace Company.DCMLRACPGProyectoIPS
+namespace UPM_IPS.DCMLRACPGProyectoIPS
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.
@@ -54,7 +54,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			get
 			{
-				return global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("FormatList"); 
+				return global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("FormatList"); 
 			}
 		}
 
@@ -148,7 +148,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			// Log and suppress all binding failure exceptions.
 			string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-				global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("BindingErrorOccurred"),
+				global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("BindingErrorOccurred"),
 				exception.ToString());
 			
 			this.AddErrorListItem(new DslShell::SimpleErrorListItem(errorMessage, this.FileName, global::Microsoft.VisualStudio.Shell.TaskPriority.Normal, global::Microsoft.VisualStudio.Shell.TaskErrorCategory.Warning));
@@ -267,7 +267,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			global::System.Collections.Generic.List<global::System.Type> allTypes = new System.Collections.Generic.List<System.Type>();
 
 			// In the type of our base domain model
-			allTypes.Add(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel));
+			allTypes.Add(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel));
 
 			// Add in any extension domain models
 			global::System.Collections.Generic.IEnumerable<global::System.Type> extensionTypes = this.GetExtensionDomainModels();
@@ -291,7 +291,7 @@ namespace Company.DCMLRACPGProyectoIPS
 				return null;
 			}
 
-			global::System.Collections.Generic.IEnumerable<global::System.Type> extensionDomainModels = this.ExtensionLocator.GetExtendingDomainModels(typeof(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel));
+			global::System.Collections.Generic.IEnumerable<global::System.Type> extensionDomainModels = this.ExtensionLocator.GetExtendingDomainModels(typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel));
 
 			return extensionDomainModels;
 		}
@@ -305,15 +305,15 @@ namespace Company.DCMLRACPGProyectoIPS
 		protected override void Load(string fileName, bool isReload)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Company.DCMLRACPGProyectoIPS.TapizModelo modelRoot = null;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo modelRoot = null;
 			DslModeling::ISchemaResolver schemaResolver = new DslShell::ModelingSchemaResolver(this.ServiceProvider);
 			//clear the current root element
 			this.SetRootElement(null);
 			// Enable diagram fixup rules in our store, because we will load diagram data.
-			global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.EnableDiagramRules(this.Store);
+			global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.EnableDiagramRules(this.Store);
 			string diagramFileName = fileName + this.DiagramExtension;
 			
-			modelRoot = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.LoadModelAndDiagram(serializationResult, this.GetModelPartition(), fileName, this.GetDiagramPartition(), diagramFileName, schemaResolver, null /* no load-time validation */, this.SerializerLocator);
+			modelRoot = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.LoadModelAndDiagram(serializationResult, this.GetModelPartition(), fileName, this.GetDiagramPartition(), diagramFileName, schemaResolver, null /* no load-time validation */, this.SerializerLocator);
 
 			// Report serialization messages.
 			this.SuspendErrorListRefresh();
@@ -332,7 +332,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			if (serializationResult.Failed)
 			{	
 				// Load failed, can't open the file.
-				throw new global::System.InvalidOperationException(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("CannotOpenDocument"));
+				throw new global::System.InvalidOperationException(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("CannotOpenDocument"));
 			}
 			else
 			{
@@ -357,50 +357,10 @@ namespace Company.DCMLRACPGProyectoIPS
 							if (this.diagramDocumentLockHolder == null)
 							{
 								throw new global::System.InvalidOperationException(string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-													global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("CannotCloseExistingDiagramDocument"),
+													global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("CannotCloseExistingDiagramDocument"),
 													diagramFileName));
 							}
 						}
-					}
-				}
-			}
-		}
-
-		/// <summary>
-		/// Called after the document is opened.
-		/// </summary>
-		/// <param name="e">Event Args.</param>
-		protected override void OnDocumentLoaded(global::System.EventArgs e)
-		{
-			base.OnDocumentLoaded(e);
-			this.OnDocumentLoaded();
-		}
-
-		/// <summary>
-		/// Called after the document is reloaded.
-		/// </summary>
-		protected override void OnDocumentReloaded(global::System.EventArgs e)
-		{
-			base.OnDocumentReloaded(e);
-			this.OnDocumentLoaded();
-		}
-		
-		/// <summary>
-		/// Called on both document load and reload.
-		/// </summary>
-		protected virtual void OnDocumentLoaded()
-		{
-			// Enable CompartmentItems events.
-			global::Company.DCMLRACPGProyectoIPS.TapizModelo modelRoot = this.RootElement as global::Company.DCMLRACPGProyectoIPS.TapizModelo;
-			if (modelRoot != null)
-			{
-				global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(modelRoot);
-				if (diagrams.Count > 0)
-				{
-					global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram diagram = diagrams[0] as global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram;
-					if (diagram != null)
-					{
-						diagram.SubscribeCompartmentItemsEvents();
 					}
 				}
 			}
@@ -450,7 +410,7 @@ namespace Company.DCMLRACPGProyectoIPS
 		protected override void Save(string fileName)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Company.DCMLRACPGProyectoIPS.TapizModelo modelRoot = (global::Company.DCMLRACPGProyectoIPS.TapizModelo)this.RootElement;
+			global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo modelRoot = (global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo)this.RootElement;
 
 			
 			// Only save the diagrams if
@@ -463,7 +423,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(this.RootElement);
 			if (diagrams.Count > 0 && (!saveAs || this.diagramDocumentLockHolder == null))
 			{
-				global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram diagram = diagrams[0] as global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram;
+				global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram diagram = diagrams[0] as global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram;
 				if (diagram != null)
 				{
 					string diagramFileName = fileName + this.DiagramExtension;
@@ -471,7 +431,7 @@ namespace Company.DCMLRACPGProyectoIPS
 					{
 						this.SuspendFileChangeNotification(diagramFileName);
 						
-						global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.SaveModelAndDiagram(serializationResult, modelRoot, fileName, diagram, diagramFileName, this.Encoding, false);
+						global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.SaveModelAndDiagram(serializationResult, modelRoot, fileName, diagram, diagramFileName, this.Encoding, false);
 					}
 					finally
 					{
@@ -481,7 +441,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			}
 			else
 			{
-				global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.SaveModel(serializationResult, modelRoot, fileName, this.Encoding, false);
+				global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.SaveModel(serializationResult, modelRoot, fileName, this.Encoding, false);
 			}
 			// Report serialization messages.
 			this.SuspendErrorListRefresh();
@@ -499,7 +459,7 @@ namespace Company.DCMLRACPGProyectoIPS
 
 			if (serializationResult.Failed)
 			{	// Save failed.
-				throw new global::System.InvalidOperationException(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
+				throw new global::System.InvalidOperationException(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
 			}
 		}
 		/// <summary>
@@ -535,14 +495,14 @@ namespace Company.DCMLRACPGProyectoIPS
 			global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(this.RootElement);
 			if (diagrams.Count > 0)
 			{
-				global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram diagram = diagrams[0] as global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram;
+				global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram diagram = diagrams[0] as global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDiagram;
 				if (diagram != null)
 				{
 					try
 					{
 						this.SuspendFileChangeNotification(fileName);
 						
-						global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.SaveDiagram(serializationResult, diagram, fileName, this.Encoding, false);
+						global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.SaveDiagram(serializationResult, diagram, fileName, this.Encoding, false);
 					}
 					finally
 					{
@@ -571,7 +531,7 @@ namespace Company.DCMLRACPGProyectoIPS
 			else
 			{	
 				// Save failed.
-				throw new global::System.InvalidOperationException(global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
+				throw new global::System.InvalidOperationException(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
 			}						
 		}
 		
@@ -596,11 +556,11 @@ namespace Company.DCMLRACPGProyectoIPS
 		{
 			get
 			{
-				global::Company.DCMLRACPGProyectoIPS.TapizModelo modelRoot = this.RootElement as global::Company.DCMLRACPGProyectoIPS.TapizModelo;
+				global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo modelRoot = this.RootElement as global::UPM_IPS.DCMLRACPGProyectoIPS.TapizModelo;
 				string modelFile = string.Empty;
 				if (modelRoot != null)
 				{
-					modelFile = global::Company.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.GetSerializedModelString(modelRoot, this.Encoding);
+					modelFile = global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSSerializationHelper.Instance.GetSerializedModelString(modelRoot, this.Encoding);
 				}
 				return modelFile;
 			}

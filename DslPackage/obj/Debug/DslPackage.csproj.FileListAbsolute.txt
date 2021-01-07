@@ -1,96 +1,199 @@
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\CSharp\1033\DCMLRACPGProyectoIPS.zip
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\VisualBasic\1033\DCMLRACPGProyectoIPS.zip
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\GeneratedCode\DCMLRACPGProyectoIPSSchema.xsd
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Company.DCMLRACPGProyectoIPS.DslPackage.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Company.DCMLRACPGProyectoIPS.DslPackage.pdb
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Company.DCMLRACPGProyectoIPS.DslPackage.pkgdef
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Company.DCMLRACPGProyectoIPS.DslPackage.vsix
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\extension.vsixmanifest
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Company.DCMLRACPGProyectoIPS.Dsl.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.15.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Diagrams.15.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Shell.15.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.15.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Framework.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.12.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.15.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Threading.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.Modeling.15.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\EnvDTE.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Design.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Utilities.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\System.Threading.Tasks.Dataflow.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\System.Collections.Immutable.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Imaging.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Validation.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ImageCatalog.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.Build.Framework.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\VSLangProj.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\VsWebSite.Interop.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\VsWebSite.Interop90.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\EnvDTE80.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.MSXML.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\stdole.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Company.DCMLRACPGProyectoIPS.Dsl.pdb
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.15.0.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Diagrams.15.0.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Shell.15.0.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Threading.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Design.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Utilities.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Imaging.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Validation.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ImageCatalog.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\en\Microsoft.VisualStudio.Imaging.resources.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\en\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.resources.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\DslPackage.csprojAssemblyReference.cache
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\VSPackage.resources
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\DslPackage.csproj.GenerateResource.cache
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\Commands.cto
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\VSCT.read.1.tlog
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\VSCT.write.1.tlog
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\resources.json
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\ctoFiles.json
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\VSPackage.resources.original
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\mergeCto.cache
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\DslPackage.csproj.CoreCompileInputs.cache
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\DslPackage.csproj.CopyComplete
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\Company.DCMLRACPGProyectoIPS.DslPackage.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\Company.DCMLRACPGProyectoIPS.DslPackage.pdb
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\Company.DCMLRACPGProyectoIPS.DslPackage.pkgdef
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\Company.DCMLRACPGProyectoIPS.DslPackage.latest.pkgdef
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\extension.vsixmanifest
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\files.json
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\TemplateManifests\templateManifest0.1033.vstman
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\ItemTemplates\CSharp\1033\DCMLRACPGProyectoIPS\CSharp.vstemplate
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\ItemTemplates\CSharp\1033\DCMLRACPGProyectoIPS\DCMLRACPG_DSLProyIPS.DCMLRACPG_DSLProyIPS
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\ItemTemplates\CSharp\1033\DCMLRACPGProyectoIPS\DCMLRACPG_DSLProyIPS.diagram
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\DCMLRACPGProyectoIPS\VisualBasic.vstemplate
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\DCMLRACPGProyectoIPS\DCMLRACPG_DSLProyIPS.DCMLRACPG_DSLProyIPS
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\DCMLRACPGProyectoIPS\DCMLRACPG_DSLProyIPS.diagram
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\obj\Debug\templateFiles.json
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\CSharp\1033\DCMLRACPGProyectoIPS.zip
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\VisualBasic\1033\DCMLRACPGProyectoIPS.zip
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\GeneratedCode\DCMLRACPGProyectoIPSSchema.xsd
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.pdb
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.pkgdef
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.vsix
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\extension.vsixmanifest
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.15.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Diagrams.15.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Shell.15.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.15.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Framework.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.12.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.15.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Threading.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.Modeling.15.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\EnvDTE.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Design.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Utilities.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\System.Threading.Tasks.Dataflow.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\System.Collections.Immutable.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Imaging.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Validation.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ImageCatalog.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.Build.Framework.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\VSLangProj.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\VsWebSite.Interop.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\VsWebSite.Interop90.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\EnvDTE80.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.MSXML.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\stdole.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.Dsl.pdb
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.15.0.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Diagrams.15.0.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Shell.15.0.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Threading.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Design.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Utilities.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Imaging.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Validation.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ImageCatalog.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\en\Microsoft.VisualStudio.Imaging.resources.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\bin\Debug\en\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.resources.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\DslPackage.csprojAssemblyReference.cache
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\VSPackage.resources
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\DslPackage.csproj.GenerateResource.cache
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\Commands.cto
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\VSCT.read.1.tlog
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\VSCT.write.1.tlog
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\resources.json
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\ctoFiles.json
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\VSPackage.resources.original
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\mergeCto.cache
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\DslPackage.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\DslPackage.csproj.CopyComplete
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.pdb
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.pkgdef
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.latest.pkgdef
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\extension.vsixmanifest
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\files.json
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\TemplateManifests\templateManifest0.1033.vstman
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\CSharp\1033\DCMLRACPGProyectoIPS\CSharp.vstemplate
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\CSharp\1033\DCMLRACPGProyectoIPS\DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\CSharp\1033\DCMLRACPGProyectoIPS\DCMLRACPGProyectoIPS.diagram
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\DCMLRACPGProyectoIPS\VisualBasic.vstemplate
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\DCMLRACPGProyectoIPS\DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\DCMLRACPGProyectoIPS\DCMLRACPGProyectoIPS.diagram
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyIPS\DslPackage\obj\Debug\templateFiles.json
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\CSharp\1033\DCMLRACPGProyectoIPS.zip
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\VisualBasic\1033\DCMLRACPGProyectoIPS.zip
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\GeneratedCode\DCMLRACPGProyectoIPSSchema.xsd
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.pdb
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.pkgdef
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.vsix
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\extension.vsixmanifest
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.15.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Diagrams.15.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Shell.15.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.15.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Framework.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.12.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.15.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Threading.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.Dsl.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextTemplating.Modeling.15.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\EnvDTE.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Design.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Utilities.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Telemetry.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\System.Collections.Immutable.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Imaging.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Validation.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ImageCatalog.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\VSLangProj.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\VsWebSite.Interop.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\VsWebSite.Interop90.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\EnvDTE80.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.MSXML.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\stdole.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\System.IO.Pipelines.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\System.Memory.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.RemoteControl.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Utilities.Internal.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\System.Buffers.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.Dsl.pdb
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.15.0.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Diagrams.15.0.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Shell.15.0.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Threading.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Design.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Utilities.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Imaging.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Validation.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ImageCatalog.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.GraphModel.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\en\Microsoft.VisualStudio.Imaging.resources.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\bin\Debug\en\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.resources.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\DslPackage.csprojAssemblyReference.cache
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\VSPackage.resources
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\DslPackage.csproj.GenerateResource.cache
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\Commands.cto
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\VSCT.read.1.tlog
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\VSCT.write.1.tlog
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\resources.json
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\ctoFiles.json
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\VSPackage.resources.original
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\mergeCto.cache
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\DslPackage.csproj.CoreCompileInputs.cache
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\DslPackage.csproj.CopyComplete
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.dll
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.pdb
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.pkgdef
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\UPM_IPS.DCMLRACPGProyectoIPS.DslPackage.latest.pkgdef
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\extension.vsixmanifest
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\files.json
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\TemplateManifests\templateManifest0.1033.vstman
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\CSharp\1033\DCMLRACPGProyectoIPS\CSharp.vstemplate
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\CSharp\1033\DCMLRACPGProyectoIPS\DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\CSharp\1033\DCMLRACPGProyectoIPS\DCMLRACPGProyectoIPS.diagram
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\DCMLRACPGProyectoIPS\VisualBasic.vstemplate
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\DCMLRACPGProyectoIPS\DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPS
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\DCMLRACPGProyectoIPS\DCMLRACPGProyectoIPS.diagram
+C:\Users\charl\Desktop\DCMLRACPGProyIPS\DslPackage\obj\Debug\templateFiles.json

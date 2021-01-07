@@ -7,7 +7,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2DA952C6-85F4-4753-A188-2A5969E0D578}</ProjectGuid>
+    <ProjectGuid>{B3C49466-F364-486A-8208-43930902ACFF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UPM_IPS.DCMLRACPGProyectoIPS</RootNamespace>
@@ -74,19 +74,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
     <None Include="..\Key.snk">
       <Link>Key.snk</Link>
     </None>
-    <None Include="app.config" />
     <None Include="GeneratedCode\SerializationHelper.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
+    <Compile Include="CodigoAdicional\FixUpDiagram.cs" />
+    <Compile Include="DesignerCustomization\Parametro.cs" />
+    <Compile Include="DesignerCustomization\Metodo.cs" />
+    <Compile Include="DesignerCustomization\Atributo.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,13 +161,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Serializer.tt</DependentUpon>
     </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\ClaseAbs.bmp" />
+    <Content Include="Resources\Agregacion.bmp" />
+    <Content Include="Resources\Atributo.bmp" />
+    <Content Include="Resources\ClaseAbstractaMetodo.bmp" />
+    <Content Include="Resources\ClaseAtributo.bmp" />
+    <Content Include="Resources\ClaseMétodo.bmp" />
+    <Content Include="Resources\Herencia.bmp" />
+    <Content Include="Resources\Método.bmp" />
+    <Content Include="Resources\MétodoAbs.bmp" />
+    <Content Include="Resources\Parámetro.bmp" />
     <Content Include="Resources\Referencia.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
@@ -262,6 +264,7 @@
       <Link>CodeAnalysisDictionary.xml</Link>
     </CodeAnalysisDictionary>
     <Content Include="Resources\Clase.bmp" />
+    <Content Include="Resources\ClaseAbs.bmp" />
     <Content Include="Resources\ExampleConnectorToolBitmap.bmp" />
     <Content Include="Resources\ExampleShapeToolBitmap.bmp" />
     <EmbeddedResource Include="Resources\ConnectorSourceSearch.cur" />
