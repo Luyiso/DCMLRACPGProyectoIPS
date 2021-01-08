@@ -61,6 +61,12 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Clase1.html">
+      <DependentUpon>Informe.tt</DependentUpon>
+    </Content>
+    <Content Include="Clase2.html">
+      <DependentUpon>Informe.tt</DependentUpon>
+    </Content>
     <Content Include="DCMLRACPGProyectoIPSReport.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,6 +76,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DCMLRACPGProyectoIPSReportVB.tt</DependentUpon>
+    </Content>
+    <Content Include="Ejemplo.html">
+      <DependentUpon>Informe.tt</DependentUpon>
+    </Content>
+    <Content Include="Informe.html">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Informe.tt</DependentUpon>
+    </Content>
+    <Content Include="Informe.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Informe.html</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

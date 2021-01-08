@@ -1,0 +1,198 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True" #>
+<#@ output extension=".html" #>
+<#@ DCMLRACPGProyectoIPS processor="DCMLRACPGProyectoIPSDirectiveProcessor" requires="fileName='Test.DCMLRACPGProyectoIPS'" #>
+
+<#@ include file="EF.utility.CS.ttinclude" #>
+
+
+	<#
+		
+		var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+		if (this.TapizModelo.Clase.Count ==0){
+		#>
+<html>
+	<head>
+		<title>
+			Diagrama Vacío
+		</title>
+		<style>
+table.Clase {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 6px solid #AA5070;
+  background-color: #575A7B;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  border-radius: 25px;
+}
+table.Clase td, table.Clase th {
+  padding: 3px 3px;
+}
+table.Clase tbody td {
+  font-size: 13px;
+  color: #BCC9DF;
+}
+table.Clase thead {
+  }
+table.Clase thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #BCC9DF;
+  text-align: center;
+}
+table.Clase tfoot td {
+  font-size: 13px;
+}
+</style>
+	</head>
+<body>
+El diagrama no contiene elementos
+</body>
+</html>
+<#
+		}
+		else
+		foreach (Clase i in this.TapizModelo.Clase)
+		{
+			if(i is ClaseAbstracta)
+			{}
+		else
+		{
+
+// la siguiente sentencia crea un fichero concreto. Una vez creado, toda la
+// salida va a este fichero hasta que se cree otro nuevo fichero
+			fileManager.StartNewFile(i.Name + ".html");
+			#>
+<html>
+	<head>
+		<title>
+			<#WriteLine(i.Name);#>
+		</title>
+		<style>
+table.Clase {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 6px solid #AA5070;
+  background-color: #575A7B;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  border-radius: 25px;
+}
+table.Clase td, table.Clase th {
+  padding: 3px 3px;
+}
+table.Clase tbody td {
+  font-size: 13px;
+  color: #BCC9DF;
+}
+table.Clase thead {
+  }
+table.Clase thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #BCC9DF;
+  text-align: center;
+}
+table.Clase tfoot td {
+  font-size: 13px;
+}
+</style>
+	</head>
+	<#
+	if(i.Enriquecida){}
+	else{
+	#>
+	<body>
+	<table class="Clase" style="height: 169px;" width="154">
+<thead>
+<tr>
+<th><#WriteLine(i.Name);#></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><#WriteLine("ID = " + i.Identificador);#></td>
+</tr>
+<##>
+<tr>
+<td>SuperClase = <#WriteLine("OwO");#></td>
+</tr>
+<##>
+<#
+if (i.Atributo.Count> 0){
+foreach (Atributo j in i.Atributo)
+		{
+		#>
+		<tr>
+		<td><# WriteLine(j.Name + " = " + j.NameTipo + "(" + j.TipoDatos + ")"); #></td>
+		</tr>
+		<#
+		}
+		}
+if (i.Metodo.Count> 0){
+foreach (Metodo j in i.Metodo)
+		{
+		#>
+		<tr>
+			<td>
+			<# 
+			if(j is MétodoAbstracto) WriteLine ("(Abstracto) "); 
+			WriteLine(j.Name + " = " + j.NameTipoRetorno + "(" + j.TipoRetorno + ")"); #>
+			</td>
+		</tr>
+		<#
+		if (j.Parametro.Count> 0){
+			foreach (Parametro k in j.Parametro)
+			{
+			#>
+			<tr>
+				<td>&tab
+					<# 
+					WriteLine(k.Nombre + " ( " + k.TipoDato + " ) " + k.TipoParametro.ToString() + ")" + "<br />" + k.Detalles); 
+					#>
+				</td>
+			</tr>
+		<#
+			}}
+		}
+		}
+if (i.TargetClase.Count> 0){
+	#><tr><td><#
+	WriteLine("Asociaciones: "); 
+	#></td></tr><#
+	foreach(Asociacion a in Asociacion.GetLinksToSourceClase(i))
+		{
+		#>
+		<tr>
+		<td> &tab
+		<# 
+		WriteLine(a.Nombre + " Cardinalidad Origen = " + a.CardinalidadMinimaSource.ToString() + ".." + a.CardinalidadMaximaSource.ToString() +  
+							" Nombre Objetivo = " + a.TargetClase.Name +  
+							" Cardinalidad Objetivo = " + a.CardinalidadMinimaTarget.ToString() + ".." + a.CardinalidadMaximaTarget.ToString()); 
+		#>
+		</td>
+		</tr>
+		<#
+		}
+	}
+
+	#>
+</tbody>
+</table> 
+			<#
+			
+	}
+	#>
+	
+
+</body>
+</html>
+<#
+		}
+	}
+// cierra el proceso de creación de ficheros del documento. Debe hacerse
+// antes de empezar a declarar funciones de la plantilla
+		fileManager.Process();
+
+	#>
+

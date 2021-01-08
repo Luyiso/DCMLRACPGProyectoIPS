@@ -2,7 +2,7 @@
 <tapizModelo xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="51462126-bb25-4f28-8218-0997a0cff0d7" xmlns="http://schemas.microsoft.com/dsltools/DCMLRACPGProyectoIPS">
   <clase>
     <tapizModeloHasClase Id="e6dab6c7-f42b-437f-99b8-b2ea8e344081">
-      <clase Id="2e97b175-38c3-47a7-be65-078cfd62e781" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Ejemplo">
+      <clase Id="2e97b175-38c3-47a7-be65-078cfd62e781" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Ejemplo" identificador="33">
         <targetClase>
           <asociacion Id="17768060-8c5b-49da-a62a-dd1d5cd51569" cardinalidadMinimaSource="Cero" cardinalidadMinimaTarget="Cero" cardinalidadMaximaSource="Cero" cardinalidadMaximaTarget="Cero">
             <claseMoniker Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" />
@@ -15,7 +15,7 @@
         </atributo>
         <metodo>
           <claseHasMetodo Id="1b72c20f-20bc-4d27-80c1-d6370fb3d7ef">
-            <metodo Id="9afe30e8-af74-4e3c-a4af-e4f349afac35" tipoLetra="Arial" colorLetraR="0" colorLetraG="0" colorLetraB="0" enriquecido="false" name="Metodo" tipoRetorno="Int" />
+            <metodo Id="9afe30e8-af74-4e3c-a4af-e4f349afac35" tipoLetra="Arial" colorLetraR="0" colorLetraG="0" colorLetraB="0" enriquecido="false" name="Ejecutar" tipoRetorno="Int" />
           </claseHasMetodo>
         </metodo>
       </clase>

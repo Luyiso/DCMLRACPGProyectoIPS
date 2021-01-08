@@ -13,20 +13,6 @@
         </metodoShape>
       </nestedChildShapes>
     </claseCShape>
-    <claseAtributoConnector Id="e8203974-4a15-4a65-b6b3-4f2749019282" edgePoints="[(4.625 : 2.125); (4.625 : 2.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <claseHasAtributoMoniker Id="bedac5eb-e2f9-45ff-8855-04464b7abd8b" />
-      <nodes>
-        <claseCShapeMoniker Id="da811479-5e7f-4cb2-9875-2e717888a0f2" />
-        <atributoShapeMoniker Id="a95bc9d4-ab9d-41cb-acf1-95c0f1295132" />
-      </nodes>
-    </claseAtributoConnector>
-    <claseMetodo Id="8c0fa11f-110c-47e8-a785-af44aa31a61f" edgePoints="[(3.3125 : 2.125); (3.3125 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <claseHasMetodoMoniker Id="1b72c20f-20bc-4d27-80c1-d6370fb3d7ef" />
-      <nodes>
-        <claseCShapeMoniker Id="da811479-5e7f-4cb2-9875-2e717888a0f2" />
-        <metodoShapeMoniker Id="9c078a5a-3c99-4d29-9978-bbed8ecc5ce1" />
-      </nodes>
-    </claseMetodo>
     <claseCShape Id="7baf682c-04fd-435e-aaaf-411b565b65a3" absoluteBounds="8.25, 2.25, 1.5, 1">
       <claseMoniker Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" />
     </claseCShape>
@@ -52,20 +38,6 @@
         </metodoShape>
       </nestedChildShapes>
     </claseAbstractaCShape>
-    <claseAtributoConnector Id="869be9b6-102b-4497-a3ef-29807d4b58ec" edgePoints="[(2.75 : 6); (4.125 : 6)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <claseHasAtributoMoniker Id="a992afd1-6c05-47c7-8b12-d481f385a58d" />
-      <nodes>
-        <claseAbstractaCShapeMoniker Id="56e8f906-7ec4-45b0-a108-85c96ecf9a39" />
-        <atributoShapeMoniker Id="2b8b07f3-81c2-44d5-8be5-c2e2dd82b551" />
-      </nodes>
-    </claseAtributoConnector>
-    <claseMetodo Id="c79f2c7e-baa7-41a4-b272-109738767c27" edgePoints="[(5.5 : 5.75); (4.375 : 5.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <claseHasMetodoMoniker Id="bc5c4b94-9b10-40b6-9d62-0dc6a5829653" />
-      <nodes>
-        <claseAbstractaCShapeMoniker Id="56e8f906-7ec4-45b0-a108-85c96ecf9a39" />
-        <metodoShapeMoniker Id="a9a3a97c-d873-4c2a-9ba7-7bc21fe06458" />
-      </nodes>
-    </claseMetodo>
     <herenciaConector Id="6afef885-e023-4767-a5a2-f5ec70dda873" edgePoints="[(4.0625 : 4.75); (4.0625 : 3.35)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <herenciaMoniker Id="dde77cdd-9fac-45b3-a81d-07c77ffda98a" />
       <relativeChildShapes />
