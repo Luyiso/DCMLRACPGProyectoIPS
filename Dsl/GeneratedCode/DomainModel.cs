@@ -615,11 +615,11 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 	public enum TipoLetra
 	{
 		/// <summary>
-		/// ComicSans
-		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.ComicSans
+		/// ComicSansMS
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.ComicSansMS
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/ComicSans.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		ComicSans = 2,
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/ComicSansMS.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		ComicSansMS = 2,
 		/// <summary>
 		/// Papyrus
 		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Papyrus
@@ -754,11 +754,11 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 	public enum TipoLetra1
 	{
 		/// <summary>
-		/// ComicSans
-		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.ComicSans
+		/// ComicSansMS
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.ComicSansMS
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/ComicSans.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
-		ComicSans = 2,
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/ComicSansMS.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		ComicSansMS = 2,
 		/// <summary>
 		/// Papyrus
 		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Papyrus
@@ -806,6 +806,41 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean/RadioButton.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		RadioButton = 1,
+	}
+}
+namespace UPM_IPS.DCMLRACPGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: Alineacion
+	/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Alineacion
+	{
+		/// <summary>
+		/// left
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.left
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/left.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		left = 0,
+		/// <summary>
+		/// center
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.center
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/center.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		center = 1,
+		/// <summary>
+		/// right
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.right
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/right.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		right = 2,
+		/// <summary>
+		/// justify
+		/// Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.justify
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/justify.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
+		justify = 3,
 	}
 }
 

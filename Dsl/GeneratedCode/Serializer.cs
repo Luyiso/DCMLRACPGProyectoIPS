@@ -5587,14 +5587,14 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 				string attribAlineacion = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "alineacion");
 				if (attribAlineacion != null)
 				{
-					global::System.String valueOfAlineacion;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribAlineacion, out valueOfAlineacion))
+					Alineacion valueOfAlineacion;
+					if (DslModeling::SerializationUtilities.TryGetValue<Alineacion>(serializationContext, attribAlineacion, out valueOfAlineacion))
 					{
 						instanceOfClaseEnriquecida.Alineacion = valueOfAlineacion;
 					}
 					else
 					{	// Invalid property value, ignored.
-						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacion", typeof(global::System.String), attribAlineacion);
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacion", typeof(Alineacion), attribAlineacion);
 					}
 				}
 			}
@@ -5604,14 +5604,14 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 				string attribNombreColorB = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nombreColorB");
 				if (attribNombreColorB != null)
 				{
-					global::System.String valueOfNombreColorB;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribNombreColorB, out valueOfNombreColorB))
+					global::System.Int16 valueOfNombreColorB;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribNombreColorB, out valueOfNombreColorB))
 					{
 						instanceOfClaseEnriquecida.NombreColorB = valueOfNombreColorB;
 					}
 					else
 					{	// Invalid property value, ignored.
-						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombreColorB", typeof(global::System.String), attribNombreColorB);
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombreColorB", typeof(global::System.Int16), attribNombreColorB);
 					}
 				}
 			}
@@ -5990,23 +5990,21 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 			// Alineacion
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfClaseEnriquecida.Alineacion;
+				Alineacion propValue = instanceOfClaseEnriquecida.Alineacion;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Alineacion>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacion", propValue);
-	
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacion", serializedPropValue);
 				}
 			}
 			// NombreColorB
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfClaseEnriquecida.NombreColorB;
+				global::System.Int16 propValue = instanceOfClaseEnriquecida.NombreColorB;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreColorB", propValue);
-	
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreColorB", serializedPropValue);
 				}
 			}
 		}

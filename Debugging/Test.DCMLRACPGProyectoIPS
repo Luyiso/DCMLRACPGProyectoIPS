@@ -2,7 +2,7 @@
 <tapizModelo xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="51462126-bb25-4f28-8218-0997a0cff0d7" xmlns="http://schemas.microsoft.com/dsltools/DCMLRACPGProyectoIPS">
   <clase>
     <tapizModeloHasClase Id="e6dab6c7-f42b-437f-99b8-b2ea8e344081">
-      <clase Id="2e97b175-38c3-47a7-be65-078cfd62e781" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Ejemplo" identificador="33">
+      <clase Id="2e97b175-38c3-47a7-be65-078cfd62e781" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" alineacion="left" nombreColorB="0" name="Ejemplo" identificador="33">
         <targetClase>
           <asociacion Id="17768060-8c5b-49da-a62a-dd1d5cd51569" cardinalidadMinimaSource="Cero" cardinalidadMinimaTarget="Cero" cardinalidadMaximaSource="Cero" cardinalidadMaximaTarget="Cero">
             <claseMoniker Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" />
@@ -15,16 +15,16 @@
         </atributo>
         <metodo>
           <claseHasMetodo Id="1b72c20f-20bc-4d27-80c1-d6370fb3d7ef">
-            <metodo Id="9afe30e8-af74-4e3c-a4af-e4f349afac35" tipoLetra="Arial" colorLetraR="0" colorLetraG="0" colorLetraB="0" enriquecido="false" name="Ejecutar" tipoRetorno="Int" />
+            <metodo Id="9afe30e8-af74-4e3c-a4af-e4f349afac35" tipoLetra="ComicSansMS" colorLetraR="255" colorLetraG="255" colorLetraB="255" enriquecido="false" name="Ejecutar" tipoRetorno="Int" />
           </claseHasMetodo>
         </metodo>
       </clase>
     </tapizModeloHasClase>
     <tapizModeloHasClase Id="895aaad7-e10f-429c-8eb9-2539c8d23a78">
-      <clase Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Clase1" />
+      <clase Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" alineacion="left" nombreColorB="0" name="Clase1" />
     </tapizModeloHasClase>
     <tapizModeloHasClase Id="e1fe30f2-e053-43ef-9499-6331518d882a">
-      <claseAbstracta Id="324c3a2d-e483-4039-9d8a-ac6fb04d5592" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="ClaseAbstracta1">
+      <claseAbstracta Id="324c3a2d-e483-4039-9d8a-ac6fb04d5592" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" alineacion="left" nombreColorB="0" name="ClaseAbstracta1">
         <compuesta>
           <agregacion Id="476d98b9-f565-4f89-b70e-f75c37636d1e" nombre="Agregacion1" cardMinComponente="Cero" cardMaxComponente="Cero" cardMinCompuesta="Cero" cardMaxCompuesta="Cero">
             <claseMoniker Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" />
@@ -48,7 +48,7 @@
       </claseAbstracta>
     </tapizModeloHasClase>
     <tapizModeloHasClase Id="29340707-3706-467a-8859-0dca05da4bc8">
-      <clase Id="b86e6c5f-54e8-47a9-81a6-778e4befeea1" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" name="Clase2">
+      <clase Id="b86e6c5f-54e8-47a9-81a6-778e4befeea1" enriquecida="false" fondoColorR="0" fondoColorG="0" fondoColorB="0" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" alineacion="left" nombreColorB="0" name="Clase2">
         <atributo>
           <claseHasAtributo Id="85a857ed-6ef8-4752-8679-245801f43ccd">
             <atributo Id="96b3bf0f-7096-4582-8f02-34e65f734baf" colorLetraR="0" colorLetraG="0" colorLetraB="0" tipoLetra="Arial" formatoBooleano="Checkbox" enriquecido="false" name="Atributo1" />

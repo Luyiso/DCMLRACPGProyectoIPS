@@ -165,12 +165,12 @@
         </DomainProperty>
         <DomainProperty Id="906a22d7-4ca8-4344-a5bd-e5c330d26ca8" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Alineacion" Name="Alineacion" DisplayName="Alineacion">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Alineacion" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="0f360cd1-7f83-4ac6-9dab-c1372941a6d2" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida.Nombre Color B" Name="NombreColorB" DisplayName="Nombre Color B">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -474,7 +474,7 @@
     </DomainEnumeration>
     <DomainEnumeration Name="TipoLetra" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra">
       <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.ComicSans" Name="ComicSans" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.ComicSansMS" Name="ComicSansMS" Value="2" />
         <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Papyrus" Name="Papyrus" Value="3" />
         <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Wingdings" Name="Wingdings" Value="4" />
         <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.Arial" Name="Arial" Value="0" />
@@ -510,7 +510,7 @@
     </DomainEnumeration>
     <DomainEnumeration Name="TipoLetra1" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1">
       <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.ComicSans" Name="ComicSans" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.ComicSansMS" Name="ComicSansMS" Value="2" />
         <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Papyrus" Name="Papyrus" Value="3" />
         <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Wingdings" Name="Wingdings" Value="4" />
         <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.Arial" Name="Arial" Value="0" />
@@ -521,6 +521,14 @@
       <Literals>
         <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean.Checkbox" Name="Checkbox" Value="0" />
         <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean.RadioButton" Name="RadioButton" Value="1" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="Alineacion" Namespace="UPM_IPS.DCMLRACPGProyectoIPS" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.left" Name="left" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.center" Name="center" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.right" Name="right" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.justify" Name="justify" Value="3" />
       </Literals>
     </DomainEnumeration>
   </Types>

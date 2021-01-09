@@ -2417,7 +2417,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// Storage for Alineacion
 		/// </summary>
-		private global::System.String alineacionPropertyStorage = string.Empty;
+		private Alineacion alineacionPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of Alineacion domain property.
@@ -2426,7 +2426,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida/Alineacion.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida/Alineacion.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("906a22d7-4ca8-4344-a5bd-e5c330d26ca8")]
-		public global::System.String Alineacion
+		public Alineacion Alineacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2442,7 +2442,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// Value handler for the ClaseEnriquecida.Alineacion domain property.
 		/// </summary>
-		internal sealed partial class AlineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.String>
+		internal sealed partial class AlineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, Alineacion>
 		{
 			private AlineacionPropertyHandler() { }
 		
@@ -2468,7 +2468,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ClaseEnriquecida element)
+			public override sealed Alineacion GetValue(ClaseEnriquecida element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.alineacionPropertyStorage;
@@ -2479,11 +2479,11 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClaseEnriquecida element, global::System.String newValue)
+			public override sealed void SetValue(ClaseEnriquecida element, Alineacion newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Alineacion oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2504,7 +2504,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// Storage for NombreColorB
 		/// </summary>
-		private global::System.String nombreColorBPropertyStorage = string.Empty;
+		private global::System.Int16 nombreColorBPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of NombreColorB domain property.
@@ -2513,7 +2513,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorB.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.ClaseEnriquecida/NombreColorB.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("0f360cd1-7f83-4ac6-9dab-c1372941a6d2")]
-		public global::System.String NombreColorB
+		public global::System.Int16 NombreColorB
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2529,7 +2529,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// Value handler for the ClaseEnriquecida.NombreColorB domain property.
 		/// </summary>
-		internal sealed partial class NombreColorBPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.String>
+		internal sealed partial class NombreColorBPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.Int16>
 		{
 			private NombreColorBPropertyHandler() { }
 		
@@ -2555,7 +2555,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ClaseEnriquecida element)
+			public override sealed global::System.Int16 GetValue(ClaseEnriquecida element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.nombreColorBPropertyStorage;
@@ -2566,11 +2566,11 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClaseEnriquecida element, global::System.String newValue)
+			public override sealed void SetValue(ClaseEnriquecida element, global::System.Int16 newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				global::System.Int16 oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

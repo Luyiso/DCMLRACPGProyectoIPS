@@ -4,3 +4,9 @@ C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\obj\Debug\Debugging.csprojAsse
 C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
 C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\obj\Debug\Debugging.dll
 C:\Users\charl\Desktop\DCMLRACPGProyIPS\Debugging\obj\Debug\Debugging.pdb
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Debugging\bin\Debug\Debugging.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Debugging\bin\Debug\Debugging.pdb
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Debugging\obj\Debug\Debugging.csprojAssemblyReference.cache
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Debugging\obj\Debug\Debugging.dll
+D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\Debugging\obj\Debug\Debugging.pdb

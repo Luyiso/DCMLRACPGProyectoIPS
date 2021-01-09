@@ -869,13 +869,13 @@
     <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoParametro.EntradaSalida</value>
     <comment>Description for EnumerationLiteral &apos;EntradaSalida&apos; on DomainEnumeration &apos;TipoParametro&apos;</comment>
   </data>
-  <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/ComicSans.DisplayName" xml:space="preserve">
-    <value>ComicSans</value>
-    <comment>Display name for EnumerationLiteral &apos;ComicSans&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/ComicSansMS.DisplayName" xml:space="preserve">
+    <value>ComicSansMS</value>
+    <comment>Display name for EnumerationLiteral &apos;ComicSansMS&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
   </data>
-  <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/ComicSans.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.ComicSans</value>
-    <comment>Description for EnumerationLiteral &apos;ComicSans&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/ComicSansMS.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra.ComicSansMS</value>
+    <comment>Description for EnumerationLiteral &apos;ComicSansMS&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
   </data>
   <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra/Papyrus.DisplayName" xml:space="preserve">
     <value>Papyrus</value>
@@ -981,13 +981,13 @@
     <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoAgregación.Referencial</value>
     <comment>Description for EnumerationLiteral &apos;Referencial&apos; on DomainEnumeration &apos;TipoAgregación&apos;</comment>
   </data>
-  <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/ComicSans.DisplayName" xml:space="preserve">
-    <value>ComicSans</value>
-    <comment>Display name for EnumerationLiteral &apos;ComicSans&apos; on DomainEnumeration &apos;TipoLetra1&apos;</comment>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/ComicSansMS.DisplayName" xml:space="preserve">
+    <value>ComicSansMS</value>
+    <comment>Display name for EnumerationLiteral &apos;ComicSansMS&apos; on DomainEnumeration &apos;TipoLetra1&apos;</comment>
   </data>
-  <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/ComicSans.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.ComicSans</value>
-    <comment>Description for EnumerationLiteral &apos;ComicSans&apos; on DomainEnumeration &apos;TipoLetra1&apos;</comment>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/ComicSansMS.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1.ComicSansMS</value>
+    <comment>Description for EnumerationLiteral &apos;ComicSansMS&apos; on DomainEnumeration &apos;TipoLetra1&apos;</comment>
   </data>
   <data name="UPM_IPS.DCMLRACPGProyectoIPS.TipoLetra1/Papyrus.DisplayName" xml:space="preserve">
     <value>Papyrus</value>
@@ -1036,6 +1036,38 @@
   <data name="UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean/RadioButton.Description" xml:space="preserve">
     <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.FormatoBoolean.RadioButton</value>
     <comment>Description for EnumerationLiteral &apos;RadioButton&apos; on DomainEnumeration &apos;FormatoBoolean&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/left.DisplayName" xml:space="preserve">
+    <value>left</value>
+    <comment>Display name for EnumerationLiteral &apos;left&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/left.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.left</value>
+    <comment>Description for EnumerationLiteral &apos;left&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/center.DisplayName" xml:space="preserve">
+    <value>center</value>
+    <comment>Display name for EnumerationLiteral &apos;center&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/center.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.center</value>
+    <comment>Description for EnumerationLiteral &apos;center&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/right.DisplayName" xml:space="preserve">
+    <value>right</value>
+    <comment>Display name for EnumerationLiteral &apos;right&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/right.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.right</value>
+    <comment>Description for EnumerationLiteral &apos;right&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/justify.DisplayName" xml:space="preserve">
+    <value>justify</value>
+    <comment>Display name for EnumerationLiteral &apos;justify&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DCMLRACPGProyectoIPS.Alineacion/justify.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.Alineacion.justify</value>
+    <comment>Description for EnumerationLiteral &apos;justify&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
   </data>
   <data name="UPM_IPS.DCMLRACPGProyectoIPS.ClaseCShape.Description" xml:space="preserve">
     <value>Description for UPM_IPS.DCMLRACPGProyectoIPS.ClaseCShape</value>

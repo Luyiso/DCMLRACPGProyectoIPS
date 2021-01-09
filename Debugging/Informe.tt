@@ -27,9 +27,14 @@ El diagrama no contiene elementos
 			{}
 		else
 		{
-			string colorTexto = i.NombreColorR.ToString("X") + i.NombreColorG.ToString("X") + i.NombreColorB.ToString("X"); 
-			string colorFondo = i.FondoColorR.ToString("X") + i.FondoColorG.ToString("X") + i.FondoColorB.ToString("X"); 
+			string colorTexto = "000000";
+			if(0<=i.NombreColorR && i.NombreColorR<=255 && 0<=i.NombreColorG && i.NombreColorG<=255 && 0<=i.NombreColorB && i.NombreColorR<=255)
+			colorTexto = i.NombreColorR.ToString("X") + i.NombreColorG.ToString("X") + i.NombreColorB.ToString("X"); 
+			string colorFondo = "FFFFFF";
+			if(0<=i.FondoColorR && i.FondoColorR<=255 && 0<=i.FondoColorG && i.FondoColorG<=255 && 0<=i.FondoColorB && i.FondoColorR<=255)
+			colorFondo = i.FondoColorR.ToString("X") + i.FondoColorG.ToString("X") + i.FondoColorB.ToString("X"); 
 			string tipoLetra = i.TipoLetra.ToString();
+			if(tipoLetra == "ComicSansMS") tipoLetra = "Comic Sans MS";
 			string alineacion = i.Alineacion.ToString();
 			fileManager.StartNewFile(i.Name + ".html");
 #>
@@ -68,8 +73,21 @@ table.Clase tfoot td {
 }
 </style>
 </head>
-<body>
-	<table class="Clase" style="height: 169px;" width="154">
+
+	<body>	
+	<table class="Clase" style="height: 169px; 
+						<# 
+						if(i.Enriquecida)
+							{
+							#>
+							text-align : <#WriteLine(alineacion);#>;
+							color : <#WriteLine(colorTexto);#>; 
+							font :  <#WriteLine(tipoLetra);#>;
+							<#
+							}
+							#>" 
+							width="154" 
+						>
 	<thead>
 	<tr>
 	<th>
@@ -88,7 +106,7 @@ table.Clase tfoot td {
 			</td>
 		</tr>
 <#
-if(i.SuperClase#!=null){
+if(i.SuperClase != null){}
 #>
 <tr>
 	<td>
@@ -108,14 +126,40 @@ if (i.Atributo.Count> 0){
 	<#
 	foreach (Atributo j in i.Atributo)
 		{
-		string colorTextoAtributo = j.ColorLetraR.ToString("X") + j.ColorLetraG.ToString("X") + j.ColorLetraB.ToString("X"); 
+		string colorTextoAtributo = "000000";
+		if(0<=j.ColorLetraR && j.ColorLetraR<=255 && 0<=j.ColorLetraG && j.ColorLetraG<=255 && 0<=j.ColorLetraB && j.ColorLetraB<=255)
+		colorTextoAtributo = "#" + j.ColorLetraR.ToString("X") + j.ColorLetraG.ToString("X") + j.ColorLetraB.ToString("X"); 
 		string tipoLetraAtributo = j.TipoLetra.ToString();
-		string booleanoAtributo = j.FormatoBooleano.ToString();
+		if(tipoLetraAtributo == "ComicSansMS") tipoLetraAtributo = "Comic Sans MS";
 		#>
 		<tr>
-		<#if(j.Enriquecido){#><td style = "color : <#WriteLine("#" + colorTextoAtributo);#>;"><# WriteLine(j.NameTipo); #></td><#}#>
-		<td><# WriteLine(j.NameTipo); #></td>
-		</tr>
+	<#if(j.Enriquecido){
+#>
+	<td style = "color : <#WriteLine(colorTextoAtributo);#>; font :  <#WriteLine(tipoLetraAtributo);#> ;">
+<#		} else {WriteLine("<td>");	
+		if(j.FormatoBooleano.ToString() == "RadioButton")
+		{
+		#>
+		<input type="radio" id="bool" name="radiobutton" value=true">
+		<#
+		}
+		else 
+		{
+		#>
+		<input type="checkbox" id="bool" name="checkbox" value="true">
+		<#
+		}
+		#>
+		<label for="atributo">
+		<#WriteLine(j.NameTipo);#> 
+		</label><br>
+		<#
+#>
+
+		</td>
+<#}#>
+		
+	</tr>
 		<#
 		}
 		}
@@ -129,43 +173,55 @@ if (i.Metodo.Count> 0){
 				</td>
 			</tr>
 			<#
-foreach (Metodo j in i.Metodo)
-		{
-		string colorTextoMetodo = j.ColorLetraR.ToString("X") + j.ColorLetraG.ToString("X") + j.ColorLetraB.ToString("X"); 
+	foreach (Metodo j in i.Metodo)
+	{
+		string colorTextoMetodo = "000000";
+		if(0<=j.ColorLetraR && j.ColorLetraR<=255 && 0<=j.ColorLetraG && j.ColorLetraG<=255 && 0<=j.ColorLetraB && j.ColorLetraB<=255)
+		colorTextoMetodo = "#" + j.ColorLetraR.ToString("X") + j.ColorLetraG.ToString("X") + j.ColorLetraB.ToString("X"); 
 		string tipoLetraMetodo = j.TipoLetra.ToString();
-		#>
-		<tr>
-			<td>
-			<# 
-			if(j is MétodoAbstracto) WriteLine ("(Abstracto) "); 
-			WriteLine(j.NameTipoRetorno); #>
-			</td>
-		</tr>
-		<#
-		if (j.Parametro.Count> 0){
-			#>
-			<tr>
-				<td>
-					<# 
-					WriteLine("Parámetros <br />"); 
-					#>
-				</td>
-			</tr>
-			<#
+		if(tipoLetraMetodo == "ComicSansMS") tipoLetraMetodo = "Comic Sans MS";
+#>
+	<tr>
+	<#if(j.Enriquecido){
+#>
+	<td style = "color : <#WriteLine(colorTextoMetodo);#>; font :  <#WriteLine(tipoLetraMetodo);#> ;">
+<#		} else {WriteLine("<td>");		
+		if(j is MétodoAbstracto) WriteLine ("(Abstracto) "); 
+		WriteLine(j.NameTipoRetorno); 
+#>
+
+		</td>
+<#}#>
+		
+	</tr>
+<#
+		if (j.Parametro.Count> 0)
+		{
+#>
+	<tr>
+		<td>
+<# 
+			WriteLine("Parámetros <br />"); 
+#>
+		</td>
+	</tr>
+<#
 			foreach (Parametro k in j.Parametro)
-			{
-			#>
-			<tr>
-				<td>&tab
-					<# 
-					WriteLine(k.Nombre + " ( " + k.TipoDato + " ) " + k.TipoParametro.ToString() + ")" + "<br />" + k.Detalles); 
-					#>
-				</td>
-			</tr>
-		<#
-			}}
+				{
+#>
+	<tr>
+		<td>&tab
+<# 
+			WriteLine(k.Nombre + " ( " + k.TipoDato + " ) " + k.TipoParametro.ToString() + ")" + "<br />" + k.Detalles); 
+#>
+		</td>
+	</tr>
+<#
+			
+				}	
 		}
-		}
+	}
+		
 if (i.TargetClase.Count> 0){
 	#><tr><td><#
 	WriteLine("Asociaciones: "); 
@@ -187,17 +243,16 @@ if (i.TargetClase.Count> 0){
 	}
 
 	#>
-</tbody>
-</table> 
-			<#		
+
+	<#		
 	}
 	#>
+	</tbody>
+</table> 
 </body>
 </html>
 <#
 		}
 	}
-// cierra el proceso de creación de ficheros del documento. Debe hacerse
-// antes de empezar a declarar funciones de la plantilla
 		fileManager.Process();
 	#>
