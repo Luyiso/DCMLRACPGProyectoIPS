@@ -106,11 +106,19 @@ table.Clase tfoot td {
 			</td>
 		</tr>
 <#
-if(i.SuperClase != null){}
+if(i.SuperClase != null)
 #>
 <tr>
 	<td>
-	<#WriteLine("SuperClase = OwO ");#>
+	<#
+	{
+	Herencia h = Herencia.GetLinkToSuperClase(i);
+	//if(i is SubClase)
+	//WriteLine("SuperClase = " + i.SuperClase.Name); 
+	WriteLine("Es subclase, con herencia de tipo ");
+	//+ h.TotalParcial.ToString() + ", " + h.DisjuntaSolapada.ToString());
+	}
+	#>
 	</td>
 </tr>
 <#

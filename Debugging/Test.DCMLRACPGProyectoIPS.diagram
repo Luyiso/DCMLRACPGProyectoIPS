@@ -16,7 +16,7 @@
     <claseCShape Id="7baf682c-04fd-435e-aaaf-411b565b65a3" absoluteBounds="8.25, 2.25, 1.5, 1">
       <claseMoniker Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" />
     </claseCShape>
-    <asociacionConector Id="845ef45a-7f0c-4f03-84fd-b07a19353c6d" edgePoints="[(5.375 : 2.75); (8.25 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <asociacionConector Id="845ef45a-7f0c-4f03-84fd-b07a19353c6d" edgePoints="[(5.375 : 2.75); (8.25 : 2.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <asociacionMoniker Id="17768060-8c5b-49da-a62a-dd1d5cd51569" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
@@ -38,7 +38,7 @@
         </metodoShape>
       </nestedChildShapes>
     </claseAbstractaCShape>
-    <herenciaConector Id="6afef885-e023-4767-a5a2-f5ec70dda873" edgePoints="[(4.0625 : 4.75); (4.0625 : 3.35)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <herenciaConector Id="6afef885-e023-4767-a5a2-f5ec70dda873" edgePoints="[(4.0625 : 4.75); (4.0625 : 3.35)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <herenciaMoniker Id="dde77cdd-9fac-45b3-a81d-07c77ffda98a" />
       <relativeChildShapes />
       <nodes>
