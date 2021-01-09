@@ -4,65 +4,35 @@
 
 <#@ include file="EF.utility.CS.ttinclude" #>
 
-
 	<#
-		
 		var fileManager=EntityFrameworkTemplateFileManager.Create(this);
 		if (this.TapizModelo.Clase.Count ==0){
 		#>
 <html>
 	<head>
 		<title>
-			Diagrama Vacío
+			Diagrama Vácío
 		</title>
-		<style>
-table.Clase {
-  font-family: Arial, Helvetica, sans-serif;
-  border: 6px solid #AA5070;
-  background-color: #575A7B;
-  width: 250px;
-  height: 100px;
-  text-align: center;
-  border-radius: 25px;
-}
-table.Clase td, table.Clase th {
-  padding: 3px 3px;
-}
-table.Clase tbody td {
-  font-size: 13px;
-  color: #BCC9DF;
-}
-table.Clase thead {
-  }
-table.Clase thead th {
-  font-size: 19px;
-  font-weight: bold;
-  color: #BCC9DF;
-  text-align: center;
-}
-table.Clase tfoot td {
-  font-size: 13px;
-}
-</style>
 	</head>
 <body>
 El diagrama no contiene elementos
 </body>
 </html>
 <#
-		}
-		else
-		foreach (Clase i in this.TapizModelo.Clase)
-		{
-			if(i is ClaseAbstracta)
+	}
+	else
+	foreach (Clase i in this.TapizModelo.Clase)
+	{
+		if(i is ClaseAbstracta)
 			{}
 		else
 		{
-
-// la siguiente sentencia crea un fichero concreto. Una vez creado, toda la
-// salida va a este fichero hasta que se cree otro nuevo fichero
+			string colorTexto = i.NombreColorR.ToString("X") + i.NombreColorG.ToString("X") + i.NombreColorB.ToString("X"); 
+			string colorFondo = i.FondoColorR.ToString("X") + i.FondoColorG.ToString("X") + i.FondoColorB.ToString("X"); 
+			string tipoLetra = i.TipoLetra.ToString();
+			string alineacion = i.Alineacion.ToString();
 			fileManager.StartNewFile(i.Name + ".html");
-			#>
+#>
 <html>
 	<head>
 		<title>
@@ -97,51 +67,91 @@ table.Clase tfoot td {
   font-size: 13px;
 }
 </style>
-	</head>
-	<#
-	if(i.Enriquecida){}
-	else{
-	#>
-	<body>
+</head>
+<body>
 	<table class="Clase" style="height: 169px;" width="154">
-<thead>
+	<thead>
+	<tr>
+	<th>
+		<#
+		WriteLine(i.Name);
+		#>
+	</th>
+	</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+			<#
+			WriteLine("ID = " + i.Identificador);
+			#>
+			</td>
+		</tr>
+<#
+if(i.SuperClase#!=null){
+#>
 <tr>
-<th><#WriteLine(i.Name);#></th>
+	<td>
+	<#WriteLine("SuperClase = OwO ");#>
+	</td>
 </tr>
-</thead>
-<tbody>
-<tr>
-<td><#WriteLine("ID = " + i.Identificador);#></td>
-</tr>
-<##>
-<tr>
-<td>SuperClase = <#WriteLine("OwO");#></td>
-</tr>
-<##>
 <#
 if (i.Atributo.Count> 0){
-foreach (Atributo j in i.Atributo)
+	#>
+	<tr>
+		<td>
+			<# 
+			WriteLine("Atributos <br />"); 
+			#>
+		</td>
+	</tr>
+	<#
+	foreach (Atributo j in i.Atributo)
 		{
+		string colorTextoAtributo = j.ColorLetraR.ToString("X") + j.ColorLetraG.ToString("X") + j.ColorLetraB.ToString("X"); 
+		string tipoLetraAtributo = j.TipoLetra.ToString();
+		string booleanoAtributo = j.FormatoBooleano.ToString();
 		#>
 		<tr>
-		<td><# WriteLine(j.Name + " = " + j.NameTipo + "(" + j.TipoDatos + ")"); #></td>
+		<#if(j.Enriquecido){#><td style = "color : <#WriteLine("#" + colorTextoAtributo);#>;"><# WriteLine(j.NameTipo); #></td><#}#>
+		<td><# WriteLine(j.NameTipo); #></td>
 		</tr>
 		<#
 		}
 		}
 if (i.Metodo.Count> 0){
+			#>
+			<tr>
+				<td>
+					<# 
+					WriteLine("Métodos <br />"); 
+					#>
+				</td>
+			</tr>
+			<#
 foreach (Metodo j in i.Metodo)
 		{
+		string colorTextoMetodo = j.ColorLetraR.ToString("X") + j.ColorLetraG.ToString("X") + j.ColorLetraB.ToString("X"); 
+		string tipoLetraMetodo = j.TipoLetra.ToString();
 		#>
 		<tr>
 			<td>
 			<# 
 			if(j is MétodoAbstracto) WriteLine ("(Abstracto) "); 
-			WriteLine(j.Name + " = " + j.NameTipoRetorno + "(" + j.TipoRetorno + ")"); #>
+			WriteLine(j.NameTipoRetorno); #>
 			</td>
 		</tr>
 		<#
 		if (j.Parametro.Count> 0){
+			#>
+			<tr>
+				<td>
+					<# 
+					WriteLine("Parámetros <br />"); 
+					#>
+				</td>
+			</tr>
+			<#
 			foreach (Parametro k in j.Parametro)
 			{
 			#>
@@ -179,12 +189,9 @@ if (i.TargetClase.Count> 0){
 	#>
 </tbody>
 </table> 
-			<#
-			
+			<#		
 	}
 	#>
-	
-
 </body>
 </html>
 <#
@@ -193,6 +200,4 @@ if (i.TargetClase.Count> 0){
 // cierra el proceso de creación de ficheros del documento. Debe hacerse
 // antes de empezar a declarar funciones de la plantilla
 		fileManager.Process();
-
 	#>
-

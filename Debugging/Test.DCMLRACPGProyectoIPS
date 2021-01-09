@@ -10,7 +10,7 @@
         </targetClase>
         <atributo>
           <claseHasAtributo Id="bedac5eb-e2f9-45ff-8855-04464b7abd8b">
-            <atributo Id="40171f26-2413-46d7-ad42-f2197d15fe0e" colorLetraR="0" colorLetraG="0" colorLetraB="0" tipoLetra="Arial" formatoBooleano="Checkbox" enriquecido="false" name="Name" tipoDatos="String" />
+            <atributo Id="40171f26-2413-46d7-ad42-f2197d15fe0e" colorLetraR="0" colorLetraG="0" colorLetraB="0" tipoLetra="Arial" formatoBooleano="Checkbox" enriquecido="false" name="Edad" tipoDatos="Int" />
           </claseHasAtributo>
         </atributo>
         <metodo>
