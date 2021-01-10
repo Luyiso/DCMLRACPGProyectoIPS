@@ -301,7 +301,7 @@
         </DomainProperty>
         <DomainProperty Id="9da427e5-4fa9-4953-abcf-7bfd2af93cfc" Description="Description for UPM_IPS.DCMLRACPGProyectoIPS.Agregacion.Tipo Agregación" Name="TipoAgregación" DisplayName="Tipo Agregación">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="TipoAgregación" />
           </Type>
         </DomainProperty>
       </Properties>

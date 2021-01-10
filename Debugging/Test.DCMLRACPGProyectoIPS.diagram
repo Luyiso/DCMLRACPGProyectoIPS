@@ -16,7 +16,7 @@
     <claseCShape Id="7baf682c-04fd-435e-aaaf-411b565b65a3" absoluteBounds="8.25, 2.375, 1.5, 1">
       <claseMoniker Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" />
     </claseCShape>
-    <asociacionConector Id="845ef45a-7f0c-4f03-84fd-b07a19353c6d" edgePoints="[(5.875 : 2.875); (8.25 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <asociacionConector Id="845ef45a-7f0c-4f03-84fd-b07a19353c6d" edgePoints="[(5.875 : 2.875); (8.25 : 2.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <asociacionMoniker Id="17768060-8c5b-49da-a62a-dd1d5cd51569" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
@@ -27,18 +27,18 @@
         <claseCShapeMoniker Id="7baf682c-04fd-435e-aaaf-411b565b65a3" />
       </nodes>
     </asociacionConector>
-    <claseAbstractaCShape Id="56e8f906-7ec4-45b0-a108-85c96ecf9a39" absoluteBounds="3.375, 5, 2.75, 1.4749999999999996">
+    <claseAbstractaCShape Id="56e8f906-7ec4-45b0-a108-85c96ecf9a39" absoluteBounds="2.875, 5, 2.75, 1.4749999999999996">
       <claseAbstractaMoniker Id="324c3a2d-e483-4039-9d8a-ac6fb04d5592" />
       <nestedChildShapes>
-        <atributoShape Id="2b8b07f3-81c2-44d5-8be5-c2e2dd82b551" absoluteBounds="4.75, 6.125, 1.25, 0.25">
+        <atributoShape Id="2b8b07f3-81c2-44d5-8be5-c2e2dd82b551" absoluteBounds="4.25, 6.125, 1.25, 0.25">
           <atributoMoniker Id="bc81f311-c885-4b70-8861-5f748dc1ba02" />
         </atributoShape>
-        <metodoShape Id="a9a3a97c-d873-4c2a-9ba7-7bc21fe06458" absoluteBounds="3.625, 5.375, 1.375, 0.5">
+        <metodoShape Id="a9a3a97c-d873-4c2a-9ba7-7bc21fe06458" absoluteBounds="3.125, 5.375, 1.375, 0.5">
           <metodoMoniker Id="4b598098-d843-4e96-80d0-7756652ddf6c" />
         </metodoShape>
       </nestedChildShapes>
     </claseAbstractaCShape>
-    <herenciaConector Id="6afef885-e023-4767-a5a2-f5ec70dda873" edgePoints="[(4.625 : 5); (4.625 : 3.475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <herenciaConector Id="6afef885-e023-4767-a5a2-f5ec70dda873" edgePoints="[(4.4375 : 5); (4.4375 : 3.475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <herenciaMoniker Id="dde77cdd-9fac-45b3-a81d-07c77ffda98a" />
       <relativeChildShapes />
       <nodes>
@@ -46,11 +46,11 @@
         <claseCShapeMoniker Id="da811479-5e7f-4cb2-9875-2e717888a0f2" />
       </nodes>
     </herenciaConector>
-    <agregaConnector Id="e1426fa5-f191-4e82-8e33-c80a1f7a889f" edgePoints="[(6.125 : 5.7375); (9 : 5.7375); (9 : 3.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <agregaConnector Id="e1426fa5-f191-4e82-8e33-c80a1f7a889f" edgePoints="[(5.625 : 5.7375); (9 : 5.7375); (9 : 3.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <agregacionMoniker Id="476d98b9-f565-4f89-b70e-f75c37636d1e" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="8, 5.4999999999999991, 0.76224768161773682, 0.181884765625" shapeFieldName="NameDeco" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="7.5, 5.4999999999999991, 0.76224768161773682, 0.181884765625" shapeFieldName="NameDeco" />
       </moveableDecoratorHostShapes>
       <nodes>
         <claseAbstractaCShapeMoniker Id="56e8f906-7ec4-45b0-a108-85c96ecf9a39" />

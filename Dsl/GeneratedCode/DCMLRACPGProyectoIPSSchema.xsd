@@ -601,7 +601,7 @@
         <!-- Property: CardMaxCompuesta -->
         <xsd:attribute name="cardMaxCompuesta" type="Cardinalidad" />
         <!-- Property: TipoAgregación -->
-        <xsd:attribute name="tipoAgregación" type="xsd:string" />
+        <xsd:attribute name="tipoAgregación" type="TipoAgregación" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

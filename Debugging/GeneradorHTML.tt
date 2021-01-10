@@ -250,13 +250,14 @@ if (i.Compuesta.Count> 0){
 	#><tr><td><#
 	WriteLine("Agregaciones: "); 
 	#></td></tr><#
+	Agregacion ag = i.Compuesta;
 	foreach(Agregacion a in Agregacion.GetLinksToCompuesta(i))
 		{
 		#>
 		<tr>
 		<td> &tab
 		<# 
-		WriteLine(a.Nombre + " Cardinalidad Componente = " + a.CardMinComponente.ToString() + ".." + a.CardMaxComponente.ToString() +  
+		WriteLine("Tipo de Agregación: " + a.TipoAgregación + "</br>" + a.Nombre + " Cardinalidad Componente = " + a.CardMinComponente.ToString() + ".." + a.CardMaxComponente.ToString() +  
 							" Nombre de la Compuesta = " + a.Compuesta.Name +  
 							" Cardinalidad de la Compuesta = " + a.CardMinCompuesta.ToString() + ".." + a.CardMaxCompuesta.ToString()); 
 		#>

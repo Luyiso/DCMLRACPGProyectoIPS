@@ -1091,7 +1091,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// Storage for TipoAgregación
 		/// </summary>
-		private global::System.String tipoAgregaciónPropertyStorage = string.Empty;
+		private TipoAgregación tipoAgregaciónPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of TipoAgregación domain property.
@@ -1100,7 +1100,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.DCMLRACPGProyectoIPS.Agregacion/TipoAgregación.DisplayName", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.DCMLRACPGProyectoIPS.Agregacion/TipoAgregación.Description", typeof(global::UPM_IPS.DCMLRACPGProyectoIPS.DCMLRACPGProyectoIPSDomainModel), "UPM_IPS.DCMLRACPGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("9da427e5-4fa9-4953-abcf-7bfd2af93cfc")]
-		public global::System.String TipoAgregación
+		public TipoAgregación TipoAgregación
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1116,7 +1116,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 		/// <summary>
 		/// Value handler for the Agregacion.TipoAgregación domain property.
 		/// </summary>
-		internal sealed partial class TipoAgregaciónPropertyHandler : DslModeling::DomainPropertyValueHandler<Agregacion, global::System.String>
+		internal sealed partial class TipoAgregaciónPropertyHandler : DslModeling::DomainPropertyValueHandler<Agregacion, TipoAgregación>
 		{
 			private TipoAgregaciónPropertyHandler() { }
 		
@@ -1142,7 +1142,7 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Agregacion element)
+			public override sealed TipoAgregación GetValue(Agregacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoAgregaciónPropertyStorage;
@@ -1153,11 +1153,11 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Agregacion element, global::System.String newValue)
+			public override sealed void SetValue(Agregacion element, TipoAgregación newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				TipoAgregación oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

@@ -9144,14 +9144,14 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 				string attribTipoAgregación = DCMLRACPGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoAgregación");
 				if (attribTipoAgregación != null)
 				{
-					global::System.String valueOfTipoAgregación;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipoAgregación, out valueOfTipoAgregación))
+					TipoAgregación valueOfTipoAgregación;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoAgregación>(serializationContext, attribTipoAgregación, out valueOfTipoAgregación))
 					{
 						instanceOfAgregacion.TipoAgregación = valueOfTipoAgregación;
 					}
 					else
 					{	// Invalid property value, ignored.
-						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoAgregación", typeof(global::System.String), attribTipoAgregación);
+						DCMLRACPGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoAgregación", typeof(TipoAgregación), attribTipoAgregación);
 					}
 				}
 			}
@@ -9695,12 +9695,11 @@ namespace UPM_IPS.DCMLRACPGProyectoIPS
 			// TipoAgregación
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfAgregacion.TipoAgregación;
+				TipoAgregación propValue = instanceOfAgregacion.TipoAgregación;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoAgregación>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoAgregación", propValue);
-	
+					DCMLRACPGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoAgregación", serializedPropValue);
 				}
 			}
 		}
