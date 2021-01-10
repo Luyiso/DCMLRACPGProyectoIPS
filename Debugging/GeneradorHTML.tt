@@ -231,21 +231,7 @@ if (i.TargetClase.Count> 0){
 	#><tr><td><#
 	WriteLine("Asociaciones: "); 
 	#></td></tr><#
-	foreach(Clase ta in i.TargetClase)
-		{
-		#>
-		<tr>
-		<td> &tab
-		<# 
-		WriteLine(ta.Name); //+ " Cardinalidad Origen = " + a.CardinalidadMinimaSource.ToString() + ".." + a.CardinalidadMaximaSource.ToString() +  
-		//WriteLine(Asociacion.GetLinksToTargetClase(i));					//" Nombre Objetivo = " + a.TargetClase.Name +  
-							//" Cardinalidad Objetivo = " + a.CardinalidadMinimaTarget.ToString() + ".." + a.CardinalidadMaximaTarget.ToString()); 
-		#>
-		</td>
-		</tr>
-		<#
-		}
-	foreach(Asociacion a in Asociacion.GetLinksToSourceClase(i))
+	foreach(Asociacion a in Asociacion.GetLinksToTargetClase(i))
 		{
 		#>
 		<tr>
@@ -254,6 +240,25 @@ if (i.TargetClase.Count> 0){
 		WriteLine(a.Nombre + " Cardinalidad Origen = " + a.CardinalidadMinimaSource.ToString() + ".." + a.CardinalidadMaximaSource.ToString() +  
 							" Nombre Objetivo = " + a.TargetClase.Name +  
 							" Cardinalidad Objetivo = " + a.CardinalidadMinimaTarget.ToString() + ".." + a.CardinalidadMaximaTarget.ToString()); 
+		#>
+		</td>
+		</tr>
+		<#
+		}
+	}
+if (i.Compuesta.Count> 0){
+	#><tr><td><#
+	WriteLine("Agregaciones: "); 
+	#></td></tr><#
+	foreach(Agregacion a in Agregacion.GetLinksToCompuesta(i))
+		{
+		#>
+		<tr>
+		<td> &tab
+		<# 
+		WriteLine(a.Nombre + " Cardinalidad Componente = " + a.CardMinComponente.ToString() + ".." + a.CardMaxComponente.ToString() +  
+							" Nombre de la Compuesta = " + a.Compuesta.Name +  
+							" Cardinalidad de la Compuesta = " + a.CardMinCompuesta.ToString() + ".." + a.CardMaxCompuesta.ToString()); 
 		#>
 		</td>
 		</tr>

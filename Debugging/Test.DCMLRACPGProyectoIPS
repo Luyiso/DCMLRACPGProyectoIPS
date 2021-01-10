@@ -4,7 +4,7 @@
     <tapizModeloHasClase Id="e6dab6c7-f42b-437f-99b8-b2ea8e344081">
       <clase Id="2e97b175-38c3-47a7-be65-078cfd62e781" enriquecida="true" fondoColorR="255" fondoColorG="255" fondoColorB="255" nombreColorR="0" nombreColorG="0" tipoLetra="Arial" alineacion="left" nombreColorB="0" name="Ejemplo" identificador="33">
         <targetClase>
-          <asociacion Id="17768060-8c5b-49da-a62a-dd1d5cd51569" cardinalidadMinimaSource="Cero" cardinalidadMinimaTarget="Cero" cardinalidadMaximaSource="Cero" cardinalidadMaximaTarget="Cero">
+          <asociacion Id="17768060-8c5b-49da-a62a-dd1d5cd51569" cardinalidadMinimaSource="Cero" cardinalidadMinimaTarget="N" cardinalidadMaximaSource="N" cardinalidadMaximaTarget="Uno">
             <claseMoniker Id="bc6297e9-a527-40e4-a9f0-a0e103730cd5" />
           </asociacion>
         </targetClase>

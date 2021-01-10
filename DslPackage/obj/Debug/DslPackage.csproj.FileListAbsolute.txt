@@ -232,7 +232,6 @@ D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Mi
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\EnvDTE.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Shell.Design.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Utilities.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Telemetry.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\System.Threading.Tasks.Dataflow.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\System.Collections.Immutable.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
@@ -252,8 +251,6 @@ D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Mi
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.MSXML.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\stdole.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.RemoteControl.dll
-D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Utilities.Internal.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\UPM_IPS.DCMLRACPGProyectoIPS.Dsl.pdb
 D:\Documentos\GitHub ETSISI Edition\DCMLRACPGProyectoIPS\DslPackage\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.15.0.xml
