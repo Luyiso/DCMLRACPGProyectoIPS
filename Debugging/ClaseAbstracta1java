@@ -1,0 +1,17 @@
+Public abstract class ClaseAbstracta1 {
+
+
+private Int ID;
+
+
+Public Int getID (){
+    return this.ID;
+	}
+
+Public void setID (Int ID){
+    this.ID = ID;
+	}
+
+Public Boolean Metodo1 () { 
+	}
+

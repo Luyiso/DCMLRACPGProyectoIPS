@@ -1,0 +1,17 @@
+Public class Clase2 {
+
+
+private  Atributo1;
+
+
+Public  getAtributo1 (){
+    return this.Atributo1;
+	}
+
+Public void setAtributo1 ( Atributo1){
+    this.Atributo1 = Atributo1;
+	}
+
+Public  Metodo1 () { 
+	}
+

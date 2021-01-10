@@ -1,0 +1,17 @@
+Public class Ejemplo {
+
+
+private Int Edad;
+
+
+Public Int getEdad (){
+    return this.Edad;
+	}
+
+Public void setEdad (Int Edad){
+    this.Edad = Edad;
+	}
+
+Public Int Ejecutar () { 
+	}
+

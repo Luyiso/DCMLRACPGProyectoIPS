@@ -1,0 +1,76 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
+<#@ output extension=".java" #>
+<#@ DCMLRACPGProyectoIPS processor="DCMLRACPGProyectoIPSDirectiveProcessor" requires="fileName='Test.DCMLRACPGProyectoIPS'" #>
+<#@ include file="EF.utility.CS.ttinclude" #>
+<#
+
+
+
+var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+if (this.TapizModelo.Clase.Count > 0){
+	foreach (Clase clase in this.TapizModelo.Clase){
+		fileManager.StartNewFile(clase.Name + "java");
+		if (clase is ClaseAbstracta)
+			WriteLine ( "Public abstract class "+ clase.Name + " {");
+
+		else WriteLine ( "Public class "+ clase.Name + " {");
+		if (clase.Atributo.Count > 0){
+			WriteLine ("");
+			WriteLine ("");
+			foreach (Atributo atributo in clase.Atributo)
+				WriteLine ("private " + atributo.TipoDatos + " " + atributo.Name + ";");
+			WriteLine ("");
+			WriteLine ("");
+		
+			foreach (Atributo atributo2 in clase.Atributo){
+
+				WriteLine ("Public "+ atributo2.TipoDatos + " " +"get"+ atributo2.Name + " (){");
+				WriteLine ("    return this." + atributo2.Name +";");
+				WriteLine ("	}");
+				WriteLine ("");
+				WriteLine ("Public void set" + atributo2.Name + " ("+ atributo2.TipoDatos +" "+ atributo2.Name + "){");
+				WriteLine ("    this." + atributo2.Name + " = " + atributo2.Name + ";");
+				WriteLine ("	}");
+				WriteLine ("");
+			}
+		}
+		if (clase.Metodo.Count  > 0){
+
+		foreach (Metodo metodo in clase.Metodo)
+			if (metodo is MétodoAbstracto){
+				Write ("Public abstract " + metodo.TipoRetorno + " (");
+				if (metodo.Parametro.Count > 0)
+					escribirParametros(metodo);
+				else 
+					Write (") {");
+				WriteLine (" ");
+				WriteLine ("	}");
+				WriteLine ("");
+			}else{
+				Write ("Public " + metodo.TipoRetorno + " " + metodo.Name + " (");
+				if (metodo.Parametro.Count > 0)
+					escribirParametros(metodo);
+				else 
+					Write (") {");
+				WriteLine (" ");
+				WriteLine ("	}");
+				WriteLine ("");
+			} 
+
+		}
+	}
+
+fileManager.Process();
+}
+#>
+
+<#+
+		private void escribirParametros (Metodo metodo){
+			foreach (Parametro parametro in metodo.Parametro){
+				if (parametro != metodo.Parametro.Last())
+					Write (parametro.TipoDato + " " + parametro.Nombre + ", ");
+				else 
+					Write (parametro.TipoDato + " " + parametro.Nombre + ") {");
+			}
+		}
+#>
