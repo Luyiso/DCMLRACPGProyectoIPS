@@ -106,27 +106,18 @@ table.Clase tfoot td {
 			</td>
 		</tr>
 <#
-if(i.SuperClase != null)
+if(i.SuperClase != null){
 #>
 <tr>
 	<td>
 	<#
-	{
-	//foreach(Clase sa in Herencia.GetLinkToSuperClase(i)){} Herencia no contiene getEnumerator
 	Herencia her = Herencia.GetLinkToSuperClase(i);
-	//if(superclase.Equals(null))WriteLine("CÓMO COJONES PASA ESTO"); //Object reference not set to an instanc eof an object
-	//WriteLine("Herencia " + h.TotalParcial);
-	//foreach(Clase sa in Herencia.GetLinksToSuperClase(i)){} No existe GetLinks
-	//foreach(Clase b in i.SuperClase){} Clase no contiene getEnumerator
-	//WriteLine(i.Name);
-	//if(i is SubClase)
-	//WriteLine("SuperClase = " + i.SuperClase.Name); 
-	//WriteLine("Es subclase, con herencia de tipo ");
-	//+ h.TotalParcial.ToString() + ", " + h.DisjuntaSolapada.ToString());
-	}
+	Clase sup = i.SuperClase; 
+	WriteLine("SuperClase : " + sup.Name + ". Herencia " + her.TotalParcial + " " + her.DisjuntaSolapada);
 	#>
 	</td>
 </tr>
+<#}#>
 <#
 if (i.Atributo.Count> 0){
 	#>

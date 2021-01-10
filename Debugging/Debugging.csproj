@@ -44,6 +44,18 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="Clase1java">
+      <DependentUpon>GeneradorJava.tt</DependentUpon>
+    </None>
+    <None Include="Clase2java">
+      <DependentUpon>GeneradorJava.tt</DependentUpon>
+    </None>
+    <None Include="ClaseAbstracta1java">
+      <DependentUpon>GeneradorJava.tt</DependentUpon>
+    </None>
+    <None Include="Ejemplojava">
+      <DependentUpon>GeneradorJava.tt</DependentUpon>
+    </None>
     <None Include="Test.DCMLRACPGProyectoIPS" />
     <None Include="Test.DCMLRACPGProyectoIPS.diagram">
       <DependentUpon>Test.DCMLRACPGProyectoIPS</DependentUpon>
@@ -62,10 +74,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Clase1.html">
-      <DependentUpon>Informe.tt</DependentUpon>
+      <DependentUpon>GeneradorHTML.tt</DependentUpon>
     </Content>
     <Content Include="Clase2.html">
-      <DependentUpon>Informe.tt</DependentUpon>
+      <DependentUpon>GeneradorHTML.tt</DependentUpon>
     </Content>
     <Content Include="DCMLRACPGProyectoIPSReport.txt">
       <AutoGen>True</AutoGen>
@@ -78,16 +90,25 @@
       <DependentUpon>DCMLRACPGProyectoIPSReportVB.tt</DependentUpon>
     </Content>
     <Content Include="Ejemplo.html">
-      <DependentUpon>Informe.tt</DependentUpon>
+      <DependentUpon>GeneradorHTML.tt</DependentUpon>
     </Content>
-    <Content Include="Informe.html">
+    <Content Include="GeneradorJava.java">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Informe.tt</DependentUpon>
+      <DependentUpon>GeneradorJava.tt</DependentUpon>
     </Content>
-    <Content Include="Informe.tt">
+    <Content Include="GeneradorJava.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Informe.html</LastGenOutput>
+      <LastGenOutput>GeneradorJava.java</LastGenOutput>
+    </Content>
+    <Content Include="GeneradorHTML.html">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneradorHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="GeneradorHTML.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GeneradorHTML.html</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
