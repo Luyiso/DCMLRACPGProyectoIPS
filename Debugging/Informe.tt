@@ -27,12 +27,12 @@ El diagrama no contiene elementos
 			{}
 		else
 		{
-			string colorTexto = "000000";
+			string colorTexto = "#000000";
 			if(0<=i.NombreColorR && i.NombreColorR<=255 && 0<=i.NombreColorG && i.NombreColorG<=255 && 0<=i.NombreColorB && i.NombreColorR<=255)
-			colorTexto = i.NombreColorR.ToString("X") + i.NombreColorG.ToString("X") + i.NombreColorB.ToString("X"); 
-			string colorFondo = "FFFFFF";
+			colorTexto = "#" + i.NombreColorR.ToString("X") + i.NombreColorG.ToString("X") + i.NombreColorB.ToString("X"); 
+			string colorFondo = "#FFFFFF";
 			if(0<=i.FondoColorR && i.FondoColorR<=255 && 0<=i.FondoColorG && i.FondoColorG<=255 && 0<=i.FondoColorB && i.FondoColorR<=255)
-			colorFondo = i.FondoColorR.ToString("X") + i.FondoColorG.ToString("X") + i.FondoColorB.ToString("X"); 
+			colorFondo = "#" + i.FondoColorR.ToString("X") + i.FondoColorG.ToString("X") + i.FondoColorB.ToString("X"); 
 			string tipoLetra = i.TipoLetra.ToString();
 			if(tipoLetra == "ComicSansMS") tipoLetra = "Comic Sans MS";
 			string alineacion = i.Alineacion.ToString();
@@ -112,10 +112,16 @@ if(i.SuperClase != null)
 	<td>
 	<#
 	{
-	Herencia h = Herencia.GetLinkToSuperClase(i);
+	//foreach(Clase sa in Herencia.GetLinkToSuperClase(i)){} Herencia no contiene getEnumerator
+	Herencia her = Herencia.GetLinkToSuperClase(i);
+	//if(superclase.Equals(null))WriteLine("CÓMO COJONES PASA ESTO"); //Object reference not set to an instanc eof an object
+	//WriteLine("Herencia " + h.TotalParcial);
+	//foreach(Clase sa in Herencia.GetLinksToSuperClase(i)){} No existe GetLinks
+	//foreach(Clase b in i.SuperClase){} Clase no contiene getEnumerator
+	//WriteLine(i.Name);
 	//if(i is SubClase)
 	//WriteLine("SuperClase = " + i.SuperClase.Name); 
-	WriteLine("Es subclase, con herencia de tipo ");
+	//WriteLine("Es subclase, con herencia de tipo ");
 	//+ h.TotalParcial.ToString() + ", " + h.DisjuntaSolapada.ToString());
 	}
 	#>
@@ -234,6 +240,20 @@ if (i.TargetClase.Count> 0){
 	#><tr><td><#
 	WriteLine("Asociaciones: "); 
 	#></td></tr><#
+	foreach(Clase ta in i.TargetClase)
+		{
+		#>
+		<tr>
+		<td> &tab
+		<# 
+		WriteLine(ta.Name); //+ " Cardinalidad Origen = " + a.CardinalidadMinimaSource.ToString() + ".." + a.CardinalidadMaximaSource.ToString() +  
+		//WriteLine(Asociacion.GetLinksToTargetClase(i));					//" Nombre Objetivo = " + a.TargetClase.Name +  
+							//" Cardinalidad Objetivo = " + a.CardinalidadMinimaTarget.ToString() + ".." + a.CardinalidadMaximaTarget.ToString()); 
+		#>
+		</td>
+		</tr>
+		<#
+		}
 	foreach(Asociacion a in Asociacion.GetLinksToSourceClase(i))
 		{
 		#>
