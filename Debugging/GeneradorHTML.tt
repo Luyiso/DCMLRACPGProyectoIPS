@@ -74,7 +74,7 @@ table.Clase tfoot td {
 		<tr>
 			<td>
 			<#
-			WriteLine("En el resto de archivos hay " + this.TapizModelo.Clase.Count + " clases no abstractas");
+			WriteLine("En el resto de archivos hay " + this.TapizModelo.Clase.Count + " clases, de las cuales hay ficheros .html(s) de las no abstractas");
 			#>
 			</td>
 		<tr>
