@@ -20,7 +20,69 @@ El diagrama no contiene elementos
 </html>
 <#
 	}
-	else
+	else{
+#>
+<html>
+	<head>
+		<title>
+			<#WriteLine("Página resumen");#>
+		</title>
+		<style>
+table.Clase {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 6px solid #AA5070;
+  background-color: #575A7B;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  border-radius: 25px;
+}
+table.Clase td, table.Clase th {
+  padding: 3px 3px;
+}
+table.Clase tbody td {
+  font-size: 13px;
+  color: #BCC9DF;
+}
+table.Clase thead {
+  }
+table.Clase thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #BCC9DF;
+  text-align: center;
+}
+table.Clase tfoot td {
+  font-size: 13px;
+}
+</style>
+</head>
+
+	<body>	
+	<table class="Clase" style="height: 169px;" width="200"> 
+						>
+	<thead>
+	<tr>
+	<th>
+		<#
+		WriteLine("Autor: Luis Rodríguez Arriero");
+		#>
+	</th>
+	</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+			<#
+			WriteLine("En el resto de archivos hay " + this.TapizModelo.Clase.Count + " clases no abstractas");
+			#>
+			</td>
+		<tr>
+	</tbody>
+	</table>
+</body>
+</html>
+<#
 	foreach (Clase i in this.TapizModelo.Clase)
 	{
 		if(i is ClaseAbstracta)
@@ -250,7 +312,6 @@ if (i.Compuesta.Count> 0){
 	#><tr><td><#
 	WriteLine("Agregaciones: "); 
 	#></td></tr><#
-	Agregacion ag = i.Compuesta;
 	foreach(Agregacion a in Agregacion.GetLinksToCompuesta(i))
 		{
 		#>
@@ -258,7 +319,7 @@ if (i.Compuesta.Count> 0){
 		<td> &tab
 		<# 
 		WriteLine("Tipo de Agregación: " + a.TipoAgregación + "</br>" + a.Nombre + " Cardinalidad Componente = " + a.CardMinComponente.ToString() + ".." + a.CardMaxComponente.ToString() +  
-							" Nombre de la Compuesta = " + a.Compuesta.Name +  
+							//" Nombre de la Compuesta = " + a.Compuesta.Name +  No funciona
 							" Cardinalidad de la Compuesta = " + a.CardMinCompuesta.ToString() + ".." + a.CardMaxCompuesta.ToString()); 
 		#>
 		</td>
@@ -278,6 +339,7 @@ if (i.Compuesta.Count> 0){
 </html>
 <#
 		}
+	}
 	}
 		fileManager.Process();
 	#>
